@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Dentistry_ARMModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Customers_Id" />
+          </Key>
+          <Property Name="Customers_Id" Type="int" Nullable="false" />
+          <Property Name="Customers_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustomersInfo_Id" Type="int" />
+          <Property Name="Personal_FK" Type="int" />
+        </EntityType>
+        <EntityType Name="CustomersInfo">
+          <Key>
+            <PropertyRef Name="CustomersInfo_Id" />
+          </Key>
+          <Property Name="CustomersInfo_Id" Type="int" Nullable="false" />
+          <Property Name="Visits_Id" Type="int" />
+          <Property Name="CustomersInfo_Allergy" Type="nvarchar" MaxLength="150" />
+          <Property Name="Diagnosis_Id" Type="int" Nullable="false" />
+          <Property Name="Customers_Drugs" Type="nvarchar" MaxLength="100" />
+          <Property Name="Researches_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Diagnosis">
+          <Key>
+            <PropertyRef Name="Diagnosis_Id" />
+          </Key>
+          <Property Name="Diagnosis_Id" Type="int" Nullable="false" />
+          <Property Name="Diagnosis_Name" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Personal_Id" />
+          </Key>
+          <Property Name="Personal_Id" Type="int" Nullable="false" />
+          <Property Name="Personal_login" Type="nvarchar" MaxLength="60" />
+          <Property Name="Personal_Password" Type="nchar" MaxLength="10" />
+          <Property Name="Personal_Role" Type="int" />
+        </EntityType>
+        <EntityType Name="Researches">
+          <Key>
+            <PropertyRef Name="Researches_Id" />
+          </Key>
+          <Property Name="Researches_Id" Type="int" Nullable="false" />
+          <Property Name="Researches_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Clients_Id" Type="int" />
+          <Property Name="Researches_Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Visits">
+          <Key>
+            <PropertyRef Name="Visits_Id" />
+          </Key>
+          <Property Name="Visits_Id" Type="int" Nullable="false" />
+          <Property Name="Visits_Time" Type="date" />
+          <Property Name="Visits_Info" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_Clients_CustomersInfo">
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomersInfo">
+              <PropertyRef Name="CustomersInfo_Id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="CustomersInfo_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clients_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="Personal_Id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="Personal_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomersInfo_Diagnosis">
+          <End Role="Diagnosis" Type="Self.Diagnosis" Multiplicity="1" />
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosis">
+              <PropertyRef Name="Diagnosis_Id" />
+            </Principal>
+            <Dependent Role="CustomersInfo">
+              <PropertyRef Name="CustomersInfo_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomersInfo_Researches">
+          <End Role="Researches" Type="Self.Researches" Multiplicity="1" />
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Researches">
+              <PropertyRef Name="Researches_Id" />
+            </Principal>
+            <Dependent Role="CustomersInfo">
+              <PropertyRef Name="Researches_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomersInfo_Visits">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="0..1" />
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Visits_Id" />
+            </Principal>
+            <Dependent Role="CustomersInfo">
+              <PropertyRef Name="Visits_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Researches_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+          <End Role="Researches" Type="Self.Researches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Customers_Id" />
+            </Principal>
+            <Dependent Role="Researches">
+              <PropertyRef Name="Clients_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище Dentistry_ARMModelContainer">
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomersInfo" EntityType="Self.CustomersInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diagnosis" EntityType="Self.Diagnosis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Researches" EntityType="Self.Researches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Visits" EntityType="Self.Visits" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Clients_CustomersInfo" Association="Self.FK_Clients_CustomersInfo">
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clients_Personal" Association="Self.FK_Clients_Personal">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomersInfo_Diagnosis" Association="Self.FK_CustomersInfo_Diagnosis">
+            <End Role="Diagnosis" EntitySet="Diagnosis" />
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomersInfo_Researches" Association="Self.FK_CustomersInfo_Researches">
+            <End Role="Researches" EntitySet="Researches" />
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomersInfo_Visits" Association="Self.FK_CustomersInfo_Visits">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Researches_Clients" Association="Self.FK_Researches_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Researches" EntitySet="Researches" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Dentistry_ARMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Customers_Id" />
+          </Key>
+          <Property Name="Customers_Id" Type="Int32" Nullable="false" />
+          <Property Name="Customers_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CustomersInfo_Id" Type="Int32" />
+          <Property Name="Personal_FK" Type="Int32" />
+          <NavigationProperty Name="CustomersInfo" Relationship="Self.FK_Clients_CustomersInfo" FromRole="Clients" ToRole="CustomersInfo" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK_Clients_Personal" FromRole="Clients" ToRole="Personal" />
+          <NavigationProperty Name="Researches" Relationship="Self.FK_Researches_Clients" FromRole="Clients" ToRole="Researches" />
+        </EntityType>
+        <EntityType Name="CustomersInfo">
+          <Key>
+            <PropertyRef Name="CustomersInfo_Id" />
+          </Key>
+          <Property Name="CustomersInfo_Id" Type="Int32" Nullable="false" />
+          <Property Name="Visits_Id" Type="Int32" />
+          <Property Name="CustomersInfo_Allergy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Diagnosis_Id" Type="Int32" Nullable="false" />
+          <Property Name="Customers_Drugs" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Researches_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_CustomersInfo" FromRole="CustomersInfo" ToRole="Clients" />
+          <NavigationProperty Name="Diagnosis" Relationship="Self.FK_CustomersInfo_Diagnosis" FromRole="CustomersInfo" ToRole="Diagnosis" />
+          <NavigationProperty Name="Researches" Relationship="Self.FK_CustomersInfo_Researches" FromRole="CustomersInfo" ToRole="Researches" />
+          <NavigationProperty Name="Visits" Relationship="Self.FK_CustomersInfo_Visits" FromRole="CustomersInfo" ToRole="Visits" />
+        </EntityType>
+        <EntityType Name="Diagnosis">
+          <Key>
+            <PropertyRef Name="Diagnosis_Id" />
+          </Key>
+          <Property Name="Diagnosis_Id" Type="Int32" Nullable="false" />
+          <Property Name="Diagnosis_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="CustomersInfo" Relationship="Self.FK_CustomersInfo_Diagnosis" FromRole="Diagnosis" ToRole="CustomersInfo" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Personal_Id" />
+          </Key>
+          <Property Name="Personal_Id" Type="Int32" Nullable="false" />
+          <Property Name="Personal_login" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Personal_Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Personal_Role" Type="Int32" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Personal" FromRole="Personal" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="Researches">
+          <Key>
+            <PropertyRef Name="Researches_Id" />
+          </Key>
+          <Property Name="Researches_Id" Type="Int32" Nullable="false" />
+          <Property Name="Researches_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Clients_Id" Type="Int32" />
+          <Property Name="Researches_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Researches_Clients" FromRole="Researches" ToRole="Clients" />
+          <NavigationProperty Name="CustomersInfo" Relationship="Self.FK_CustomersInfo_Researches" FromRole="Researches" ToRole="CustomersInfo" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Visits">
+          <Key>
+            <PropertyRef Name="Visits_Id" />
+          </Key>
+          <Property Name="Visits_Id" Type="Int32" Nullable="false" />
+          <Property Name="Visits_Time" Type="DateTime" Precision="0" />
+          <Property Name="Visits_Info" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CustomersInfo" Relationship="Self.FK_CustomersInfo_Visits" FromRole="Visits" ToRole="CustomersInfo" />
+        </EntityType>
+        <Association Name="FK_Clients_CustomersInfo">
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomersInfo">
+              <PropertyRef Name="CustomersInfo_Id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="CustomersInfo_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clients_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="Personal_Id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="Personal_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Researches_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+          <End Role="Researches" Type="Self.Researches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Customers_Id" />
+            </Principal>
+            <Dependent Role="Researches">
+              <PropertyRef Name="Clients_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomersInfo_Diagnosis">
+          <End Role="Diagnosis" Type="Self.Diagnosis" Multiplicity="1" />
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosis">
+              <PropertyRef Name="Diagnosis_Id" />
+            </Principal>
+            <Dependent Role="CustomersInfo">
+              <PropertyRef Name="CustomersInfo_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomersInfo_Researches">
+          <End Role="Researches" Type="Self.Researches" Multiplicity="1" />
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Researches">
+              <PropertyRef Name="Researches_Id" />
+            </Principal>
+            <Dependent Role="CustomersInfo">
+              <PropertyRef Name="Researches_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomersInfo_Visits">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="0..1" />
+          <End Role="CustomersInfo" Type="Self.CustomersInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Visits_Id" />
+            </Principal>
+            <Dependent Role="CustomersInfo">
+              <PropertyRef Name="Visits_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Dentistry_ARMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Self.Clients" />
+          <EntitySet Name="CustomersInfo" EntityType="Self.CustomersInfo" />
+          <EntitySet Name="Diagnosis" EntityType="Self.Diagnosis" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" />
+          <EntitySet Name="Researches" EntityType="Self.Researches" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Visits" EntityType="Self.Visits" />
+          <AssociationSet Name="FK_Clients_CustomersInfo" Association="Self.FK_Clients_CustomersInfo">
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clients_Personal" Association="Self.FK_Clients_Personal">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Researches_Clients" Association="Self.FK_Researches_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Researches" EntitySet="Researches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomersInfo_Diagnosis" Association="Self.FK_CustomersInfo_Diagnosis">
+            <End Role="Diagnosis" EntitySet="Diagnosis" />
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomersInfo_Researches" Association="Self.FK_CustomersInfo_Researches">
+            <End Role="Researches" EntitySet="Researches" />
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomersInfo_Visits" Association="Self.FK_CustomersInfo_Visits">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="CustomersInfo" EntitySet="CustomersInfo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Dentistry_ARMModelContainer" CdmEntityContainer="Dentistry_ARMEntities">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="Dentistry_ARMModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="Customers_Id" ColumnName="Customers_Id" />
+                <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+                <ScalarProperty Name="CustomersInfo_Id" ColumnName="CustomersInfo_Id" />
+                <ScalarProperty Name="Personal_FK" ColumnName="Personal_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomersInfo">
+            <EntityTypeMapping TypeName="Dentistry_ARMModel.CustomersInfo">
+              <MappingFragment StoreEntitySet="CustomersInfo">
+                <ScalarProperty Name="CustomersInfo_Id" ColumnName="CustomersInfo_Id" />
+                <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
+                <ScalarProperty Name="CustomersInfo_Allergy" ColumnName="CustomersInfo_Allergy" />
+                <ScalarProperty Name="Diagnosis_Id" ColumnName="Diagnosis_Id" />
+                <ScalarProperty Name="Customers_Drugs" ColumnName="Customers_Drugs" />
+                <ScalarProperty Name="Researches_Id" ColumnName="Researches_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diagnosis">
+            <EntityTypeMapping TypeName="Dentistry_ARMModel.Diagnosis">
+              <MappingFragment StoreEntitySet="Diagnosis">
+                <ScalarProperty Name="Diagnosis_Id" ColumnName="Diagnosis_Id" />
+                <ScalarProperty Name="Diagnosis_Name" ColumnName="Diagnosis_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personal">
+            <EntityTypeMapping TypeName="Dentistry_ARMModel.Personal">
+              <MappingFragment StoreEntitySet="Personal">
+                <ScalarProperty Name="Personal_Id" ColumnName="Personal_Id" />
+                <ScalarProperty Name="Personal_login" ColumnName="Personal_login" />
+                <ScalarProperty Name="Personal_Password" ColumnName="Personal_Password" />
+                <ScalarProperty Name="Personal_Role" ColumnName="Personal_Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Researches">
+            <EntityTypeMapping TypeName="Dentistry_ARMModel.Researches">
+              <MappingFragment StoreEntitySet="Researches">
+                <ScalarProperty Name="Researches_Id" ColumnName="Researches_Id" />
+                <ScalarProperty Name="Researches_Name" ColumnName="Researches_Name" />
+                <ScalarProperty Name="Clients_Id" ColumnName="Clients_Id" />
+                <ScalarProperty Name="Researches_Description" ColumnName="Researches_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Dentistry_ARMModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Visits">
+            <EntityTypeMapping TypeName="Dentistry_ARMModel.Visits">
+              <MappingFragment StoreEntitySet="Visits">
+                <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
+                <ScalarProperty Name="Visits_Time" ColumnName="Visits_Time" />
+                <ScalarProperty Name="Visits_Info" ColumnName="Visits_Info" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:DentistryWpfApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Assets/Dictionaries/MainDictionary.xaml" />
     </Application.Resources>
 </Application>

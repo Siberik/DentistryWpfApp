@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="Montserrat">pack://application:,,,/Assets/Fonts/Montserrat-Regular.ttf#Montserrat Regular
+    </FontFamily>
+    <SolidColorBrush Color="#48257E" x:Key="MainColorBackground"/>
+
+    <SolidColorBrush Color="#FFFFFF" x:Key="MainColorForeground"/>
+    <SolidColorBrush Color="#33B0AE" x:Key="AdditionalColorButton"/>
+    <SolidColorBrush x:Key="AdditionalColor" Color="#176665"/>
+    <Style x:Key="AuthorizationButtonNetral" TargetType="Button">
+
+       
+
+        <Setter Property="Control.Background" Value="{StaticResource MainColorForeground}"/>
+
+        <Setter Property="Control.Foreground" Value="{StaticResource MainColorBackground}"/>
+
+        <Setter Property="Control.Margin" Value="20"/>
+        <Setter Property="Control.FontFamily" Value="Montserrat"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+
+                <Setter Property="Control.Background" Value="{StaticResource AdditionalColorButton}"/>
+
+                <Setter Property="Control.Foreground" Value="{StaticResource MainColorForeground}"/>
+
+                <Setter Property="Control.Margin" Value="20"/>
+                <Setter Property="Control.FontFamily" Value="Montserrat"/>
+                <Setter Property="ItemsControl.BorderBrush" Value="{StaticResource MainColorForeground}"/>
+                <Setter Property="ItemsControl.BorderThickness" Value="2"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Control.Background" Value="{StaticResource AdditionalColor}"/>
+
+                <Setter Property="Control.Foreground" Value="{StaticResource MainColorForeground}"/>
+
+                <Setter Property="Control.Margin" Value="20"/>
+                <Setter Property="Control.FontFamily" Value="Montserrat"/>
+                <Setter Property="ItemsControl.BorderBrush" Value="{StaticResource MainColorForeground}"/>
+                <Setter Property="ItemsControl.BorderThickness" Value="2"/>
+            </Trigger>
+        </Style.Triggers>
+        
+    </Style>
+    
+
+</ResourceDictionary>

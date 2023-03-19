@@ -107,6 +107,10 @@
     <Compile Include="View\Pages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="Assets\Dictionaries\MainDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -150,6 +154,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Resource Include="Assets\Fonts\Montserrat-Regular.ttf" />
     <None Include="Model\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
@@ -163,9 +168,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Dictionaries\" />
-    <Folder Include="Assets\Fonts\" />
-    <Folder Include="Assets\Images\" />
     <Folder Include="ViewModel\" />
     <Folder Include="View\Windows\" />
   </ItemGroup>

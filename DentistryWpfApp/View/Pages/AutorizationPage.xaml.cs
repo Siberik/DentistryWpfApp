@@ -39,5 +39,18 @@ namespace DentistryWpfApp.View.Pages
                 MessageBox.Show("Введены неверные данные!");
             }
         }
+
+       
+        //private void AuthorizeButtonMouseEnter(object sender, MouseEventArgs e)
+        //{
+        //    AuthorizeButton.Style =  (Style)FindResource("AuthorizationButtonHover");
+        //}
+
+       
+
+        //private void AuthorizeButtonMouseLeave(object sender, MouseEventArgs e)
+        //{
+        //    AuthorizeButton.Style = (Style)FindResource("AuthorizationButtonNetral");
+        //}
     }
 }

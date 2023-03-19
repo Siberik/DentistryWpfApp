@@ -8,7 +8,22 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+          
+               
+                <RowDefinition Name="UIGridRow">
+                    <RowDefinition.Style>
+                        <Style TargetType="{x:Type RowDefinition}">
+                            <Setter Property="Height" Value="Auto" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding SomeBoolProperty}" Value="True">
+                                    <Setter Property="Height" Value="0" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RowDefinition.Style>
+                </RowDefinition>
+               
+            
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel x:Name="NavigationStackPanel">

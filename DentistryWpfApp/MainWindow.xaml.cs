@@ -26,6 +26,7 @@ namespace DentistryWpfApp
             InitializeComponent();
             if(!MainFrame.CanGoBack) { 
             NavigationStackPanel.Visibility = Visibility.Hidden;
+                UIGridRow.ActualHeight = 0;
             }
             MainFrame.Navigate(new AutorizationPage());
         }

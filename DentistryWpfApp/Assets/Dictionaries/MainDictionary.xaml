@@ -7,7 +7,28 @@
     <SolidColorBrush Color="#FFFFFF" x:Key="MainColorForeground"/>
     <SolidColorBrush Color="#33B0AE" x:Key="AdditionalColorButton"/>
     <SolidColorBrush x:Key="AdditionalColor" Color="#176665"/>
-    <Style x:Key="AuthorizationButtonNetral" TargetType="Button">
+    <ControlTemplate x:Key="NoMouseOverButtonTemplate" 
+                 TargetType="Button">
+        <Border Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+        </Border>
+
+        <!-- Add only required visual state triggers -->
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled"
+             Value="False">
+                <Setter Property="Background"
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                <Setter Property="Foreground"
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+
+    </ControlTemplate>
+    <Style x:Key="AuthorizationButton" TargetType="Button">
 
        
 
@@ -20,28 +41,34 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
 
-                <Setter Property="Control.Background" Value="{StaticResource AdditionalColorButton}"/>
-
-                <Setter Property="Control.Foreground" Value="{StaticResource MainColorForeground}"/>
-
-                <Setter Property="Control.Margin" Value="20"/>
-                <Setter Property="Control.FontFamily" Value="Montserrat"/>
-                <Setter Property="ItemsControl.BorderBrush" Value="{StaticResource MainColorForeground}"/>
-                <Setter Property="ItemsControl.BorderThickness" Value="2"/>
-            </Trigger>
-            <Trigger Property="IsPressed" Value="True">
                 <Setter Property="Control.Background" Value="{StaticResource AdditionalColor}"/>
 
                 <Setter Property="Control.Foreground" Value="{StaticResource MainColorForeground}"/>
 
                 <Setter Property="Control.Margin" Value="20"/>
                 <Setter Property="Control.FontFamily" Value="Montserrat"/>
+
                 <Setter Property="ItemsControl.BorderBrush" Value="{StaticResource MainColorForeground}"/>
                 <Setter Property="ItemsControl.BorderThickness" Value="2"/>
+                <Setter Property="ItemsControl.Template" Value="{StaticResource NoMouseOverButtonTemplate}"/>
+            </Trigger>
+            
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Control.Background" Value="{StaticResource AdditionalColorButton}"/>
+
+                <Setter Property="Control.Foreground" Value="{StaticResource MainColorForeground}"/>
+
+                <Setter Property="Control.Margin" Value="20"/>
+                <Setter Property="Control.FontFamily" Value="Montserrat"/>
+
+                <Setter Property="ItemsControl.BorderBrush" Value="{StaticResource MainColorForeground}"/>
+                <Setter Property="ItemsControl.BorderThickness" Value="2"/>
+                <Setter Property="ItemsControl.Template" Value="{StaticResource NoMouseOverButtonTemplate}"/>
             </Trigger>
         </Style.Triggers>
         
     </Style>
-    
+  
+
 
 </ResourceDictionary>

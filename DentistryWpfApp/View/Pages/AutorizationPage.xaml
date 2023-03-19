@@ -15,7 +15,7 @@
             <TextBox x:Name="AuthorizationTextBox"/>
             <TextBlock Text="Пароль" Margin="10"/>
             <PasswordBox x:Name="AuthPasswordBox"/>
-            <Button Content="Авторизация" Margin="30" Name="AuthorizeButton" Click="AuthorizeButtonClick" Style="{StaticResource AuthorizationButtonNetral}"/>
+            <Button Content="Авторизация" Margin="30" Name="AuthorizeButton" Click="AuthorizeButtonClick" Style="{StaticResource AuthorizationButton}"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -5,12 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800" Foreground="{StaticResource MainColorForeground}" Background="{StaticResource MainColorBackground}"
+      d:DesignHeight="450" d:DesignWidth="800" Foreground="{StaticResource MainColorForeground}" Background="{StaticResource MainColorBackground}" 
      >
 
     <Grid>
         
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlocksStyle}"/>
+            </StackPanel.Resources>
             <TextBlock Text="Имя пользователя" Margin="10"/>
             <TextBox x:Name="AuthorizationTextBox"/>
             <TextBlock Text="Пароль" Margin="10"/>

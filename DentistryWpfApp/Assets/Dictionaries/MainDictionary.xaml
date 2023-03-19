@@ -2,7 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <FontFamily x:Key="Montserrat">pack://application:,,,/Assets/Fonts/Montserrat-Regular.ttf#Montserrat Regular
     </FontFamily>
-    <SolidColorBrush Color="#48257E" x:Key="MainColorBackground"/>
+    <FontFamily x:Key="Main">pack://application:,,,/Assets/Fonts/OpenSans-Regular.ttf#Open Sans
+    </FontFamily>
+        <SolidColorBrush Color="#48257E" x:Key="MainColorBackground"/>
 
     <SolidColorBrush Color="#FFFFFF" x:Key="MainColorForeground"/>
     <SolidColorBrush Color="#33B0AE" x:Key="AdditionalColorButton"/>
@@ -68,7 +70,9 @@
         </Style.Triggers>
         
     </Style>
-  
+    <Style x:Key="TextBlocksStyle" TargetType="TextBlock">
+        <Setter Property="ItemsControl.FontFamily" Value="Main"/>
+    </Style>
 
 
 </ResourceDictionary>

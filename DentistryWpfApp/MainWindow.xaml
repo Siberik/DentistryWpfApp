@@ -11,6 +11,9 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <StackPanel x:Name="NavigationStackPanel" Background="{StaticResource MainColorBackground}">
+            
+        </StackPanel>
         <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden">
             
         </Frame>

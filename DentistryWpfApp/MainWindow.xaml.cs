@@ -30,18 +30,22 @@ namespace DentistryWpfApp
             }
             MainFrame.Navigate(new AutorizationPage());
         }
-        [ValueConversion(typeof(bool), typeof(GridLength))]
-        public class BoolToGridRowHeightConverter : IValueConverter
-        {
-            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-            {
-                return ((bool)value == true) ? new GridLength(1, GridUnitType.Star) : new GridLength(0);
-            }
+        
 
-            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-            {    // Don't need any convert back
-                return null;
-            }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

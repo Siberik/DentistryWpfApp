@@ -5,32 +5,115 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DentistryWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+         Title="LoginView" Height="550" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
     <Grid>
         <Grid.RowDefinitions>
-          
-               
-                <RowDefinition Name="UIGridRow">
-                    <RowDefinition.Style>
-                        <Style TargetType="{x:Type RowDefinition}">
-                            <Setter Property="Height" Value="Auto" />
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding SomeBoolProperty}" Value="True">
-                                    <Setter Property="Height" Value="0" />
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </RowDefinition.Style>
-                </RowDefinition>
-               
-            
+
+
+            <RowDefinition Name="UIGridRow" Height="50"/>
+
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="NavigationStackPanel">
-            
-        </StackPanel>
-        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden">
-            
-        </Frame>
+       
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="ВХОД"
+                               Foreground="DarkGray"
+                               FontSize="10"
+                               FontFamily="Montserrat"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                    <Button x:Name="MinimizeButton"                           
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#278BEF"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button x:Name="CloseButton"                          
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnClose_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#DA34AE"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#C62DAE"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Grid>
+        
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="0,0,0,50" Grid.Row="2"/>
     </Grid>
 </Window>

@@ -26,13 +26,13 @@ namespace DentistryWpfApp.View.Pages
             InitializeComponent();
         }
 
-       
+        int role = 0;
     Core db= new Core();
         private void AuthorizeButtonClick(object sender, RoutedEventArgs e)
         {
             if (db.context.Personal.Where(x => x.Personal_login == UserLoginTextBox.Text && x.Personal_Password == UserPasswordBox.Password).FirstOrDefault() != null)
             {
-                this.NavigationService.Navigate(new TestPage());
+                role= db.context.Personal
             }
             else
             {
@@ -41,16 +41,6 @@ namespace DentistryWpfApp.View.Pages
         }
 
        
-        //private void AuthorizeButtonMouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    AuthorizeButton.Style =  (Style)FindResource("AuthorizationButtonHover");
-        //}
-
-       
-
-        //private void AuthorizeButtonMouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    AuthorizeButton.Style = (Style)FindResource("AuthorizationButtonNetral");
-        //}
+        
     }
 }

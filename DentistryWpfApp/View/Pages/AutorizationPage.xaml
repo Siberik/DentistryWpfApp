@@ -10,24 +10,165 @@
      >
 
     <Grid>
+        <Border CornerRadius="12">
+            <Border.Background>
+                <ImageBrush ImageSource="../../Assets/Images/MainPhoto.jpg"
+                        />
+            </Border.Background>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Width="310" Height="260" Background="#33B0AE">
-            <StackPanel.Resources>
-                <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlocksStyle}"/>
-                <Style TargetType="TextBox" BasedOn="{StaticResource TextBoxStyle}"/>
-            </StackPanel.Resources>
+            <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
 
-            <TextBlock Text="Имя пользователя" HorizontalAlignment="Center" Margin="0,50,0,7"/>
-            <TextBox x:Name="AuthorizationTextBox"/>
-            <TextBlock Text="Пароль"  HorizontalAlignment="Center" Margin="0,30,0,7"/>
-            <PasswordBox x:Name="AuthPasswordBox" Width="140" Height="20"/>
-            <Button Content="Войти" Margin="30" Name="AuthorizeButton" Click="AuthorizeButtonClick" Style="{StaticResource AuthorizationButton}" BorderBrush="{Binding ActualHeight, ElementName=AuthorizeButton, Mode=OneWay}">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="2"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-        </StackPanel>
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#462AD8" Offset="0"/>
+                        <GradientStop Color="#DA34AE" Offset="0.75"/>
+                        <GradientStop Color="#8A16C1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#060531" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel Width="300"
+                            Grid.Row="1"
+                            Orientation="Vertical"
+                            Margin="0,90,0,0">
+
+                    <!--<Image Source="/Images/Logo.png"
+                           Width="100" Height="100"/>-->
+
+                    <TextBlock
+                               Foreground="White"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"><Run Language="ru-ru" Text="А"/><Run Text="РМ СТОМАТОЛОГА"/><LineBreak/><Run/></TextBlock>
+
+                    <TextBlock Text="Войдите в свой рабочий аккаунт."
+                               Foreground="LightGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               Margin="0,5,0,0"/>
+
+
+                    <TextBlock Text="Логин"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"                             
+                               Margin="0,35,0,0"/>
+
+                    <TextBox x:Name="UserLoginTextBox"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             Margin="0,5,0,0"
+                             Padding="20,0,0,0">
+
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/Assets/Images/user-icon.png"
+                                        Stretch="None"
+                                        AlignmentX="Left"/>
+                        </TextBox.Background>
+                    </TextBox>
+
+                    <TextBlock Text="Пароль"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"                             
+                               Margin="0,15,0,0"/>
+
+                    <PasswordBox x:Name="UserPasswordBox"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             Margin="0,5,0,0"
+                             Padding="20,0,0,0">
+
+                        <PasswordBox.Background>
+                            <ImageBrush ImageSource="../../Assets/Images/key-icon.png"
+                                        Stretch="None"
+                                        AlignmentX="Left"/>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+
+                    <Button x:Name="LogginButton"                          
+                            BorderThickness="0"
+                            Content="LOG IN"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="0,50,0,0"
+                            Click="AuthorizeButtonClick">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,15,0,0">
+
+                        <TextBlock Text="Forgot Password?"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"/>
+
+                        <TextBlock Text="Reset"
+                               Foreground="White"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               Cursor="Hand"
+                               Margin="8,0,0,0"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Border>
     </Grid>
 </Page>

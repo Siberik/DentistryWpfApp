@@ -30,7 +30,7 @@ namespace DentistryWpfApp.View.Pages
     Core db= new Core();
         private void AuthorizeButtonClick(object sender, RoutedEventArgs e)
         {
-            if (db.context.Personal.Where(x => x.Personal_login == AuthorizationTextBox.Text && x.Personal_Password == AuthPasswordBox.Password).FirstOrDefault() != null)
+            if (db.context.Personal.Where(x => x.Personal_login == UserLoginTextBox.Text && x.Personal_Password == UserPasswordBox.Password).FirstOrDefault() != null)
             {
                 this.NavigationService.Navigate(new TestPage());
             }

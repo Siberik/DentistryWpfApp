@@ -269,6 +269,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\MainPhoto.jpg" />
+    <Resource Include="Assets\Images\key-icon.png" />
+    <Resource Include="Assets\Images\user-icon.png" />
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>

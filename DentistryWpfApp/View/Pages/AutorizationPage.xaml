@@ -9,16 +9,24 @@
      >
 
     <Grid>
-        
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Width="310" Height="260" Background="#33B0AE">
             <StackPanel.Resources>
                 <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlocksStyle}"/>
+                <Style TargetType="TextBox" BasedOn="{StaticResource TextBoxStyle}"/>
             </StackPanel.Resources>
-            <TextBlock Text="Имя пользователя" Margin="10"/>
+
+            <TextBlock Text="Имя пользователя" HorizontalAlignment="Center" Margin="0,50,0,7"/>
             <TextBox x:Name="AuthorizationTextBox"/>
-            <TextBlock Text="Пароль" Margin="10"/>
-            <PasswordBox x:Name="AuthPasswordBox"/>
-            <Button Content="Авторизация" Margin="30" Name="AuthorizeButton" Click="AuthorizeButtonClick" Style="{StaticResource AuthorizationButton}"/>
+            <TextBlock Text="Пароль"  HorizontalAlignment="Center" Margin="0,30,0,7"/>
+            <PasswordBox x:Name="AuthPasswordBox" Width="140" Height="20"/>
+            <Button Content="Войти" Margin="30" Name="AuthorizeButton" Click="AuthorizeButtonClick" Style="{StaticResource AuthorizationButton}" BorderBrush="{Binding ActualHeight, ElementName=AuthorizeButton, Mode=OneWay}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="2"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

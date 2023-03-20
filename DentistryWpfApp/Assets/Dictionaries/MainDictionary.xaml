@@ -39,7 +39,10 @@
         <Setter Property="Control.Foreground" Value="{StaticResource MainColorBackground}"/>
 
         <Setter Property="Control.Margin" Value="20"/>
+        <Setter Property="ItemsControl.Width" Value="162"/>
+        <Setter Property="ItemsControl.Height" Value="36"/>
         <Setter Property="Control.FontFamily" Value="Montserrat"/>
+        <Setter Property="ItemsControl.FontSize" Value="16"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
 
@@ -49,6 +52,7 @@
 
                 <Setter Property="Control.Margin" Value="20"/>
                 <Setter Property="Control.FontFamily" Value="Montserrat"/>
+                
 
                 <Setter Property="ItemsControl.BorderBrush" Value="{StaticResource MainColorForeground}"/>
                 <Setter Property="ItemsControl.BorderThickness" Value="2"/>
@@ -73,6 +77,10 @@
     <Style x:Key="TextBlocksStyle" TargetType="TextBlock">
         <Setter Property="ItemsControl.FontFamily" Value="Main"/>
     </Style>
-
+    <Style x:Key="TextBoxStyle" TargetType="TextBox">
+        <Setter Property="ItemsControl.Height" Value="20"/>
+        <Setter Property="ItemsControl.Width" Value="140"/>
+        
+    </Style>
 
 </ResourceDictionary>

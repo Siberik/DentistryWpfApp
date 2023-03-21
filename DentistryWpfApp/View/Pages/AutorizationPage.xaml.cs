@@ -26,13 +26,13 @@ namespace DentistryWpfApp.View.Pages
             InitializeComponent();
         }
 
-        int role = 0;
+        
     Core db= new Core();
         private void AuthorizeButtonClick(object sender, RoutedEventArgs e)
         {
             if (db.context.Personal.Where(x => x.Personal_login == UserLoginTextBox.Text && x.Personal_Password == UserPasswordBox.Password).FirstOrDefault() != null)
             {
-                role= db.context.Personal
+                this.NavigationService.Navigate(new TestPage());
             }
             else
             {

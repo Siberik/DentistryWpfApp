@@ -6,9 +6,42 @@
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TestPage" Foreground="{StaticResource MainColorBackground}">
+      Title="TestPage">
 
     <Grid>
-        
+       
+        <Border CornerRadius="12">
+            
+            <Border.Background>
+                <ImageBrush ImageSource="../../Assets/Images/MainPhoto.jpg"
+                        />
+            </Border.Background>
+
+            <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#462bD8" Offset="0"/>
+                        <GradientStop Color="#DA34AE" Offset="0.75"/>
+                        <GradientStop Color="#3A16C1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+
+                <Border.Background>
+                    
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#060536" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                
+            </Border>
+
+            
+        </Border>
+        <TextBlock Text="Чё" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="AliceBlue"/>
     </Grid>
+        
 </Page>

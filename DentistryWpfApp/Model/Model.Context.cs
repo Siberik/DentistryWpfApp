@@ -13,10 +13,10 @@ namespace DentistryWpfApp.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Dentistry_ARMEntities : DbContext
+    public partial class DentistryEntities : DbContext
     {
-        public Dentistry_ARMEntities()
-            : base("name=Dentistry_ARMEntities")
+        public DentistryEntities()
+            : base("name=DentistryEntities")
         {
         }
     
@@ -25,12 +25,20 @@ namespace DentistryWpfApp.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Allergy> Allergy { get; set; }
+        public virtual DbSet<AllergyInfo> AllergyInfo { get; set; }
         public virtual DbSet<Clients> Clients { get; set; }
-        public virtual DbSet<CustomersInfo> CustomersInfo { get; set; }
+        public virtual DbSet<DentalFormula> DentalFormula { get; set; }
         public virtual DbSet<Diagnosis> Diagnosis { get; set; }
+        public virtual DbSet<DiagnosisHistory> DiagnosisHistory { get; set; }
+        public virtual DbSet<Drugs> Drugs { get; set; }
+        public virtual DbSet<DrugsInfo> DrugsInfo { get; set; }
         public virtual DbSet<Personal> Personal { get; set; }
-        public virtual DbSet<Researches> Researches { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Registration> Registration { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<Services> Services { get; set; }
+        public virtual DbSet<ServicesHistory> ServicesHistory { get; set; }
+        public virtual DbSet<Studies> Studies { get; set; }
         public virtual DbSet<Visits> Visits { get; set; }
     }
 }

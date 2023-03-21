@@ -25,9 +25,7 @@ namespace DentistryWpfApp
         public MainWindow()
         {
             InitializeComponent();
-            if(MainFrame.CanGoBack) {
-                UIGridRow.Height = new GridLength(50, GridUnitType.Pixel); 
-            }
+           
             MainFrame.Navigate(new AutorizationPage());
         }
         

@@ -8,6 +8,6 @@ namespace DentistryWpfApp.Model
 {
     public class Core
     {
-      public  Dentistry_ARMEntities context= new Dentistry_ARMEntities();
+      public DentistryEntities context = new DentistryEntities();
     }
 }

@@ -12,21 +12,14 @@ namespace DentistryWpfApp.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Researches
+    public partial class Studies
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Researches()
-        {
-            this.CustomersInfo = new HashSet<CustomersInfo>();
-        }
-    
-        public int Researches_Id { get; set; }
-        public string Researches_Name { get; set; }
-        public Nullable<int> Clients_Id { get; set; }
-        public string Researches_Description { get; set; }
+        public int Studies_Id { get; set; }
+        public string Studies_Name { get; set; }
+        public string Studies_Description { get; set; }
+        public byte[] Studies_Image { get; set; }
+        public int Clients_Id_FK { get; set; }
     
         public virtual Clients Clients { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CustomersInfo> CustomersInfo { get; set; }
     }
 }

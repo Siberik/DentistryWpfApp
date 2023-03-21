@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DentistryWpfApp.View.Pages
+namespace DentistryWpfApp.View.Pages.AdminPages
 {
     /// <summary>
-    /// Логика взаимодействия для TestPage.xaml
+    /// Логика взаимодействия для MainAdminPage.xaml
     /// </summary>
-    public partial class TestPage : Page
+    public partial class MainAdminPage : Page
     {
-        public TestPage()
+        public MainAdminPage()
         {
             InitializeComponent();
         }

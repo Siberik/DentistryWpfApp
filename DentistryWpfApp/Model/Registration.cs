@@ -12,21 +12,15 @@ namespace DentistryWpfApp.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Personal
+    public partial class Registration
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Personal()
-        {
-            this.Clients = new HashSet<Clients>();
-        }
+        public int Registration_Id { get; set; }
+        public System.DateTime Registration_Date { get; set; }
+        public string Registration_Description { get; set; }
+        public int Clients_Id_FK { get; set; }
+        public int Visits_Id_FK { get; set; }
     
-        public int Personal_Id { get; set; }
-        public string Personal_Login { get; set; }
-        public string Personal_Password { get; set; }
-        public int Role_Id_FK { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Clients> Clients { get; set; }
-        public virtual Role Role { get; set; }
+        public virtual Clients Clients { get; set; }
+        public virtual Visits Visits { get; set; }
     }
 }

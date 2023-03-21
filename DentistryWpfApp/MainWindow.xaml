@@ -23,9 +23,25 @@
         </Grid.RowDefinitions>
        
             <Grid>
-               
 
-                <Grid>
+            <Border CornerRadius="12">
+                
+
+                <Border CornerRadius="10,10,0,0"                    
+           
+            Opacity="0.95">
+
+                    
+
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                            <GradientStop Color="#060536" Offset="0.5"/>
+                            <GradientStop Color="#1B1448" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+            <Grid>
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -34,7 +50,7 @@
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="ВХОД"
+                    <TextBlock x:Name="NavigationTextBlock" Text="ВХОД"
                                Foreground="DarkGray"
                                FontSize="10"
                                FontFamily="Montserrat"

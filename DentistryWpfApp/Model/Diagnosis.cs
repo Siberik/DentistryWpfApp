@@ -14,9 +14,17 @@ namespace DentistryWpfApp.Model
     
     public partial class Diagnosis
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Diagnosis()
+        {
+            this.DiagnosisHistory = new HashSet<DiagnosisHistory>();
+        }
+    
         public int Diagnosis_Id { get; set; }
         public string Diagnosis_Name { get; set; }
+        public string Diagnosis_Description { get; set; }
     
-        public virtual CustomersInfo CustomersInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DiagnosisHistory> DiagnosisHistory { get; set; }
     }
 }

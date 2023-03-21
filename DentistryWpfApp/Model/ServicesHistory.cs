@@ -12,12 +12,14 @@ namespace DentistryWpfApp.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class ServicesHistory
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int ServicesHistory_Id { get; set; }
+        public string Services_Code_FK { get; set; }
+        public System.DateTime ServicesHistory_Date { get; set; }
+        public int Clients_Id_FK { get; set; }
+    
+        public virtual Clients Clients { get; set; }
+        public virtual Services Services { get; set; }
     }
 }

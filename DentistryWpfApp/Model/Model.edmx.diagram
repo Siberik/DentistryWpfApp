@@ -4,20 +4,36 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="263e7d4b4a7447c39356554909ac1998" Name="Diagram1">
-        <EntityTypeShape EntityType="Dentistry_ARMModel.Clients" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Dentistry_ARMModel.CustomersInfo" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Dentistry_ARMModel.Diagnosis" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Dentistry_ARMModel.Personal" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Dentistry_ARMModel.Researches" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Dentistry_ARMModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Dentistry_ARMModel.Visits" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
-        <AssociationConnector Association="Dentistry_ARMModel.FK_Clients_CustomersInfo" ManuallyRouted="false" />
-        <AssociationConnector Association="Dentistry_ARMModel.FK_Clients_Personal" ManuallyRouted="false" />
-        <AssociationConnector Association="Dentistry_ARMModel.FK_Researches_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="Dentistry_ARMModel.FK_CustomersInfo_Diagnosis" ManuallyRouted="false" />
-        <AssociationConnector Association="Dentistry_ARMModel.FK_CustomersInfo_Researches" ManuallyRouted="false" />
-        <AssociationConnector Association="Dentistry_ARMModel.FK_CustomersInfo_Visits" ManuallyRouted="false" />
+      <Diagram DiagramId="7239b43b3dec4f969b1636618821643d" Name="Diagram1" ZoomLevel="27">
+        <EntityTypeShape EntityType="DentistryModel.Allergy" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.AllergyInfo" Width="1.5" PointX="7.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Clients" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.DentalFormula" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Diagnosis" Width="1.5" PointX="8.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.DiagnosisHistory" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Drugs" Width="1.5" PointX="8.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.DrugsInfo" Width="1.5" PointX="10.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Personal" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Registration" Width="1.5" PointX="10.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Role" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Services" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.ServicesHistory" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Studies" Width="1.5" PointX="7.5" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Visits" Width="1.5" PointX="8.25" PointY="17.5" IsExpanded="true" />
+        <AssociationConnector Association="DentistryModel.FK_AllergyInfo_Allergy" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_AllergyInfo_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_Clients_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_DentalFormula_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_DiagnosisHistory_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_DrugsInfo_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_Registration_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_ServicesHistory_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_Studies_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_DiagnosisHistory_Diagnosis" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_DrugsInfo_Drugs" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_Personal_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_Registration_Visits" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_ServicesHistory_Services" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

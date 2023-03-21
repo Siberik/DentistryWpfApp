@@ -12,25 +12,19 @@ namespace DentistryWpfApp.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class CustomersInfo
+    public partial class Allergy
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CustomersInfo()
+        public Allergy()
         {
-            this.Clients = new HashSet<Clients>();
+            this.AllergyInfo = new HashSet<AllergyInfo>();
         }
     
-        public int CustomersInfo_Id { get; set; }
-        public Nullable<int> Visits_Id { get; set; }
-        public string CustomersInfo_Allergy { get; set; }
-        public int Diagnosis_Id { get; set; }
-        public string Customers_Drugs { get; set; }
-        public int Researches_Id { get; set; }
+        public int Allergy_Id { get; set; }
+        public string Allergy_Name { get; set; }
+        public string Allergy_Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Clients> Clients { get; set; }
-        public virtual Diagnosis Diagnosis { get; set; }
-        public virtual Researches Researches { get; set; }
-        public virtual Visits Visits { get; set; }
+        public virtual ICollection<AllergyInfo> AllergyInfo { get; set; }
     }
 }

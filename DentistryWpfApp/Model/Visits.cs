@@ -17,14 +17,14 @@ namespace DentistryWpfApp.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Visits()
         {
-            this.CustomersInfo = new HashSet<CustomersInfo>();
+            this.Registration = new HashSet<Registration>();
         }
     
         public int Visits_Id { get; set; }
-        public Nullable<System.DateTime> Visits_Time { get; set; }
-        public string Visits_Info { get; set; }
+        public System.DateTime Visits_Date { get; set; }
+        public string Visits_Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CustomersInfo> CustomersInfo { get; set; }
+        public virtual ICollection<Registration> Registration { get; set; }
     }
 }

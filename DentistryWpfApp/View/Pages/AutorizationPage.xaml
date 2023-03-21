@@ -17,7 +17,7 @@
             </Border.Background>
 
             <Border CornerRadius="10"                    
-            BorderThickness="2"
+            BorderThickness="3"
             Opacity="0.95">
 
                 <Border.BorderBrush>
@@ -43,28 +43,17 @@
                     <!--<Image Source="/Images/Logo.png"
                            Width="100" Height="100"/>-->
 
-                    <TextBlock
-                               Foreground="White"
-                               FontSize="25"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"
-                               HorizontalAlignment="Center"><Run Language="ru-ru" Text="А"/><Run Text="РМ СТОМАТОЛОГА"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Style="{StaticResource H1 TextBlock}"><Run Language="ru-ru" Text="А"/><Run Text="РМ СТОМАТОЛОГА"/><LineBreak/><Run/></TextBlock>
 
                     <TextBlock Text="Войдите в свой рабочий аккаунт."
-                               Foreground="LightGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"
+                              
+                              Style="{StaticResource H2 TextBlock}"
+
                                Margin="0,5,0,0"/>
 
 
-                    <TextBlock Text="Логин"
-                               Foreground="DarkGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"                             
+                    <TextBlock Text="Логин" Style="{StaticResource Authorize TextBlock}"
+                                                          
                                Margin="0,35,0,0"/>
 
                     <TextBox x:Name="UserLoginTextBox"
@@ -88,10 +77,7 @@
                     </TextBox>
 
                     <TextBlock Text="Пароль"
-                               Foreground="DarkGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"                             
+                               Style="{StaticResource Authorize TextBlock}"                             
                                Margin="0,15,0,0"/>
 
                     <PasswordBox x:Name="UserPasswordBox"
@@ -115,25 +101,9 @@
                     </PasswordBox>
 
                     <Button x:Name="LogginButton"                          
-                            BorderThickness="0"
-                            Content="LOG IN"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            Cursor="Hand"                           
-                            Margin="0,50,0,0"
-                            Click="AuthorizeButtonClick">
+                          Style="{StaticResource LogInButton}" Content="Войти" Click="AuthorizeButtonClick">
 
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#462AD8"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#28AEED"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
+                       
 
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
@@ -149,15 +119,15 @@
 
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
-                                Margin="0,15,0,0">
+                                Margin="0,8,0,0">
 
-                        <TextBlock Text="Forgot Password?"
+                        <TextBlock Text="Забыли пароль?"
                                Foreground="DarkGray"
                                FontSize="12"
                                FontWeight="Medium"
                                FontFamily="Montserrat"/>
 
-                        <TextBlock Text="Reset"
+                        <TextBlock Text="Восстановить"
                                Foreground="White"
                                FontSize="12"
                                FontWeight="Medium"

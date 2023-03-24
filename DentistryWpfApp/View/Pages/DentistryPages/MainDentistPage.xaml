@@ -3,12 +3,19 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:DentistryWpfApp.View.Pages.DentistryPages"
+       xmlns:local="clr-namespace:WPFControlVisibilityApp.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainDentistPage">
-
+    <Page.DataContext>
+        <local:AppViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
+    </Page.Resources>
     <Grid>
+        
+        
         <Border CornerRadius="12">
             <Border.Background>
                 <ImageBrush ImageSource="/Assets/Images/DentistFone.jpg"
@@ -17,9 +24,9 @@
 
             <Border CornerRadius="10"                    
             BorderThickness="3"
-            Opacity="0.95">
+            Opacity="0.95" OverridesDefaultStyle="True">
 
-                <Border.BorderBrush>
+                <Border.BorderBrush >
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                         <GradientStop Color="#462bD8" Offset="0"/>
                         <GradientStop Color="#DA34AE" Offset="0.75"/>
@@ -33,96 +40,24 @@
                         <GradientStop Color="#1B1448" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <StackPanel  VerticalAlignment="Top" Margin="0,50,0,0" HorizontalAlignment="Center" Orientation="Vertical" >
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                <Button Width="150" Height="150" Margin="5">
-
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                </StackPanel>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-                        <Button Width="150" Height="150" Margin="5,25">
-
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                        <Button Width="150" Height="150" Margin="5">
-
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                    </StackPanel>
-                </StackPanel>
+               
                 
             </Border>
             
         </Border>
-        
+        <Button Command="{Binding ShowPanelCommand}"
+                Style="{StaticResource MenuBtnStyle}" />
+
+        <!--// Border Control //-->
+
+        <Border Style="{StaticResource PanelStyle}"
+                Visibility="{Binding IsPanelVisible, Converter={StaticResource BooleanToVisibility}}">
+
+            <!--// Hide Panel Button //-->
+
+            <Button Command="{Binding HidePanelCommand}"
+                    Style="{StaticResource ClosePanelStyle}" />
+
+        </Border>
     </Grid>
 </Page>

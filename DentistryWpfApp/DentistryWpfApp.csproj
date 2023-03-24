@@ -220,6 +220,8 @@
     <Compile Include="Model\Visits.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AppViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\Pages\AdminPages\MainAdminPage.xaml.cs">
       <DependentUpon>MainAdminPage.xaml</DependentUpon>
     </Compile>
@@ -302,7 +304,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
     <Folder Include="View\Windows\" />
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +326,10 @@
     <Resource Include="Assets\Images\DentistFone.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\Images\close_def.png" />
+    <Resource Include="Assets\Images\close_mo.png" />
+    <Resource Include="Assets\Images\menu_def.png" />
+    <Resource Include="Assets\Images\menu_mo.png" />
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

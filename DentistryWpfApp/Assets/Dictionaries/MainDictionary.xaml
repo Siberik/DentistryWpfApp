@@ -49,5 +49,253 @@
         <Setter Property="ItemsControl.FontFamily" Value="{StaticResource Montserrat}"/>
         
     </Style>
-  
+    <ImageBrush x:Key="close_def"
+                ImageSource="/Assets/Images/shutdown_def.png"
+                Stretch="None" />
+
+    <ImageBrush x:Key="close_mo"
+                ImageSource="/Assets/Images/shutdown_mo.png"
+                Stretch="None" />
+
+    <Style x:Key="CloseAppStyle"
+           TargetType="{x:Type Button}">
+
+        <Setter Property="Height"
+                Value="55" />
+        <Setter Property="Width"
+                Value="55" />
+        <Setter Property="HorizontalAlignment"
+                Value="Right" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="Margin"
+                Value="0,10,10,0" />
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border x:Name="border"
+                            BorderThickness="0"
+                            Background="{StaticResource close_def}">
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource close_mo}" />
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource close_mo}" />
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+
+    </Style>
+
+
+    <ImageBrush x:Key="close_panel_def"
+                ImageSource="/Assets/Images/close_def.png"
+                Stretch="None" />
+
+    <ImageBrush x:Key="close_panel_mo"
+                ImageSource="/Assets/Images/close_mo.png"
+                Stretch="None" />
+
+    <Style x:Key="ClosePanelStyle"
+           TargetType="{x:Type Button}">
+
+        <Setter Property="Height"
+                Value="40" />
+        <Setter Property="Width"
+                Value="40" />
+        <Setter Property="HorizontalAlignment"
+                Value="Right" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="Margin"
+                Value="0,10,10,0" />
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border x:Name="border"
+                            BorderThickness="0"
+                            Background="{StaticResource close_panel_def}">
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource close_panel_mo}" />
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource close_panel_mo}" />
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+
+    </Style>
+
+
+    <ImageBrush x:Key="menu_btn_def"
+                ImageSource="/Assets/Images/menu_def.png"
+                Stretch="None" />
+
+    <ImageBrush x:Key="menu_btn_mo"
+                ImageSource="/Assets/Images/menu_mo.png"
+                Stretch="None" />
+
+    <Style x:Key="MenuBtnStyle"
+           TargetType="{x:Type Button}">
+
+        <Setter Property="Height"
+                Value="55" />
+        <Setter Property="Width"
+                Value="55" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="Margin"
+                Value="15,10,0,0" />
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border x:Name="border"
+                            BorderThickness="0"
+                            Background="{StaticResource menu_btn_def}">
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource menu_btn_mo}" />
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource menu_btn_mo}" />
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+
+    </Style>
+
+
+    
+
+   
+
+    <Style x:Key="TextBorder"
+           TargetType="Border">
+
+        <Setter Property="Background"
+                Value="BlueViolet" />
+        <Setter Property="Height"
+                Value="20" />
+        <Setter Property="Width"
+                Value="240" />
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="VerticalAlignment"
+                Value="Bottom" />
+        <Setter Property="CornerRadius"
+                Value="3" />
+
+    </Style>
+
+
+    <Style x:Key="NameBase"
+           TargetType="Grid">
+
+        <Setter Property="Height"
+                Value="70" />
+        <Setter Property="Width"
+                Value="280" />
+        <Setter Property="HorizontalAlignment"
+                Value="Right" />
+        <Setter Property="VerticalAlignment"
+                Value="Bottom" />
+        <Setter Property="Margin"
+                Value="0,0,100,100" />
+
+    </Style>
+
+    <Style x:Key="PanelStyle"
+           TargetType="Border">
+
+        <Setter Property="Width"
+                Value="220" />
+        <Setter Property="Background"
+                Value="BlueViolet" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="CornerRadius"
+                Value="20,0,0,20" />
+
+    </Style>
+
+    
 </ResourceDictionary>

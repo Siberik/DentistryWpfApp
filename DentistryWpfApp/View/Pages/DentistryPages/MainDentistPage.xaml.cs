@@ -20,7 +20,7 @@ namespace DentistryWpfApp.View.Pages.DentistryPages
     /// </summary>
     public partial class MainDentistPage : Page
     {
-        public MainDentistPage()
+        public MainDentistPage(string login,int roleId)
         {
             InitializeComponent();
         }

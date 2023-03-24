@@ -38,7 +38,7 @@ namespace DentistryWpfApp.View.Pages
                if (db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text && x.Personal_Password == UserPasswordBox.Password && x.Role_Id_FK==1).FirstOrDefault() != null)
             {
                    
-                this.NavigationService.Navigate(new MainDentistPage());
+                this.NavigationService.Navigate(new MainDentistPage(UserLoginTextBox.Text,1));
             }
             if (db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text && x.Personal_Password == UserPasswordBox.Password && x.Role_Id_FK == 2).FirstOrDefault() != null)
             {

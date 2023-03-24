@@ -246,7 +246,7 @@
         <Setter Property="HorizontalAlignment"
                 Value="Left" />
         <Setter Property="CornerRadius"
-                Value="13,0,0,13" />
+                Value="7.8,0,0,7.8" />
 
     </Style>
 

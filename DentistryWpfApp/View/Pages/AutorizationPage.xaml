@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800" Foreground="{StaticResource MainColorForeground}" Background="{StaticResource MainColorBackground}" 
+      d:DesignHeight="450" d:DesignWidth="800" Foreground="{StaticResource MainColorForeground}" 
      >
 
     <Grid>
@@ -16,7 +16,7 @@
                         />
             </Border.Background>
 
-            <Border CornerRadius="10"                    
+            <Border CornerRadius="3,3,10,10"                    
             BorderThickness="3"
             Opacity="0.95">
 

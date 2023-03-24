@@ -22,7 +22,7 @@
                         />
             </Border.Background>
 
-            <Border CornerRadius="10"                    
+            <Border CornerRadius="3,3,10,10"                    
             BorderThickness="3"
             Opacity="0.95" OverridesDefaultStyle="True">
 

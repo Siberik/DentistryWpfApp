@@ -328,8 +328,8 @@
     </Resource>
     <Resource Include="Assets\Images\close_def.png" />
     <Resource Include="Assets\Images\close_mo.png" />
-    <Resource Include="Assets\Images\menu_def.png" />
     <Resource Include="Assets\Images\menu_mo.png" />
+    <Resource Include="Assets\Images\menu_def.png" />
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

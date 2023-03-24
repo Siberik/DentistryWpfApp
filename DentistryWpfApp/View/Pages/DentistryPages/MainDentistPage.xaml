@@ -46,7 +46,7 @@
             
         </Border>
         <Button Command="{Binding ShowPanelCommand}"
-                Style="{StaticResource MenuBtnStyle}" />
+                Style="{StaticResource MenuBtnStyle}" Click="Button_Click" />
 
         <!--// Border Control //-->
 

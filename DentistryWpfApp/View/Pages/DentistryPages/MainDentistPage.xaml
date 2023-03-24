@@ -45,6 +45,16 @@
             </Border>
             
         </Border>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="50">
+            <Button Width="200" Height="150">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+        </StackPanel>
         <Button Command="{Binding ShowPanelCommand}"
                 Style="{StaticResource MenuBtnStyle}" Click="Button_Click" />
 

@@ -216,8 +216,6 @@
                 Value="Center" />
         <Setter Property="VerticalAlignment"
                 Value="Bottom" />
-        <Setter Property="CornerRadius"
-                Value="3" />
 
     </Style>
 
@@ -248,7 +246,7 @@
         <Setter Property="HorizontalAlignment"
                 Value="Left" />
         <Setter Property="CornerRadius"
-                Value="20,0,0,20" />
+                Value="13,0,0,13" />
 
     </Style>
 

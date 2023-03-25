@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e0ed8ea6a9b64fc88fab361c681aac0e" Name="Diagram1">
+      <Diagram DiagramId="f8e86b859bd3424081812dd00e54fb1b" Name="Diagram1" ZoomLevel="46">
         <EntityTypeShape EntityType="DentistryModel.Allergy" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.AllergyInfo" Width="1.5" PointX="7.5" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Clients" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="DentistryModel.DiagnosisHistory" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Drugs" Width="1.5" PointX="8.25" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.DrugsInfo" Width="1.5" PointX="10.5" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DentistryModel.Personal" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Personal" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Registration" Width="1.5" PointX="10.5" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Role" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Services" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />

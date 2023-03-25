@@ -47,7 +47,7 @@
         </Border>
         <StackPanel  Margin="10,50,10,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button Width="200" Height="150" Name="ClientsButton" Click="ClientsButtonClick">
+                <Button Width="200" Height="150">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -119,13 +119,12 @@
 
         <Border Style="{StaticResource PanelStyle}"
                 Visibility="{Binding IsPanelVisible, Converter={StaticResource BooleanToVisibility}}">
-            
+
             <!--// Hide Panel Button //-->
 
             <Button Command="{Binding HidePanelCommand}"
                     Style="{StaticResource ClosePanelStyle}" />
 
         </Border>
-        
     </Grid>
 </Page>

@@ -32,15 +32,7 @@ namespace DentistryWpfApp.View.Pages.DentistryPages
 
         private void ClientsButtonClick(object sender, RoutedEventArgs e)
         {
-           ClientsController clientsController = new ClientsController();
-            if (clientsController.AddClient("A","Б",1))
-            {
-                MessageBox.Show("Ты всё добавил");
-            }
-            else
-            {
-                MessageBox.Show("Добавление не выполнено");
-            }
+           
         }
     }
 }

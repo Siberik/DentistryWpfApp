@@ -22,10 +22,11 @@ namespace DentistryWpfApp.View.Pages.DentistryPages
     public partial class MainDentistPage : Page
     {
         
-        public MainDentistPage(string login,int roleId)
+        public MainDentistPage(string name,string lastname,string role,string surname=null)
         {
             InitializeComponent();
-            
+            NameTextBlock.Text = $"Пользователь: {lastname} {name} {surname}";
+            RoleTextBlock.Text =$"Роль: {role}" ;
         }
 
        

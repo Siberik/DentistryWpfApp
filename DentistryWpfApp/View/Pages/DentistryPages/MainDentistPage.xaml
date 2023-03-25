@@ -41,18 +41,15 @@
                     </LinearGradientBrush>
                 </Border.Background>
                
-                
+
+
             </Border>
             
         </Border>
         <StackPanel  Margin="10,50,10,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
                 <Button Width="200" Height="150">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"/>
-                        </Style>
-                    </Button.Resources>
+                    
 
                 </Button>
                 <Button Width="200" Height="150">
@@ -112,7 +109,7 @@
             </StackPanel>
         </StackPanel>
        
-        <Button Command="{Binding ShowPanelCommand}"
+           <Button Command="{Binding ShowPanelCommand}"
                 Style="{StaticResource MenuBtnStyle}"  />
 
         <!--// Border Control //-->
@@ -126,5 +123,16 @@
                     Style="{StaticResource ClosePanelStyle}" />
 
         </Border>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="50">
+            <TextBlock x:Name="NameTextBlock" >
+                
+            </TextBlock>
+            <TextBlock x:Name="RoleTextBlock">
+                
+            </TextBlock>
+
+        </StackPanel>
+        
+        
     </Grid>
 </Page>

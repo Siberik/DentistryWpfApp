@@ -218,6 +218,9 @@
     <Compile Include="Model\Studies.cs">
       <DependentUpon>ModelDestrinity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Visits.cs">
       <DependentUpon>ModelDestrinity.tt</DependentUpon>
     </Compile>

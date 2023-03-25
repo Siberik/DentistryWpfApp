@@ -113,18 +113,19 @@
         </StackPanel>
        
         <Button Command="{Binding ShowPanelCommand}"
-                Style="{StaticResource MenuBtnStyle}" Click="Button_Click" />
+                Style="{StaticResource MenuBtnStyle}"  />
 
         <!--// Border Control //-->
 
         <Border Style="{StaticResource PanelStyle}"
                 Visibility="{Binding IsPanelVisible, Converter={StaticResource BooleanToVisibility}}">
-
+            
             <!--// Hide Panel Button //-->
 
             <Button Command="{Binding HidePanelCommand}"
                     Style="{StaticResource ClosePanelStyle}" />
 
         </Border>
+        
     </Grid>
 </Page>

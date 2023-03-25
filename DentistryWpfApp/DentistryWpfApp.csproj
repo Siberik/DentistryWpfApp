@@ -168,6 +168,7 @@
     <Compile Include="Model\Clients.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Controllers\ClientsController.cs" />
     <Compile Include="Model\Core.cs" />
     <Compile Include="Model\DentalFormula.cs">
       <DependentUpon>Model.tt</DependentUpon>

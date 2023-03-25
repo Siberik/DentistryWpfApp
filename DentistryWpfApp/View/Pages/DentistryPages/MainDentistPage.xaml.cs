@@ -25,9 +25,6 @@ namespace DentistryWpfApp.View.Pages.DentistryPages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }

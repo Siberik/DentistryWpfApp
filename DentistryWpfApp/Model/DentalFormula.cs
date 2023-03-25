@@ -17,7 +17,7 @@ namespace DentistryWpfApp.Model
         public int DentalFormula_Id { get; set; }
         public string DentalFormula_Formula { get; set; }
         public string DentalFormula_Description { get; set; }
-        public Nullable<int> Client_Id_FK { get; set; }
+        public int Client_Id_FK { get; set; }
     
         public virtual Clients Clients { get; set; }
     }

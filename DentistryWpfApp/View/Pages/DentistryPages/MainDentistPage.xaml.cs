@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DentistryWpfApp.Model.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,11 +21,26 @@ namespace DentistryWpfApp.View.Pages.DentistryPages
     /// </summary>
     public partial class MainDentistPage : Page
     {
+        
         public MainDentistPage(string login,int roleId)
         {
             InitializeComponent();
+            
         }
 
        
+
+        private void ClientsButtonClick(object sender, RoutedEventArgs e)
+        {
+           ClientsController clientsController = new ClientsController();
+            if (clientsController.AddClient("A","Б",1))
+            {
+                MessageBox.Show("Ты всё добавил");
+            }
+            else
+            {
+                MessageBox.Show("Добавление не выполнено");
+            }
+        }
     }
 }

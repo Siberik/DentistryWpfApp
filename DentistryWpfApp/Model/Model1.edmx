@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Allergy_Id" />
           </Key>
-          <Property Name="Allergy_Id" Type="int" Nullable="false" />
+          <Property Name="Allergy_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Allergy_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Allergy_Description" Type="nvarchar(max)" />
         </EntityType>
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="AllergyInfo_Id" />
           </Key>
-          <Property Name="AllergyInfo_Id" Type="int" Nullable="false" />
+          <Property Name="AllergyInfo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Allergy_Id_FK" Type="int" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
@@ -25,9 +25,9 @@
           <Key>
             <PropertyRef Name="Clients_Id" />
           </Key>
-          <Property Name="Clients_Id" Type="int" Nullable="false" />
+          <Property Name="Clients_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Clients_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Clients_Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Clients_Surname" Type="nvarchar" MaxLength="50" />
           <Property Name="Clients_Lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Clients_Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
@@ -36,16 +36,16 @@
           <Key>
             <PropertyRef Name="DentalFormula_Id" />
           </Key>
-          <Property Name="DentalFormula_Id" Type="int" Nullable="false" />
+          <Property Name="DentalFormula_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DentalFormula_Formula" Type="nvarchar(max)" Nullable="false" />
           <Property Name="DentalFormula_Description" Type="nvarchar(max)" />
-          <Property Name="Client_Id_FK" Type="int" />
+          <Property Name="Client_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Diagnosis">
           <Key>
             <PropertyRef Name="Diagnosis_Id" />
           </Key>
-          <Property Name="Diagnosis_Id" Type="int" Nullable="false" />
+          <Property Name="Diagnosis_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Diagnosis_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Diagnosis_Description" Type="nvarchar(max)" />
         </EntityType>
@@ -53,7 +53,7 @@
           <Key>
             <PropertyRef Name="DiagnosisHistory_Id" />
           </Key>
-          <Property Name="DiagnosisHistory_Id" Type="int" Nullable="false" />
+          <Property Name="DiagnosisHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Diagnosis_Id_FK" Type="int" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
@@ -61,15 +61,15 @@
           <Key>
             <PropertyRef Name="Drugs_Id" />
           </Key>
-          <Property Name="Drugs_Id" Type="int" Nullable="false" />
-          <Property Name="Drugs_Name" Type="nvarchar(max)" />
+          <Property Name="Drugs_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Drugs_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Drugs_Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="DrugsInfo">
           <Key>
             <PropertyRef Name="DrugsInfo_Id" />
           </Key>
-          <Property Name="DrugsInfo_Id" Type="int" Nullable="false" />
+          <Property Name="DrugsInfo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Drugs_Id_FK" Type="int" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
@@ -77,7 +77,7 @@
           <Key>
             <PropertyRef Name="Personal_Id" />
           </Key>
-          <Property Name="Personal_Id" Type="int" Nullable="false" />
+          <Property Name="Personal_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Personal_Login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Personal_Password" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Role_Id_FK" Type="int" Nullable="false" />
@@ -86,7 +86,7 @@
           <Key>
             <PropertyRef Name="Registration_Id" />
           </Key>
-          <Property Name="Registration_Id" Type="int" Nullable="false" />
+          <Property Name="Registration_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Registration_Date" Type="date" Nullable="false" />
           <Property Name="Registration_Description" Type="nvarchar(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
@@ -96,7 +96,7 @@
           <Key>
             <PropertyRef Name="Role_Id" />
           </Key>
-          <Property Name="Role_Id" Type="int" Nullable="false" />
+          <Property Name="Role_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Role_Name" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Services">
@@ -111,7 +111,7 @@
           <Key>
             <PropertyRef Name="ServicesHistory_Id" />
           </Key>
-          <Property Name="ServicesHistory_Id" Type="int" Nullable="false" />
+          <Property Name="ServicesHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Services_Code_FK" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ServicesHistory_Date" Type="date" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
@@ -120,7 +120,7 @@
           <Key>
             <PropertyRef Name="Studies_Id" />
           </Key>
-          <Property Name="Studies_Id" Type="int" Nullable="false" />
+          <Property Name="Studies_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Studies_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Studies_Description" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Studies_Image" Type="image" />
@@ -130,9 +130,9 @@
           <Key>
             <PropertyRef Name="Visits_Id" />
           </Key>
-          <Property Name="Visits_Id" Type="int" Nullable="false" />
+          <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Visits_Date" Type="date" Nullable="false" />
-          <Property Name="Visits_Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Visits_Description" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
           <End Role="Allergy" Type="Self.Allergy" Multiplicity="1" />
@@ -171,7 +171,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DentalFormula_Clients">
-          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
           <End Role="DentalFormula" Type="Self.DentalFormula" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clients">
@@ -384,7 +384,7 @@
           <Key>
             <PropertyRef Name="Allergy_Id" />
           </Key>
-          <Property Name="Allergy_Id" Type="Int32" Nullable="false" />
+          <Property Name="Allergy_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Allergy_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Allergy_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="AllergyInfo" Relationship="Self.FK_AllergyInfo_Allergy" FromRole="Allergy" ToRole="AllergyInfo" />
@@ -393,7 +393,7 @@
           <Key>
             <PropertyRef Name="AllergyInfo_Id" />
           </Key>
-          <Property Name="AllergyInfo_Id" Type="Int32" Nullable="false" />
+          <Property Name="AllergyInfo_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Allergy_Id_FK" Type="Int32" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Allergy" Relationship="Self.FK_AllergyInfo_Allergy" FromRole="AllergyInfo" ToRole="Allergy" />
@@ -403,9 +403,9 @@
           <Key>
             <PropertyRef Name="Clients_Id" />
           </Key>
-          <Property Name="Clients_Id" Type="Int32" Nullable="false" />
+          <Property Name="Clients_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Clients_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Clients_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Clients_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Clients_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
@@ -422,17 +422,17 @@
           <Key>
             <PropertyRef Name="DentalFormula_Id" />
           </Key>
-          <Property Name="DentalFormula_Id" Type="Int32" Nullable="false" />
+          <Property Name="DentalFormula_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DentalFormula_Formula" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DentalFormula_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Client_Id_FK" Type="Int32" />
+          <Property Name="Client_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_DentalFormula_Clients" FromRole="DentalFormula" ToRole="Clients" />
         </EntityType>
         <EntityType Name="Diagnosis">
           <Key>
             <PropertyRef Name="Diagnosis_Id" />
           </Key>
-          <Property Name="Diagnosis_Id" Type="Int32" Nullable="false" />
+          <Property Name="Diagnosis_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Diagnosis_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Diagnosis_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DiagnosisHistory" Relationship="Self.FK_DiagnosisHistory_Diagnosis" FromRole="Diagnosis" ToRole="DiagnosisHistory" />
@@ -441,7 +441,7 @@
           <Key>
             <PropertyRef Name="DiagnosisHistory_Id" />
           </Key>
-          <Property Name="DiagnosisHistory_Id" Type="Int32" Nullable="false" />
+          <Property Name="DiagnosisHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Diagnosis_Id_FK" Type="Int32" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_DiagnosisHistory_Clients" FromRole="DiagnosisHistory" ToRole="Clients" />
@@ -451,8 +451,8 @@
           <Key>
             <PropertyRef Name="Drugs_Id" />
           </Key>
-          <Property Name="Drugs_Id" Type="Int32" Nullable="false" />
-          <Property Name="Drugs_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Drugs_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Drugs_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Drugs_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DrugsInfo" Relationship="Self.FK_DrugsInfo_Drugs" FromRole="Drugs" ToRole="DrugsInfo" />
         </EntityType>
@@ -460,7 +460,7 @@
           <Key>
             <PropertyRef Name="DrugsInfo_Id" />
           </Key>
-          <Property Name="DrugsInfo_Id" Type="Int32" Nullable="false" />
+          <Property Name="DrugsInfo_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Drugs_Id_FK" Type="Int32" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_DrugsInfo_Clients" FromRole="DrugsInfo" ToRole="Clients" />
@@ -470,7 +470,7 @@
           <Key>
             <PropertyRef Name="Personal_Id" />
           </Key>
-          <Property Name="Personal_Id" Type="Int32" Nullable="false" />
+          <Property Name="Personal_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Personal_Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Personal_Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Role_Id_FK" Type="Int32" Nullable="false" />
@@ -481,7 +481,7 @@
           <Key>
             <PropertyRef Name="Registration_Id" />
           </Key>
-          <Property Name="Registration_Id" Type="Int32" Nullable="false" />
+          <Property Name="Registration_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Registration_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
@@ -493,7 +493,7 @@
           <Key>
             <PropertyRef Name="Role_Id" />
           </Key>
-          <Property Name="Role_Id" Type="Int32" Nullable="false" />
+          <Property Name="Role_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Role_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Personal" Relationship="Self.FK_Personal_Role" FromRole="Role" ToRole="Personal" />
         </EntityType>
@@ -510,7 +510,7 @@
           <Key>
             <PropertyRef Name="ServicesHistory_Id" />
           </Key>
-          <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" />
+          <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Services_Code_FK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
@@ -521,7 +521,7 @@
           <Key>
             <PropertyRef Name="Studies_Id" />
           </Key>
-          <Property Name="Studies_Id" Type="Int32" Nullable="false" />
+          <Property Name="Studies_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Studies_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Studies_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Studies_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -532,9 +532,9 @@
           <Key>
             <PropertyRef Name="Visits_Id" />
           </Key>
-          <Property Name="Visits_Id" Type="Int32" Nullable="false" />
+          <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Visits_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
@@ -574,7 +574,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DentalFormula_Clients">
-          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
           <End Role="DentalFormula" Type="Self.DentalFormula" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clients">

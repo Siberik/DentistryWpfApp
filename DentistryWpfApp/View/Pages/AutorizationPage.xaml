@@ -80,7 +80,7 @@
                                Style="{StaticResource Authorize TextBlock}"                             
                                Margin="0,15,0,0"/>
 
-                    <PasswordBox x:Name="UserPasswordBox"
+                    <PasswordBox x:Name="UserPasswordBox" KeyDown="UserPasswordBoxKeyDown"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            

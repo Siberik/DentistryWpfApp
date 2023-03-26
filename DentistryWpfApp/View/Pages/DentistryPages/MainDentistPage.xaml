@@ -6,7 +6,7 @@
        xmlns:local="clr-namespace:WPFControlVisibilityApp.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MainDentistPage">
+      Title="MainDentistPage" Foreground="{StaticResource MainColorForeground}">
     <Page.DataContext>
         <local:AppViewModel/>
     </Page.DataContext>

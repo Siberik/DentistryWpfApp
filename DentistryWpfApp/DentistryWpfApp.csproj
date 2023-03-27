@@ -40,60 +40,78 @@
   <ItemGroup>
     <Reference Include="Avalonia, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Animation, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Animation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Base, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Base.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Controls, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Controls.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.DesignerSupport, Version=0.7.0.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.DesignerSupport.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.DesktopRuntime, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.DesktopRuntime.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Dialogs, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Dialogs.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Input, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Input.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Interactivity, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Interactivity.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Layout, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Layout.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Markup, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Markup.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Markup.Xaml, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Markup.Xaml.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.MicroCom, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.MicroCom.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.OpenGL, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.OpenGL.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Remote.Protocol, Version=0.10.18.0, Culture=neutral, PublicKeyToken=7ecde292c616a9f3, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.Remote.Protocol.0.10.18\lib\netstandard2.0\Avalonia.Remote.Protocol.dll</HintPath>
     </Reference>
     <Reference Include="Avalonia.Styling, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Styling.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Themes.Default, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Themes.Default.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Themes.Fluent, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Themes.Fluent.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Avalonia.Visuals, Version=0.10.18.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
       <HintPath>..\packages\Avalonia.0.10.18\lib\net461\Avalonia.Visuals.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -160,69 +178,66 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Allergy.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\AllergyInfo.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Clients.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Controllers\ClientsController.cs" />
     <Compile Include="Model\Core.cs" />
     <Compile Include="Model\DentalFormula.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Diagnosis.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\DiagnosisHistory.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Drugs.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\DrugsInfo.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelDestrinity.Context.cs">
+    <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDestrinity.Context.tt</DependentUpon>
+      <DependentUpon>Model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelDestrinity.cs">
+    <Compile Include="Model\Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelDestrinity.Designer.cs">
+    <Compile Include="Model\Model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDestrinity.edmx</DependentUpon>
+      <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Personal.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Registration.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Role.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Services.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ServicesHistory.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Studies.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Visits.cs">
-      <DependentUpon>ModelDestrinity.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
@@ -291,12 +306,12 @@
     </EmbeddedResource>
     <Resource Include="Assets\Fonts\Montserrat-Regular.ttf" />
     <Resource Include="Assets\Fonts\OpenSans-Regular.ttf" />
-    <EntityDeploy Include="Model\ModelDestrinity.edmx">
+    <EntityDeploy Include="Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelDestrinity.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\ModelDestrinity.edmx.diagram">
-      <DependentUpon>ModelDestrinity.edmx</DependentUpon>
+    <None Include="Model\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -307,9 +322,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\Windows\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Assets\Images\MainPhoto.jpg" />
     <Resource Include="Assets\Images\key-icon.png" />
@@ -336,15 +349,16 @@
     <Resource Include="Assets\Images\menu_def.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\ModelDestrinity.Context.tt">
+    <Resource Include="Assets\Images\icon.png" />
+    <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDestrinity.edmx</DependentUpon>
-      <LastGenOutput>ModelDestrinity.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\ModelDestrinity.tt">
+    <Content Include="Model\Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDestrinity.edmx</DependentUpon>
-      <LastGenOutput>ModelDestrinity.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -352,8 +366,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Avalonia.0.10.18\build\Avalonia.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.0.10.18\build\Avalonia.props'))" />
     <Error Condition="!Exists('..\packages\Avalonia.0.10.18\build\Avalonia.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.0.10.18\build\Avalonia.targets'))" />
+    <Error Condition="!Exists('..\packages\Avalonia.0.10.18\build\Avalonia.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.0.10.18\build\Avalonia.props'))" />
   </Target>
   <Import Project="..\packages\Avalonia.0.10.18\build\Avalonia.targets" Condition="Exists('..\packages\Avalonia.0.10.18\build\Avalonia.targets')" />
 </Project>

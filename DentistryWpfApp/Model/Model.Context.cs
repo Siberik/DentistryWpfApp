@@ -40,6 +40,5 @@ namespace DentistryWpfApp.Model
         public virtual DbSet<ServicesHistory> ServicesHistory { get; set; }
         public virtual DbSet<Studies> Studies { get; set; }
         public virtual DbSet<Visits> Visits { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

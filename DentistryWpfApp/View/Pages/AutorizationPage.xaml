@@ -38,7 +38,7 @@
                 <StackPanel Width="300"
                             Grid.Row="1"
                             Orientation="Vertical"
-                            Margin="0,90,0,0">
+                            Margin="0,65,0,0">
 
                     <!--<Image Source="/Images/Logo.png"
                            Width="100" Height="100"/>-->
@@ -80,7 +80,7 @@
                                Style="{StaticResource Authorize TextBlock}"                             
                                Margin="0,15,0,0"/>
 
-                    <PasswordBox x:Name="UserPasswordBox" KeyDown="UserPasswordBoxKeyDown"
+                    <PasswordBox x:Name="UserPasswordBox"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            

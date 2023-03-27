@@ -12,6 +12,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -54,12 +55,14 @@ namespace DentistryWpfApp.View.Pages
             }  
             else
             {
-                System.Windows.MessageBox.Show("Введены неверные данные!");
+                MessageBox.Show("Введены неверные данные!");
             }
+
+           
         }
 
-       
+        
 
-       
+     
     }
 }

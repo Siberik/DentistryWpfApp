@@ -4,6 +4,7 @@
 /// YouTube Channel : C# Design Pro 
 /// </Summary>   
 
+using System;
 using System.ComponentModel;
 using System.Windows.Input;
 
@@ -73,13 +74,24 @@ namespace WPFControlVisibilityApp.ViewModel
             }
         }
 
-       
-       
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
+        private Action<object> execute;
+        private Func<object, bool> canExecute;
+
+        public event EventHandler CanExecuteChanged
+        {
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
+        }
+
+
+
     }
 }

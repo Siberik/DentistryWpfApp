@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800" Foreground="{StaticResource MainColorForeground}" 
      >
-
+   
     <Grid>
         <Border CornerRadius="12">
             <Border.Background>
@@ -80,7 +80,7 @@
                                Style="{StaticResource Authorize TextBlock}"                             
                                Margin="0,15,0,0"/>
 
-                    <PasswordBox x:Name="UserPasswordBox"
+                    <PasswordBox x:Name="UserPasswordBox" 
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
@@ -101,7 +101,7 @@
                     </PasswordBox>
 
                     <Button x:Name="LogginButton"                          
-                          Style="{StaticResource LogInButton}" Content="Войти" Click="AuthorizeButtonClick">
+                          Style="{StaticResource LogInButton}" Content="Войти" Click="AuthorizeButtonClick" IsDefault="True">
 
                        
 

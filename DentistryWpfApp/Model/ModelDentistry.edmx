@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище kistaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -90,7 +90,7 @@
             <PropertyRef Name="Registration_Id" />
           </Key>
           <Property Name="Registration_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Registration_Date" Type="datetime" Nullable="false" />
+          <Property Name="Registration_Date" Type="date" Nullable="false" />
           <Property Name="Registration_Description" Type="nvarchar(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
           <Property Name="Visits_Id_FK" Type="int" Nullable="false" />
@@ -116,7 +116,7 @@
           </Key>
           <Property Name="ServicesHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Services_Code_FK" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="ServicesHistory_Date" Type="datetime" Nullable="false" />
+          <Property Name="ServicesHistory_Date" Type="date" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Studies">
@@ -126,7 +126,7 @@
           <Property Name="Studies_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Studies_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Studies_Description" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Studies_Image" Type="varbinary(max)" />
+          <Property Name="Studies_Image" Type="image" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Visits">
@@ -134,7 +134,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Visits_Date" Type="datetime" Nullable="false" />
+          <Property Name="Visits_Date" Type="date" Nullable="false" />
           <Property Name="Visits_Description" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
@@ -305,7 +305,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище kistaModelContainer">
+        <EntityContainer Name="Хранилище DentistryModelContainer">
           <EntitySet Name="Allergy" EntityType="Self.Allergy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AllergyInfo" EntityType="Self.AllergyInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
@@ -382,7 +382,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="kistaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DentistryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -488,7 +488,7 @@
             <PropertyRef Name="Registration_Id" />
           </Key>
           <Property Name="Registration_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Registration_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <Property Name="Visits_Id_FK" Type="Int32" Nullable="false" />
@@ -518,7 +518,7 @@
           </Key>
           <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Services_Code_FK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_ServicesHistory_Clients" FromRole="ServicesHistory" ToRole="Clients" />
           <NavigationProperty Name="Services" Relationship="Self.FK_ServicesHistory_Services" FromRole="ServicesHistory" ToRole="Services" />
@@ -539,7 +539,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
         </EntityType>
@@ -789,9 +789,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище kistaModelContainer" CdmEntityContainer="DentistryEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DentistryModelContainer" CdmEntityContainer="DentistryEntities">
           <EntitySetMapping Name="Allergy">
-            <EntityTypeMapping TypeName="kistaModel.Allergy">
+            <EntityTypeMapping TypeName="DentistryModel.Allergy">
               <MappingFragment StoreEntitySet="Allergy">
                 <ScalarProperty Name="Allergy_Id" ColumnName="Allergy_Id" />
                 <ScalarProperty Name="Allergy_Name" ColumnName="Allergy_Name" />
@@ -800,7 +800,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AllergyInfo">
-            <EntityTypeMapping TypeName="kistaModel.AllergyInfo">
+            <EntityTypeMapping TypeName="DentistryModel.AllergyInfo">
               <MappingFragment StoreEntitySet="AllergyInfo">
                 <ScalarProperty Name="AllergyInfo_Id" ColumnName="AllergyInfo_Id" />
                 <ScalarProperty Name="Allergy_Id_FK" ColumnName="Allergy_Id_FK" />
@@ -809,7 +809,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Clients">
-            <EntityTypeMapping TypeName="kistaModel.Clients">
+            <EntityTypeMapping TypeName="DentistryModel.Clients">
               <MappingFragment StoreEntitySet="Clients">
                 <ScalarProperty Name="Clients_Id" ColumnName="Clients_Id" />
                 <ScalarProperty Name="Clients_Name" ColumnName="Clients_Name" />
@@ -821,7 +821,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DentalFormula">
-            <EntityTypeMapping TypeName="kistaModel.DentalFormula">
+            <EntityTypeMapping TypeName="DentistryModel.DentalFormula">
               <MappingFragment StoreEntitySet="DentalFormula">
                 <ScalarProperty Name="DentalFormula_Id" ColumnName="DentalFormula_Id" />
                 <ScalarProperty Name="DentalFormula_Formula" ColumnName="DentalFormula_Formula" />
@@ -831,7 +831,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Diagnosis">
-            <EntityTypeMapping TypeName="kistaModel.Diagnosis">
+            <EntityTypeMapping TypeName="DentistryModel.Diagnosis">
               <MappingFragment StoreEntitySet="Diagnosis">
                 <ScalarProperty Name="Diagnosis_Id" ColumnName="Diagnosis_Id" />
                 <ScalarProperty Name="Diagnosis_Name" ColumnName="Diagnosis_Name" />
@@ -840,7 +840,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DiagnosisHistory">
-            <EntityTypeMapping TypeName="kistaModel.DiagnosisHistory">
+            <EntityTypeMapping TypeName="DentistryModel.DiagnosisHistory">
               <MappingFragment StoreEntitySet="DiagnosisHistory">
                 <ScalarProperty Name="DiagnosisHistory_Id" ColumnName="DiagnosisHistory_Id" />
                 <ScalarProperty Name="Diagnosis_Id_FK" ColumnName="Diagnosis_Id_FK" />
@@ -849,7 +849,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Drugs">
-            <EntityTypeMapping TypeName="kistaModel.Drugs">
+            <EntityTypeMapping TypeName="DentistryModel.Drugs">
               <MappingFragment StoreEntitySet="Drugs">
                 <ScalarProperty Name="Drugs_Id" ColumnName="Drugs_Id" />
                 <ScalarProperty Name="Drugs_Name" ColumnName="Drugs_Name" />
@@ -858,7 +858,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DrugsInfo">
-            <EntityTypeMapping TypeName="kistaModel.DrugsInfo">
+            <EntityTypeMapping TypeName="DentistryModel.DrugsInfo">
               <MappingFragment StoreEntitySet="DrugsInfo">
                 <ScalarProperty Name="DrugsInfo_Id" ColumnName="DrugsInfo_Id" />
                 <ScalarProperty Name="Drugs_Id_FK" ColumnName="Drugs_Id_FK" />
@@ -867,7 +867,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Personal">
-            <EntityTypeMapping TypeName="kistaModel.Personal">
+            <EntityTypeMapping TypeName="DentistryModel.Personal">
               <MappingFragment StoreEntitySet="Personal">
                 <ScalarProperty Name="Personal_Id" ColumnName="Personal_Id" />
                 <ScalarProperty Name="Personal_Login" ColumnName="Personal_Login" />
@@ -880,7 +880,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Registration">
-            <EntityTypeMapping TypeName="kistaModel.Registration">
+            <EntityTypeMapping TypeName="DentistryModel.Registration">
               <MappingFragment StoreEntitySet="Registration">
                 <ScalarProperty Name="Registration_Id" ColumnName="Registration_Id" />
                 <ScalarProperty Name="Registration_Date" ColumnName="Registration_Date" />
@@ -891,7 +891,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Role">
-            <EntityTypeMapping TypeName="kistaModel.Role">
+            <EntityTypeMapping TypeName="DentistryModel.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
                 <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
@@ -899,7 +899,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Services">
-            <EntityTypeMapping TypeName="kistaModel.Services">
+            <EntityTypeMapping TypeName="DentistryModel.Services">
               <MappingFragment StoreEntitySet="Services">
                 <ScalarProperty Name="Services_Code" ColumnName="Services_Code" />
                 <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
@@ -908,7 +908,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ServicesHistory">
-            <EntityTypeMapping TypeName="kistaModel.ServicesHistory">
+            <EntityTypeMapping TypeName="DentistryModel.ServicesHistory">
               <MappingFragment StoreEntitySet="ServicesHistory">
                 <ScalarProperty Name="ServicesHistory_Id" ColumnName="ServicesHistory_Id" />
                 <ScalarProperty Name="Services_Code_FK" ColumnName="Services_Code_FK" />
@@ -918,7 +918,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Studies">
-            <EntityTypeMapping TypeName="kistaModel.Studies">
+            <EntityTypeMapping TypeName="DentistryModel.Studies">
               <MappingFragment StoreEntitySet="Studies">
                 <ScalarProperty Name="Studies_Id" ColumnName="Studies_Id" />
                 <ScalarProperty Name="Studies_Name" ColumnName="Studies_Name" />
@@ -929,7 +929,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Visits">
-            <EntityTypeMapping TypeName="kistaModel.Visits">
+            <EntityTypeMapping TypeName="DentistryModel.Visits">
               <MappingFragment StoreEntitySet="Visits">
                 <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
                 <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />

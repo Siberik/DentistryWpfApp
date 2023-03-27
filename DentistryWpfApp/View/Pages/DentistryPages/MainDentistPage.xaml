@@ -50,7 +50,11 @@
         <StackPanel  Margin="10,50,10,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
                 <Button Width="200" Height="150">
-                    
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
 
                 </Button>
                 <Button Width="200" Height="150">
@@ -124,15 +128,30 @@
                     Style="{StaticResource ClosePanelStyle}" />
 
         </Border>
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="50">
-            <TextBlock x:Name="NameTextBlock" >
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,4,10,0" MaxHeight="45" >
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="ItemsControl.BorderThickness" Value="1"/>
+                    <Setter Property="ItemsControl.Background" Value="Bisque"/>
+                    <Setter Property="ItemsControl.BorderBrush" Value="Aqua"/>
+                </Style>
+            </StackPanel.Style>
+            <StackPanel Orientation="Horizontal">
+                <Image  Source="/Assets/Images/icon.png" Width="30" Height="30"/>
+                
+                <StackPanel>
+                <TextBlock x:Name="NameTextBlock" Text="Позователь:">
                 
             </TextBlock>
-            <TextBlock x:Name="RoleTextBlock">
+            <TextBlock x:Name="RoleTextBlock" Text="Роль:">
                 
             </TextBlock>
-
+            </StackPanel>
+            
+            
         </StackPanel>
+            </StackPanel>
+            
         
         
     </Grid>

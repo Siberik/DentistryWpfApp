@@ -323,6 +323,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\user_ico.svg" />
     <Content Include="Model\ModelDentistry.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelDentistry.edmx</DependentUpon>

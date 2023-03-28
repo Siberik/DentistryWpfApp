@@ -8,7 +8,7 @@ using System;
 using System.ComponentModel;
 using System.Windows.Input;
 
-namespace WPFControlVisibilityApp.ViewModel
+namespace DentistryWpfApp.ViewModel
 {
     public class AppViewModel : INotifyPropertyChanged
     {

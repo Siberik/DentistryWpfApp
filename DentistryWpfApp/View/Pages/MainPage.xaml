@@ -1,22 +1,21 @@
-﻿<Page x:Class="DentistryWpfApp.View.Pages.DentistryPages.MainDentistPage"
+﻿<Page x:Class="DentistryWpfApp.View.Pages.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-       xmlns:local="clr-namespace:WPFControlVisibilityApp.ViewModel"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="MainDentistPage" Foreground="{StaticResource MainColorForeground}">
+      xmlns:local="clr-namespace:DentistryWpfApp.ViewModel"
+      
+   
+      Title="MainPage">
+
     <Page.DataContext>
         <local:AppViewModel/>
     </Page.DataContext>
     <Page.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
     </Page.Resources>
-   
+
     <Grid>
-        
-        
+
+
         <Border CornerRadius="12">
             <Border.Background>
                 <ImageBrush ImageSource="/Assets/Images/DentistFone.jpg"
@@ -41,11 +40,11 @@
                         <GradientStop Color="#1B1448" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-               
+
 
 
             </Border>
-            
+
         </Border>
         <StackPanel  Margin="10,50,10,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
@@ -113,8 +112,8 @@
                 </Button>
             </StackPanel>
         </StackPanel>
-       
-           <Button Command="{Binding ShowPanelCommand}"
+
+        <Button Command="{Binding ShowPanelCommand}"
                 Style="{StaticResource MenuBtnStyle}"  />
 
         <!--// Border Control //-->
@@ -137,22 +136,22 @@
                 </Style>
             </StackPanel.Style>
             <StackPanel Orientation="Horizontal">
-                <Image  Source="/Assets/Images/icon.png" Width="30" Height="30"/>
-                
+                <Image  Source="/Assets/Images/icon.png" Name="RoleImge" Width="30" Height="30"/>
+
                 <StackPanel>
-                <TextBlock x:Name="NameTextBlock" Text="Позователь:">
-                
-            </TextBlock>
-            <TextBlock x:Name="RoleTextBlock" Text="Роль:">
-                
-            </TextBlock>
+                    <TextBlock x:Name="NameTextBlock" Text="Позователь:">
+
+                    </TextBlock>
+                    <TextBlock x:Name="RoleTextBlock" Text="Роль:">
+
+                    </TextBlock>
+                </StackPanel>
+
+
             </StackPanel>
-            
-            
         </StackPanel>
-            </StackPanel>
-            
-        
-        
+
+
+
     </Grid>
 </Page>

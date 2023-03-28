@@ -241,17 +241,11 @@
     </Compile>
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
-    <Compile Include="View\Pages\AdminPages\MainAdminPage.xaml.cs">
-      <DependentUpon>MainAdminPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Pages\AutorizationPage.xaml.cs">
       <DependentUpon>AutorizationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\DentistryPages\MainDentistPage.xaml.cs">
+    <Compile Include="View\Pages\MainDentistPage.xaml.cs">
       <DependentUpon>MainDentistPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\ManagersPages\MainManagerPage.xaml.cs">
-      <DependentUpon>MainManagerPage.xaml</DependentUpon>
     </Compile>
     <Page Include="Assets\Dictionaries\MainDictionary.xaml">
       <SubType>Designer</SubType>
@@ -269,19 +263,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Pages\AdminPages\MainAdminPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Pages\AutorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\DentistryPages\MainDentistPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\ManagersPages\MainManagerPage.xaml">
+    <Page Include="View\Pages\MainDentistPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

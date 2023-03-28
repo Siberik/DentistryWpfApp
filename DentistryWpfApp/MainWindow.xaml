@@ -50,7 +50,7 @@
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock x:Name="NavigationTextBlock" Text="ВХОД"
+                    <TextBlock x:Name="NavigationTextBlock" Text="АРМ СТОМАТОЛОГА"
                                Foreground="DarkGray"
                                FontSize="10"
                                FontFamily="Montserrat"

@@ -4,8 +4,17 @@
              xmlns:local="clr-namespace:DentistryWpfApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="Assets/Dictionaries/MainDictionary.xaml" />
-        
+       
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/LightTheme.xaml"/>
+                <ResourceDictionary Source="Assets/Dictionaries/MainDictionary.xaml" />
+
+
+                <ResourceDictionary Source="Styles/MainStyle.xaml"/>
+               
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
     
 </Application>

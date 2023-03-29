@@ -1,5 +1,4 @@
 ﻿using DentistryWpfApp.Model;
-using DentistryWpfApp.View.Pages.DentistryPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +22,7 @@ namespace DentistryWpfApp.View.Pages
         {
             InitializeComponent();
         }
-
+         
         
     Core db= new Core();
         private void AuthorizeButtonClick(object sender, RoutedEventArgs e)
@@ -41,9 +40,8 @@ namespace DentistryWpfApp.View.Pages
                     lastname = db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text).Select(x => x.Personal_LastName).FirstOrDefault();
                     surname = db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text).Select(x => x.Personal_Surname).FirstOrDefault();
                     roleId = db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text && x.Personal_Password == UserPasswordBox.Password).Select(x=>x.Role_Id_FK).FirstOrDefault();
-                    this.NavigationService.Navigate(new MainDentistPage(name,lastname, role,roleId, surname));
-            
-            
+                MessageBox.Show("Вход выполнен");
+
             }  
             else
             {

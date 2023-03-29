@@ -25,15 +25,22 @@ namespace DentistryWpfApp
         public MainWindow()
         {
             InitializeComponent();
-           
-            MainFrame.Navigate(new AutorizationPage());
-        }
-        
 
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+           
+        }
+
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
+            Close();
+        }
+
+        private void btnRestore_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Normal)
+                WindowState = WindowState.Maximized;
+            else
+                WindowState = WindowState.Normal;
         }
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
@@ -41,9 +48,26 @@ namespace DentistryWpfApp
             WindowState = WindowState.Minimized;
         }
 
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+        private void rdHome_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            // PagesNavigation.Navigate(new HomePage());
+
+            PagesNavigation.Navigate(new System.Uri("/View/Pages/HomePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void rdSounds_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new System.Uri("View/Pages/SoundsPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void rdNotes_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new System.Uri("Pages/NotesPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void rdPayment_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new System.Uri("Pages/PaymentPage.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

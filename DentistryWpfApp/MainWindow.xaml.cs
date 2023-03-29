@@ -25,8 +25,8 @@ namespace DentistryWpfApp
         public MainWindow()
         {
             InitializeComponent();
+            PagesNavigation.Navigate(new System.Uri("/View/Pages/HomePage.xaml", UriKind.RelativeOrAbsolute));
 
-           
         }
 
 

@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace DentistryWpfApp
 {
@@ -22,12 +23,19 @@ namespace DentistryWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        int roleWin = 0;
+        string nameWin;
+        string lastnameWin;
+        string surnameWin;
 
         public MainWindow(int role,string name,string lastname,string surname=null)
         {
             InitializeComponent();
             PagesNavigation.Navigate(new HomePage(name,lastname,surname));
-
+            roleWin = role;
+            nameWin = name;
+            lastnameWin = lastname;
+            surnameWin = surname;
         }
 
 
@@ -53,7 +61,7 @@ namespace DentistryWpfApp
         {
             // PagesNavigation.Navigate(new HomePage());
 
-            PagesNavigation.Navigate(new System.Uri("/View/Pages/HomePage.xaml", UriKind.RelativeOrAbsolute));
+            PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin, surnameWin));
         }
 
         private void rdSounds_Click(object sender, RoutedEventArgs e)

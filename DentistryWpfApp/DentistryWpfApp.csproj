@@ -241,11 +241,9 @@
     </Compile>
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
-    <Compile Include="View\Pages\AutorizationPage.xaml.cs">
-      <DependentUpon>AutorizationPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="AutorizationWindow.xaml.cs">
       <DependentUpon>AutorizationWindow.xaml</DependentUpon>
@@ -282,13 +280,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Pages\AutorizationPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Pages\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
     <Page Include="AutorizationWindow.xaml">
       <SubType>Designer</SubType>
@@ -338,6 +333,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Avatars\avatar-2.jpg" />
+    <Resource Include="Assets\Images\home-page.png" />
     <Content Include="Assets\Images\user_ico.svg" />
     <Content Include="Model\ModelDentistry.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -5,10 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800" 
       Title="HomePage">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Лох" FontSize="50"/>
+        <Viewbox>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Добрый день!"  x:Name="NameTextBlock" FontSize="20"/>
+                <TextBlock Text="Здесь вы можете просмотреть, создать и изменить любую информацию касаемо здоровья пациента и состояния его зубов."/>
+            </StackPanel>
+        </Viewbox>
+      
     </Grid>
 </Page>

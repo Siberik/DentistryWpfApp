@@ -22,10 +22,11 @@ namespace DentistryWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+
+        public MainWindow(int role,string name,string lastname,string surname=null)
         {
             InitializeComponent();
-            PagesNavigation.Navigate(new System.Uri("/View/Pages/HomePage.xaml", UriKind.RelativeOrAbsolute));
+            PagesNavigation.Navigate(new HomePage(name,lastname,surname));
 
         }
 

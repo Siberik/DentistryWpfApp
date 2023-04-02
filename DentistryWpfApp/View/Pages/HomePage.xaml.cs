@@ -20,9 +20,10 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class HomePage : Page
     {
-        public HomePage()
+        public HomePage(string name,string lastname,string surname=null)
         {
             InitializeComponent();
+            NameTextBlock.Text = $"Добрый день,{name} {lastname} {surname}!";
         }
     }
 }

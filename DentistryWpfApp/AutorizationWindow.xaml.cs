@@ -40,7 +40,7 @@ namespace DentistryWpfApp.View.Windows
                 lastname = db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text).Select(x => x.Personal_LastName).FirstOrDefault();
                 surname = db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text).Select(x => x.Personal_Surname).FirstOrDefault();
                 roleId = db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text && x.Personal_Password == UserPasswordBox.Password).Select(x => x.Role_Id_FK).FirstOrDefault();
-                var newForm = new MainWindow(); //create your new form.
+                var newForm = new MainWindow(roleId,name,lastname,surname); //create your new form.
                 newForm.Show(); //show the new form.
                 this.Close(); //only if you want to close the current form.
 

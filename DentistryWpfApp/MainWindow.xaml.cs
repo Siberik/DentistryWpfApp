@@ -81,5 +81,10 @@ namespace DentistryWpfApp
         {
             PagesNavigation.Navigate(new System.Uri("Pages/PaymentPage.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void rdHome_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

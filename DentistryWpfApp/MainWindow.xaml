@@ -61,10 +61,13 @@
                             </ToggleButton>
 
                             <StackPanel Grid.Row="3" >
-                                <RadioButton x:Name="rdHome" IsChecked="True" Content=" Домой" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{ DynamicResource home}" Click="rdHome_Click" Cursor="Hand"/>
+                                <RadioButton x:Name="rdHome" IsChecked="True" Content=" Домой" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{ DynamicResource home}" Click="rdHome_Click" Cursor="Hand" Checked="rdHome_Checked"/>
                                 <RadioButton x:Name="rdSounds" Content="Карточки пациента" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource headphones}" Margin="0 5 0 5" Click="rdSounds_Click"/>
                                 <RadioButton x:Name="rdNotes" Content="Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
                                 <RadioButton x:Name="rdPayment" Content="Пока не знаю х2" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPayment_Click"/>
+                                <RadioButton x:Name="rdTest" Content="Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Click="rdNotes_Click">
+                                    
+                                </RadioButton>
                             </StackPanel>
 
                             <StackPanel Grid.Row="3" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20">

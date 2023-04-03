@@ -29,7 +29,7 @@ namespace DentistryWpfApp.View.Pages
             }
             else if(DateTime.Now.Hour >= 5 && DateTime.Now.Hour < 12)
             {
-                timeNow = "Доброе утро";
+                timeNow = "Доброго утра";
             }
             else if(DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 18)
             {

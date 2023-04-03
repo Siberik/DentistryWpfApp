@@ -11,8 +11,9 @@
     <Grid>
         <Viewbox>
             <StackPanel>
-                <TextBlock Text="Добрый день!"  x:Name="NameTextBlock" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="Здесь вы можете просмотреть, создать и изменить любую информацию касаемо здоровья пациента и состояния его зубов." x:Name="RoleTextBlock"/>
+                <TextBlock Text="Добрый день!"  x:Name="NameTextBlock" FontSize="30"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="RoleTextBlock"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="Здесь вы можете просмотреть, создать и изменить любую информацию касаемо здоровья пациента и состояния его зубов." x:Name="RoleDescriptionTextBlock"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Viewbox>
       

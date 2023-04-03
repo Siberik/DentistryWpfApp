@@ -23,19 +23,22 @@ namespace DentistryWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        int roleWin = 0;
+        string roleNameWin;
+        int roleIdWin = 0;
         string nameWin;
         string lastnameWin;
         string surnameWin;
 
-        public MainWindow(int role,string name,string lastname,string surname=null)
+        public MainWindow(int roleId,string role,string name,string lastname,string surname)
         {
             InitializeComponent();
-            PagesNavigation.Navigate(new HomePage(name,lastname,surname));
-            roleWin = role;
+            
+            roleIdWin = roleId;
             nameWin = name;
             lastnameWin = lastname;
             surnameWin = surname;
+            roleNameWin= role;
+            PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin, roleNameWin, surnameWin));
         }
 
 
@@ -61,7 +64,7 @@ namespace DentistryWpfApp
         {
             // PagesNavigation.Navigate(new HomePage());
 
-            PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin, surnameWin));
+            PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin,roleNameWin, surnameWin));
         }
 
         private void rdSounds_Click(object sender, RoutedEventArgs e)

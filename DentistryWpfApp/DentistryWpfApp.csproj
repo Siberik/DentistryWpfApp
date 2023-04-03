@@ -178,66 +178,84 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Allergy.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\AllergyInfo.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Clients.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Controllers\ClientsController.cs" />
     <Compile Include="Model\Core.cs" />
     <Compile Include="Model\DentalFormula.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Diagnosis.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\DiagnosisHistory.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Drugs.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\DrugsInfo.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Model\ModelDentistry.Context.cs">
+    <Compile Include="Model\ModelHospital.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDentistry.Context.tt</DependentUpon>
+      <DependentUpon>ModelHospital.Context.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Model\ModelDentistry.cs">
+    <Compile Include="Model\ModelHospital.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Model\ModelDentistry.Designer.cs">
+    <Compile Include="Model\ModelHospital.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDentistry.edmx</DependentUpon>
+      <DependentUpon>ModelHospital.edmx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Personal.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Registration.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Role.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Services.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\ServicesHistory.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Studies.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Model\Visits.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
+      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
@@ -315,12 +333,14 @@
     </EmbeddedResource>
     <Resource Include="Assets\Fonts\Montserrat-Regular.ttf" />
     <Resource Include="Assets\Fonts\OpenSans-Regular.ttf" />
-    <EntityDeploy Include="Model\ModelDentistry.edmx">
+    <EntityDeploy Include="Model\ModelHospital.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelDentistry.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelHospital.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EntityDeploy>
-    <None Include="Model\ModelDentistry.edmx.diagram">
-      <DependentUpon>ModelDentistry.edmx</DependentUpon>
+    <None Include="Model\ModelHospital.edmx.diagram">
+      <DependentUpon>ModelHospital.edmx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -332,19 +352,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\ModelHospital.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelHospital.edmx</DependentUpon>
+      <LastGenOutput>ModelHospital.Context.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Model\ModelHospital.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelHospital.edmx</DependentUpon>
+      <LastGenOutput>ModelHospital.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\Avatars\avatar-2.jpg" />
     <Resource Include="Assets\Images\home-page.png" />
     <Content Include="Assets\Images\user_ico.svg" />
-    <Content Include="Model\ModelDentistry.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDentistry.edmx</DependentUpon>
-      <LastGenOutput>ModelDentistry.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\ModelDentistry.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDentistry.edmx</DependentUpon>
-      <LastGenOutput>ModelDentistry.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\MainPhoto.jpg" />

@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Allergy">
+          <Key>
+            <PropertyRef Name="Allergy_Id" />
+          </Key>
+          <Property Name="Allergy_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Allergy_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Allergy_Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AllergyInfo">
+          <Key>
+            <PropertyRef Name="AllergyInfo_Id" />
+          </Key>
+          <Property Name="AllergyInfo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Allergy_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Clients_Id" />
+          </Key>
+          <Property Name="Clients_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Clients_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Clients_Surname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Clients_Lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Clients_Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DentalFormula">
+          <Key>
+            <PropertyRef Name="DentalFormula_Id" />
+          </Key>
+          <Property Name="DentalFormula_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DentalFormula_Formula" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DentalFormula_Description" Type="nvarchar(max)" />
+          <Property Name="Client_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Diagnosis">
+          <Key>
+            <PropertyRef Name="Diagnosis_Id" />
+          </Key>
+          <Property Name="Diagnosis_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Diagnosis_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Diagnosis_Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DiagnosisHistory">
+          <Key>
+            <PropertyRef Name="DiagnosisHistory_Id" />
+          </Key>
+          <Property Name="DiagnosisHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Diagnosis_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Drugs">
+          <Key>
+            <PropertyRef Name="Drugs_Id" />
+          </Key>
+          <Property Name="Drugs_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Drugs_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Drugs_Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DrugsInfo">
+          <Key>
+            <PropertyRef Name="DrugsInfo_Id" />
+          </Key>
+          <Property Name="DrugsInfo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Drugs_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Personal_Id" />
+          </Key>
+          <Property Name="Personal_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Personal_Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Personal_Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Personal_Name" Type="nvarchar(max)" />
+          <Property Name="Personal_Surname" Type="nvarchar(max)" />
+          <Property Name="Personal_LastName" Type="nvarchar(max)" />
+          <Property Name="Role_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="Registration_Id" />
+          </Key>
+          <Property Name="Registration_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Registration_Date" Type="datetime" Nullable="false" />
+          <Property Name="Registration_Description" Type="nvarchar(max)" />
+          <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Visits_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Role_Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="Services_Code" />
+          </Key>
+          <Property Name="Services_Code" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Services_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Services_Count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServicesHistory">
+          <Key>
+            <PropertyRef Name="ServicesHistory_Id" />
+          </Key>
+          <Property Name="ServicesHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Services_Code_FK" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ServicesHistory_Date" Type="datetime" Nullable="false" />
+          <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Studies">
+          <Key>
+            <PropertyRef Name="Studies_Id" />
+          </Key>
+          <Property Name="Studies_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Studies_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Studies_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Studies_Image" Type="varbinary(max)" />
+          <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Visits">
+          <Key>
+            <PropertyRef Name="Visits_Id" />
+          </Key>
+          <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Visits_Date" Type="datetime" Nullable="false" />
+          <Property Name="Visits_Description" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_AllergyInfo_Allergy">
+          <End Role="Allergy" Type="Self.Allergy" Multiplicity="1" />
+          <End Role="AllergyInfo" Type="Self.AllergyInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Allergy">
+              <PropertyRef Name="Allergy_Id" />
+            </Principal>
+            <Dependent Role="AllergyInfo">
+              <PropertyRef Name="Allergy_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AllergyInfo_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="AllergyInfo" Type="Self.AllergyInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="AllergyInfo">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clients_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="Personal_Id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="Personal_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DentalFormula_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="DentalFormula" Type="Self.DentalFormula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="DentalFormula">
+              <PropertyRef Name="Client_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisHistory_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="DiagnosisHistory" Type="Self.DiagnosisHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="DiagnosisHistory">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisHistory_Diagnosis">
+          <End Role="Diagnosis" Type="Self.Diagnosis" Multiplicity="1" />
+          <End Role="DiagnosisHistory" Type="Self.DiagnosisHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosis">
+              <PropertyRef Name="Diagnosis_Id" />
+            </Principal>
+            <Dependent Role="DiagnosisHistory">
+              <PropertyRef Name="Diagnosis_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DrugsInfo_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="DrugsInfo" Type="Self.DrugsInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="DrugsInfo">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DrugsInfo_Drugs">
+          <End Role="Drugs" Type="Self.Drugs" Multiplicity="1" />
+          <End Role="DrugsInfo" Type="Self.DrugsInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Drugs">
+              <PropertyRef Name="Drugs_Id" />
+            </Principal>
+            <Dependent Role="DrugsInfo">
+              <PropertyRef Name="Drugs_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personal_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Id" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="Role_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Registration_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="Registration">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Registration_Visits">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Visits_Id" />
+            </Principal>
+            <Dependent Role="Registration">
+              <PropertyRef Name="Visits_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServicesHistory_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="ServicesHistory" Type="Self.ServicesHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="ServicesHistory">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServicesHistory_Services">
+          <End Role="Services" Type="Self.Services" Multiplicity="1" />
+          <End Role="ServicesHistory" Type="Self.ServicesHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Services">
+              <PropertyRef Name="Services_Code" />
+            </Principal>
+            <Dependent Role="ServicesHistory">
+              <PropertyRef Name="Services_Code_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Studies_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="Studies" Type="Self.Studies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="Studies">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище DentistryModelContainer">
+          <EntitySet Name="Allergy" EntityType="Self.Allergy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AllergyInfo" EntityType="Self.AllergyInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DentalFormula" EntityType="Self.DentalFormula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diagnosis" EntityType="Self.Diagnosis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DiagnosisHistory" EntityType="Self.DiagnosisHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Drugs" EntityType="Self.Drugs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DrugsInfo" EntityType="Self.DrugsInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServicesHistory" EntityType="Self.ServicesHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Studies" EntityType="Self.Studies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Visits" EntityType="Self.Visits" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AllergyInfo_Allergy" Association="Self.FK_AllergyInfo_Allergy">
+            <End Role="Allergy" EntitySet="Allergy" />
+            <End Role="AllergyInfo" EntitySet="AllergyInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AllergyInfo_Clients" Association="Self.FK_AllergyInfo_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="AllergyInfo" EntitySet="AllergyInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clients_Personal" Association="Self.FK_Clients_Personal">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DentalFormula_Clients" Association="Self.FK_DentalFormula_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="DentalFormula" EntitySet="DentalFormula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisHistory_Clients" Association="Self.FK_DiagnosisHistory_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="DiagnosisHistory" EntitySet="DiagnosisHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisHistory_Diagnosis" Association="Self.FK_DiagnosisHistory_Diagnosis">
+            <End Role="Diagnosis" EntitySet="Diagnosis" />
+            <End Role="DiagnosisHistory" EntitySet="DiagnosisHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DrugsInfo_Clients" Association="Self.FK_DrugsInfo_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="DrugsInfo" EntitySet="DrugsInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DrugsInfo_Drugs" Association="Self.FK_DrugsInfo_Drugs">
+            <End Role="Drugs" EntitySet="Drugs" />
+            <End Role="DrugsInfo" EntitySet="DrugsInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personal_Role" Association="Self.FK_Personal_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Registration_Clients" Association="Self.FK_Registration_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Registration" EntitySet="Registration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Registration_Visits" Association="Self.FK_Registration_Visits">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="Registration" EntitySet="Registration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServicesHistory_Clients" Association="Self.FK_ServicesHistory_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="ServicesHistory" EntitySet="ServicesHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServicesHistory_Services" Association="Self.FK_ServicesHistory_Services">
+            <End Role="Services" EntitySet="Services" />
+            <End Role="ServicesHistory" EntitySet="ServicesHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Studies_Clients" Association="Self.FK_Studies_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Studies" EntitySet="Studies" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DentistryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Allergy">
+          <Key>
+            <PropertyRef Name="Allergy_Id" />
+          </Key>
+          <Property Name="Allergy_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Allergy_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Allergy_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AllergyInfo" Relationship="Self.FK_AllergyInfo_Allergy" FromRole="Allergy" ToRole="AllergyInfo" />
+        </EntityType>
+        <EntityType Name="AllergyInfo">
+          <Key>
+            <PropertyRef Name="AllergyInfo_Id" />
+          </Key>
+          <Property Name="AllergyInfo_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Allergy_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Allergy" Relationship="Self.FK_AllergyInfo_Allergy" FromRole="AllergyInfo" ToRole="Allergy" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_AllergyInfo_Clients" FromRole="AllergyInfo" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Clients_Id" />
+          </Key>
+          <Property Name="Clients_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Clients_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Clients_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Clients_Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Clients_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AllergyInfo" Relationship="Self.FK_AllergyInfo_Clients" FromRole="Clients" ToRole="AllergyInfo" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK_Clients_Personal" FromRole="Clients" ToRole="Personal" />
+          <NavigationProperty Name="DentalFormula" Relationship="Self.FK_DentalFormula_Clients" FromRole="Clients" ToRole="DentalFormula" />
+          <NavigationProperty Name="DiagnosisHistory" Relationship="Self.FK_DiagnosisHistory_Clients" FromRole="Clients" ToRole="DiagnosisHistory" />
+          <NavigationProperty Name="DrugsInfo" Relationship="Self.FK_DrugsInfo_Clients" FromRole="Clients" ToRole="DrugsInfo" />
+          <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Clients" FromRole="Clients" ToRole="Registration" />
+          <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Clients" FromRole="Clients" ToRole="ServicesHistory" />
+          <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_Clients" FromRole="Clients" ToRole="Studies" />
+        </EntityType>
+        <EntityType Name="DentalFormula">
+          <Key>
+            <PropertyRef Name="DentalFormula_Id" />
+          </Key>
+          <Property Name="DentalFormula_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DentalFormula_Formula" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DentalFormula_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_DentalFormula_Clients" FromRole="DentalFormula" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="Diagnosis">
+          <Key>
+            <PropertyRef Name="Diagnosis_Id" />
+          </Key>
+          <Property Name="Diagnosis_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Diagnosis_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Diagnosis_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DiagnosisHistory" Relationship="Self.FK_DiagnosisHistory_Diagnosis" FromRole="Diagnosis" ToRole="DiagnosisHistory" />
+        </EntityType>
+        <EntityType Name="DiagnosisHistory">
+          <Key>
+            <PropertyRef Name="DiagnosisHistory_Id" />
+          </Key>
+          <Property Name="DiagnosisHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Diagnosis_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_DiagnosisHistory_Clients" FromRole="DiagnosisHistory" ToRole="Clients" />
+          <NavigationProperty Name="Diagnosis" Relationship="Self.FK_DiagnosisHistory_Diagnosis" FromRole="DiagnosisHistory" ToRole="Diagnosis" />
+        </EntityType>
+        <EntityType Name="Drugs">
+          <Key>
+            <PropertyRef Name="Drugs_Id" />
+          </Key>
+          <Property Name="Drugs_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Drugs_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Drugs_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DrugsInfo" Relationship="Self.FK_DrugsInfo_Drugs" FromRole="Drugs" ToRole="DrugsInfo" />
+        </EntityType>
+        <EntityType Name="DrugsInfo">
+          <Key>
+            <PropertyRef Name="DrugsInfo_Id" />
+          </Key>
+          <Property Name="DrugsInfo_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Drugs_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_DrugsInfo_Clients" FromRole="DrugsInfo" ToRole="Clients" />
+          <NavigationProperty Name="Drugs" Relationship="Self.FK_DrugsInfo_Drugs" FromRole="DrugsInfo" ToRole="Drugs" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Personal_Id" />
+          </Key>
+          <Property Name="Personal_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Personal_Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Personal_Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Personal_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personal_Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personal_LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Role_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Personal" FromRole="Personal" ToRole="Clients" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_Personal_Role" FromRole="Personal" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="Registration_Id" />
+          </Key>
+          <Property Name="Registration_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Registration_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Visits_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Registration_Clients" FromRole="Registration" ToRole="Clients" />
+          <NavigationProperty Name="Visits" Relationship="Self.FK_Registration_Visits" FromRole="Registration" ToRole="Visits" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK_Personal_Role" FromRole="Role" ToRole="Personal" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="Services_Code" />
+          </Key>
+          <Property Name="Services_Code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Services_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Services_Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Services" FromRole="Services" ToRole="ServicesHistory" />
+        </EntityType>
+        <EntityType Name="ServicesHistory">
+          <Key>
+            <PropertyRef Name="ServicesHistory_Id" />
+          </Key>
+          <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Services_Code_FK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_ServicesHistory_Clients" FromRole="ServicesHistory" ToRole="Clients" />
+          <NavigationProperty Name="Services" Relationship="Self.FK_ServicesHistory_Services" FromRole="ServicesHistory" ToRole="Services" />
+        </EntityType>
+        <EntityType Name="Studies">
+          <Key>
+            <PropertyRef Name="Studies_Id" />
+          </Key>
+          <Property Name="Studies_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Studies_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Studies_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Studies_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Studies_Clients" FromRole="Studies" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="Visits">
+          <Key>
+            <PropertyRef Name="Visits_Id" />
+          </Key>
+          <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
+        </EntityType>
+        <Association Name="FK_AllergyInfo_Allergy">
+          <End Role="Allergy" Type="Self.Allergy" Multiplicity="1" />
+          <End Role="AllergyInfo" Type="Self.AllergyInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Allergy">
+              <PropertyRef Name="Allergy_Id" />
+            </Principal>
+            <Dependent Role="AllergyInfo">
+              <PropertyRef Name="Allergy_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AllergyInfo_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="AllergyInfo" Type="Self.AllergyInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="AllergyInfo">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clients_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="Personal_Id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="Personal_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DentalFormula_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="DentalFormula" Type="Self.DentalFormula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="DentalFormula">
+              <PropertyRef Name="Client_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisHistory_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="DiagnosisHistory" Type="Self.DiagnosisHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="DiagnosisHistory">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DrugsInfo_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="DrugsInfo" Type="Self.DrugsInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="DrugsInfo">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Registration_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="Registration">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServicesHistory_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="ServicesHistory" Type="Self.ServicesHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="ServicesHistory">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Studies_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="Studies" Type="Self.Studies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="Studies">
+              <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiagnosisHistory_Diagnosis">
+          <End Role="Diagnosis" Type="Self.Diagnosis" Multiplicity="1" />
+          <End Role="DiagnosisHistory" Type="Self.DiagnosisHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diagnosis">
+              <PropertyRef Name="Diagnosis_Id" />
+            </Principal>
+            <Dependent Role="DiagnosisHistory">
+              <PropertyRef Name="Diagnosis_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DrugsInfo_Drugs">
+          <End Role="Drugs" Type="Self.Drugs" Multiplicity="1" />
+          <End Role="DrugsInfo" Type="Self.DrugsInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Drugs">
+              <PropertyRef Name="Drugs_Id" />
+            </Principal>
+            <Dependent Role="DrugsInfo">
+              <PropertyRef Name="Drugs_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personal_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Id" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="Role_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Registration_Visits">
+          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visits">
+              <PropertyRef Name="Visits_Id" />
+            </Principal>
+            <Dependent Role="Registration">
+              <PropertyRef Name="Visits_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServicesHistory_Services">
+          <End Role="Services" Type="Self.Services" Multiplicity="1" />
+          <End Role="ServicesHistory" Type="Self.ServicesHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Services">
+              <PropertyRef Name="Services_Code" />
+            </Principal>
+            <Dependent Role="ServicesHistory">
+              <PropertyRef Name="Services_Code_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DentistryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Allergy" EntityType="Self.Allergy" />
+          <EntitySet Name="AllergyInfo" EntityType="Self.AllergyInfo" />
+          <EntitySet Name="Clients" EntityType="Self.Clients" />
+          <EntitySet Name="DentalFormula" EntityType="Self.DentalFormula" />
+          <EntitySet Name="Diagnosis" EntityType="Self.Diagnosis" />
+          <EntitySet Name="DiagnosisHistory" EntityType="Self.DiagnosisHistory" />
+          <EntitySet Name="Drugs" EntityType="Self.Drugs" />
+          <EntitySet Name="DrugsInfo" EntityType="Self.DrugsInfo" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" />
+          <EntitySet Name="Registration" EntityType="Self.Registration" />
+          <EntitySet Name="Role" EntityType="Self.Role" />
+          <EntitySet Name="Services" EntityType="Self.Services" />
+          <EntitySet Name="ServicesHistory" EntityType="Self.ServicesHistory" />
+          <EntitySet Name="Studies" EntityType="Self.Studies" />
+          <EntitySet Name="Visits" EntityType="Self.Visits" />
+          <AssociationSet Name="FK_AllergyInfo_Allergy" Association="Self.FK_AllergyInfo_Allergy">
+            <End Role="Allergy" EntitySet="Allergy" />
+            <End Role="AllergyInfo" EntitySet="AllergyInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AllergyInfo_Clients" Association="Self.FK_AllergyInfo_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="AllergyInfo" EntitySet="AllergyInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clients_Personal" Association="Self.FK_Clients_Personal">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DentalFormula_Clients" Association="Self.FK_DentalFormula_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="DentalFormula" EntitySet="DentalFormula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisHistory_Clients" Association="Self.FK_DiagnosisHistory_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="DiagnosisHistory" EntitySet="DiagnosisHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DrugsInfo_Clients" Association="Self.FK_DrugsInfo_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="DrugsInfo" EntitySet="DrugsInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Registration_Clients" Association="Self.FK_Registration_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Registration" EntitySet="Registration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServicesHistory_Clients" Association="Self.FK_ServicesHistory_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="ServicesHistory" EntitySet="ServicesHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Studies_Clients" Association="Self.FK_Studies_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Studies" EntitySet="Studies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiagnosisHistory_Diagnosis" Association="Self.FK_DiagnosisHistory_Diagnosis">
+            <End Role="Diagnosis" EntitySet="Diagnosis" />
+            <End Role="DiagnosisHistory" EntitySet="DiagnosisHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DrugsInfo_Drugs" Association="Self.FK_DrugsInfo_Drugs">
+            <End Role="Drugs" EntitySet="Drugs" />
+            <End Role="DrugsInfo" EntitySet="DrugsInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personal_Role" Association="Self.FK_Personal_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Registration_Visits" Association="Self.FK_Registration_Visits">
+            <End Role="Visits" EntitySet="Visits" />
+            <End Role="Registration" EntitySet="Registration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServicesHistory_Services" Association="Self.FK_ServicesHistory_Services">
+            <End Role="Services" EntitySet="Services" />
+            <End Role="ServicesHistory" EntitySet="ServicesHistory" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DentistryModelContainer" CdmEntityContainer="DentistryEntities">
+          <EntitySetMapping Name="Allergy">
+            <EntityTypeMapping TypeName="DentistryModel.Allergy">
+              <MappingFragment StoreEntitySet="Allergy">
+                <ScalarProperty Name="Allergy_Id" ColumnName="Allergy_Id" />
+                <ScalarProperty Name="Allergy_Name" ColumnName="Allergy_Name" />
+                <ScalarProperty Name="Allergy_Description" ColumnName="Allergy_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AllergyInfo">
+            <EntityTypeMapping TypeName="DentistryModel.AllergyInfo">
+              <MappingFragment StoreEntitySet="AllergyInfo">
+                <ScalarProperty Name="AllergyInfo_Id" ColumnName="AllergyInfo_Id" />
+                <ScalarProperty Name="Allergy_Id_FK" ColumnName="Allergy_Id_FK" />
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="DentistryModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="Clients_Id" ColumnName="Clients_Id" />
+                <ScalarProperty Name="Clients_Name" ColumnName="Clients_Name" />
+                <ScalarProperty Name="Clients_Surname" ColumnName="Clients_Surname" />
+                <ScalarProperty Name="Clients_Lastname" ColumnName="Clients_Lastname" />
+                <ScalarProperty Name="Clients_Phone" ColumnName="Clients_Phone" />
+                <ScalarProperty Name="Personal_Id_FK" ColumnName="Personal_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DentalFormula">
+            <EntityTypeMapping TypeName="DentistryModel.DentalFormula">
+              <MappingFragment StoreEntitySet="DentalFormula">
+                <ScalarProperty Name="DentalFormula_Id" ColumnName="DentalFormula_Id" />
+                <ScalarProperty Name="DentalFormula_Formula" ColumnName="DentalFormula_Formula" />
+                <ScalarProperty Name="DentalFormula_Description" ColumnName="DentalFormula_Description" />
+                <ScalarProperty Name="Client_Id_FK" ColumnName="Client_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diagnosis">
+            <EntityTypeMapping TypeName="DentistryModel.Diagnosis">
+              <MappingFragment StoreEntitySet="Diagnosis">
+                <ScalarProperty Name="Diagnosis_Id" ColumnName="Diagnosis_Id" />
+                <ScalarProperty Name="Diagnosis_Name" ColumnName="Diagnosis_Name" />
+                <ScalarProperty Name="Diagnosis_Description" ColumnName="Diagnosis_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiagnosisHistory">
+            <EntityTypeMapping TypeName="DentistryModel.DiagnosisHistory">
+              <MappingFragment StoreEntitySet="DiagnosisHistory">
+                <ScalarProperty Name="DiagnosisHistory_Id" ColumnName="DiagnosisHistory_Id" />
+                <ScalarProperty Name="Diagnosis_Id_FK" ColumnName="Diagnosis_Id_FK" />
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Drugs">
+            <EntityTypeMapping TypeName="DentistryModel.Drugs">
+              <MappingFragment StoreEntitySet="Drugs">
+                <ScalarProperty Name="Drugs_Id" ColumnName="Drugs_Id" />
+                <ScalarProperty Name="Drugs_Name" ColumnName="Drugs_Name" />
+                <ScalarProperty Name="Drugs_Description" ColumnName="Drugs_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DrugsInfo">
+            <EntityTypeMapping TypeName="DentistryModel.DrugsInfo">
+              <MappingFragment StoreEntitySet="DrugsInfo">
+                <ScalarProperty Name="DrugsInfo_Id" ColumnName="DrugsInfo_Id" />
+                <ScalarProperty Name="Drugs_Id_FK" ColumnName="Drugs_Id_FK" />
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personal">
+            <EntityTypeMapping TypeName="DentistryModel.Personal">
+              <MappingFragment StoreEntitySet="Personal">
+                <ScalarProperty Name="Personal_Id" ColumnName="Personal_Id" />
+                <ScalarProperty Name="Personal_Login" ColumnName="Personal_Login" />
+                <ScalarProperty Name="Personal_Password" ColumnName="Personal_Password" />
+                <ScalarProperty Name="Personal_Name" ColumnName="Personal_Name" />
+                <ScalarProperty Name="Personal_Surname" ColumnName="Personal_Surname" />
+                <ScalarProperty Name="Personal_LastName" ColumnName="Personal_LastName" />
+                <ScalarProperty Name="Role_Id_FK" ColumnName="Role_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registration">
+            <EntityTypeMapping TypeName="DentistryModel.Registration">
+              <MappingFragment StoreEntitySet="Registration">
+                <ScalarProperty Name="Registration_Id" ColumnName="Registration_Id" />
+                <ScalarProperty Name="Registration_Date" ColumnName="Registration_Date" />
+                <ScalarProperty Name="Registration_Description" ColumnName="Registration_Description" />
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+                <ScalarProperty Name="Visits_Id_FK" ColumnName="Visits_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role">
+            <EntityTypeMapping TypeName="DentistryModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="DentistryModel.Services">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Services_Code" ColumnName="Services_Code" />
+                <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+                <ScalarProperty Name="Services_Count" ColumnName="Services_Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServicesHistory">
+            <EntityTypeMapping TypeName="DentistryModel.ServicesHistory">
+              <MappingFragment StoreEntitySet="ServicesHistory">
+                <ScalarProperty Name="ServicesHistory_Id" ColumnName="ServicesHistory_Id" />
+                <ScalarProperty Name="Services_Code_FK" ColumnName="Services_Code_FK" />
+                <ScalarProperty Name="ServicesHistory_Date" ColumnName="ServicesHistory_Date" />
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Studies">
+            <EntityTypeMapping TypeName="DentistryModel.Studies">
+              <MappingFragment StoreEntitySet="Studies">
+                <ScalarProperty Name="Studies_Id" ColumnName="Studies_Id" />
+                <ScalarProperty Name="Studies_Name" ColumnName="Studies_Name" />
+                <ScalarProperty Name="Studies_Description" ColumnName="Studies_Description" />
+                <ScalarProperty Name="Studies_Image" ColumnName="Studies_Image" />
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Visits">
+            <EntityTypeMapping TypeName="DentistryModel.Visits">
+              <MappingFragment StoreEntitySet="Visits">
+                <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
+                <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />
+                <ScalarProperty Name="Visits_Description" ColumnName="Visits_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

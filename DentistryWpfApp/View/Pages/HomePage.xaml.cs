@@ -20,10 +20,28 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class HomePage : Page
     {
-        public HomePage(string name,string lastname,string surname=null)
+        public HomePage(string name,string lastname,string role,string surname=null)
         {
+            string timeNow;
+            if(DateTime.Now.Hour>=0&& DateTime.Now.Hour<4)
+            {
+                timeNow = "Доброй ночи";
+            }
+            else if(DateTime.Now.Hour >= 5 && DateTime.Now.Hour < 12)
+            {
+                timeNow = "Доброе утро";
+            }
+            else if(DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 18)
+            {
+                timeNow = "Доброго дня";
+            }
+            else
+            {
+                timeNow = "Доброго вечера";
+            }
             InitializeComponent();
-            NameTextBlock.Text = $"Добрый день,{name} {lastname} {surname}!";
+            NameTextBlock.Text = $"{timeNow}, {lastname} {name} {surname}!";
+            RoleTextBlock.Text = $"Ваша роль: {role}";
         }
     }
 }

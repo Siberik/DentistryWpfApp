@@ -69,7 +69,7 @@ namespace DentistryWpfApp
 
         private void rdSounds_Click(object sender, RoutedEventArgs e)
         {
-            PagesNavigation.Navigate(new System.Uri("View/Pages/SoundsPage.xaml", UriKind.RelativeOrAbsolute));
+            PagesNavigation.Navigate(new System.Uri("View/Pages/ClientsPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void rdNotes_Click(object sender, RoutedEventArgs e)

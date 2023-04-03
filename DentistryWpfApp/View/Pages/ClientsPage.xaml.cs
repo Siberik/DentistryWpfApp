@@ -18,9 +18,9 @@ namespace DentistryWpfApp.View.Pages
     /// <summary>
     /// Логика взаимодействия для SoundsPage.xaml
     /// </summary>
-    public partial class SoundsPage : Page
+    public partial class ClientsPage : Page
     {
-        public SoundsPage()
+        public ClientsPage()
         {
             InitializeComponent();
         }

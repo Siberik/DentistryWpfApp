@@ -266,8 +266,8 @@
     <Compile Include="AutorizationWindow.xaml.cs">
       <DependentUpon>AutorizationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\SoundsPage.xaml.cs">
-      <DependentUpon>SoundsPage.xaml</DependentUpon>
+    <Compile Include="View\Pages\ClientsPage.xaml.cs">
+      <DependentUpon>ClientsPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Page Include="Assets\Dictionaries\MainDictionary.xaml">
@@ -307,7 +307,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\SoundsPage.xaml">
+    <Page Include="View\Pages\ClientsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

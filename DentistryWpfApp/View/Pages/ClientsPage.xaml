@@ -1,4 +1,4 @@
-﻿<Page x:Class="DentistryWpfApp.View.Pages.SoundsPage"
+﻿<Page x:Class="DentistryWpfApp.View.Pages.ClientsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,6 +9,6 @@
       Title="SoundsPage">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Лох2" FontSize="50"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Страница клиентов" FontSize="50"/>
     </Grid>
 </Page>

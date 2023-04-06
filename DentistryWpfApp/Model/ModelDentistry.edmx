@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -84,6 +84,14 @@
           <Property Name="Personal_Surname" Type="nvarchar(max)" />
           <Property Name="Personal_LastName" Type="nvarchar(max)" />
           <Property Name="Role_Id_FK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PhotoPersonal">
+          <Key>
+            <PropertyRef Name="PhotoPersonal_Id" />
+          </Key>
+          <Property Name="PhotoPersonal_Id" Type="int" Nullable="false" />
+          <Property Name="PhotoPersonal_Image" Type="varbinary(max)" />
+          <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Registration">
           <Key>
@@ -245,6 +253,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_PhotoPersonal_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="PhotoPersonal" Type="Self.PhotoPersonal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="PhotoPersonal">
+              <PropertyRef Name="Personal_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Registration_Clients">
           <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
           <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
@@ -315,6 +335,7 @@
           <EntitySet Name="Drugs" EntityType="Self.Drugs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DrugsInfo" EntityType="Self.DrugsInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhotoPersonal" EntityType="Self.PhotoPersonal" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
@@ -357,6 +378,10 @@
             <End Role="Role" EntitySet="Role" />
             <End Role="Personal" EntitySet="Personal" />
           </AssociationSet>
+          <AssociationSet Name="FK_PhotoPersonal_Clients" Association="Self.FK_PhotoPersonal_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="PhotoPersonal" EntitySet="PhotoPersonal" />
+          </AssociationSet>
           <AssociationSet Name="FK_Registration_Clients" Association="Self.FK_Registration_Clients">
             <End Role="Clients" EntitySet="Clients" />
             <End Role="Registration" EntitySet="Registration" />
@@ -378,8 +403,7 @@
             <End Role="Studies" EntitySet="Studies" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DentistryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -420,6 +444,7 @@
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Clients" FromRole="Clients" ToRole="Registration" />
           <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Clients" FromRole="Clients" ToRole="ServicesHistory" />
           <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_Clients" FromRole="Clients" ToRole="Studies" />
+          <NavigationProperty Name="PhotoPersonal" Relationship="DentistryModel.FK_PhotoPersonal_Clients" FromRole="Clients" ToRole="PhotoPersonal" />
         </EntityType>
         <EntityType Name="DentalFormula">
           <Key>
@@ -783,7 +808,33 @@
             <End Role="Services" EntitySet="Services" />
             <End Role="ServicesHistory" EntitySet="ServicesHistory" />
           </AssociationSet>
+          <EntitySet Name="PhotoPersonal" EntityType="DentistryModel.PhotoPersonal" />
+          <AssociationSet Name="FK_PhotoPersonal_Clients" Association="DentistryModel.FK_PhotoPersonal_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="PhotoPersonal" EntitySet="PhotoPersonal" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="PhotoPersonal">
+          <Key>
+            <PropertyRef Name="PhotoPersonal_Id" />
+          </Key>
+          <Property Name="PhotoPersonal_Id" Type="Int32" Nullable="false" />
+          <Property Name="PhotoPersonal_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="DentistryModel.FK_PhotoPersonal_Clients" FromRole="PhotoPersonal" ToRole="Clients" />
+        </EntityType>
+        <Association Name="FK_PhotoPersonal_Clients">
+          <End Type="DentistryModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="DentistryModel.PhotoPersonal" Role="PhotoPersonal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="PhotoPersonal">
+              <PropertyRef Name="Personal_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -934,6 +985,15 @@
                 <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
                 <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />
                 <ScalarProperty Name="Visits_Description" ColumnName="Visits_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhotoPersonal">
+            <EntityTypeMapping TypeName="DentistryModel.PhotoPersonal">
+              <MappingFragment StoreEntitySet="PhotoPersonal">
+                <ScalarProperty Name="Personal_Id_FK" ColumnName="Personal_Id_FK" />
+                <ScalarProperty Name="PhotoPersonal_Image" ColumnName="PhotoPersonal_Image" />
+                <ScalarProperty Name="PhotoPersonal_Id" ColumnName="PhotoPersonal_Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

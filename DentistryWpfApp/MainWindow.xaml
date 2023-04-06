@@ -35,11 +35,11 @@
                             <!-- Logo -->
                             <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top">
                                 <Path Data="{DynamicResource logo}" Margin="16 0 0 0" Stretch="Fill" Fill="{DynamicResource PrimaryBlueColor}" Width="25" Height="25" HorizontalAlignment="Left"/>
-                                <Label Content="Orizon" Foreground="{DynamicResource PrimaryBlueColor}" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14 0 0 0"/>
+                                <Label Content="Прометей" Foreground="{DynamicResource PrimaryBlueColor}" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14 0 0 0"/>
                             </StackPanel>
 
                             <!-- Menu -->
-                            <ToggleButton  x:Name="btnMenu"  HorizontalAlignment="Right" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Style="{StaticResource MenuIconStyle}" Margin="0 0 15 0">
+                            <ToggleButton  x:Name="btnMenu"  HorizontalAlignment="Right" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Style="{StaticResource MenuIconStyle}" Margin="0 0 15 0" Checked="btnMenu_Checked">
                                 <ToggleButton.Triggers>
                                     <EventTrigger RoutedEvent="ToggleButton.Unchecked">
                                         <BeginStoryboard>
@@ -61,13 +61,14 @@
                             </ToggleButton>
 
                             <StackPanel Grid.Row="3" >
-                                <RadioButton x:Name="rdHome" IsChecked="True" Content=" Домой" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{ DynamicResource home}" Click="rdHome_Click" Cursor="Hand" Checked="rdHome_Checked"/>
+                                <RadioButton x:Name="rdHome" IsChecked="True" Content="Домашняя страница" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click" Cursor="Hand" Checked="rdHome_Checked">
+
+                                </RadioButton>
                                 <RadioButton x:Name="rdSounds" Content="Карточки пациента" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource headphones}" Margin="0 5 0 5" Click="rdSounds_Click"/>
                                 <RadioButton x:Name="rdNotes" Content="Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
-                                <RadioButton x:Name="rdPayment" Content="Пока не знаю х2" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPayment_Click"/>
-                                <RadioButton x:Name="rdTest" Content="Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Click="rdNotes_Click">
-                                    
-                                </RadioButton>
+
+
+
                             </StackPanel>
 
                             <StackPanel Grid.Row="3" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20">
@@ -89,8 +90,9 @@
                     <Grid Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="60"/>
-                            <RowDefinition Height="87*"/>
-                            <RowDefinition Height="158*"/>
+                            <RowDefinition Height="105*"/>
+                            <RowDefinition Height="69*"/>
+                            <RowDefinition Height="316*"/>
                         </Grid.RowDefinitions>
 
                         <!-- Start: Button Close | Restore | Minimize -->
@@ -108,11 +110,11 @@
                                     </Style>
                                 </Button.Style>
                             </Button>
-                            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
+                            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}"/>
                         </StackPanel>
                         <!-- End: Button Close | Restore | Minimize -->
 
-                        <Border Grid.Row="1" Margin="10,10,10,10" Grid.RowSpan="2">
+                        <Border Grid.Row="1" Margin="10,10,10,10" Grid.RowSpan="3">
                             <Frame x:Name="PagesNavigation" NavigationUIVisibility="Hidden" Cursor="Hand">
                                 <!-- Page Content -->
                             </Frame>

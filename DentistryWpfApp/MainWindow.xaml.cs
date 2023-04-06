@@ -86,5 +86,15 @@ namespace DentistryWpfApp
         {
 
         }
+
+        private void rdTest_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMenu_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

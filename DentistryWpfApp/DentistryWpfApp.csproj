@@ -146,6 +146,9 @@
     <Compile Include="Model\Personal.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\PhotoPersonal.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Registration.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
@@ -164,6 +167,7 @@
     <Compile Include="Model\Visits.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
+    <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\Pages\HomePage.xaml.cs">
@@ -175,6 +179,10 @@
     </Compile>
     <Compile Include="View\Pages\ClientsPage.xaml.cs">
       <DependentUpon>ClientsPage.xaml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="View\Pages\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Page Include="Assets\Dictionaries\MainDictionary.xaml">
@@ -201,6 +209,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\DarkTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\LightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -220,6 +232,11 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\ClientsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\Pages\UserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

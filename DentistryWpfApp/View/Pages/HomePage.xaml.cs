@@ -23,6 +23,10 @@ namespace DentistryWpfApp.View.Pages
         public HomePage(string name,string lastname,string role,string surname=null)
         {
             string timeNow;
+             ;
+
+            Foreground = Brushes.White;
+            
             if(DateTime.Now.Hour>=0&& DateTime.Now.Hour<4)
             {
                 timeNow = "Доброй ночи";

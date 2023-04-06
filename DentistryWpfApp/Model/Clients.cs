@@ -24,6 +24,7 @@ namespace DentistryWpfApp.Model
             this.Registration = new HashSet<Registration>();
             this.ServicesHistory = new HashSet<ServicesHistory>();
             this.Studies = new HashSet<Studies>();
+            this.PhotoPersonal = new HashSet<PhotoPersonal>();
         }
     
         public int Clients_Id { get; set; }
@@ -48,5 +49,7 @@ namespace DentistryWpfApp.Model
         public virtual ICollection<ServicesHistory> ServicesHistory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Studies> Studies { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhotoPersonal> PhotoPersonal { get; set; }
     }
 }

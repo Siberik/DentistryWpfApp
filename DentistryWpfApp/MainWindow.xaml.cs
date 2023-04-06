@@ -1,4 +1,6 @@
-﻿using DentistryWpfApp.View.Pages;
+﻿using DentistryWpfApp.Themes;
+using DentistryWpfApp.View.Pages;
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -32,7 +34,12 @@ namespace DentistryWpfApp
         public MainWindow(int roleId,string role,string name,string lastname,string surname)
         {
             InitializeComponent();
-            
+
+            var uri = new Uri(@"Themes/LightTheme.xaml", UriKind.Relative);
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            Application.Current.Resources.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+
             roleIdWin = roleId;
             nameWin = name;
             lastnameWin = lastname;
@@ -94,6 +101,38 @@ namespace DentistryWpfApp
 
         private void btnMenu_Checked(object sender, RoutedEventArgs e)
         {
+
+        }
+
+       
+
+        private void UserStackPanelMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+            
+        {
+            rdHome.IsChecked = false;
+            PagesNavigation.Navigate(new UserPage());
+        }
+
+       public  int count = 0;
+        private void rdTheme_Click(object sender, RoutedEventArgs e)
+        {
+            count++;
+            if (count%2!=0)
+
+            {
+                var uri = new Uri(@"Themes/DarkTheme.xaml", UriKind.Relative);
+                ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            }
+            else
+            {
+                var uri = new Uri(@"Themes/LightTheme.xaml", UriKind.Relative);
+                ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            }
+
 
         }
     }

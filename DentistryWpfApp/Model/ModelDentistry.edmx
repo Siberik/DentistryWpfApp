@@ -89,7 +89,7 @@
           <Key>
             <PropertyRef Name="PhotoPersonal_Id" />
           </Key>
-          <Property Name="PhotoPersonal_Id" Type="int" Nullable="false" />
+          <Property Name="PhotoPersonal_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PhotoPersonal_Image" Type="varbinary(max)" />
           <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
         </EntityType>

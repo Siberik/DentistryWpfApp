@@ -66,12 +66,12 @@
                                 </RadioButton>
                                 <RadioButton x:Name="rdSounds" Content="Карточки пациента" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource headphones}" Margin="0 5 0 5" Click="rdSounds_Click"/>
                                 <RadioButton x:Name="rdNotes" Content="Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
-
+                                <RadioButton x:Name="rdTheme" Content="Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click"/>
 
 
                             </StackPanel>
 
-                            <StackPanel Grid.Row="3" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20">
+                            <StackPanel Grid.Row="3" x:Name="UserStackPanel" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20" MouseLeftButtonDown="UserStackPanelMouseLeftButtonDown">
                                 <Ellipse Width="40" Height="40" Margin="10 0 0 0">
                                     <Ellipse.Fill>
                                         <ImageBrush ImageSource="/Assets/Avatars/avatar-2.jpg"/>

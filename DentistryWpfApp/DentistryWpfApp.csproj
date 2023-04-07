@@ -168,6 +168,7 @@
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Themes\ThemesController.cs" />
+    <Compile Include="Themes\ThemesCountClass.cs" />
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\Pages\HomePage.xaml.cs">

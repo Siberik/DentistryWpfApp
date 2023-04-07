@@ -31,6 +31,7 @@ namespace DentistryWpfApp
         string lastnameWin;
         string surnameWin;
 
+        ThemesCountClass themes = new ThemesCountClass();
         public MainWindow(int roleId,string role,string name,string lastname,string surname)
         {
             InitializeComponent();
@@ -113,17 +114,19 @@ namespace DentistryWpfApp
             PagesNavigation.Navigate(new UserPage());
         }
 
-       public  int count = 0;
+       
         private void rdTheme_Click(object sender, RoutedEventArgs e)
         {
-            count++;
-            if (count%2!=0)
+            themes.count++;
+            if (themes.count%2!=0)
 
             {
                 var uri = new Uri(@"Themes/DarkTheme.xaml", UriKind.Relative);
                 ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+                this.PagesNavigation.Refresh();
+
             }
             else
             {
@@ -131,6 +134,7 @@ namespace DentistryWpfApp
                 ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+                this.PagesNavigation.Refresh();
             }
 
 

@@ -1,6 +1,7 @@
 ﻿using DentistryWpfApp.Themes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,9 +26,9 @@ namespace DentistryWpfApp.View.Pages
         {
             string timeNow;
              
-            ThemesCountClass themes = new ThemesCountClass();
             
-           
+
+            
               
             
             
@@ -48,16 +49,18 @@ namespace DentistryWpfApp.View.Pages
                 timeNow = "Доброго вечера";
             }
             InitializeComponent();
-            
-            if (themes.count % 2 != 0)
+
+          
+            if (ThemesCountClass.count % 2 != 0)
             {
-            NameTextBlock.Foreground = Brushes.Thistle;
-                Console.WriteLine(themes.count);
+                NameTextBlock.Foreground = Brushes.Thistle;
+                Console.WriteLine(ThemesCountClass.count);
             }
             else
             {
                 NameTextBlock.Foreground = Brushes.Black;
-                Console.WriteLine(themes.count);
+                Console.WriteLine(ThemesCountClass.count);
+                
             }
             
             NameTextBlock.Text = $"{timeNow}, {lastname} {name} {surname}!";

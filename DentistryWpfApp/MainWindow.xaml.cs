@@ -117,8 +117,8 @@ namespace DentistryWpfApp
        
         private void rdTheme_Click(object sender, RoutedEventArgs e)
         {
-            themes.count++;
-            if (themes.count%2!=0)
+            ThemesCountClass.count++;
+            if (ThemesCountClass.count%2!=0)
 
             {
                 var uri = new Uri(@"Themes/DarkTheme.xaml", UriKind.Relative);
@@ -126,7 +126,7 @@ namespace DentistryWpfApp
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
                 PagesNavigation.NavigationService.Refresh();
-                Console.WriteLine($"Тёмная тема: {themes.count}");
+                Console.WriteLine($"Тёмная тема: {ThemesCountClass.count}");
             }
             else
             {
@@ -135,7 +135,7 @@ namespace DentistryWpfApp
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
                 PagesNavigation.NavigationService.Refresh();
-                Console.WriteLine($"Светлая тема: {themes.count}");
+                Console.WriteLine($"Светлая тема: {ThemesCountClass.count}");
             }
 
 

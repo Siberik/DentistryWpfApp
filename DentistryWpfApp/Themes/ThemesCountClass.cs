@@ -8,6 +8,6 @@ namespace DentistryWpfApp.Themes
 {
     public  class ThemesCountClass
     {
-        public  int count = 0;
+        public static int count;
     }
 }

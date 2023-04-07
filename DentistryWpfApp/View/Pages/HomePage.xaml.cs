@@ -48,13 +48,16 @@ namespace DentistryWpfApp.View.Pages
                 timeNow = "Доброго вечера";
             }
             InitializeComponent();
+            
             if (themes.count % 2 != 0)
             {
             NameTextBlock.Foreground = Brushes.Thistle;
+                Console.WriteLine(themes.count);
             }
             else
             {
                 NameTextBlock.Foreground = Brushes.Black;
+                Console.WriteLine(themes.count);
             }
             
             NameTextBlock.Text = $"{timeNow}, {lastname} {name} {surname}!";

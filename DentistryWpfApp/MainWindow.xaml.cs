@@ -125,8 +125,8 @@ namespace DentistryWpfApp
                 ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-                this.PagesNavigation.Refresh();
-
+                PagesNavigation.NavigationService.Refresh();
+                Console.WriteLine($"Тёмная тема: {themes.count}");
             }
             else
             {
@@ -134,7 +134,8 @@ namespace DentistryWpfApp
                 ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-                this.PagesNavigation.Refresh();
+                PagesNavigation.NavigationService.Refresh();
+                Console.WriteLine($"Светлая тема: {themes.count}");
             }
 
 

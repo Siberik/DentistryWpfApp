@@ -136,6 +136,7 @@ namespace DentistryWpfApp
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
                 PagesNavigation.NavigationService.Refresh();
                 Console.WriteLine($"Светлая тема: {ThemesCountClass.count}");
+                rdTheme.Tag =
             }
 
 

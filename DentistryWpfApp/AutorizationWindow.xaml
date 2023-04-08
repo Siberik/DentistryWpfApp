@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DentistryWpfApp.View.Windows"
         mc:Ignorable="d"
-        Title="AutorizationWindow" Height="450" Width="800"  WindowStyle="None"
+        Title="AutorizationWindow" Height="450" Width="800"  
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" Background="Transparent">
     <Grid>

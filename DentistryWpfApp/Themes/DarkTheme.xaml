@@ -17,5 +17,5 @@
     <SolidColorBrush x:Key="TextSecundaryColor" Color="AliceBlue"/>
 
     <!-- Icons Colors -->
-    <SolidColorBrush x:Key="ActionIconColor" Color="#434344"/>
+    <SolidColorBrush x:Key="ActionIconColor" Color="#FFF"/>
 </ResourceDictionary>

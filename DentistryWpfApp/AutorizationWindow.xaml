@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AutorizationWindow" Height="450" Width="800"  WindowStyle="None"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" Background="{StaticResource MainColorForeground}">
+        WindowStartupLocation="CenterScreen" Background="{StaticResource MainColorBackground}">
    
         
 
@@ -19,7 +19,7 @@
             </Grid.RowDefinitions>
        
               <StackPanel  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
-                <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
+                <Button x:Name="btnClose"  Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
 
                 <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
             </StackPanel>

@@ -110,7 +110,7 @@
                                     </Style>
                                 </Button.Style>
                             </Button>
-                            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}"/>
+                            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
                         </StackPanel>
                         <!-- End: Button Close | Restore | Minimize -->
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DentistryWpfApp.Model;
+using JetBrains.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,24 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class PatientsPage : Page
     {
+        public int id;
+       Core db = new Core();
         public PatientsPage()
         {
             InitializeComponent();
+            var patientsList= db.context.Clients;
+            for (int i = 0; i < patientsList.Select(x=>x.Clients_Id).ToArray().Count(); i++)
+            {
+                
+                var textblock = new TextBlock();
+                textblock.Text = $" {patientsList.Where(x => x.Clients_Id == i).ToString()} {patientsList.Where(x => x.Clients_Id == i).Select(x => x.Clients_Name)} ";
+                textblock.MouseDown += Label_MouseDown;
+            }
+
+        }
+        private void Label_MouseDown(object sender, RoutedEventArgs e) 
+        {
+           
         }
     }
 }

@@ -54,7 +54,7 @@ namespace DentistryWpfApp.View.Pages
            
             
             NameTextBlock.Text = $"{timeNow}, {lastname} {name} {surname}!";
-            RoleTextBlock.Text = $"Ваша роль: {role}";
+            RoleTextBlock.Text = $"Ваша должность: {role}";
             
         }
     }

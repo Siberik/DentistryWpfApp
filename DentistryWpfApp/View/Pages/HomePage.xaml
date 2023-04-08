@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800" 
-      Title="HomePage" Foreground="Black">
+      Title="HomePage" Foreground="{DynamicResource TextPrimaryColor}">
 
     <Grid>
         <Viewbox>

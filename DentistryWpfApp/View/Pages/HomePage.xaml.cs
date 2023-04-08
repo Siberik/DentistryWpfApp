@@ -51,17 +51,7 @@ namespace DentistryWpfApp.View.Pages
             InitializeComponent();
 
           
-            if (ThemesCountClass.count % 2 != 0)
-            {
-                NameTextBlock.Foreground = Brushes.Thistle;
-                Console.WriteLine(ThemesCountClass.count);
-            }
-            else
-            {
-                NameTextBlock.Foreground = Brushes.Black;
-                Console.WriteLine(ThemesCountClass.count);
-                
-            }
+           
             
             NameTextBlock.Text = $"{timeNow}, {lastname} {name} {surname}!";
             RoleTextBlock.Text = $"Ваша роль: {role}";

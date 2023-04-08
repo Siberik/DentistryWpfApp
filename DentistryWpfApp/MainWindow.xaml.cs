@@ -75,10 +75,7 @@ namespace DentistryWpfApp
             PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin,roleNameWin, surnameWin));
         }
 
-        private void rdSounds_Click(object sender, RoutedEventArgs e)
-        {
-            PagesNavigation.Navigate(new System.Uri("View/Pages/ClientsPage.xaml", UriKind.RelativeOrAbsolute));
-        }
+      
 
         private void rdNotes_Click(object sender, RoutedEventArgs e)
         {
@@ -110,6 +107,8 @@ namespace DentistryWpfApp
         private void UserStackPanelMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
             
         {
+            rdNotes.IsChecked = false;
+            rdPatients.IsChecked = false;
             rdHome.IsChecked = false;
             PagesNavigation.Navigate(new UserPage());
         }
@@ -121,25 +120,38 @@ namespace DentistryWpfApp
             if (ThemesCountClass.count%2!=0)
 
             {
+                rdTheme.IsChecked = false;
                 var uri = new Uri(@"Themes/DarkTheme.xaml", UriKind.Relative);
                 ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
                 PagesNavigation.NavigationService.Refresh();
                 Console.WriteLine($"Тёмная тема: {ThemesCountClass.count}");
+                rdTheme.SetResourceReference(RadioButton.TagProperty, "sun");
+
+
+
             }
             else
             {
+                rdTheme.IsChecked=false;
                 var uri = new Uri(@"Themes/LightTheme.xaml", UriKind.Relative);
                 ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
                 PagesNavigation.NavigationService.Refresh();
                 Console.WriteLine($"Светлая тема: {ThemesCountClass.count}");
-                
+                rdTheme.SetResourceReference(RadioButton.TagProperty, "moon");
+
             }
 
 
+        }
+
+      
+        private void rdPatientsClick(object sender, RoutedEventArgs e)
+        {
+            this.PagesNavigation.Navigate(new PatientsPage());
         }
     }
 }

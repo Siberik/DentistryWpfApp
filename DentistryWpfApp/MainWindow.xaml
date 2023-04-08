@@ -64,7 +64,7 @@
                                 <RadioButton x:Name="rdHome" IsChecked="True" Content=" Домашняя страница" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click" Cursor="Hand" Checked="rdHome_Checked">
 
                                 </RadioButton>
-                                <RadioButton x:Name="rdSounds" Content=" Карточки пациентов" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource patient}" Margin="0 5 0 5" Click="rdSounds_Click"/>
+                                <RadioButton x:Name="rdPatients" Content=" Карточки пациентов" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource patient}" Margin="0 5 0 5" Click="rdPatientsClick" Cursor="Hand"/>
                                 <RadioButton x:Name="rdNotes" Content=" Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
                                 <RadioButton x:Name="rdTheme" Content=" Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click" IsChecked="False"/>
 

@@ -273,5 +273,8 @@
         <!--Unknown tag: metadata-->
     </Canvas>
 
-
+    <Style x:Key="PatientsTextBlock" TargetType="TextBlock">
+        <Setter Property="Background" Value="Blue"/>
+        
+    </Style>
 </ResourceDictionary>

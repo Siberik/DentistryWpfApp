@@ -36,10 +36,15 @@ namespace DentistryWpfApp.View.Pages
             {
             string Lastname= db.context.Clients.Where(x=>x.Clients_Id==i+1).Select(x => x.Clients_Lastname).FirstOrDefault();
             string Firstname = db.context.Clients.Where(x => x.Clients_Id == i + 1).Select(x => x.Clients_Name).FirstOrDefault();
-            TextBlock textBlock = new TextBlock();
-            textBlock.Text = $" №{i+1} {Lastname} {Firstname}";
+                TextBlock textBlock = new TextBlock
+                {
+                    Text = $" №{i + 1} {Lastname} {Firstname}"
+                };
 
-            MainPatientsStackPanel.Children.Add(textBlock);
+                Style style = this.FindResource("PatientsTextBlock") as Style;
+                textBlock.Style = style;
+
+                MainPatientsStackPanel.Children.Add(textBlock);
 
             }
             

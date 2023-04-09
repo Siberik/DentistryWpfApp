@@ -22,24 +22,22 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class PatientsPage : Page
     {
-        public int id;
-       Core db = new Core();
+       
+      
+
         public PatientsPage()
         {
             InitializeComponent();
-            var patientsList= db.context.Clients;
-            for (int i = 0; i < patientsList.Select(x=>x.Clients_Id).ToArray().Count(); i++)
+            Core db = new Core();
+          var patientIdList= db.context.Clients.Select(x=>x.Clients_Id).ToList();
+            for (int i = 0; i < patientIdList.Count(); i++)
             {
-                
-                var textblock = new TextBlock();
-                textblock.Text = $" {patientsList.Where(x => x.Clients_Id == i).ToString()} {patientsList.Where(x => x.Clients_Id == i).Select(x => x.Clients_Name)} ";
-                textblock.MouseDown += Label_MouseDown;
+                TextBlock newTextBlock = new TextBlock();
+                newTextBlock.Text = "Хорошего дня!";
             }
 
         }
-        private void Label_MouseDown(object sender, RoutedEventArgs e) 
-        {
-           
-        }
+
+        
     }
 }

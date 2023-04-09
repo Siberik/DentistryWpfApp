@@ -27,13 +27,18 @@ namespace DentistryWpfApp.View.Pages
 
         public PatientsPage()
         {
-            InitializeComponent();
+
             Core db = new Core();
-          var patientIdList= db.context.Clients.Select(x=>x.Clients_Id).ToList();
+            var patientIdList = db.context.Clients.Select(x => x.Clients_Id).ToList();
+            InitializeComponent();
+            
+         
             for (int i = 0; i < patientIdList.Count(); i++)
             {
-                TextBlock newTextBlock = new TextBlock();
-                newTextBlock.Text = "Хорошего дня!";
+                TextBlock newTextBlock = new TextBlock
+                {
+                    Text = "Хорошего дня!"
+                };
             }
 
         }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -31,16 +32,17 @@ namespace DentistryWpfApp.View.Pages
             Core db = new Core();
             var patientIdList = db.context.Clients.Select(x => x.Clients_Id).ToList();
             InitializeComponent();
-            
-         
-            for (int i = 0; i < patientIdList.Count(); i++)
+            for (int i = 0; i < patientIdList.Count; i++)
             {
-                TextBlock newTextBlock = new TextBlock
-                {
-                    Text = "Хорошего дня!"
-                };
-            }
+            string Lastname= db.context.Clients.Where(x=>x.Clients_Id==i+1).Select(x => x.Clients_Lastname).FirstOrDefault();
+            string Firstname = db.context.Clients.Where(x => x.Clients_Id == i + 1).Select(x => x.Clients_Name).FirstOrDefault();
+            TextBlock textBlock = new TextBlock();
+            textBlock.Text = $" №{i+1} {Lastname} {Firstname}";
 
+            MainPatientsStackPanel.Children.Add(textBlock);
+
+            }
+            
         }
 
         

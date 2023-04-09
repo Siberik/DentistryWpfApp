@@ -273,8 +273,17 @@
         <!--Unknown tag: metadata-->
     </Canvas>
 
-    <Style x:Key="PatientsTextBlock" TargetType="TextBlock">
-        <Setter Property="Background" Value="Blue"/>
+    <Style x:Key="PatientsButton" TargetType="Button">
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}"/>
+
+        <Style.Resources>
+            <Style TargetType="Border">
+                 <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="Black" />
+
+            </Style>
+           
+        </Style.Resources>
         
     </Style>
 </ResourceDictionary>

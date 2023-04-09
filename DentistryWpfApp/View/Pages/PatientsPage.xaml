@@ -9,10 +9,15 @@
       Title="PatientsPage" Foreground="{StaticResource TextPrimaryColor}">
 
     <Grid>
+        
         <Viewbox>
-            <StackPanel x:Name="MainPatientsStackPanel">
+           
 
+                <StackPanel x:Name="MainPatientsStackPanel">
+                
             </StackPanel>
+
+   
         </Viewbox>
         
     </Grid>

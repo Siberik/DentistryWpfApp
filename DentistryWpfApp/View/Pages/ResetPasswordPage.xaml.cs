@@ -74,10 +74,15 @@ namespace DentistryWpfApp.View.Pages
                     {
                         Personal s = new Personal()
                         {
-                            Personal_Id=db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(x=>x.Personal_Id).First(),
-                            Personal_Password=password,
-                            Personal_Login=login,   
-                            Personal_Mail=email,
+                            Personal_Id=db.context.Personal.Where(x=>x.Personal_Mail==EmailTextBox.Text).Select(y=>y.Personal_Id).First(),
+                            Personal_Password = password,
+                            Personal_Login = login,
+                            Personal_Mail = email,
+                            Personal_LastName=db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(y => y.Personal_LastName).First(),
+                            Personal_Name=db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(y => y.Personal_Name).First(),
+                            Personal_Surname=db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(y => y.Personal_Surname).First(),
+
+                            Role_Id_FK = db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(x => x.Role_Id_FK).First(),
 
                         };
                         db.context.Personal.AddOrUpdate(s);

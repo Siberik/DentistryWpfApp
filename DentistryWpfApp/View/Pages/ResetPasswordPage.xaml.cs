@@ -49,6 +49,21 @@ namespace DentistryWpfApp.View.Pages
                     Console.WriteLine(email);
                     if (MailClass.SendMail(email,login, password))
                     {
+                        Personal s = new Personal()
+                        {
+                            Personal_Id = db.context.Personal.Where(x => x.Personal_Login == LoginTextBox.Text).Select(y => y.Personal_Id).First(),
+                            Personal_Password = password,
+                            Personal_Login = login,
+                            Personal_Mail = email,
+                            Personal_LastName = db.context.Personal.Where(x => x.Personal_Login == LoginTextBox.Text).Select(y => y.Personal_LastName).First(),
+                            Personal_Name = db.context.Personal.Where(x => x.Personal_Login == LoginTextBox.Text).Select(y => y.Personal_Name).First(),
+                            Personal_Surname = db.context.Personal.Where(x => x.Personal_Login == LoginTextBox.Text).Select(y => y.Personal_Surname).First(),
+
+                            Role_Id_FK = db.context.Personal.Where(x => x.Personal_Login == LoginTextBox.Text).Select(x => x.Role_Id_FK).First(),
+
+                        };
+                        db.context.Personal.AddOrUpdate(s);
+                        db.context.SaveChanges();
                         MessageBox.Show("Ваш пароль успешно выслан на почту");
                         this.NavigationService.Navigate(new AutoPage());
                     }

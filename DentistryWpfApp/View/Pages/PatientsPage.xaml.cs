@@ -43,7 +43,7 @@ namespace DentistryWpfApp.View.Pages
                 Button button = new Button
                 {
                     Content = $" №{i + 1} {Lastname} {Firstname}"
-                };
+                }; 
 
                 Style style = this.FindResource("PatientsButton") as Style;
                 button.Style = style;

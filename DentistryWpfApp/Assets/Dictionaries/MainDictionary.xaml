@@ -278,8 +278,8 @@
 
         <Style.Resources>
             <Style TargetType="Border">
-                 <Setter Property="BorderThickness" Value="1" />
-            <Setter Property="BorderBrush" Value="Black" />
+                 <Setter Property="BorderThickness" Value="20" />
+            <Setter Property="BorderBrush" Value="Yellow" />
 
             </Style>
            

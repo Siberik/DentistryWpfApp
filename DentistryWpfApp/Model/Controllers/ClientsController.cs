@@ -52,7 +52,7 @@ namespace DentistryWpfApp.Model.Controllers
             try
 
             {
-                currentClient.pass
+                currentClient.Clients_Name
 
             }
 }

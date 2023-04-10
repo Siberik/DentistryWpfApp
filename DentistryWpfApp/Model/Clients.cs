@@ -21,10 +21,10 @@ namespace DentistryWpfApp.Model
             this.DentalFormula = new HashSet<DentalFormula>();
             this.DiagnosisHistory = new HashSet<DiagnosisHistory>();
             this.DrugsInfo = new HashSet<DrugsInfo>();
+            this.PhotoPersonal = new HashSet<PhotoPersonal>();
             this.Registration = new HashSet<Registration>();
             this.ServicesHistory = new HashSet<ServicesHistory>();
             this.Studies = new HashSet<Studies>();
-            this.PhotoPersonal = new HashSet<PhotoPersonal>();
         }
     
         public int Clients_Id { get; set; }
@@ -44,12 +44,12 @@ namespace DentistryWpfApp.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DrugsInfo> DrugsInfo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhotoPersonal> PhotoPersonal { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registration> Registration { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ServicesHistory> ServicesHistory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Studies> Studies { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhotoPersonal> PhotoPersonal { get; set; }
     }
 }

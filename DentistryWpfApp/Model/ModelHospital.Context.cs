@@ -34,12 +34,12 @@ namespace DentistryWpfApp.Model
         public virtual DbSet<Drugs> Drugs { get; set; }
         public virtual DbSet<DrugsInfo> DrugsInfo { get; set; }
         public virtual DbSet<Personal> Personal { get; set; }
+        public virtual DbSet<PhotoPersonal> PhotoPersonal { get; set; }
         public virtual DbSet<Registration> Registration { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Services> Services { get; set; }
         public virtual DbSet<ServicesHistory> ServicesHistory { get; set; }
         public virtual DbSet<Studies> Studies { get; set; }
         public virtual DbSet<Visits> Visits { get; set; }
-        public virtual DbSet<PhotoPersonal> PhotoPersonal { get; set; }
     }
 }

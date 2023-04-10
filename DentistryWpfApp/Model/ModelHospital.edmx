@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -90,7 +90,7 @@
           <Key>
             <PropertyRef Name="PhotoPersonal_Id" />
           </Key>
-          <Property Name="PhotoPersonal_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PhotoPersonal_Id" Type="int" Nullable="false" />
           <Property Name="PhotoPersonal_Image" Type="varbinary(max)" />
           <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
         </EntityType>
@@ -99,7 +99,7 @@
             <PropertyRef Name="Registration_Id" />
           </Key>
           <Property Name="Registration_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Registration_Date" Type="date" Nullable="false" />
+          <Property Name="Registration_Date" Type="datetime" Nullable="false" />
           <Property Name="Registration_Description" Type="nvarchar(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
           <Property Name="Visits_Id_FK" Type="int" Nullable="false" />
@@ -125,7 +125,7 @@
           </Key>
           <Property Name="ServicesHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Services_Code_FK" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="ServicesHistory_Date" Type="date" Nullable="false" />
+          <Property Name="ServicesHistory_Date" Type="datetime" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Studies">
@@ -135,7 +135,7 @@
           <Property Name="Studies_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Studies_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Studies_Description" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Studies_Image" Type="image" />
+          <Property Name="Studies_Image" Type="varbinary(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Visits">
@@ -143,7 +143,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Visits_Date" Type="date" Nullable="false" />
+          <Property Name="Visits_Date" Type="datetime" Nullable="false" />
           <Property Name="Visits_Description" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
@@ -404,7 +404,8 @@
             <End Role="Studies" EntitySet="Studies" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DentistryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -442,10 +443,10 @@
           <NavigationProperty Name="DentalFormula" Relationship="Self.FK_DentalFormula_Clients" FromRole="Clients" ToRole="DentalFormula" />
           <NavigationProperty Name="DiagnosisHistory" Relationship="Self.FK_DiagnosisHistory_Clients" FromRole="Clients" ToRole="DiagnosisHistory" />
           <NavigationProperty Name="DrugsInfo" Relationship="Self.FK_DrugsInfo_Clients" FromRole="Clients" ToRole="DrugsInfo" />
+          <NavigationProperty Name="PhotoPersonal" Relationship="Self.FK_PhotoPersonal_Clients" FromRole="Clients" ToRole="PhotoPersonal" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Clients" FromRole="Clients" ToRole="Registration" />
           <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Clients" FromRole="Clients" ToRole="ServicesHistory" />
           <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_Clients" FromRole="Clients" ToRole="Studies" />
-          <NavigationProperty Name="PhotoPersonal" Relationship="DentistryModel.FK_PhotoPersonal_Clients" FromRole="Clients" ToRole="PhotoPersonal" />
         </EntityType>
         <EntityType Name="DentalFormula">
           <Key>
@@ -506,16 +507,25 @@
           <Property Name="Personal_Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Personal_LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Role_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Personal_Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Personal" FromRole="Personal" ToRole="Clients" />
           <NavigationProperty Name="Role" Relationship="Self.FK_Personal_Role" FromRole="Personal" ToRole="Role" />
-          <Property Name="Personal_Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PhotoPersonal">
+          <Key>
+            <PropertyRef Name="PhotoPersonal_Id" />
+          </Key>
+          <Property Name="PhotoPersonal_Id" Type="Int32" Nullable="false" />
+          <Property Name="PhotoPersonal_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_PhotoPersonal_Clients" FromRole="PhotoPersonal" ToRole="Clients" />
         </EntityType>
         <EntityType Name="Registration">
           <Key>
             <PropertyRef Name="Registration_Id" />
           </Key>
           <Property Name="Registration_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Registration_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <Property Name="Visits_Id_FK" Type="Int32" Nullable="false" />
@@ -545,7 +555,7 @@
           </Key>
           <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Services_Code_FK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_ServicesHistory_Clients" FromRole="ServicesHistory" ToRole="Clients" />
           <NavigationProperty Name="Services" Relationship="Self.FK_ServicesHistory_Services" FromRole="ServicesHistory" ToRole="Services" />
@@ -566,7 +576,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
         </EntityType>
@@ -639,6 +649,18 @@
             </Principal>
             <Dependent Role="DrugsInfo">
               <PropertyRef Name="Clients_Id_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhotoPersonal_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="PhotoPersonal" Type="Self.PhotoPersonal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Clients_Id" />
+            </Principal>
+            <Dependent Role="PhotoPersonal">
+              <PropertyRef Name="Personal_Id_FK" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -748,6 +770,7 @@
           <EntitySet Name="Drugs" EntityType="Self.Drugs" />
           <EntitySet Name="DrugsInfo" EntityType="Self.DrugsInfo" />
           <EntitySet Name="Personal" EntityType="Self.Personal" />
+          <EntitySet Name="PhotoPersonal" EntityType="Self.PhotoPersonal" />
           <EntitySet Name="Registration" EntityType="Self.Registration" />
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="Services" EntityType="Self.Services" />
@@ -777,6 +800,10 @@
           <AssociationSet Name="FK_DrugsInfo_Clients" Association="Self.FK_DrugsInfo_Clients">
             <End Role="Clients" EntitySet="Clients" />
             <End Role="DrugsInfo" EntitySet="DrugsInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhotoPersonal_Clients" Association="Self.FK_PhotoPersonal_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="PhotoPersonal" EntitySet="PhotoPersonal" />
           </AssociationSet>
           <AssociationSet Name="FK_Registration_Clients" Association="Self.FK_Registration_Clients">
             <End Role="Clients" EntitySet="Clients" />
@@ -810,33 +837,7 @@
             <End Role="Services" EntitySet="Services" />
             <End Role="ServicesHistory" EntitySet="ServicesHistory" />
           </AssociationSet>
-          <EntitySet Name="PhotoPersonal" EntityType="DentistryModel.PhotoPersonal" />
-          <AssociationSet Name="FK_PhotoPersonal_Clients" Association="DentistryModel.FK_PhotoPersonal_Clients">
-            <End Role="Clients" EntitySet="Clients" />
-            <End Role="PhotoPersonal" EntitySet="PhotoPersonal" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="PhotoPersonal">
-          <Key>
-            <PropertyRef Name="PhotoPersonal_Id" />
-          </Key>
-          <Property Name="PhotoPersonal_Id" Type="Int32" Nullable="false" />
-          <Property Name="PhotoPersonal_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Clients" Relationship="DentistryModel.FK_PhotoPersonal_Clients" FromRole="PhotoPersonal" ToRole="Clients" />
-        </EntityType>
-        <Association Name="FK_PhotoPersonal_Clients">
-          <End Type="DentistryModel.Clients" Role="Clients" Multiplicity="1" />
-          <End Type="DentistryModel.PhotoPersonal" Role="PhotoPersonal" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Clients">
-              <PropertyRef Name="Clients_Id" />
-            </Principal>
-            <Dependent Role="PhotoPersonal">
-              <PropertyRef Name="Personal_Id_FK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -922,7 +923,6 @@
           <EntitySetMapping Name="Personal">
             <EntityTypeMapping TypeName="DentistryModel.Personal">
               <MappingFragment StoreEntitySet="Personal">
-                <ScalarProperty Name="Personal_Mail" ColumnName="Personal_Mail" />
                 <ScalarProperty Name="Personal_Id" ColumnName="Personal_Id" />
                 <ScalarProperty Name="Personal_Login" ColumnName="Personal_Login" />
                 <ScalarProperty Name="Personal_Password" ColumnName="Personal_Password" />
@@ -930,6 +930,16 @@
                 <ScalarProperty Name="Personal_Surname" ColumnName="Personal_Surname" />
                 <ScalarProperty Name="Personal_LastName" ColumnName="Personal_LastName" />
                 <ScalarProperty Name="Role_Id_FK" ColumnName="Role_Id_FK" />
+                <ScalarProperty Name="Personal_Mail" ColumnName="Personal_Mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhotoPersonal">
+            <EntityTypeMapping TypeName="DentistryModel.PhotoPersonal">
+              <MappingFragment StoreEntitySet="PhotoPersonal">
+                <ScalarProperty Name="PhotoPersonal_Id" ColumnName="PhotoPersonal_Id" />
+                <ScalarProperty Name="PhotoPersonal_Image" ColumnName="PhotoPersonal_Image" />
+                <ScalarProperty Name="Personal_Id_FK" ColumnName="Personal_Id_FK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -988,15 +998,6 @@
                 <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
                 <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />
                 <ScalarProperty Name="Visits_Description" ColumnName="Visits_Description" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PhotoPersonal">
-            <EntityTypeMapping TypeName="DentistryModel.PhotoPersonal">
-              <MappingFragment StoreEntitySet="PhotoPersonal">
-                <ScalarProperty Name="Personal_Id_FK" ColumnName="Personal_Id_FK" />
-                <ScalarProperty Name="PhotoPersonal_Image" ColumnName="PhotoPersonal_Image" />
-                <ScalarProperty Name="PhotoPersonal_Id" ColumnName="PhotoPersonal_Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

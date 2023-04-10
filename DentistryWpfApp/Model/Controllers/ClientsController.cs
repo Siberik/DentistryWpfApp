@@ -46,6 +46,13 @@ namespace DentistryWpfApp.Model.Controllers
                 return false;
             }
         }
-        
-    }
+        public Clients EditClient(Clients currentClient,string newPassword)
+        {
+
+            try
+
+            {
+                currentClient.pass
+
+            }
 }

@@ -40,11 +40,16 @@ namespace DentistryWpfApp.View.Pages
             {
                 if (db.context.Personal.Where(x => x.Personal_Login == LoginTextBox.Text).FirstOrDefault() != null)
                 {
+                    string login=LoginTextBox.Text;
+                    Console.WriteLine(login);
                     string password = MailClass.GetRandomPassword(16);
+                    Console.WriteLine(password);
                     string email=db.context.Personal.Where(x => x.Personal_Login == LoginTextBox.Text).Select(x=>x.Personal_Mail).First();
-                    if (MailClass.SendMail(email, password))
+                    Console.WriteLine(email);
+                    if (MailClass.SendMail(email,login, password))
                     {
                         MessageBox.Show("Ваш пароль успешно выслан на почту");
+                        this.NavigationService.Navigate(new AutoPage());
                     }
                     else
                     {
@@ -52,7 +57,34 @@ namespace DentistryWpfApp.View.Pages
                     }
                     
                 }
+                
+            }
+           else if (EmailTextBox.Text != String.Empty)
+            {
+                if (db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).FirstOrDefault() != null)
+                {
+                    string login =db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(x=>x.Personal_Login).First();
+                    string password = MailClass.GetRandomPassword(16);
+                    Console.WriteLine(password);
+                    string email = EmailTextBox.Text;
+                    Console.WriteLine(email);
+                    if (MailClass.SendMail(email,login, password))
+                    {
+                        MessageBox.Show("Ваш пароль успешно выслан на почту");
+                        this.NavigationService.Navigate(new AutoPage());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Вы ввели неверную почту");
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Неверно введены данные");
             }
         }
+       
     }
 }

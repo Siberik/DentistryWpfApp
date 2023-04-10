@@ -10,15 +10,11 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
+            
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
-            <Button x:Name="btnClose"  Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
-
-            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
-        </StackPanel>
+        
 
 
 
@@ -106,9 +102,7 @@
                              Padding="20,0,0,0">
 
                         <PasswordBox.Background>
-                            <ImageBrush ImageSource="Assets/Images/key-icon.png"
-                                        Stretch="None"
-                                        AlignmentX="Left"/>
+                            <SolidColorBrush Color="Transparent"/>
                         </PasswordBox.Background>
                     </PasswordBox>
 
@@ -133,19 +127,19 @@
                                 HorizontalAlignment="Center"
                                 Margin="0,8,0,0">
 
-                        <TextBlock Text="Забыли пароль?"
+                        <TextBlock Text="Забыли логин или пароль?"
                                Foreground="DarkGray"
                                FontSize="12"
                                FontWeight="Medium"
                                FontFamily="Montserrat"/>
 
-                        <TextBlock Text="Восстановить"
+                        <TextBlock Text="Восстановить" Name="ResetTextBlock"
                                Foreground="White"
                                FontSize="12"
                                FontWeight="Medium"
                                FontFamily="Montserrat"
                                Cursor="Hand"
-                               Margin="8,0,0,0"/>
+                               Margin="8,0,0,0" MouseDown="ResetTextBlockMouseDown"/>
 
                     </StackPanel>
 

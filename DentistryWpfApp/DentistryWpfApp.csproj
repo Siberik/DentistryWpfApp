@@ -190,6 +190,7 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\Pages\AutoPage.xaml.cs">
       <DependentUpon>AutoPage.xaml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="View\Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -249,6 +250,7 @@
     <Page Include="View\Pages\AutoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
     <Page Include="View\Pages\HomePage.xaml">
       <SubType>Designer</SubType>
@@ -327,7 +329,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Images\MainPhoto.jpg" />
-    <Resource Include="Assets\Images\key-icon.png" />
+    <Resource Include="Assets\Images\key-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Images\user-icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

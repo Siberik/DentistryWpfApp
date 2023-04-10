@@ -25,7 +25,8 @@ namespace DentistryWpfApp.View.Pages
         {
             InitializeComponent();
         }
-        Core db = new Core();
+
+        readonly Core db = new Core();
         private void AuthorizeButtonClick(object sender, RoutedEventArgs e)
         {
             string role = "";
@@ -43,8 +44,12 @@ namespace DentistryWpfApp.View.Pages
                 surname = db.context.Personal.Where(x => x.Personal_Login == UserLoginTextBox.Text).Select(x => x.Personal_Surname).FirstOrDefault();
 
                 var newForm = new MainWindow(roleId, role, name, lastname, surname); //create your new form.
-                newForm.Show(); //show the new form.
-                this.Close(); //only if you want to close the current form.
+                newForm.Show();
+
+                Application.Current.MainWindow.Close();
+
+
+
 
             }
             else
@@ -55,16 +60,12 @@ namespace DentistryWpfApp.View.Pages
 
 
         }
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+
+       
+
+        private void ResetTextBlockMouseDown(object sender, MouseButtonEventArgs e)
         {
-            Close();
-        }
-
-
-
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized;
+            this.NavigationService.Navigate(new ResetPasswordPage());
         }
     }
 }

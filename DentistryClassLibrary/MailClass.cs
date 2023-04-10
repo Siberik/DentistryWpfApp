@@ -10,7 +10,7 @@ namespace DentistryClassLibrary
 {
     public class MailClass
     {
-        public static bool SendMail(string to,string password)
+        public static bool SendMail(string to,string login, string password)
         {
             try
             {
@@ -21,7 +21,7 @@ namespace DentistryClassLibrary
             mailMessage.From = new MailAddress("t.pochta@vladgubarev.site");
             mailMessage.To.Add(new MailAddress($"{to}"));
             mailMessage.Subject = $"Восстановление пароля.";
-            mailMessage.Body = $"Восстановление пароля произшло успешно.\n Ваш новый пароль: {password}. \n Если вы не подавали заявку на восстановление пароля, то напишите на почту:t.pochta@vladgubarev.site";
+            mailMessage.Body = $"Восстановление пароля произшло успешно. Ваш логин: {login}.\n Ваш пароль: {password}. \n Если вы не подавали заявку на восстановление пароля, то напишите на почту: t.pochta@vladgubarev.site";
             smtpClient.Send(mailMessage);
             return true;
             }

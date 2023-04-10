@@ -27,7 +27,17 @@ namespace DentistryWpfApp.View.Windows
             InitializeComponent();
             MainFrame.Navigate(new AutoPage());
         }
-        
-      
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+       
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }

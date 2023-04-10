@@ -64,6 +64,7 @@ namespace DentistryWpfApp.View.Pages
                 if (db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).FirstOrDefault() != null)
                 {
                     string login =db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(x=>x.Personal_Login).First();
+                    Console.WriteLine(login);
                     string password = MailClass.GetRandomPassword(16);
                     Console.WriteLine(password);
                     string email = EmailTextBox.Text;

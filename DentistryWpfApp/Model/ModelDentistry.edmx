@@ -90,7 +90,7 @@
           <Key>
             <PropertyRef Name="PhotoPersonal_Id" />
           </Key>
-          <Property Name="PhotoPersonal_Id" Type="int" Nullable="false" />
+          <Property Name="PhotoPersonal_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PhotoPersonal_Image" Type="varbinary(max)" />
           <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
         </EntityType>
@@ -99,7 +99,7 @@
             <PropertyRef Name="Registration_Id" />
           </Key>
           <Property Name="Registration_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Registration_Date" Type="datetime" Nullable="false" />
+          <Property Name="Registration_Date" Type="date" Nullable="false" />
           <Property Name="Registration_Description" Type="nvarchar(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
           <Property Name="Visits_Id_FK" Type="int" Nullable="false" />
@@ -125,7 +125,7 @@
           </Key>
           <Property Name="ServicesHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Services_Code_FK" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="ServicesHistory_Date" Type="datetime" Nullable="false" />
+          <Property Name="ServicesHistory_Date" Type="date" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Studies">
@@ -135,7 +135,7 @@
           <Property Name="Studies_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Studies_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Studies_Description" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Studies_Image" Type="varbinary(max)" />
+          <Property Name="Studies_Image" Type="image" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Visits">
@@ -143,7 +143,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Visits_Date" Type="datetime" Nullable="false" />
+          <Property Name="Visits_Date" Type="date" Nullable="false" />
           <Property Name="Visits_Description" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
@@ -515,7 +515,7 @@
           <Key>
             <PropertyRef Name="PhotoPersonal_Id" />
           </Key>
-          <Property Name="PhotoPersonal_Id" Type="Int32" Nullable="false" />
+          <Property Name="PhotoPersonal_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PhotoPersonal_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_PhotoPersonal_Clients" FromRole="PhotoPersonal" ToRole="Clients" />
@@ -525,7 +525,7 @@
             <PropertyRef Name="Registration_Id" />
           </Key>
           <Property Name="Registration_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Registration_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <Property Name="Visits_Id_FK" Type="Int32" Nullable="false" />
@@ -555,7 +555,7 @@
           </Key>
           <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Services_Code_FK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_ServicesHistory_Clients" FromRole="ServicesHistory" ToRole="Clients" />
           <NavigationProperty Name="Services" Relationship="Self.FK_ServicesHistory_Services" FromRole="ServicesHistory" ToRole="Services" />
@@ -576,7 +576,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
         </EntityType>

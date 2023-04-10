@@ -120,69 +120,70 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Allergy.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\AllergyInfo.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Clients.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Controllers\ClientsController.cs" />
+    <Compile Include="Model\Controllers\PersonalController.cs" />
     <Compile Include="Model\Core.cs" />
     <Compile Include="Model\DentalFormula.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Diagnosis.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\DiagnosisHistory.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Drugs.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\DrugsInfo.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelHospital.Context.cs">
+    <Compile Include="Model\ModelDentistry.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelHospital.Context.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelHospital.cs">
+    <Compile Include="Model\ModelDentistry.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelHospital.Designer.cs">
+    <Compile Include="Model\ModelDentistry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelHospital.edmx</DependentUpon>
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Personal.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PhotoPersonal.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Registration.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Role.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Services.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ServicesHistory.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Studies.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Visits.cs">
-      <DependentUpon>ModelHospital.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemesCountClass.cs" />
@@ -296,12 +297,12 @@
     </EmbeddedResource>
     <Resource Include="Assets\Fonts\Montserrat-Regular.ttf" />
     <Resource Include="Assets\Fonts\OpenSans-Regular.ttf" />
-    <EntityDeploy Include="Model\ModelHospital.edmx">
+    <EntityDeploy Include="Model\ModelDentistry.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelHospital.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelDentistry.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\ModelHospital.edmx.diagram">
-      <DependentUpon>ModelHospital.edmx</DependentUpon>
+    <None Include="Model\ModelDentistry.edmx.diagram">
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -313,15 +314,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\ModelHospital.Context.tt">
+    <Content Include="Model\ModelDentistry.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelHospital.edmx</DependentUpon>
-      <LastGenOutput>ModelHospital.Context.cs</LastGenOutput>
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
+      <LastGenOutput>ModelDentistry.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\ModelHospital.tt">
+    <Content Include="Model\ModelDentistry.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelHospital.edmx</DependentUpon>
-      <LastGenOutput>ModelHospital.cs</LastGenOutput>
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
+      <LastGenOutput>ModelDentistry.cs</LastGenOutput>
     </Content>
     <Resource Include="Assets\Avatars\avatar-2.jpg" />
     <Resource Include="Assets\Images\home-page.png" />

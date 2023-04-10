@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using DentistryClassLibrary;
 using System.Data.Entity.Migrations;
 using System.Configuration;
+using System.Data.SqlClient;
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -71,6 +72,16 @@ namespace DentistryWpfApp.View.Pages
                     Console.WriteLine(email);
                     if (MailClass.SendMail(email,login, password))
                     {
+                        Personal s = new Personal()
+                        {
+                            Personal_Id=db.context.Personal.Where(x => x.Personal_Mail == EmailTextBox.Text).Select(x=>x.Personal_Id).First(),
+                            Personal_Password=password,
+                            Personal_Login=login,   
+                            Personal_Mail=email,
+
+                        };
+                        db.context.Personal.AddOrUpdate(s);
+                        db.context.SaveChanges();
                         MessageBox.Show("Ваш пароль успешно выслан на почту");
                         this.NavigationService.Navigate(new AutoPage());
                     }

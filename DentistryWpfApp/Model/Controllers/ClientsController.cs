@@ -8,18 +8,18 @@ namespace DentistryWpfApp.Model.Controllers
 {
     public class ClientsController
     {
-        private static  Core db = new Core();
-        public  bool AddClient(string clientName, string clientLastname, int personalId,string clientSurname = null, string clientPhone = null)
+        private static Core db = new Core();
+        public bool AddClient(string clientName, string clientLastname, int personalId, string clientSurname = null, string clientPhone = null)
         {
-            
+
             try
 
             {
-                
-               
+
+
                 Clients clientsConnect = new Clients()
                 {
-                   
+
                     Clients_Name = clientName,
                     Clients_Surname = clientSurname,
                     Clients_Lastname = clientLastname,
@@ -46,13 +46,6 @@ namespace DentistryWpfApp.Model.Controllers
                 return false;
             }
         }
-        public Clients EditClient(Clients currentClient,string newPassword)
-        {
-
-            try
-
-            {
-                currentClient.Clients_Name
-
-            }
+    }
 }
+       

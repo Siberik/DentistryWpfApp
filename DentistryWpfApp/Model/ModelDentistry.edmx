@@ -84,6 +84,7 @@
           <Property Name="Personal_Surname" Type="nvarchar(max)" />
           <Property Name="Personal_LastName" Type="nvarchar(max)" />
           <Property Name="Role_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Personal_Mail" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="PhotoPersonal">
           <Key>
@@ -507,6 +508,7 @@
           <Property Name="Role_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Personal" FromRole="Personal" ToRole="Clients" />
           <NavigationProperty Name="Role" Relationship="Self.FK_Personal_Role" FromRole="Personal" ToRole="Role" />
+          <Property Name="Personal_Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Registration">
           <Key>
@@ -920,6 +922,7 @@
           <EntitySetMapping Name="Personal">
             <EntityTypeMapping TypeName="DentistryModel.Personal">
               <MappingFragment StoreEntitySet="Personal">
+                <ScalarProperty Name="Personal_Mail" ColumnName="Personal_Mail" />
                 <ScalarProperty Name="Personal_Id" ColumnName="Personal_Id" />
                 <ScalarProperty Name="Personal_Login" ColumnName="Personal_Login" />
                 <ScalarProperty Name="Personal_Password" ColumnName="Personal_Password" />

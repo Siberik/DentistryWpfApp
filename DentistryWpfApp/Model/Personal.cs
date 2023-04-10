@@ -27,6 +27,7 @@ namespace DentistryWpfApp.Model
         public string Personal_Surname { get; set; }
         public string Personal_LastName { get; set; }
         public int Role_Id_FK { get; set; }
+        public string Personal_Mail { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Clients> Clients { get; set; }

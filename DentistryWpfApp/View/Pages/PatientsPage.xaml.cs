@@ -15,6 +15,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Web;
+using System.Net;
+using System.Net.Mail;
+using System.Net.Mime;
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -44,10 +48,12 @@ namespace DentistryWpfApp.View.Pages
                 Style style = this.FindResource("PatientsButton") as Style;
                 button.Style = style;
 
-                MainPatientsStackPanel.Children.Add(button);
-
+                
             }
             
+
+
+
         }
 
         

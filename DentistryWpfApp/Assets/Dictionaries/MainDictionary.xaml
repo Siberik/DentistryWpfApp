@@ -276,14 +276,17 @@
     <Style x:Key="PatientsButton" TargetType="Button">
         <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}"/>
 
+        
+                 <Setter Property="BorderThickness" Value="5" />
+
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBlueColor}"/>
         <Style.Resources>
             <Style TargetType="Border">
-                 <Setter Property="BorderThickness" Value="20" />
-            <Setter Property="BorderBrush" Value="Yellow" />
-
+                <Setter Property="CornerRadius" Value="50"/>
             </Style>
-           
         </Style.Resources>
-        
+
+
+
     </Style>
 </ResourceDictionary>

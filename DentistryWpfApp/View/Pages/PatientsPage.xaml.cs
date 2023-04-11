@@ -48,7 +48,7 @@ namespace DentistryWpfApp.View.Pages
                 Style style = this.FindResource("PatientsButton") as Style;
                 button.Style = style;
                 MainPatientsStackPanel.Children.Add(button);
-                
+                button.Margin= new Thickness(0, 10, 0, 0);
             }
             
 

@@ -102,7 +102,7 @@
                              Padding="20,0,0,0">
 
                         <PasswordBox.Background>
-                            <SolidColorBrush Color="Transparent"/>
+                            <ImageBrush ImageSource="/Assets/Images/key-icon.png" Stretch="None" AlignmentX="Left"/>
                         </PasswordBox.Background>
                     </PasswordBox>
 

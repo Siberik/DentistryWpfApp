@@ -11,6 +11,7 @@
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         AllowsTransparency="True" Icon="/Assets/Images/icon.png"
+        
        >
 
     <Grid>
@@ -49,6 +50,7 @@
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
+                                   
                                     <EventTrigger RoutedEvent="ToggleButton.Checked">
                                         <BeginStoryboard>
                                             <Storyboard x:Name="ShowStackPanel">
@@ -67,8 +69,7 @@
                                 <RadioButton x:Name="rdPatients" Content=" Карточки пациентов" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource patient}" Margin="0 5 0 5" Click="rdPatientsClick" Cursor="Hand"/>
                                 <RadioButton x:Name="rdNotes" Content=" Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
                                 <RadioButton x:Name="rdTheme" Content=" Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click" IsChecked="False"/>
-
-
+                              
                             </StackPanel>
 
                             <StackPanel Grid.Row="3" x:Name="UserStackPanel" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20" MouseLeftButtonDown="UserStackPanelMouseLeftButtonDown">

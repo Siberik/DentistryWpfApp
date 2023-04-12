@@ -211,6 +211,10 @@
       <DependentUpon>UserPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="View\Pages\ViewingPatientPage.xaml.cs">
+      <DependentUpon>ViewingPatientPage.xaml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Page Include="Assets\Dictionaries\MainDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -272,6 +276,11 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\Pages\ViewingPatientPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

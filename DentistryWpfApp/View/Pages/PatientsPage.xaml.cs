@@ -20,6 +20,8 @@ using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
 
+
+
 namespace DentistryWpfApp.View.Pages
 {
     /// <summary>
@@ -40,22 +42,36 @@ namespace DentistryWpfApp.View.Pages
             {
             string Lastname= db.context.Clients.Where(x=>x.Clients_Id==i+1).Select(x => x.Clients_Lastname).FirstOrDefault();
             string Firstname = db.context.Clients.Where(x => x.Clients_Id == i + 1).Select(x => x.Clients_Name).FirstOrDefault();
+                string count = (i + 1).ToString();
                 Button button = new Button
                 {
-                    Content = $" №{i + 1} {Lastname} {Firstname}"
+                   
+                    
+                    Content = $" №{i + 1}. {Lastname} {Firstname}",
                 }; 
 
                 Style style = this.FindResource("PatientsButton") as Style;
                 button.Style = style;
                 MainPatientsStackPanel.Children.Add(button);
                 button.Margin= new Thickness(0, 10, 0, 0);
+                button.Click += Button_Click;
+                
             }
             
-
+            
 
 
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            var i = button.Content.ToString();
+           int id= int.Parse(string.Join("", i.Where(c => char.IsDigit(c))));
+            this.NavigationService.Navigate(new ViewingPatientPage(id));
+        }
+
+      
+
     }
 }

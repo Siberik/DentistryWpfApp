@@ -15,7 +15,7 @@ namespace DentistryClassLibrary
             try
             {
             SmtpClient smtpClient = new SmtpClient("smtp.mail.ru", 25);
-            smtpClient.Credentials = new NetworkCredential("t.pochta@vladgubarev.site", "U8n9miiaZRyjVBvag4Q6");
+            smtpClient.Credentials = new NetworkCredential("t.pochta@vladgubarev.site", "G0S3inDTHG4G3sG2TuGi");
             smtpClient.EnableSsl = true;
             MailMessage mailMessage = new MailMessage();
             mailMessage.From = new MailAddress("t.pochta@vladgubarev.site");

@@ -9,6 +9,13 @@
       Title="ViewingPatientPage">
 
     <Grid>
-        <TextBlock x:Name="IdTextBlock"/>
-    </Grid>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20">
+            <TextBlock x:Name="IdTextBlock"/>
+            <TextBlock x:Name="NameTextBlock" Margin="0,10"/>
+            <TextBlock x:Name="SurnameTextBlock" Margin="0,10"/>
+            <TextBlock x:Name="LastNameTextBlock" Margin="0,10"/>
+           
+        </StackPanel>
+       </Grid> 
 </Page>
+ 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DentistryWpfApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,18 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class ViewingPatientPage : Page
     {
+        Core db= new Core();
         public ViewingPatientPage(int id)
         {
+            string name= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Name).FirstOrDefault();
+            string surname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Surname).FirstOrDefault();
+            string lastname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Lastname).FirstOrDefault();
             InitializeComponent();
-            IdTextBlock.Text = $"Id пользователя: {id}";
+            IdTextBlock.Text = $"Id клиента: {id}";
+            LastNameTextBlock.Text =$" Фамилия: {lastname}";
+            NameTextBlock.Text =$"Имя : {name}";
+            SurnameTextBlock.Text = $"Отчество: {surname}";
+
             
         }
     }

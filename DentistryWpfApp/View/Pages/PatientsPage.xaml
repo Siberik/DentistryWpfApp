@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PatientsPage" Foreground="{StaticResource TextPrimaryColor}" FontSize="20">
+      Title="PatientsPage" Foreground="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource Montserrat}" FontSize="20">
  
     <Grid>
         

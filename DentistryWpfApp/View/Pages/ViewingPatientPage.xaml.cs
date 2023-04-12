@@ -29,7 +29,7 @@ namespace DentistryWpfApp.View.Pages
             string lastname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Lastname).FirstOrDefault();
             InitializeComponent();
             IdTextBlock.Text = $"Id клиента: {id}";
-            LastNameTextBlock.Text =$" Фамилия: {lastname}";
+            LastNameTextBlock.Text =$"Фамилия: {lastname}";
             NameTextBlock.Text =$"Имя : {name}";
             SurnameTextBlock.Text = $"Отчество: {surname}";
 

@@ -45,11 +45,11 @@ namespace DentistryWpfApp.View.Pages
                 string count = (i + 1).ToString();
                 Button button = new Button
                 {
-                   
-                    
-                    Content = $" №{i + 1}. {Lastname} {Firstname}",
-                }; 
 
+                    Name = $"Button",
+                    Content = $" №{i + 1}. {Lastname} {Firstname}",
+                };
+                button.Name += count;
                 Style style = this.FindResource("PatientsButton") as Style;
                 button.Style = style;
                 MainPatientsStackPanel.Children.Add(button);
@@ -66,7 +66,7 @@ namespace DentistryWpfApp.View.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            var i = button.Content.ToString();
+            var i = button.Name.ToString();
            int id= int.Parse(string.Join("", i.Where(c => char.IsDigit(c))));
             this.NavigationService.Navigate(new ViewingPatientPage(id));
         }

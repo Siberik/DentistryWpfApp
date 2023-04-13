@@ -9,11 +9,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -32,12 +34,14 @@ namespace DentistryWpfApp.View.Pages
             LastNameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Lastname).FirstOrDefault();
             SurnameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Surname).FirstOrDefault();
             PhoneTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault();
-
-
+            
+         
+            string phone = PhoneTextBox.Text;
+            PhoneTextBox.Text =phone.ToString("+#-###-###-##-##");
         }
 
-      
-    
+
+        MaskedTextBox dynamicMaskedTextBox = new MaskedTextBox();
 
         private void SaveButtonClick(object sender, RoutedEventArgs e)
         {

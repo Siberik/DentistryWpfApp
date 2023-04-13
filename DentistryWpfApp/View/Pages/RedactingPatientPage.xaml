@@ -12,10 +12,24 @@
 
         <Viewbox Grid.Row="1">
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20">
-                <TextBox x:Name="LastNameTextBox" Width="200" Margin="0,10"/>
-                <TextBox x:Name="NameTextBox" Margin="0,10"/>
-                <TextBox x:Name="SurnameTextBox" Margin="0,10"/>
-                <TextBox x:Name="PhoneTextBox" Margin="0,10"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0,0,10,0" Text="Фамилия:" VerticalAlignment="Center"></TextBlock>
+                    <TextBox x:Name="LastNameTextBox" Width="200" Margin="0,10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0,0,10,0" Text="Имя:" VerticalAlignment="Center"></TextBlock>
+                    <TextBox x:Name="NameTextBox"  Width="200" Margin="0,10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0,0,10,0" Text="Отчество" VerticalAlignment="Center"></TextBlock>
+                    <TextBox x:Name="SurnameTextBox" Width="200" Margin="0,10"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0,0,10,0" Text="Телефон:" VerticalAlignment="Center"></TextBlock>
+                    <TextBox x:Name="PhoneTextBox" Margin="0,10" Width="200"/>
+                </StackPanel>
+               
                 <Button Content="Сохранить" x:Name="SaveButton" Click="SaveButtonClick"/>
             </StackPanel>
         </Viewbox>

@@ -51,7 +51,16 @@ namespace DentistryWpfApp.View.Pages
                 Personal_Id_FK= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault()
             };
             db.context.Clients.AddOrUpdate(s);
-            db.context.SaveChanges();
+            if (db.context.SaveChanges()>0)
+            {
+                MessageBox.Show("Сохранено.");
+                this.NavigationService.Navigate(new ViewingPatientPage(idget));
+            }
+            else
+            {
+                MessageBox.Show("Проверьте правильность введённых данных");
+            }
+            
         }
     }
 }

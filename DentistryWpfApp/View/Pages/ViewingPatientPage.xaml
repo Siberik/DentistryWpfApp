@@ -17,7 +17,7 @@
                 
             </RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" HorizontalAlignment="Right"  Content="Лол"/>
+        <Button Grid.Row="0" HorizontalAlignment="Right"  Content="Лол" x:Name="RedactButton" Click="RedactButtonClick"/>
 
 
         <Viewbox Grid.Row="1">

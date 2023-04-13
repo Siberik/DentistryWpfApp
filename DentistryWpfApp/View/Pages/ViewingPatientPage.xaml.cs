@@ -1,4 +1,5 @@
 ﻿using DentistryWpfApp.Model;
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,11 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class ViewingPatientPage : Page
     {
+        private int idget = 0;
         Core db= new Core();
         public ViewingPatientPage(int id)
         {
+            idget = id;
             string name= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Name).FirstOrDefault();
             string surname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Surname).FirstOrDefault();
             string lastname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Lastname).FirstOrDefault();
@@ -34,6 +37,13 @@ namespace DentistryWpfApp.View.Pages
             SurnameTextBlock.Text = $"Отчество: {surname}";
 
             
+        }
+
+       
+
+        private void RedactButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RedactingPatientPage(idget));
         }
     }
 }

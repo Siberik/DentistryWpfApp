@@ -9,6 +9,15 @@
       Title="RedactingPatientPage">
 
     <Grid>
-        
+
+        <Viewbox Grid.Row="1">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20">
+                <TextBox x:Name="LastNameTextBox" Margin="0,10"/>
+                <TextBox x:Name="NameTextBox" Margin="0,10"/>
+                <TextBox x:Name="SurnameTextBox" Margin="0,10"/>
+                <TextBox x:Name="PhoneTextBox" Margin="0,10"/>
+                <Button Content="Сохранить" x:Name="SaveButton" Click="SaveButtonClick"/>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>

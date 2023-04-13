@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DentistryWpfApp.Model;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,36 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class RedactingPatientPage : Page
     {
-        public RedactingPatientPage()
+        private int idget = 0;
+        Core db = new Core();
+        public RedactingPatientPage(int id)
         {
+            idget=id;
             InitializeComponent();
+            NameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Name).FirstOrDefault();
+            LastNameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Lastname).FirstOrDefault();
+            SurnameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Surname).FirstOrDefault();
+            PhoneTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault();
+
+
+        }
+
+      
+    
+
+        private void SaveButtonClick(object sender, RoutedEventArgs e)
+        {
+            Clients s = new Clients()
+            {
+                Clients_Id = idget,
+                Clients_Name = NameTextBox.Text,
+                Clients_Surname = SurnameTextBox.Text,
+                Clients_Lastname = LastNameTextBox.Text,
+                Clients_Phone=PhoneTextBox.Text,
+                Personal_Id_FK= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault()
+            };
+            db.context.Clients.AddOrUpdate(s);
+            db.context.SaveChanges();
         }
     }
 }

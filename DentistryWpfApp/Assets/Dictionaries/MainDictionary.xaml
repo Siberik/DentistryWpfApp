@@ -297,13 +297,15 @@
     <Style x:Key="PatientsButton" TargetType="Button">
         <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}"/>
 
-        
-                 <Setter Property="BorderThickness" Value="5" />
+        <Setter Property="Background" Value="{StaticResource PrimaryBlueColor}"/>
 
-        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBlueColor}"/>
+
+        <Setter Property="BorderBrush" Value="#884FFF"/>
         <Style.Resources>
             <Style TargetType="Border">
-                <Setter Property="CornerRadius" Value="50"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderThickness" Value="1" /> 
+               
             </Style>
         </Style.Resources>
 

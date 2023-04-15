@@ -339,7 +339,7 @@
                             
 
                             <!-- Text -->
-                            <TextBlock x:Name="txtName" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                            <TextBlock x:Name="txtName" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,5,0"
                                                 Grid.Column="0" Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}"
                                                 FontWeight="{TemplateBinding FontWeight}"
                                                 FontSize="{TemplateBinding FontSize}" />

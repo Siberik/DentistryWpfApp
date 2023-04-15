@@ -31,9 +31,10 @@
          
     </Style>
     <Style x:Key="SaveButton" TargetType="Button">
-    <Setter Property="ItemsControl.BorderThickness" Value="0"></Setter>
+    <Setter Property="ItemsControl.BorderThickness" Value="1"></Setter>
     <Setter Property="ItemsControl.Foreground" Value="{DynamicResource TextPrimaryColor}"/>
-    <Setter Property="ItemsControl.FontSize" Value="12"/>
+        <Setter Property="BorderBrush" Value="Violet"/>
+        <Setter Property="ItemsControl.FontSize" Value="12"/>
         <Setter Property="ItemsControl.Cursor" Value="Hand"/>
         <Setter Property="ItemsControl.FontFamily" Value="{StaticResource Montserrat}"/>
     <Setter Property="Background" Value="{DynamicResource PrimaryBlueColor}"/>
@@ -44,7 +45,7 @@
     </Style.Triggers>
         <Style.Resources>
             <Style TargetType="Border">
-                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="CornerRadius" Value="10"/>
             </Style>
         </Style.Resources>
     </Style>
@@ -311,5 +312,51 @@
 
 
 
+    </Style>
+
+    <Style x:Key="SaveButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryGrayColor}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Button"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                           
+
+                           
+
+                            <!-- Icon -->
+                            
+
+                            <!-- Text -->
+                            <TextBlock x:Name="txtName" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                                Grid.Column="0" Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}"
+                                                FontWeight="{TemplateBinding FontWeight}"
+                                                FontSize="{TemplateBinding FontSize}" />
+                            <Path x:Name="Icon" Data="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Height="30" Width="30"  Grid.Column="1" Fill="{DynamicResource PrimaryGrayColor}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        </Grid>
+                        
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueColor}"/>
+                            <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource PrimaryBlueColor}"/>
+                           
+                        </Trigger>
+                       
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

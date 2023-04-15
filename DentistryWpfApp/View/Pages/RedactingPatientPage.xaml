@@ -11,26 +11,25 @@
     <Grid>
 
         <Viewbox Grid.Row="1">
-            <StackPanel VerticalAlignment="Top"  Margin="0,20"  Width="250">
+            <StackPanel VerticalAlignment="Top"  Margin="0,20"  >
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <TextBlock Margin="0,0,10,0" Text="Фамилия:" VerticalAlignment="Center"></TextBlock>
-                    <TextBox x:Name="LastNameTextBox" Width="250" Margin="0,10"/>
+                    <TextBox x:Name="LastNameTextBox" MinWidth="150" HorizontalAlignment="Stretch" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                     <TextBlock Margin="0,0,10,0" Text="Имя:" VerticalAlignment="Center"></TextBlock>
-                    <TextBox x:Name="NameTextBox"  Width="250" Margin="0,10"/>
+                    <TextBox x:Name="NameTextBox"  MinWidth="150" Margin="0,10" HorizontalAlignment="Stretch"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0,0,10,0" Text="Отчество" VerticalAlignment="Center"></TextBlock>
-                    <TextBox x:Name="SurnameTextBox"  Margin="0,10" Width="250"/>
+                    <TextBox x:Name="SurnameTextBox"  Margin="0,10" MinWidth="150" HorizontalAlignment="Stretch"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0,0,10,0" Text="Телефон:" VerticalAlignment="Center"></TextBlock>
-                    <TextBox x:Name="PhoneTextBox" Margin="0,10" Width="250"/>
+                    <TextBox x:Name="PhoneTextBox"  MinWidth="150"  HorizontalAlignment="Stretch" Margin="0,10,0,20"/>
                 </StackPanel>
-               
-                <Button Content="Сохранить" x:Name="SaveButton" Click="SaveButtonClick" Style="{DynamicResource PatientsButton}" Width="100" Height="30"/>
+                <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Center" Click="SaveButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}"/>
             </StackPanel>
         </Viewbox>
     </Grid>

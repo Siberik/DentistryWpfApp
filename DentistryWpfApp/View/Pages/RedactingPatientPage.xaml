@@ -9,28 +9,36 @@
       Title="RedactingPatientPage">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Viewbox Grid.Row="0">
-            <StackPanel Margin="0,20">
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="Пиво"/>
-                    <TextBlock Text="Пиво"/>
-                    <TextBlock Text="Пиво"/>
+
+
+        <Viewbox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <StackPanel Margin="0,20" Orientation="Horizontal">
+                    <StackPanel Grid.Column="0"  HorizontalAlignment="Center" >
+                        <TextBlock Text="Имя:" Margin="0,5"/>
+                        <TextBlock Text="Фамилия:" Margin="0,8"/>
+                        <TextBlock Text="Отчество:" Margin="0,3"/>
+                        <TextBlock Text="Телефон:" Margin="0,9"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Center">
+                        <TextBox MinWidth="150" x:Name="NameTextBox"  Margin="0,5"/>
+                        <TextBox MinWidth="150" x:Name="LastNameTextBox" Margin="0,5"/>
+                        <TextBox MinWidth="150" x:Name="SurnameTextBox" Margin="0,5"/>
+                        <TextBox MinWidth="150" x:Name="PhoneTextBox" Margin="0,5"/>
+                        
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel Grid.Column="2">
-                    <TextBlock Text="Пиво"/>
-                </StackPanel>
-               
-                <Button x:Name="SaveButton"   Content="Сохранить" Margin="0,10,0,0" HorizontalAlignment="Center" IsDefault="True" Click="SaveButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}"/>
-            </StackPanel>
+                <Button x:Name="SaveButton"  HorizontalAlignment="Center" Content="Сохранить" Grid.Row="1" Grid.ColumnSpan="2" IsDefault="True" Click="SaveButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}"  />
+            </Grid>
+
         </Viewbox>
     </Grid>
 </Page>

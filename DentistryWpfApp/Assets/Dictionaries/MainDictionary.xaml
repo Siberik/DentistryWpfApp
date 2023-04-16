@@ -362,4 +362,13 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style TargetType="TextBox">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBlueColor}"/>
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Style.Resources>
+    </Style>
 </ResourceDictionary>

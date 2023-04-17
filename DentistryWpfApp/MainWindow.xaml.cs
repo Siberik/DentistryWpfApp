@@ -1,4 +1,5 @@
-﻿using DentistryWpfApp.Themes;
+﻿using DentistryWpfApp.Model;
+using DentistryWpfApp.Themes;
 using DentistryWpfApp.View.Pages;
 using JetBrains.Annotations;
 using System;
@@ -25,6 +26,8 @@ namespace DentistryWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        Core db= new Core();
+        int idWin;
         string roleNameWin;
         int roleIdWin = 0;
         string nameWin;
@@ -40,12 +43,13 @@ namespace DentistryWpfApp
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-
+            
             roleIdWin = roleId;
             nameWin = name;
             lastnameWin = lastname;
             surnameWin = surname;
             roleNameWin= role;
+            idWin = db.context.Personal.Where(x => x.Personal_Name == nameWin).Where(x => x.Personal_LastName == lastnameWin).Select(x=>x.Personal_Id).First(); ;
             PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin, roleNameWin, surnameWin));
         }
 
@@ -110,7 +114,7 @@ namespace DentistryWpfApp
             rdNotes.IsChecked = false;
             rdPatients.IsChecked = false;
             rdHome.IsChecked = false;
-            PagesNavigation.Navigate(new UserPage());
+            PagesNavigation.Navigate(new UserPage(idWin));
         }
 
        

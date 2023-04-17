@@ -10,9 +10,37 @@
 
     <Grid>
         <Viewbox>
-            <TextBlock>
-                Я существую
-            </TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Абоба" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
+                <StackPanel Margin="0,20" Orientation="Horizontal">
+                   
+                    <StackPanel Grid.Column="0"  HorizontalAlignment="Center" >
+                        <TextBlock Text="Фамилия:" Margin="0,7"/>
+                        <TextBlock Text="Имя:" Margin="0,5"/>
+                        <TextBlock Text="Отчество:" Margin="0,6"/>
+                       
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Center">
+                        <TextBox MinWidth="150" x:Name="LastNameTextBox" Margin="0,5"/>
+                        <TextBox MinWidth="150" x:Name="NameTextBox"  Margin="0,5"/>
+
+                        <TextBox MinWidth="150" x:Name="SurnameTextBox" Margin="0,5"/>
+                        
+
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="SaveButton"  HorizontalAlignment="Center" Content="Сохранить" Grid.Row="1" Grid.ColumnSpan="2" IsDefault="True" Click="SaveButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}"  />
+            </Grid>
+
         </Viewbox>
     </Grid>
 </Page>

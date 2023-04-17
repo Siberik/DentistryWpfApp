@@ -50,7 +50,7 @@ namespace DentistryWpfApp
             surnameWin = surname;
             roleNameWin= role;
             idWin = db.context.Personal.Where(x => x.Personal_Name == nameWin).Where(x => x.Personal_LastName == lastnameWin).Select(x=>x.Personal_Id).First(); ;
-            PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin, roleNameWin, surnameWin));
+            PagesNavigation.Navigate(new HomePage(idWin));
         }
 
 
@@ -76,7 +76,7 @@ namespace DentistryWpfApp
         {
             // PagesNavigation.Navigate(new HomePage());
 
-            PagesNavigation.Navigate(new HomePage(nameWin, lastnameWin,roleNameWin, surnameWin));
+            PagesNavigation.Navigate(new HomePage(idWin));
         }
 
       

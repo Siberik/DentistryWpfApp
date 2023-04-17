@@ -1,7 +1,9 @@
-﻿using DentistryWpfApp.Themes;
+﻿using DentistryWpfApp.Model;
+using DentistryWpfApp.Themes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,13 +24,18 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class HomePage : Page
     {
-        public HomePage(string name,string lastname,string role,string surname=null)
+        Core db= new Core();
+        public HomePage(int id)
         {
-            string timeNow;
-             
+            int roleId = db.context.Personal.Where(x => x.Personal_Id == id).Select(x => x.Role_Id_FK).First();
+          
             
+            string lastname=db.context.Personal.Where(x=>x.Personal_Id==id).Select(x=>x.Personal_LastName).First();
+            string name=db.context.Personal.Where(x=>x.Personal_Id==id).Select(x=>x.Personal_Name).First();
+            string surname=db.context.Personal.Where(x=>x.Personal_Id==id).Select(x=>x.Personal_Surname).First();
+            string role=db.context.Role.Where(x=> x.Role_Id==roleId).Select(x=>x.Role_Name).First();
 
-            
+              string timeNow;
               
             
             

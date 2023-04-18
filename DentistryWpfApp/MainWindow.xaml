@@ -19,12 +19,14 @@
         <Grid>
             <Border CornerRadius="8" Background="{DynamicResource PrimaryBackgroundColor}">
                 <Grid>
+                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <!-- Start: GridColum Left-->
                     <Border  CornerRadius="8 0 0 8" Background="{DynamicResource SecundaryBackgroundColor}">
+                        
                         <Grid x:Name="gridMenu" Width="60.6">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="60"/>
@@ -32,13 +34,13 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-
+                            
                             <!-- Logo -->
                             <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top">
                                 <Path Data="{DynamicResource logo}" Margin="16 0 0 0" Stretch="Fill" Fill="{DynamicResource PrimaryBlueColor}" Width="25" Height="25" HorizontalAlignment="Left"/>
                                 <Label Content="Прометей" Foreground="{DynamicResource PrimaryBlueColor}" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14 0 0 0"/>
                             </StackPanel>
-
+                           
                             <!-- Menu -->
                             <ToggleButton  x:Name="btnMenu"  HorizontalAlignment="Right" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Style="{StaticResource MenuIconStyle}" Margin="0 0 15 0" Checked="btnMenu_Checked">
                                 <ToggleButton.Triggers>
@@ -68,11 +70,12 @@
                                 </RadioButton>
                                 <RadioButton x:Name="rdPatients" Content=" Карточки пациентов" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource patient}" Margin="0 5 0 5" Click="rdPatientsClick" Cursor="Hand"/>
                                 <RadioButton x:Name="rdNotes" Content=" Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
-                                <RadioButton x:Name="rdTheme" Content=" Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click" IsChecked="False" Margin="0,155" VerticalAlignment="Bottom"/>
-                              
+                                <RadioButton x:Name="rdTheme" Content=" Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click" IsChecked="False"/>
                             </StackPanel>
                            
                             <StackPanel Grid.Row="3" x:Name="UserStackPanel" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20" MouseLeftButtonDown="UserStackPanelMouseLeftButtonDown">
+
+                              
                                 <Ellipse Width="40" Height="40" Margin="10 0 0 0">
                                     <Ellipse.Fill>
                                         <ImageBrush ImageSource="/Assets/Avatars/avatar-2.jpg"/>
@@ -85,6 +88,7 @@
                                     <Label Content="scarlettgwen@gmail.com" Foreground="{DynamicResource PrimaryGrayColor}" FontSize="11" FontWeight="Regular" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="0 -10 0 0"/>
                                     
                                 </StackPanel>
+                                
                             </StackPanel>
                             
                         </Grid>

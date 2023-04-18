@@ -17,8 +17,11 @@
                 
             </RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" HorizontalAlignment="Right"  Content="Лол" x:Name="RedactButton" Click="RedactButtonClick"/>
-
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+         <Button Grid.Row="0"   Content="Редактировать" x:Name="RedactButton" Click="RedactButtonClick" Margin="0,0,10,0"/>
+        <Button Grid.Row="0"  Content="Удалить" x:Name="DeleteButton" Click="DeleteButtonClick" />
+        </StackPanel>
+        
 
         <Viewbox Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">

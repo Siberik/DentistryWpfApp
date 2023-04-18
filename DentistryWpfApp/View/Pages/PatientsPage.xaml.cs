@@ -37,16 +37,19 @@ namespace DentistryWpfApp.View.Pages
             Core db = new Core();
             var patientIdList = db.context.Clients.Select(x => x.Clients_Id).ToList();
             InitializeComponent();
-            for (int i = 0; i < patientIdList.Count; i++)
+            for (int i = db.context.Clients.Select(x=>x.Clients_Id).Min()-1; i < patientIdList.Count; i++)
             {
-            string Lastname= db.context.Clients.Where(x=>x.Clients_Id==i+1).Select(x => x.Clients_Lastname).FirstOrDefault();
-            string Firstname = db.context.Clients.Where(x => x.Clients_Id == i + 1).Select(x => x.Clients_Name).FirstOrDefault();
-                string count = (i + 1).ToString();
+                
+            string Lastname= db.context.Clients.Where(x=>x.Clients_Id==i).Select(x => x.Clients_Lastname).FirstOrDefault();
+            string Firstname = db.context.Clients.Where(x => x.Clients_Id == i).Select(x => x.Clients_Name).FirstOrDefault();
+                if (Lastname!=String.Empty & Firstname!=String.Empty)
+                {
+                string count = (i).ToString();
                 Button button = new Button
                 {
 
                     Name = $"Button",
-                    Content = $" №{i + 1}. {Lastname} {Firstname}",
+                    Content = $" №{i}. {Lastname} {Firstname}",
                 };
                 button.Name += count;
                 Style style = this.FindResource("PatientsButton") as Style;
@@ -54,6 +57,8 @@ namespace DentistryWpfApp.View.Pages
                 MainPatientsStackPanel.Children.Add(button);
                 button.Margin= new Thickness(0, 10, 0, 0);
                 button.Click += Button_Click;
+                }
+               
                 
             }
             
@@ -70,7 +75,11 @@ namespace DentistryWpfApp.View.Pages
             this.NavigationService.Navigate(new ViewingPatientPage(id));
         }
 
-       
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
             AddPatientWindow win2 = new AddPatientWindow();

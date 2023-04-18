@@ -2,7 +2,9 @@
 using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -45,6 +47,45 @@ namespace DentistryWpfApp.View.Pages
         private void RedactButtonClick(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new RedactingPatientPage(idget));
+        }
+
+     
+
+        private void DeleteButtonClick(object sender, RoutedEventArgs e)
+        {
+            
+            Clients clientsDelete = new Clients()
+            {
+                Clients_Name= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Name).FirstOrDefault(),
+                Clients_Lastname= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Lastname).FirstOrDefault(),
+                Clients_Phone= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Phone).FirstOrDefault(),
+                Clients_Surname= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Surname).FirstOrDefault(),
+                Personal_Id_FK= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
+                Clients_Id= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Id).FirstOrDefault(),
+                
+               
+            };
+          
+        
+          
+            if (!db.context.Clients.Local.Contains(clientsDelete))
+            {
+                db.context.Clients.Attach(clientsDelete);
+            }
+            EntityState state = db.context.Entry(clientsDelete).State;
+            if (state != EntityState.Deleted)
+            {
+                db.context.Entry(clientsDelete).State = EntityState.Deleted;
+            }
+            if (db.context.SaveChanges() > 0)
+            {
+                MessageBox.Show("Удаление сделано.");
+            }
+            else
+            {
+                MessageBox.Show("Проблемы с БД");
+            }
+
         }
     }
 }

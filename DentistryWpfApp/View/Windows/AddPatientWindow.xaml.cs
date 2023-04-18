@@ -42,9 +42,11 @@ namespace DentistryWpfApp.View.Windows
                 Clients_Name=NameTextBox.Text,
                 Clients_Lastname=LastNameTextBox.Text,
                 Clients_Phone=PhoneTextBox.Text,
+                Clients_Surname=SurnameTextBox.Text,
                 Personal_Id_FK=dentistId,
             };
             db.context.Clients.Add(newClient);
+            
             if(db.context.SaveChanges() >0) {
                 MessageBox.Show("Новый клиент создан.");
                 Close();

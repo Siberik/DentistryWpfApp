@@ -68,22 +68,27 @@
                                 </RadioButton>
                                 <RadioButton x:Name="rdPatients" Content=" Карточки пациентов" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource patient}" Margin="0 5 0 5" Click="rdPatientsClick" Cursor="Hand"/>
                                 <RadioButton x:Name="rdNotes" Content=" Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
-                                <RadioButton x:Name="rdTheme" Content=" Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click" IsChecked="False"/>
+                                <RadioButton x:Name="rdTheme" Content=" Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click" IsChecked="False" Margin="0,155" VerticalAlignment="Bottom"/>
                               
                             </StackPanel>
-
+                           
                             <StackPanel Grid.Row="3" x:Name="UserStackPanel" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20" MouseLeftButtonDown="UserStackPanelMouseLeftButtonDown">
                                 <Ellipse Width="40" Height="40" Margin="10 0 0 0">
                                     <Ellipse.Fill>
                                         <ImageBrush ImageSource="/Assets/Avatars/avatar-2.jpg"/>
                                     </Ellipse.Fill>
                                 </Ellipse>
+                               
                                 <StackPanel Orientation="Vertical" Margin="8 0 0 0">
+                                    
                                     <Label Content="Scarlett Gwen" Foreground="{DynamicResource TextPrimaryColor}" FontSize="14" FontWeight="SemiBold" HorizontalContentAlignment="Center" HorizontalAlignment="Left"/>
                                     <Label Content="scarlettgwen@gmail.com" Foreground="{DynamicResource PrimaryGrayColor}" FontSize="11" FontWeight="Regular" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="0 -10 0 0"/>
+                                    
                                 </StackPanel>
                             </StackPanel>
+                            
                         </Grid>
+                        
                     </Border>
                     <!-- End: GridColum Left-->
 

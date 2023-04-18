@@ -200,6 +200,12 @@
     <Compile Include="AutorizationWindow.xaml.cs">
       <DependentUpon>AutorizationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\NotesAdminPage.xaml.cs">
+      <DependentUpon>NotesAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\NotesDentistPage.xaml.cs">
+      <DependentUpon>NotesDentistPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\PatientsPage.xaml.cs">
       <DependentUpon>PatientsPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -217,6 +223,9 @@
     <Compile Include="View\Pages\ViewingPatientPage.xaml.cs">
       <DependentUpon>ViewingPatientPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="View\Windows\AddPatientWindow.xaml.cs">
+      <DependentUpon>AddPatientWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Assets\Dictionaries\MainDictionary.xaml">
       <SubType>Designer</SubType>
@@ -269,6 +278,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\NotesAdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\NotesDentistPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\PatientsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -291,6 +308,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\Windows\AddPatientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -374,9 +395,7 @@
   <ItemGroup>
     <Resource Include="Assets\Images\icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\Windows\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DentistryClassLibrary\DentistryClassLibrary.csproj">
       <Project>{55bc7c91-dcaa-4d6c-be5c-1f419cc50a69}</Project>

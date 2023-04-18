@@ -19,8 +19,7 @@ using System.Web;
 using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
-
-
+using DentistryWpfApp.View.Windows;
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -71,7 +70,11 @@ namespace DentistryWpfApp.View.Pages
             this.NavigationService.Navigate(new ViewingPatientPage(id));
         }
 
-      
-
+       
+        private void AddButtonClick(object sender, RoutedEventArgs e)
+        {
+            AddPatientWindow win2 = new AddPatientWindow();
+            win2.Show();
+        }
     }
 }

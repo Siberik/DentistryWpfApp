@@ -9,11 +9,16 @@
       Title="PatientsPage" Foreground="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource Montserrat}" FontSize="20">
  
     <Grid>
-        
-        <Viewbox>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" HorizontalAlignment="Right" Content="Создать нового человека" x:Name="AddButton" Click="AddButtonClick"></Button>
+        <Viewbox Grid.Row="1">
            
 
-                <StackPanel x:Name="MainPatientsStackPanel">
+                <StackPanel x:Name="MainPatientsStackPanel" >
                 
             </StackPanel>
 

@@ -157,5 +157,10 @@ namespace DentistryWpfApp
         {
             this.PagesNavigation.Navigate(new PatientsPage());
         }
+
+        private void rdTheme_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

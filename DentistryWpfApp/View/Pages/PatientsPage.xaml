@@ -14,7 +14,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" HorizontalAlignment="Right" Content="Создать нового человека" x:Name="AddButton" Click="AddButtonClick"></Button>
+        <Button Grid.Row="0" HorizontalAlignment="Right" Content="Создать нового клиента" x:Name="AddButton" Click="AddButtonClick"></Button>
         <Viewbox Grid.Row="1">
            
 

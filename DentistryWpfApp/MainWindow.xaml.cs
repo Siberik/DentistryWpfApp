@@ -83,7 +83,14 @@ namespace DentistryWpfApp
 
         private void rdNotes_Click(object sender, RoutedEventArgs e)
         {
-            PagesNavigation.Navigate(new System.Uri("Pages/NotesPage.xaml", UriKind.RelativeOrAbsolute));
+            if (idWin == 1)
+            {
+                PagesNavigation.Navigate(new NotesDentistPage());
+            }
+            else
+            {
+                PagesNavigation.Navigate(new NotesAdminPage());
+            }
         }
 
         private void rdPayment_Click(object sender, RoutedEventArgs e)

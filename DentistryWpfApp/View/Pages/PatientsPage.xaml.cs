@@ -41,7 +41,7 @@ namespace DentistryWpfApp.View.Pages
             int count = db.context.Clients.Select(x => x.Clients_Id).Min();
             Console.WriteLine($"Начальное значение:{count}");
 
-            while (count < db.context.Clients.Select(x => x.Clients_Id).Max())
+            while (count-1 < db.context.Clients.Select(x => x.Clients_Id).Max())
             {
                 
                
@@ -50,11 +50,12 @@ namespace DentistryWpfApp.View.Pages
                 string name=db.context.Clients.Where(x=>x.Clients_Id==count).Select(x=>x.Clients_Name).FirstOrDefault();
                 if (lastname!=null)
                 {
+                        int countId=db.context.Clients.Where(x=>x.Clients_Lastname==lastname).Select(x=>x.Clients_Id).First();
                     Button button = new Button
                     {
 
                         Name = $"Button",
-                        Content = $" №{count + 1}. {lastname} {name}",
+                        Content = $" №{countId}. {lastname} {name}",
                     };
                     button.Name += count;
                     Style style = this.FindResource("PatientsButton") as Style;

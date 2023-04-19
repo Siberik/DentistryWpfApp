@@ -35,34 +35,37 @@ namespace DentistryWpfApp.View.Pages
         {
 
             Core db = new Core();
-            var patientIdList = db.context.Clients.Select(x => x.Clients_Id).ToList();
+           
             InitializeComponent();
-            for (int i = db.context.Clients.Select(x=>x.Clients_Id).Min()-1; i < patientIdList.Count; i++)
+            int count = db.context.Clients.Select(x => x.Clients_Id).Min();
+
+            while (count < db.context.Clients.Select(x => x.Clients_Id).ToArray().Length)
             {
                 
-            string Lastname= db.context.Clients.Where(x=>x.Clients_Id==i).Select(x => x.Clients_Lastname).FirstOrDefault();
-            string Firstname = db.context.Clients.Where(x => x.Clients_Id == i).Select(x => x.Clients_Name).FirstOrDefault();
-                if (Lastname!=String.Empty & Firstname!=String.Empty)
+                count++;
+                string lastname=db.context.Clients.Where(x=>x.Clients_Id==count).Select(x=>x.Clients_Lastname).FirstOrDefault();
+                string name=db.context.Clients.Where(x=>x.Clients_Id==count).Select(x=>x.Clients_Name).FirstOrDefault();
+                if (lastname!=null)
                 {
-                string count = (i).ToString();
-                Button button = new Button
-                {
+                    Button button = new Button
+                    {
 
-                    Name = $"Button",
-                    Content = $" №{i}. {Lastname} {Firstname}",
-                };
-                button.Name += count;
-                Style style = this.FindResource("PatientsButton") as Style;
-                button.Style = style;
-                MainPatientsStackPanel.Children.Add(button);
-                button.Margin= new Thickness(0, 10, 0, 0);
-                button.Click += Button_Click;
+                        Name = $"Button",
+                        Content = $" №{count + 1}. {lastname} {name}",
+                    };
+                    button.Name += count;
+                    Style style = this.FindResource("PatientsButton") as Style;
+                    button.Style = style;
+                    MainPatientsStackPanel.Children.Add(button);
+                    button.Margin = new Thickness(0, 10, 0, 0);
+                    button.Click += Button_Click;
                 }
-               
-                
+
             }
-            
-            
+
+
+
+
 
 
         }
@@ -75,10 +78,7 @@ namespace DentistryWpfApp.View.Pages
             this.NavigationService.Navigate(new ViewingPatientPage(id));
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
 
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {

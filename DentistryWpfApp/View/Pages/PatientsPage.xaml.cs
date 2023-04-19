@@ -37,12 +37,15 @@ namespace DentistryWpfApp.View.Pages
             Core db = new Core();
            
             InitializeComponent();
+            if(db.context.Clients.Select(x => x.Clients_Id).ToArray().Length>0){
             int count = db.context.Clients.Select(x => x.Clients_Id).Min();
+            Console.WriteLine($"Начальное значение:{count}");
 
-            while (count < db.context.Clients.Select(x => x.Clients_Id).ToArray().Length)
+            while (count < db.context.Clients.Select(x => x.Clients_Id).Max())
             {
                 
-                count++;
+               
+                Console.WriteLine($"Промежуточное значение:{count}");
                 string lastname=db.context.Clients.Where(x=>x.Clients_Id==count).Select(x=>x.Clients_Lastname).FirstOrDefault();
                 string name=db.context.Clients.Where(x=>x.Clients_Id==count).Select(x=>x.Clients_Name).FirstOrDefault();
                 if (lastname!=null)
@@ -60,8 +63,10 @@ namespace DentistryWpfApp.View.Pages
                     button.Margin = new Thickness(0, 10, 0, 0);
                     button.Click += Button_Click;
                 }
-
+                count++;
             }
+            }
+          
 
 
 

@@ -6,53 +6,57 @@
         xmlns:local="clr-namespace:DentistryWpfApp.View.Windows"
         mc:Ignorable="d"
         Title="AddPatientWindow" Height="400" Width="400"  WindowStyle="None"
-        ResizeMode="NoResize"
+       
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         AllowsTransparency="True" Icon="/Assets/Images/icon.png" Foreground="{DynamicResource TextPrimaryColor}">
-    <Grid>
-        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Top">
-             <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Center">
-            <TextBlock Text="Добавить пользователя:" FontSize="20"></TextBlock>
-        </StackPanel>
-        </Viewbox>
+    <Border CornerRadius="8" Background="{DynamicResource PrimaryBackgroundColor}">
+        <Grid>
        
-        <Viewbox>
-            
-            <Grid>
-                
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-              
-                
-                <StackPanel Margin="0,20" Orientation="Horizontal" >
-                   
-                    <StackPanel Grid.Column="0"  HorizontalAlignment="Center">
-                        <TextBlock Text="Фамилия:" Margin="0,7"/>
-                        <TextBlock Text="Имя:" Margin="0,5"/>
-                        <TextBlock Text="Отчество:" Margin="0,6"/>
-                        <TextBlock Text="Телефон:" Margin="0,5"/>
-                        <TextBlock Text="Лечащий врач:" Margin="0,5"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Center">
-                        <TextBox MinWidth="150" x:Name="LastNameTextBox" Margin="0,5"/>
-                        <TextBox MinWidth="150" x:Name="NameTextBox"  Margin="0,5"/>
-
-                        <TextBox MinWidth="150" x:Name="SurnameTextBox" Margin="0,5"/>
-                        <TextBox MinWidth="150" x:Name="PhoneTextBox" Margin="0,5"/>
-                        <ComboBox  MinWidth="150" x:Name="DentistComboBox" Margin="0,5"/>
-
-                    </StackPanel>
+            <Viewbox HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <TextBlock Text="Добавить пользователя:" FontSize="20"></TextBlock>
                 </StackPanel>
-                <Button x:Name="SaveButton"  HorizontalAlignment="Center" Content="Сохранить" Grid.Row="1" Grid.ColumnSpan="2" IsDefault="True" Click="SaveButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}"  />
-            </Grid>
+            </Viewbox>
 
-        </Viewbox>
+            <Viewbox>
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+
+
+                    <StackPanel Margin="0,20" Orientation="Horizontal" >
+
+                        <StackPanel Grid.Column="0"  HorizontalAlignment="Center">
+                            <TextBlock Text="Фамилия:" Margin="0,7"/>
+                            <TextBlock Text="Имя:" Margin="0,5"/>
+                            <TextBlock Text="Отчество:" Margin="0,6"/>
+                            <TextBlock Text="Телефон:" Margin="0,5"/>
+                            <TextBlock Text="Лечащий врач:" Margin="0,5"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Center">
+                            <TextBox MinWidth="150" x:Name="LastNameTextBox" Margin="0,5"/>
+                            <TextBox MinWidth="150" x:Name="NameTextBox"  Margin="0,5"/>
+
+                            <TextBox MinWidth="150" x:Name="SurnameTextBox" Margin="0,5"/>
+                            <TextBox MinWidth="150" x:Name="PhoneTextBox" Margin="0,5"/>
+                            <ComboBox  MinWidth="150" x:Name="DentistComboBox" Margin="0,5"/>
+
+                        </StackPanel>
+                    </StackPanel>
+                    <Button x:Name="SaveButton"  HorizontalAlignment="Center" Content="Сохранить" Grid.Row="1" Grid.ColumnSpan="2" IsDefault="True" Click="SaveButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}"  />
+                </Grid>
+
+            </Viewbox>
+        
     </Grid>
+    </Border>
 </Window>

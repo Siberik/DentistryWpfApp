@@ -43,7 +43,7 @@ namespace DentistryWpfApp.View.Pages
 
             while (count-1 < db.context.Clients.Select(x => x.Clients_Id).Max())
             {
-                
+
                
                 Console.WriteLine($"Промежуточное значение:{count}");
                 string lastname=db.context.Clients.Where(x=>x.Clients_Id==count).Select(x=>x.Clients_Lastname).FirstOrDefault();
@@ -64,7 +64,9 @@ namespace DentistryWpfApp.View.Pages
                     button.Margin = new Thickness(0, 10, 0, 0);
                     button.Click += Button_Click;
                 }
-                count++;
+                    while (MainPatientsStackPanel.Children.Count > 0)
+                        MainPatientsStackPanel.Children.RemoveAt(0);
+                    count++;
             }
             }
           

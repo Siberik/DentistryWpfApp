@@ -110,6 +110,7 @@
           </Key>
           <Property Name="Role_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Role_Name" Type="nvarchar(max)" />
+          <Property Name="Role_Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -538,6 +539,7 @@
           <Property Name="Role_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Role_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Personal" Relationship="Self.FK_Personal_Role" FromRole="Role" ToRole="Personal" />
+          <Property Name="Role_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -956,6 +958,7 @@
           <EntitySetMapping Name="Role">
             <EntityTypeMapping TypeName="DentistryModel.Role">
               <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Role_Description" ColumnName="Role_Description" />
                 <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
                 <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
               </MappingFragment>

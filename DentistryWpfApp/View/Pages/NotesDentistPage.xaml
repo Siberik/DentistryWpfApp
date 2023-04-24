@@ -9,8 +9,13 @@
       Title="NotesDentistPage" Foreground="{DynamicResource TextPrimaryColor}">
 
     <Grid>
-        <StackPanel>
-            <TextBlock Text="Ку"></TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Дневник записей стоматолога" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource H1 TextBlock}"/>
+        <StackPanel Grid.Row="1" Name="VisitsStackPanel">
+            
         </StackPanel>
     </Grid>
 </Page>

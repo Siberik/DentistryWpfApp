@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DentistryWpfApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,16 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class NotesDentistPage : Page
     {
-        public NotesDentistPage()
+        Core db = new Core();
+        public NotesDentistPage(int personalId)
         {
             InitializeComponent();
+
+           
+            for (int i = 0; i < 0; i++)
+            {
+
+            }
         }
     }
 }

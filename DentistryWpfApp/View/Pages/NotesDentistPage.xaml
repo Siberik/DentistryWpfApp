@@ -14,6 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Дневник записей стоматолога" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource H1 TextBlock}"/>
+        <Button HorizontalAlignment="Right" Content="Создать записцйу2быдлз--3дцдддззззззззззззззц22ау.ъцпра  9ь"></Button>
         <StackPanel Grid.Row="1" Name="VisitsStackPanel">
             
         </StackPanel>

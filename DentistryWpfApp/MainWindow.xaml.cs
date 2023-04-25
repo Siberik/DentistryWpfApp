@@ -85,7 +85,7 @@ namespace DentistryWpfApp
         {
             if (idWin == 1)
             {
-                PagesNavigation.Navigate(new NotesDentistPage());
+                PagesNavigation.Navigate(new NotesDentistPage(idWin));
             }
             else
             {

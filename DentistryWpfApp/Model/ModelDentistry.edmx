@@ -102,7 +102,7 @@
           <Property Name="Registration_Date" Type="date" Nullable="false" />
           <Property Name="Registration_Description" Type="nvarchar(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
-          <Property Name="Visits_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Visits_Id_FK" Type="int" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -146,6 +146,7 @@
           <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Visits_Date" Type="date" Nullable="false" />
           <Property Name="Visits_Description" Type="nvarchar(max)" />
+          <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
           <End Role="Allergy" Type="Self.Allergy" Multiplicity="1" />
@@ -280,7 +281,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Registration_Visits">
-          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="0..1" />
           <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Visits">
@@ -528,7 +529,7 @@
           <Property Name="Registration_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Registration_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
-          <Property Name="Visits_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Visits_Id_FK" Type="Int32" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_Registration_Clients" FromRole="Registration" ToRole="Clients" />
           <NavigationProperty Name="Visits" Relationship="Self.FK_Registration_Visits" FromRole="Registration" ToRole="Visits" />
         </EntityType>
@@ -580,6 +581,7 @@
           <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
+          <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
           <End Role="Allergy" Type="Self.Allergy" Multiplicity="1" />
@@ -997,6 +999,7 @@
           <EntitySetMapping Name="Visits">
             <EntityTypeMapping TypeName="DentistryModel.Visits">
               <MappingFragment StoreEntitySet="Visits">
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
                 <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
                 <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />
                 <ScalarProperty Name="Visits_Description" ColumnName="Visits_Description" />

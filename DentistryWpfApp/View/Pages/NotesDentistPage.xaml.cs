@@ -25,10 +25,13 @@ namespace DentistryWpfApp.View.Pages
         public NotesDentistPage(int personalId)
         {
             InitializeComponent();
-            var clientsIdentificators=db.context.Clients.Where(x=>x.Personal_Id_FK==personalId).ToList();
-            for (int i = 0; i < 0; i++)
+            var clientsIdList=db.context.Clients.Where(x=>x.Personal_Id_FK==personalId).ToList();
+            for (int i = 0; i < clientsIdList.Count; i++)
             {
-                if(db.context.Registration)
+                Button button = new Button
+                {
+                    Content=
+                };   
             }
         }
     }

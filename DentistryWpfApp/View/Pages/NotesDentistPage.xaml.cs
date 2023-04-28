@@ -21,17 +21,18 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class NotesDentistPage : Page
     {
-        Core db = new Core();
+        readonly Core db = new Core();
         public NotesDentistPage(int personalId)
         {
             InitializeComponent();
-            var clientsIdList=db.context.Clients.Where(x=>x.Personal_Id_FK==personalId).ToList();
+            var clientsIdList=db.context.Clients.Where(x=>x.Personal_Id_FK==personalId).Select(x=>x.Clients_Id).ToList();
             for (int i = 0; i < clientsIdList.Count; i++)
             {
                 Button button = new Button
                 {
-                    Content=
+                    Content="абоба"
                 };   
+                VisitsStackPanel.Children.Add(button);
             }
         }
     }

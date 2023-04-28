@@ -119,9 +119,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Allergy.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AllergyInfo.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Clients.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Controllers\ClientsController.cs" />
     <Compile Include="Model\Controllers\PersonalController.cs" />
     <Compile Include="Model\Core.cs" />
+    <Compile Include="Model\DentalFormula.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Diagnosis.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DiagnosisHistory.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Drugs.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DrugsInfo.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ModelDentistry.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +160,30 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDentistry.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Personal.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PhotoPersonal.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Registration.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Role.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Services.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ServicesHistory.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Studies.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Visits.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemesCountClass.cs" />

@@ -20,8 +20,8 @@
             </StackPanel>
             
         </Viewbox>
-        <Viewbox>
-            <StackPanel Grid.Row="1" Name="VisitsStackPanel">
+        <Viewbox Grid.Row="1" >
+            <StackPanel Name="VisitsStackPanel">
             
         </StackPanel>
         </Viewbox>

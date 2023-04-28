@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -406,7 +406,8 @@
             <End Role="Studies" EntitySet="Studies" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DentistryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -539,8 +540,8 @@
           </Key>
           <Property Name="Role_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Role_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Personal" Relationship="Self.FK_Personal_Role" FromRole="Role" ToRole="Personal" />
           <Property Name="Role_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK_Personal_Role" FromRole="Role" ToRole="Personal" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -580,8 +581,8 @@
           <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
           <End Role="Allergy" Type="Self.Allergy" Multiplicity="1" />
@@ -740,7 +741,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Registration_Visits">
-          <End Role="Visits" Type="Self.Visits" Multiplicity="1" />
+          <End Role="Visits" Type="Self.Visits" Multiplicity="0..1" />
           <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Visits">
@@ -960,9 +961,9 @@
           <EntitySetMapping Name="Role">
             <EntityTypeMapping TypeName="DentistryModel.Role">
               <MappingFragment StoreEntitySet="Role">
-                <ScalarProperty Name="Role_Description" ColumnName="Role_Description" />
                 <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
                 <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+                <ScalarProperty Name="Role_Description" ColumnName="Role_Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -999,10 +1000,10 @@
           <EntitySetMapping Name="Visits">
             <EntityTypeMapping TypeName="DentistryModel.Visits">
               <MappingFragment StoreEntitySet="Visits">
-                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
                 <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
                 <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />
                 <ScalarProperty Name="Visits_Description" ColumnName="Visits_Description" />
+                <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

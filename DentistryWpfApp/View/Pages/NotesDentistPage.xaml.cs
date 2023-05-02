@@ -29,9 +29,10 @@ namespace DentistryWpfApp.View.Pages
             InitializeComponent();
            var clientsIdList = db.context.Clients.Where(x => x.Personal_Id_FK == personalId).Select(x => x.Clients_Id).ToList();
             var registrations = db.context.Registration
-      .Where(r => clientsIdList.Contains(r.Clients_Id_FK))
+      .Where(r => clientsIdList.Contains((int)r.Clients_Id_FK))
       .ToList();
-
+            registrations=registrations.OrderBy(r => r.Registration_Date) // добавляем сортировку по дате
+        .ToList();
             foreach (var registration in registrations)
             {
                 Button button = new Button
@@ -68,7 +69,7 @@ namespace DentistryWpfApp.View.Pages
                 .ToList();
 
             var registrations = db.context.Registration
-                .Where(r => clientsIdList.Contains(r.Clients_Id_FK) &&
+                .Where(r => clientsIdList.Contains((int)r.Clients_Id_FK) &&
                             (!registrationDate.HasValue || r.Registration_Date == registrationDate.Value))
                 .ToList();
 

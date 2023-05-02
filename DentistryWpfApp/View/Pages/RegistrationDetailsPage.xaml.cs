@@ -23,14 +23,11 @@ namespace DentistryWpfApp.View.Pages
     public partial class RegistrationDetailsPage : Page
     {
         Core db = new Core();
-        
+        int regId = 0;
         public RegistrationDetailsPage(Registration registration)
         {
-            if (registration == null)
-            {
-                MessageBox.Show("Пользователь удалён");
-                Application.Current.Shutdown();
-            }
+            regId = registration.Registration_Id;
+           
             
            
              var date = registration.Registration_Date.ToString();
@@ -43,8 +40,15 @@ namespace DentistryWpfApp.View.Pages
           
             InitializeComponent();
             DateTextBlock.Text=$"{date}";
-            ClientsNameTextBlock.Text = $"Имя: {clientLastName} {clientName} {clientSurName}";
+            Line.Text = $"{clientLastName} {clientName} {clientSurName}";
             
+        }
+
+       
+
+        private void ClientsNameTextBlockMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new ViewingPatientPage(regId));
         }
     }
 }

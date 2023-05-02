@@ -10,21 +10,19 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Viewbox>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Дневник записей стоматолога" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource H1 TextBlock}"/>
-        
-            </StackPanel>
-            
-        </Viewbox>
-        <Viewbox Grid.Row="1" >
-            <StackPanel Name="VisitsStackPanel">
-            
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Фамилия клиента:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+            <TextBox Name="ClientNameTextBox" Width="200" VerticalAlignment="Center"/>
+            <TextBlock Text="Дата:" Margin="20,0,10,0" VerticalAlignment="Center"/>
+            <DatePicker Name="RegistrationDatePicker" Width="150" VerticalAlignment="Center"/>
+            <Button Content="Применить фильтр" Margin="20,0" Click="OnFilterButtonClicked"/>
         </StackPanel>
+        <Viewbox Grid.Row="1">
+            <StackPanel Name="VisitsStackPanel"/>
         </Viewbox>
-        
     </Grid>
+
 </Page>

@@ -76,14 +76,24 @@ namespace DentistryWpfApp.View.Pages
             if (state != EntityState.Deleted)
             {
                 db.context.Entry(clientsDelete).State = EntityState.Deleted;
+                int clientId = clientsDelete.Clients_Id; // id клиента
+                var registrations = db.context.Registration.Where(r => r.Clients_Id_FK == clientId).ToList();
+
+                foreach (var registration in registrations)
+                {
+                    db.context.Registration.Remove(registration);
+                }
+
+                db.context.SaveChanges();
             }
+            
             if (db.context.SaveChanges() > 0)
             {
                 MessageBox.Show("Удаление сделано.");
             }
             else
             {
-                MessageBox.Show("Проблемы с БД");
+                MessageBox.Show("Удаление сделано. Привязанных к клиенту приёмов не обнаружено.");
             }
 
         }

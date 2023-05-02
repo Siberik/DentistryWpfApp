@@ -24,7 +24,7 @@ namespace DentistryWpfApp.View.Pages
         public RegistrationDetailsPage(Registration registration)
         {
             InitializeComponent();
-            
+            DateTextBlock.Text=registration.Registration_Date.ToString();
         }
     }
 }

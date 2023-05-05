@@ -28,7 +28,7 @@ namespace DentistryWpfApp.View.Pages
         {
             regId = registration.Registration_Id;
            
-            
+                Console.WriteLine(regId.ToString());
            
              var date = registration.Registration_Date.ToString();
             string clientName = db.context.Clients.Where(x => x.Clients_Id == registration.Clients_Id_FK).Select(x=>x.Clients_Name).First().ToString();

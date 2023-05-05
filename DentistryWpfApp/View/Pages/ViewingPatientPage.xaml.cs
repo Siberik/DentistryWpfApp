@@ -84,7 +84,7 @@ namespace DentistryWpfApp.View.Pages
                     db.context.Registration.Remove(registration);
                 }
 
-                db.context.SaveChanges();
+                
             }
             
             if (db.context.SaveChanges() > 0)

@@ -13,13 +13,17 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Margin="10">
+        <Viewbox>
+            <StackPanel Orientation="Horizontal" Margin="10">
             <TextBlock Text="Фамилия клиента:" Margin="0,0,10,0" VerticalAlignment="Center"/>
             <TextBox Name="ClientNameTextBox" Width="200" VerticalAlignment="Center"/>
             <TextBlock Text="Дата:" Margin="20,0,10,0" VerticalAlignment="Center"/>
             <DatePicker Name="RegistrationDatePicker" Width="150" VerticalAlignment="Center"/>
             <Button Content="Применить фильтр" Margin="20,0" Click="OnFilterButtonClicked"/>
+            <Button Margin="10,0,0,0" Content="Создать запись" VerticalAlignment="Center" Name="CreateRegistrationButton" Click="CreateRegistrationButtonClick"/>
         </StackPanel>
+        </Viewbox>
+        
         <Viewbox Grid.Row="1">
             <StackPanel Name="VisitsStackPanel"/>
         </Viewbox>

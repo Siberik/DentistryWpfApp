@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DentistryClassLibrary;
+using DentistryWpfApp.View.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,17 @@ namespace DentistryWpfApp.View.Pages
         public CreateRegistratonPage()
         {
             InitializeComponent();
+        }
+
+
+
+        private void CreateRegButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (!InputClass.HourChecking(HourTextBox.Text))
+            {
+                MessageBox.Show("Неправильно введено время.");
+            }
+            
         }
     }
 }

@@ -46,7 +46,8 @@ namespace DentistryWpfApp.View.Pages
 
         private void CreateRegButtonClick(object sender, RoutedEventArgs e)
         {
-            if (!InputClass.HourChecking(HourTextBox.Text)||!InputClass.DataChecking(RegistrationDatePicker.SelectedDate.Value.ToString()))
+            if (!InputClass.HourChecking(HourTextBox.Text)||!
+                InputClass.DataChecking(RegistrationDatePicker.SelectedDate.Value.ToString()))
             {
                 errorSnackbar.MessageQueue.Enqueue("Ошибка: Неверный формат времени", "OK", () => { });
             }

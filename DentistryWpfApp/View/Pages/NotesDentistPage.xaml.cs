@@ -35,13 +35,17 @@ namespace DentistryWpfApp.View.Pages
         .ToList();
             foreach (var registration in registrations)
             {
-                Button button = new Button
+                // Проверяем, прошло ли время записи на прием
+                if (registration.Registration_Date > DateTime.Now)
                 {
-                    Content = $"Клиент: {registration.Clients.Clients_Name}, Дата: {registration.Registration_Date}",
-                    Tag = registration
-                };
-                button.Click += OnButtonClicked;
-                VisitsStackPanel.Children.Add(button);
+                    Button button = new Button
+                    {
+                        Content = $"Клиент: {registration.Clients.Clients_Name}, Дата: {registration.Registration_Date}",
+                        Tag = registration
+                    };
+                    button.Click += OnButtonClicked;
+                    VisitsStackPanel.Children.Add(button);
+                }
             }
         }
         private void OnButtonClicked(object sender, RoutedEventArgs e)
@@ -76,17 +80,22 @@ namespace DentistryWpfApp.View.Pages
             VisitsStackPanel.Children.Clear();
             foreach (var registration in registrations)
             {
-                Button button = new Button
+                // Проверяем, прошло ли время записи на прием
+                if (registration.Registration_Date > DateTime.Now)
                 {
-                    Content = $"Клиент: {registration.Clients.Clients_Name}, Дата: {registration.Registration_Date}",
-                    Tag = registration
-                };
-                button.Click += OnButtonClicked;
-                VisitsStackPanel.Children.Add(button);
+                    Button button = new Button
+                    {
+                        Content = $"Клиент: {registration.Clients.Clients_Name}, Дата: {registration.Registration_Date}",
+                        Tag = registration
+                    };
+                    button.Click += OnButtonClicked;
+                    VisitsStackPanel.Children.Add(button);
+                }
             }
         }
 
-        
+
+
 
         private void CreateRegistrationButtonClick(object sender, RoutedEventArgs e)
         {

@@ -83,7 +83,7 @@ namespace DentistryWpfApp.View.Pages
                 };
                 db.context.Registration.Add(registration);
                 if(db.context.SaveChanges()>0) {
-                    MessageBox.Show("Красавчик");
+                    MessageBox.Show("Запись на приём успешно создана.");
                 }
                 else
                 {

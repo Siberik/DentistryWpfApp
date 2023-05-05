@@ -25,6 +25,7 @@ namespace DentistryWpfApp.View.Pages
         public CreateRegistratonPage()
         {
             InitializeComponent();
+            errorSnackbar.MessageQueue.Enqueue("Ошибка: Неверный формат даты", "OK", () => { });
         }
 
 
@@ -35,7 +36,11 @@ namespace DentistryWpfApp.View.Pages
             {
                 MessageBox.Show("Неправильно введено время.");
             }
-            
+            else if(!RegistrationDatePicker.SelectedDate.HasValue)
+            {
+                MessageBox.Show("Не выбрано время");
+            }
+            var date = RegistrationDatePicker.Text;
         }
     }
 }

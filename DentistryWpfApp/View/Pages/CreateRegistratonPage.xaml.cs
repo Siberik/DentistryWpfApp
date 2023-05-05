@@ -33,10 +33,10 @@ namespace DentistryWpfApp.View.Pages
         {
             personalID = personalId;
 
-           
+
             InitializeComponent();
-           
-           var clientsList=db.context.Clients.Where(x=>x.Personal_Id_FK==personalId).Select(p => p.Clients_Lastname ).ToList();
+
+            var clientsList = db.context.Clients.Where(x => x.Personal_Id_FK == personalId).Select(p => p.Clients_Lastname).ToList();
             for (int i = 0; i < clientsList.Count; i++) {
                 ClientsComboBox.Items.Add(clientsList[i]);
             }
@@ -46,7 +46,7 @@ namespace DentistryWpfApp.View.Pages
 
         private void CreateRegButtonClick(object sender, RoutedEventArgs e)
         {
-            if (!InputClass.HourChecking(HourTextBox.Text))
+            if (!InputClass.HourChecking(HourTextBox.Text)||!InputClass.DataChecking(RegistrationDatePicker.SelectedDate.Value.ToString()))
             {
                 errorSnackbar.MessageQueue.Enqueue("Ошибка: Неверный формат времени", "OK", () => { });
             }
@@ -67,8 +67,14 @@ namespace DentistryWpfApp.View.Pages
 
                 // объединяем дату и время в объект DateTime
                 DateTime result = date.Add(time);
-
-                string LastName = ClientsComboBox.SelectionBoxItem.ToString();
+                if (result.Date<DateTime.Now)
+                {
+                    MessageBox.Show("Нельзя записаться на прошедшую дату.");
+                    
+                }
+                else
+                {
+                  string LastName = ClientsComboBox.SelectionBoxItem.ToString();
 
 
 
@@ -89,6 +95,8 @@ namespace DentistryWpfApp.View.Pages
                 {
                     MessageBox.Show("Что-то не так.");
                 }
+                }
+                
 
             }
         }

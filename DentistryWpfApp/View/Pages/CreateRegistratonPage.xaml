@@ -55,9 +55,7 @@
             <!-- Комбо-бокс с клиентами -->
             <TextBlock Text="Выберите клиента" FontSize="18" Margin="10" Grid.Row="5"/>
                 <ComboBox Margin="10" Grid.Row="6" Name="ClientsComboBox" >
-                <ComboBoxItem Content="Клиент 1"/>
-                <ComboBoxItem Content="Клиент 2"/>
-                <ComboBoxItem Content="Клиент 3"/>
+                
             </ComboBox>
 
             <!-- Кнопка создания записи -->

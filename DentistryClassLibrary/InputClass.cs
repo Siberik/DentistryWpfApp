@@ -14,5 +14,11 @@ namespace DentistryClassLibrary
             DateTime result;
             return DateTime.TryParseExact(input, "HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out result);
         }
+        public static bool DataChecking(string dateString)
+        {
+            DateTime result;
+            return DateTime.TryParse(dateString, out result);
+        }
+
     }
 }

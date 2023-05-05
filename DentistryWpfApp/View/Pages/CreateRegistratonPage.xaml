@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CreateRegistratonPage">
+      Title="CreateRegistratonPage" Foreground="{DynamicResource TextPrimaryColor}">
 
     <Page.Resources>
         <Style TargetType="TextBlock">
@@ -50,11 +50,11 @@
 
                 <!-- Описание -->
             <TextBlock Text="Описание" FontSize="18" Margin="10" Grid.Row="3"/>
-            <TextBox Margin="10" Grid.Row="4"/>
+            <TextBox Margin="10" Grid.Row="4" Name="DescTextBox"/>
 
             <!-- Комбо-бокс с клиентами -->
             <TextBlock Text="Выберите клиента" FontSize="18" Margin="10" Grid.Row="5"/>
-            <ComboBox Margin="10" Grid.Row="6">
+                <ComboBox Margin="10" Grid.Row="6" Name="ClientsComboBox" >
                 <ComboBoxItem Content="Клиент 1"/>
                 <ComboBoxItem Content="Клиент 2"/>
                 <ComboBoxItem Content="Клиент 3"/>
@@ -62,7 +62,7 @@
 
             <!-- Кнопка создания записи -->
             <Button Content="Создать запись" FontSize="18" Margin="10" Grid.Row="7" Width="139" Name="CreateRegButton" Click="CreateRegButtonClick"/>
-                <materialDesign:Snackbar x:Name="errorSnackbar" MessageQueue="{materialDesign:MessageQueue}" VerticalAlignment="Bottom"/>
+                 <materialDesign:Snackbar x:Name="errorSnackbar" MessageQueue="{materialDesign:MessageQueue}" VerticalAlignment="Bottom" Foreground="Red"/>
             </StackPanel>
         </Grid>
     </Viewbox>

@@ -90,7 +90,7 @@ namespace DentistryWpfApp.View.Pages
 
         private void CreateRegistrationButtonClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new CreateRegistratonPage());
+            this.NavigationService.Navigate(new CreateRegistratonPage(personalID));
         }
     }
 }

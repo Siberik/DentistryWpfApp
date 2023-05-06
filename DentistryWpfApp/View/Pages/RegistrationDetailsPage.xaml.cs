@@ -24,9 +24,11 @@ namespace DentistryWpfApp.View.Pages
     {
         Core db = new Core();
         int regId = 0;
+        int clientId= 0;
         public RegistrationDetailsPage(Registration registration)
         {
             regId = registration.Registration_Id;
+            clientId =(int) registration.Clients_Id_FK;
            
                 Console.WriteLine(regId.ToString());
            
@@ -48,7 +50,7 @@ namespace DentistryWpfApp.View.Pages
 
         private void ClientsNameTextBlockMouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.NavigationService.Navigate(new ViewingPatientPage(regId));
+            this.NavigationService.Navigate(new ViewingPatientPage(clientId));
         }
     }
 }

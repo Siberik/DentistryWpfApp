@@ -59,7 +59,7 @@ namespace DentistryWpfApp.View.Pages
 
         private void CompleteVisitButtonClick(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new ResultPage((int)reg.Clients_Id_FK));
         }
         private void CancelVisitButtonClick(object sender, RoutedEventArgs e)
         {

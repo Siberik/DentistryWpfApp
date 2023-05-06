@@ -20,7 +20,7 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class ResultPage : Page
     {
-        public ResultPage()
+        public ResultPage(int clientsId)
         {
             InitializeComponent();
         }

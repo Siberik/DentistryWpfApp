@@ -9,8 +9,24 @@ using System.Net.Sockets;
 
 namespace DentistryClassLibrary
 {
+    
     public class MailClass
     {
+        /// <summary>
+        ///  Отправка логина и пароля на почту 
+        /// </summary>
+        /// <param name="to">
+        /// Кому (наш адресат)
+        /// </param>
+        /// <param name="login">
+        /// Логин пользователя
+        /// </param>
+        /// <param name="password">
+        /// Новый пароль пользователя
+        /// </param>
+        /// <returns>
+        /// Возвращает true, если письмо отправлено и false, если нет
+        /// </returns>
         public static bool SendMail(string to,string login, string password)
         {
             try

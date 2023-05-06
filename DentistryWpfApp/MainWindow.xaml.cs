@@ -51,6 +51,9 @@ namespace DentistryWpfApp
             roleNameWin= role;
             idWin = db.context.Personal.Where(x => x.Personal_Name == nameWin).Where(x => x.Personal_LastName == lastnameWin).Select(x=>x.Personal_Id).First(); ;
             PagesNavigation.Navigate(new HomePage(idWin));
+            PersonalNameLabel.Content = $"{lastname} {name}";
+            var mail = db.context.Personal.Where(x => x.Personal_Id == idWin).Select(x => x.Personal_Mail).First();
+            MailLabel.Content = mail;
         }
 
 

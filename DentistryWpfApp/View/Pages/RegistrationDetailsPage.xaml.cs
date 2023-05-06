@@ -25,8 +25,10 @@ namespace DentistryWpfApp.View.Pages
         Core db = new Core();
         int regId = 0;
         int clientId= 0;
+        Registration reg;
         public RegistrationDetailsPage(Registration registration)
         {
+            reg=registration;
             regId = registration.Registration_Id;
             clientId =(int) registration.Clients_Id_FK;
            
@@ -52,5 +54,36 @@ namespace DentistryWpfApp.View.Pages
         {
             this.NavigationService.Navigate(new ViewingPatientPage(clientId));
         }
+
+      
+
+        private void CompleteVisitButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void CancelVisitButtonClick(object sender, RoutedEventArgs e)
+        {
+            var registration = db.context.Registration.Find(regId);
+            if (registration == null)
+            {
+                MessageBox.Show("Запись не найдена.");
+                return;
+            }
+            db.context.Registration.Remove(registration);
+            if (db.context.SaveChanges() > 0)
+            {
+                MessageBox.Show("Удалено.");
+            }
+            else
+            {
+                MessageBox.Show("Что-то не работает");
+            }
+        }
+
+
+
     }
 }
+
+   
+

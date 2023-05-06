@@ -18,8 +18,12 @@
                 </TextBlock>
                 <TextBlock x:Name="DescriptionTextBlock" Margin="0,10"/>
                 <TextBlock x:Name="DentistTextBlock" Margin="0,10"/>
+                <TextBlock x:Name="QuestionTextBlock" Margin="0,10" Text="Прошёл ли приём?" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <Button Content="Приём завершён" Background="Green" Margin="5" />
+                    <Button Content="Приём отменён" Background="Red" Margin="5"/>
+                </StackPanel>
             </StackPanel>
-            
         </Viewbox>
     </Grid>
 </Page>

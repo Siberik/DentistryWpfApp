@@ -8,28 +8,23 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ResultPage">
 
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <Viewbox>
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="Составление протокола" FontSize="24" FontWeight="Bold" Margin="0,20,0,0"/>
+                <StackPanel Margin="0,20,0,0">
+                    <TextBlock Text="Что было сделано?" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                </StackPanel>
 
-        <!-- Заголовок -->
-        <TextBlock Grid.Row="0" Text="Составление протокола" FontSize="24" FontWeight="Bold"/>
+                <!-- Блок "Диагноз" -->
+                <StackPanel Margin="0,20,0,0">
+                    <TextBlock Text="Диагноз" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                </StackPanel>
+                <Button Margin="0,20" HorizontalAlignment="Center" Content="Сформировать протокол"/>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
 
-        <!-- Блок "Что было сделано?" -->
-        <StackPanel Grid.Row="1" Margin="0,20,0,0">
-            <TextBlock Text="Что было сделано?" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
-            <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
-        </StackPanel>
-
-        <!-- Блок "Диагноз" -->
-        <StackPanel Grid.Row="2" Margin="0,20,0,0">
-            <TextBlock Text="Диагноз" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
-            <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
-        </StackPanel>
-        <Button Margin="0,20" Grid.Row="3" HorizontalAlignment="Center" Content="Сформировать протокол"/>
-    </Grid>
 </Page>

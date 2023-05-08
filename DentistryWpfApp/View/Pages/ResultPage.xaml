@@ -8,9 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ResultPage">
 
-    <Viewbox>
+    <Viewbox Width="500">
         <Grid>
-            <StackPanel>
+            <StackPanel Width="500">
                 <TextBlock Text="Составление протокола" FontSize="24" FontWeight="Bold" Margin="0,20,0,0"/>
                 <StackPanel Margin="0,20,0,0">
                     <TextBlock Text="Что было сделано?" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>

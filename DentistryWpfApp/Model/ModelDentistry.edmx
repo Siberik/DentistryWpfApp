@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -115,20 +115,21 @@
         </EntityType>
         <EntityType Name="Services">
           <Key>
-            <PropertyRef Name="Services_Code" />
+            <PropertyRef Name="Services_Id" />
           </Key>
+          <Property Name="Services_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Services_Code" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Services_Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Services_Count" Type="int" Nullable="false" />
+          <Property Name="Services_Count" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="ServicesHistory">
           <Key>
             <PropertyRef Name="ServicesHistory_Id" />
           </Key>
           <Property Name="ServicesHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Services_Code_FK" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ServicesHistory_Date" Type="date" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Services_Id_FK" Type="int" />
         </EntityType>
         <EntityType Name="Studies">
           <Key>
@@ -306,14 +307,14 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ServicesHistory_Services">
-          <End Role="Services" Type="Self.Services" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="0..1" />
           <End Role="ServicesHistory" Type="Self.ServicesHistory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Services">
-              <PropertyRef Name="Services_Code" />
+              <PropertyRef Name="Services_Id" />
             </Principal>
             <Dependent Role="ServicesHistory">
-              <PropertyRef Name="Services_Code_FK" />
+              <PropertyRef Name="Services_Id_FK" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -407,7 +408,8 @@
             <End Role="Studies" EntitySet="Studies" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DentistryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -439,6 +441,7 @@
           <Property Name="Clients_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Clients_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Clients_Date" Type="DateTime" Precision="0" />
           <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AllergyInfo" Relationship="Self.FK_AllergyInfo_Clients" FromRole="Clients" ToRole="AllergyInfo" />
           <NavigationProperty Name="Personal" Relationship="Self.FK_Clients_Personal" FromRole="Clients" ToRole="Personal" />
@@ -449,7 +452,6 @@
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Clients" FromRole="Clients" ToRole="Registration" />
           <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Clients" FromRole="Clients" ToRole="ServicesHistory" />
           <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_Clients" FromRole="Clients" ToRole="Studies" />
-          <Property Name="Clients_Date" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="DentalFormula">
           <Key>
@@ -546,11 +548,12 @@
         </EntityType>
         <EntityType Name="Services">
           <Key>
-            <PropertyRef Name="Services_Code" />
+            <PropertyRef Name="Services_Id" />
           </Key>
+          <Property Name="Services_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Services_Code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Services_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Services_Count" Type="Int32" Nullable="false" />
+          <Property Name="Services_Count" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Services" FromRole="Services" ToRole="ServicesHistory" />
         </EntityType>
         <EntityType Name="ServicesHistory">
@@ -558,9 +561,9 @@
             <PropertyRef Name="ServicesHistory_Id" />
           </Key>
           <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Services_Code_FK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Services_Id_FK" Type="Int32" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_ServicesHistory_Clients" FromRole="ServicesHistory" ToRole="Clients" />
           <NavigationProperty Name="Services" Relationship="Self.FK_ServicesHistory_Services" FromRole="ServicesHistory" ToRole="Services" />
         </EntityType>
@@ -754,14 +757,14 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ServicesHistory_Services">
-          <End Role="Services" Type="Self.Services" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="0..1" />
           <End Role="ServicesHistory" Type="Self.ServicesHistory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Services">
-              <PropertyRef Name="Services_Code" />
+              <PropertyRef Name="Services_Id" />
             </Principal>
             <Dependent Role="ServicesHistory">
-              <PropertyRef Name="Services_Code_FK" />
+              <PropertyRef Name="Services_Id_FK" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -870,12 +873,12 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="DentistryModel.Clients">
               <MappingFragment StoreEntitySet="Clients">
-                <ScalarProperty Name="Clients_Date" ColumnName="Clients_Date" />
                 <ScalarProperty Name="Clients_Id" ColumnName="Clients_Id" />
                 <ScalarProperty Name="Clients_Name" ColumnName="Clients_Name" />
                 <ScalarProperty Name="Clients_Surname" ColumnName="Clients_Surname" />
                 <ScalarProperty Name="Clients_Lastname" ColumnName="Clients_Lastname" />
                 <ScalarProperty Name="Clients_Phone" ColumnName="Clients_Phone" />
+                <ScalarProperty Name="Clients_Date" ColumnName="Clients_Date" />
                 <ScalarProperty Name="Personal_Id_FK" ColumnName="Personal_Id_FK" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -972,6 +975,7 @@
           <EntitySetMapping Name="Services">
             <EntityTypeMapping TypeName="DentistryModel.Services">
               <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Services_Id" ColumnName="Services_Id" />
                 <ScalarProperty Name="Services_Code" ColumnName="Services_Code" />
                 <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
                 <ScalarProperty Name="Services_Count" ColumnName="Services_Count" />
@@ -982,9 +986,9 @@
             <EntityTypeMapping TypeName="DentistryModel.ServicesHistory">
               <MappingFragment StoreEntitySet="ServicesHistory">
                 <ScalarProperty Name="ServicesHistory_Id" ColumnName="ServicesHistory_Id" />
-                <ScalarProperty Name="Services_Code_FK" ColumnName="Services_Code_FK" />
                 <ScalarProperty Name="ServicesHistory_Date" ColumnName="ServicesHistory_Date" />
                 <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+                <ScalarProperty Name="Services_Id_FK" ColumnName="Services_Id_FK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

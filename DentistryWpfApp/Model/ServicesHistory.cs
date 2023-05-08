@@ -15,9 +15,9 @@ namespace DentistryWpfApp.Model
     public partial class ServicesHistory
     {
         public int ServicesHistory_Id { get; set; }
-        public string Services_Code_FK { get; set; }
         public System.DateTime ServicesHistory_Date { get; set; }
         public int Clients_Id_FK { get; set; }
+        public Nullable<int> Services_Id_FK { get; set; }
     
         public virtual Clients Clients { get; set; }
         public virtual Services Services { get; set; }

@@ -20,9 +20,10 @@ namespace DentistryWpfApp.Model
             this.ServicesHistory = new HashSet<ServicesHistory>();
         }
     
+        public int Services_Id { get; set; }
         public string Services_Code { get; set; }
         public string Services_Name { get; set; }
-        public int Services_Count { get; set; }
+        public string Services_Count { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ServicesHistory> ServicesHistory { get; set; }

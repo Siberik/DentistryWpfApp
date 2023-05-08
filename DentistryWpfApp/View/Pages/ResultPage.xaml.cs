@@ -50,6 +50,7 @@ namespace DentistryWpfApp.View.Pages
                 serviceButton.Margin = new Thickness(10, 0, 0, 0);
                 // Добавляем обработчики событий для кнопки
                 serviceButton.MouseEnter += ServiceButton_MouseEnter;
+                serviceButton.MouseLeave +=ServiceButton_MouseLeave;
                 serviceButton.Click += ServiceButton_Click;
 
                 servicesContainer.Children.Add(serviceButton);
@@ -64,6 +65,15 @@ namespace DentistryWpfApp.View.Pages
             if (serviceButton != null)
             {
                 serviceButton.Background = Brushes.Red;
+            }
+        }    private void ServiceButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            // Изменяем цвет кнопки при наведении мыши
+            var serviceButton = sender as Button;
+           
+            if (serviceButton != null)
+            {
+                serviceButton.Background = Brushes.Gray;
             }
         }
 

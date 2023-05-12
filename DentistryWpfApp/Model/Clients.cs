@@ -34,6 +34,7 @@ namespace DentistryWpfApp.Model
         public string Clients_Phone { get; set; }
         public Nullable<System.DateTime> Clients_Date { get; set; }
         public int Personal_Id_FK { get; set; }
+        public string Clients_Prof { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AllergyInfo> AllergyInfo { get; set; }

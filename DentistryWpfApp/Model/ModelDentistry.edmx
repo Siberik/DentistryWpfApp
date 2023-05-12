@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -31,6 +31,7 @@
           <Property Name="Clients_Lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Clients_Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Clients_Date" Type="datetime" />
+          <Property Name="Clients_Prof" Type="nvarchar(max)" />
           <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DentalFormula">
@@ -294,7 +295,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ServicesHistory_Clients">
+        <Association Name="FK_ServicesHistory_Clients1">
           <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
           <End Role="ServicesHistory" Type="Self.ServicesHistory" Multiplicity="*" />
           <ReferentialConstraint>
@@ -395,7 +396,7 @@
             <End Role="Visits" EntitySet="Visits" />
             <End Role="Registration" EntitySet="Registration" />
           </AssociationSet>
-          <AssociationSet Name="FK_ServicesHistory_Clients" Association="Self.FK_ServicesHistory_Clients">
+          <AssociationSet Name="FK_ServicesHistory_Clients1" Association="Self.FK_ServicesHistory_Clients1">
             <End Role="Clients" EntitySet="Clients" />
             <End Role="ServicesHistory" EntitySet="ServicesHistory" />
           </AssociationSet>
@@ -408,8 +409,7 @@
             <End Role="Studies" EntitySet="Studies" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DentistryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -452,6 +452,7 @@
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Clients" FromRole="Clients" ToRole="Registration" />
           <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Clients" FromRole="Clients" ToRole="ServicesHistory" />
           <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_Clients" FromRole="Clients" ToRole="Studies" />
+          <Property Name="Clients_Prof" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="DentalFormula">
           <Key>
@@ -873,6 +874,7 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="DentistryModel.Clients">
               <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="Clients_Prof" ColumnName="Clients_Prof" />
                 <ScalarProperty Name="Clients_Id" ColumnName="Clients_Id" />
                 <ScalarProperty Name="Clients_Name" ColumnName="Clients_Name" />
                 <ScalarProperty Name="Clients_Surname" ColumnName="Clients_Surname" />

@@ -30,7 +30,7 @@
           <Property Name="Clients_Surname" Type="nvarchar" MaxLength="50" />
           <Property Name="Clients_Lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Clients_Phone" Type="nvarchar" MaxLength="20" />
-          <Property Name="Clients_Date" Type="date" />
+          <Property Name="Clients_Date" Type="datetime" />
           <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DentalFormula">
@@ -127,7 +127,7 @@
             <PropertyRef Name="ServicesHistory_Id" />
           </Key>
           <Property Name="ServicesHistory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ServicesHistory_Date" Type="date" Nullable="false" />
+          <Property Name="ServicesHistory_Date" Type="datetime" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
           <Property Name="Services_Id_FK" Type="int" />
         </EntityType>
@@ -138,7 +138,7 @@
           <Property Name="Studies_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Studies_Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Studies_Description" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Studies_Image" Type="image" />
+          <Property Name="Studies_Image" Type="varbinary(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Visits">
@@ -146,7 +146,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Visits_Date" Type="date" Nullable="false" />
+          <Property Name="Visits_Date" Type="datetime" Nullable="false" />
           <Property Name="Visits_Description" Type="nvarchar(max)" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
@@ -441,7 +441,7 @@
           <Property Name="Clients_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Clients_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Clients_Date" Type="DateTime" Precision="0" />
+          <Property Name="Clients_Date" Type="DateTime" Precision="3" />
           <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AllergyInfo" Relationship="Self.FK_AllergyInfo_Clients" FromRole="Clients" ToRole="AllergyInfo" />
           <NavigationProperty Name="Personal" Relationship="Self.FK_Clients_Personal" FromRole="Clients" ToRole="Personal" />
@@ -561,7 +561,7 @@
             <PropertyRef Name="ServicesHistory_Id" />
           </Key>
           <Property Name="ServicesHistory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ServicesHistory_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <Property Name="Services_Id_FK" Type="Int32" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_ServicesHistory_Clients" FromRole="ServicesHistory" ToRole="Clients" />
@@ -583,7 +583,7 @@
             <PropertyRef Name="Visits_Id" />
           </Key>
           <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />

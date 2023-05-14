@@ -1,18 +1,11 @@
 ﻿using DentistryWpfApp.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -86,5 +79,49 @@ namespace DentistryWpfApp.View.Pages
                 servicesContainer.Children.Remove(serviceButton);
             }
         }
+
+        private void AddToWordButton_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
+            Microsoft.Office.Interop.Word.Document doc = new Microsoft.Office.Interop.Word.Document();
+            object missing = System.Reflection.Missing.Value;
+            string fileName = "043у.docx";
+            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\Assets\\Documents\\", fileName);
+
+
+            Console.WriteLine("Полный путь к файлу: " + filePath);
+
+
+
+
+
+            // Открываем документ Word
+            object file = filePath;
+
+            doc = word.Documents.Open(ref file, ReadOnly: false, Visible: true);
+
+            // Получаем значение для вставки
+            string valueToInsert = "Хуй";
+
+            // Получаем закладку по имени
+            Microsoft.Office.Interop.Word.Bookmark bookmark = doc.Bookmarks["ДанныеРентгеновскихИсследований"];
+
+            // Переходим к закладке и вставляем значение
+            if (bookmark != null)
+            {
+                bookmark.Range.Text = valueToInsert;
+            }
+
+            // Сохраняем и закрываем документ
+            object saveChanges = true;
+            object originalFormat = System.Reflection.Missing.Value;
+            object routeDocument = System.Reflection.Missing.Value;
+            doc.Close(ref saveChanges, ref originalFormat, ref routeDocument);
+            word.Quit(ref missing, ref missing, ref missing);
+
+            MessageBox.Show("Значение успешно добавлено в Word!");
+        }
+
+
     }
 }

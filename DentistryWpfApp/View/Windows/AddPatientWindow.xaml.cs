@@ -20,6 +20,10 @@ namespace DentistryWpfApp.View.Windows
     /// </summary>
     public partial class AddPatientWindow : Window
     {
+        private bool isDragging = false;
+        private double x = 0;
+        private double y = 0;
+
         Core db = new Core();
         public AddPatientWindow()
         {
@@ -29,6 +33,29 @@ namespace DentistryWpfApp.View.Windows
             DentistComboBox.DisplayMemberPath = "Personal_LastName";
 
 
+        }
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            isDragging = true;
+            x = e.GetPosition(this).X;
+            y = e.GetPosition(this).Y;
+        }
+
+        private void Border_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            isDragging = false;
+        }
+
+        private void Border_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                double newX = this.Left + (e.GetPosition(this).X - x);
+                double newY = this.Top + (e.GetPosition(this).Y - y);
+
+                this.Left = newX;
+                this.Top = newY;
+            }
         }
 
         private void SaveButtonClick(object sender, RoutedEventArgs e)
@@ -74,6 +101,11 @@ namespace DentistryWpfApp.View.Windows
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+
+        private void Window_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 

@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b2857a72130b41f29c0e0387a15b0cc7" Name="Diagram1" ZoomLevel="74">
+      <Diagram DiagramId="5a4f7b5d8ae94d7aacffdefce54c7ef1" Name="Diagram1">
         <EntityTypeShape EntityType="DentistryModel.Allergy" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.AllergyInfo" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DentistryModel.Clients" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.Clients" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.DentalFormula" Width="1.5" PointX="7.5" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Diagnosis" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.DiagnosisHistory" Width="1.5" PointX="7.5" PointY="14.75" IsExpanded="true" />
@@ -20,6 +20,7 @@
         <EntityTypeShape EntityType="DentistryModel.Services" Width="1.5" PointX="8.25" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.ServicesHistory" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Studies" Width="1.5" PointX="7.5" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DentistryModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DentistryModel.Visits" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="DentistryModel.FK_AllergyInfo_Allergy" ManuallyRouted="false" />
         <AssociationConnector Association="DentistryModel.FK_AllergyInfo_Clients" ManuallyRouted="false" />
@@ -29,7 +30,7 @@
         <AssociationConnector Association="DentistryModel.FK_DrugsInfo_Clients" ManuallyRouted="false" />
         <AssociationConnector Association="DentistryModel.FK_PhotoPersonal_Clients" ManuallyRouted="false" />
         <AssociationConnector Association="DentistryModel.FK_Registration_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="DentistryModel.FK_ServicesHistory_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DentistryModel.FK_ServicesHistory_Clients1" ManuallyRouted="false" />
         <AssociationConnector Association="DentistryModel.FK_Studies_Clients" ManuallyRouted="false" />
         <AssociationConnector Association="DentistryModel.FK_DiagnosisHistory_Diagnosis" ManuallyRouted="false" />
         <AssociationConnector Association="DentistryModel.FK_DrugsInfo_Drugs" ManuallyRouted="false" />

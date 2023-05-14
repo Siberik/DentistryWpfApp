@@ -32,14 +32,15 @@ namespace DentistryWpfApp.View.Pages
             string name= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Name).FirstOrDefault();
             string surname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Surname).FirstOrDefault();
             string lastname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Lastname).FirstOrDefault();
-            string phone = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault(); ;
+            string phone = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault();
+            var date = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Date).FirstOrDefault();
             InitializeComponent();
             IdTextBlock.Text = $"Id клиента: {id}";
             LastNameTextBlock.Text =$"Фамилия: {lastname}";
             NameTextBlock.Text =$"Имя : {name}";
             SurnameTextBlock.Text = $"Отчество: {surname}";
             PhoneTextBlock.Text = $"Телефон: {phone}";
-            
+            ClientsDateTextBlock.Text = $"Дата рождения: {date}";
         }
 
        
@@ -62,8 +63,8 @@ namespace DentistryWpfApp.View.Pages
                 Clients_Surname= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Surname).FirstOrDefault(),
                 Personal_Id_FK= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
                 Clients_Id= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Id).FirstOrDefault(),
-                
-               
+                Clients_Date= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Date).FirstOrDefault(),
+
             };
           
         

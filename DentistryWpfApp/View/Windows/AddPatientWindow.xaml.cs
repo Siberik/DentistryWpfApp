@@ -38,12 +38,13 @@ namespace DentistryWpfApp.View.Windows
             var dentistId=db.context.Personal.Where(x=>x.Personal_Id==textComboBox).Select(x=>x.Personal_Id).FirstOrDefault();
             Clients newClient = new Clients()
             {
-                
-                Clients_Name=NameTextBox.Text,
-                Clients_Lastname=LastNameTextBox.Text,
-                Clients_Phone=PhoneTextBox.Text,
-                Clients_Surname=SurnameTextBox.Text,
-                Personal_Id_FK=dentistId,
+
+                Clients_Name = NameTextBox.Text,
+                Clients_Lastname = LastNameTextBox.Text,
+                Clients_Phone = PhoneTextBox.Text,
+                Clients_Surname = SurnameTextBox.Text,
+                Personal_Id_FK = dentistId,
+                Clients_Date = ClientsDatePicker.SelectedDate,
             };
             db.context.Clients.Add(newClient);
             

@@ -55,6 +55,7 @@
 
                             <TextBox MinWidth="150" x:Name="SurnameTextBox" Margin="0,5"/>
                             <TextBox MinWidth="150" x:Name="PhoneTextBox" Margin="0,5"/>
+                            <DatePicker MinWidth="150" x:Name="ClientsDatePicker" Margin="0,5"/>
                             <ComboBox  MinWidth="150" x:Name="DentistComboBox" Margin="0,5"/>
 
                         </StackPanel>

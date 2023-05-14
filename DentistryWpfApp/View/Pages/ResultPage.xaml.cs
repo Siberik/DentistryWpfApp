@@ -93,7 +93,7 @@ namespace DentistryWpfApp.View.Pages
 
 
 
-            ка рабь
+
 
             // Открываем документ Word
             object file = filePath;

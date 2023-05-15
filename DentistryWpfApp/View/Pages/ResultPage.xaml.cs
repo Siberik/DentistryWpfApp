@@ -88,38 +88,38 @@ namespace DentistryWpfApp.View.Pages
             string fileName = "043у.docx";
             string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\Assets\\Documents\\", fileName);
 
-
-            Console.WriteLine("Полный путь к файлу: " + filePath);
-
-
-
-
-
             // Открываем документ Word
             object file = filePath;
-
             doc = word.Documents.Open(ref file, ReadOnly: false, Visible: true);
 
-            // Получаем значение для вставки
-            string valueToInsert = "Хуй";
+            // Получаем значения для вставки
+            string valueToInsert1 = "Место для рекламы";
+            string valueToInsert2 = "Лечащий драч";
 
-            // Получаем закладку по имени
-            Microsoft.Office.Interop.Word.Bookmark bookmark = doc.Bookmarks["ДанныеРентгеновскихИсследований"];
+            // Получаем закладки по именам
+            Microsoft.Office.Interop.Word.Bookmark bookmark1 = doc.Bookmarks["ЛечащийВрач"];
+            Microsoft.Office.Interop.Word.Bookmark bookmark2 = doc.Bookmarks["ДанныеРентгеновскихИсследований"];
 
-            // Переходим к закладке и вставляем значение
-            if (bookmark != null)
+            // Переходим к закладкам и вставляем значения
+            if (bookmark1 != null)
             {
-                bookmark.Range.Text = valueToInsert;
+                bookmark1.Range.Text = valueToInsert1;
+            }
+            if (bookmark2 != null)
+            {
+                bookmark2.Range.Text = valueToInsert2;
             }
 
-            // Сохраняем и закрываем документ
-            object saveChanges = true;
-            object originalFormat = System.Reflection.Missing.Value;
-            object routeDocument = System.Reflection.Missing.Value;
-            doc.Close(ref saveChanges, ref originalFormat, ref routeDocument);
-            word.Quit(ref missing, ref missing, ref missing);
+            // Показываем документ Word пользователю
+            word.Visible = true;
 
-            MessageBox.Show("Значение успешно добавлено в Word!");
+            // Освобождаем ресурсы
+            doc = null;
+            word = null;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            MessageBox.Show("Значения успешно добавлены в Word!");
         }
 
 

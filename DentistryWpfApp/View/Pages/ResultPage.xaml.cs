@@ -43,7 +43,7 @@ namespace DentistryWpfApp.View.Pages
                 serviceButton.Margin = new Thickness(10, 0, 0, 0);
                 // Добавляем обработчики событий для кнопки
                 serviceButton.MouseEnter += ServiceButton_MouseEnter;
-                serviceButton.MouseLeave +=ServiceButton_MouseLeave;
+                serviceButton.MouseLeave += ServiceButton_MouseLeave;
                 serviceButton.Click += ServiceButton_Click;
 
                 servicesContainer.Children.Add(serviceButton);
@@ -54,16 +54,17 @@ namespace DentistryWpfApp.View.Pages
         {
             // Изменяем цвет кнопки при наведении мыши
             var serviceButton = sender as Button;
-           
+
             if (serviceButton != null)
             {
                 serviceButton.Background = Brushes.Red;
             }
-        }    private void ServiceButton_MouseLeave(object sender, MouseEventArgs e)
+        }
+        private void ServiceButton_MouseLeave(object sender, MouseEventArgs e)
         {
             // Изменяем цвет кнопки при наведении мыши
             var serviceButton = sender as Button;
-           
+
             if (serviceButton != null)
             {
                 serviceButton.Background = Brushes.Gray;
@@ -92,23 +93,16 @@ namespace DentistryWpfApp.View.Pages
             object file = filePath;
             doc = word.Documents.Open(ref file, ReadOnly: false, Visible: true);
 
-            // Получаем значения для вставки
+            // Получаем значения для вставки и задаем стиль "нижнее подчеркивание"
             string valueToInsert1 = "Место для рекламы";
+            Microsoft.Office.Interop.Word.Range bookmark1 = doc.Bookmarks["ЛечащийВрач"].Range;
+            bookmark1.Text = valueToInsert1;
+            bookmark1.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
             string valueToInsert2 = "Лечащий драч";
-
-            // Получаем закладки по именам
-            Microsoft.Office.Interop.Word.Bookmark bookmark1 = doc.Bookmarks["ЛечащийВрач"];
-            Microsoft.Office.Interop.Word.Bookmark bookmark2 = doc.Bookmarks["ДанныеРентгеновскихИсследований"];
-
-            // Переходим к закладкам и вставляем значения
-            if (bookmark1 != null)
-            {
-                bookmark1.Range.Text = valueToInsert1;
-            }
-            if (bookmark2 != null)
-            {
-                bookmark2.Range.Text = valueToInsert2;
-            }
+            Microsoft.Office.Interop.Word.Range bookmark2 = doc.Bookmarks["ДанныеРентгеновскихИсследований"].Range;
+            bookmark2.Text = valueToInsert2;
+            bookmark2.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
 
             // Показываем документ Word пользователю
             word.Visible = true;
@@ -121,7 +115,6 @@ namespace DentistryWpfApp.View.Pages
 
             MessageBox.Show("Значения успешно добавлены в Word!");
         }
-
 
     }
 }

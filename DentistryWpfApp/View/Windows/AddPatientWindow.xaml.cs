@@ -72,6 +72,8 @@ namespace DentistryWpfApp.View.Windows
                 Clients_Surname = SurnameTextBox.Text,
                 Personal_Id_FK = dentistId,
                 Clients_Date = ClientsDatePicker.SelectedDate,
+                Clients_Prof=ProfTextBox.Text,
+                Сlients_Adress= AdressTextBox.Text,
             };
             db.context.Clients.Add(newClient);
             
@@ -103,10 +105,7 @@ namespace DentistryWpfApp.View.Windows
             WindowState = WindowState.Minimized;
         }
 
-        private void Window_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-
-        }
+      
     }
 
 }

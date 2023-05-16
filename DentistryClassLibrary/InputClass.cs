@@ -37,6 +37,6 @@ namespace DentistryClassLibrary
             DateTime result;
             return DateTime.TryParse(dateString, out result);
         }
-
+     
     }
 }

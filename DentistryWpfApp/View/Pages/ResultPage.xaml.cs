@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Humanizer;
-
+using DentistryClassLibrary;
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -21,6 +21,7 @@ namespace DentistryWpfApp.View.Pages
         Core db = new Core();
         public ResultPage(int clientsId)
         {
+            contractGenerator = new ContractGeneratorClass();
             InitializeComponent();
             idGet = clientsId; 
             // Получаем список всех услуг
@@ -93,125 +94,114 @@ namespace DentistryWpfApp.View.Pages
             Instrumental,
             Prepositional
         }
-        string GetMonthName(int month, InflectionCase inflectionCase)
-        {
-            var culture = new CultureInfo("ru-RU");
-            var dateTimeFormatInfo = culture.DateTimeFormat;
-
-            var monthName = dateTimeFormatInfo.GetMonthName(month);
-
-            switch (inflectionCase)
-            {
-                case InflectionCase.Genitive:
-                    if (month == 3 || month == 8)
-                    {
-                        monthName += "а";
-                    }
-                    else if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 10 || month == 11)
-                    {
-                        monthName += "я";
-                    }
-                    else
-                    {
-                        monthName += "ь";
-                    }
-                    break;
-                default:
-                    break;
-            }
-
-            return monthName;
-        }
-        private void AddToWordButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Создаем экземпляр приложения Word
-          
-
-            // Устанавливаем параметры приложения
-            
-
-            // Открываем документ Word
-            string fileName = "043у.docx";
-            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\Assets\\Documents\\", fileName);
-           
-
-            // Создаем временную копию файла
-            string tempFilePath = System.IO.Path.Combine(System.IO.Path.GetTempPath(), fileName);
-            System.IO.File.Copy(filePath, tempFilePath, true);
-
-            // Создаем объект Word и открываем документ
-            Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
-            Microsoft.Office.Interop.Word.Document doc = word.Documents.Open(tempFilePath, ReadOnly: false, Visible: true);
-
-            // Получаем значения для вставки и задаем стиль "нижнее подчеркивание"
-            string valueToInsert1 = "Место для рекламы";
-            Microsoft.Office.Interop.Word.Range bookmark1 = doc.Bookmarks["ЛечащийВрач"].Range;
-            bookmark1.Text = valueToInsert1;
-            bookmark1.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
-
-            string valueToInsert2 = "Лечащий драч";
-            Microsoft.Office.Interop.Word.Range bookmark2 = doc.Bookmarks["ДанныеРентгеновскихИсследований"].Range;
-            bookmark2.Text = valueToInsert2;
-            bookmark2.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
-
-            string name = db.context.Clients.Where(x => x.Clients_Id == idGet).Select(x => x.Clients_Name).FirstOrDefault();
-            string surname = db.context.Clients.Where(x => x.Clients_Id == idGet).Select(x => x.Clients_Surname).FirstOrDefault();
-            string lastname = db.context.Clients.Where(x => x.Clients_Id == idGet).Select(x => x.Clients_Lastname).FirstOrDefault();
-            string valueToInsert3 = $"{lastname} {name} {surname}";
-            Microsoft.Office.Interop.Word.Range bookmark3 = doc.Bookmarks["ФИО"].Range;
-            bookmark3.Text = valueToInsert3;
-            bookmark3.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
-
-            string valueToInsert4 = $"{DateTime.Now:yy}";
-            Microsoft.Office.Interop.Word.Range bookmark4 = doc.Bookmarks["ГодДвеПоследние"].Range;
-            bookmark4.Text = valueToInsert4;
-            bookmark4.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
-
-            string valueToInsert5 = $"{DateTime.Now.Day}";
-            Microsoft.Office.Interop.Word.Range bookmark5 = doc.Bookmarks["Число"].Range;
-            bookmark5.Text = valueToInsert5;
-            bookmark5.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
-
-
-         
-
-            DateTime now = DateTime.Now;
-            string monthName = now.ToString("MMMM", CultureInfo.CreateSpecificCulture("ru-RU"));
-
-            string[] monthCases = new string[] { "января", "февраля", "марта", "апреля", "мая", "июня",
-                                     "июля", "августа", "сентября", "октября", "ноября", "декабря" };
-
-            int monthNumber = now.Month;
-            string inflectedMonthName = monthCases[monthNumber - 1];
-
-            string result = inflectedMonthName;
-            Console.WriteLine(result);
-
-            string valueToInsert6 = result;
-            
-
-
-
-            Microsoft.Office.Interop.Word.Range bookmark6 = doc.Bookmarks["Месяц"].Range;
-            bookmark6.Text = valueToInsert6;
-            bookmark6.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
-            // Показываем документ Word пользователю
-            word.Visible = true;
-
-            // Закрываем документ и освобождаем ресурсы
-            doc.Close();
-            word.Quit();
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(doc);
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(word);
-            GC.Collect();
-
-            // Открываем временный файл в программе по умолчанию
-            System.Diagnostics.Process.Start(tempFilePath);
-
-            MessageBox.Show("Значения успешно добавлены в Word!");
-
-        }
+        private ContractGeneratorClass contractGenerator;
+      
        
 
+
+            private void AddToWordButton_Click(object sender, RoutedEventArgs e)
+            {
+                ContractGeneratorClass contractGeneratorClass = new ContractGeneratorClass();
+
+                // Открываем документ Word
+                string fileName = "043у.docx";
+                string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\Assets\\Documents\\", fileName);
+
+                // Создаем временную копию файла
+                string tempFilePath = System.IO.Path.Combine(System.IO.Path.GetTempPath(), fileName);
+                System.IO.File.Copy(filePath, tempFilePath, true);
+
+                // Создаем объект Word и открываем документ
+                Microsoft.Office.Interop.Word.Application word = null;
+                Microsoft.Office.Interop.Word.Document doc = null;
+
+                try
+                {
+                    word = new Microsoft.Office.Interop.Word.Application();
+                    doc = word.Documents.Open(tempFilePath, ReadOnly: false, Visible: true);
+
+                    // Ваш остальной код
+                    // Получаем значения для вставки и задаем стиль "нижнее подчеркивание"
+                    string valueToInsert1 = "Место для рекламы";
+                    Microsoft.Office.Interop.Word.Range bookmark1 = doc.Bookmarks["ЛечащийВрач"].Range;
+                    bookmark1.Text = valueToInsert1;
+                    bookmark1.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+                    string valueToInsert2 = "Лечащий драч";
+                    Microsoft.Office.Interop.Word.Range bookmark2 = doc.Bookmarks["ДанныеРентгеновскихИсследований"].Range;
+                    bookmark2.Text = valueToInsert2;
+                    bookmark2.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+                    string name = db.context.Clients.Where(x => x.Clients_Id == idGet).Select(x => x.Clients_Name).FirstOrDefault();
+                    string surname = db.context.Clients.Where(x => x.Clients_Id == idGet).Select(x => x.Clients_Surname).FirstOrDefault();
+                    string lastname = db.context.Clients.Where(x => x.Clients_Id == idGet).Select(x => x.Clients_Lastname).FirstOrDefault();
+                    string valueToInsert3 = $"{lastname} {name} {surname}";
+                    Microsoft.Office.Interop.Word.Range bookmark3 = doc.Bookmarks["ФИО"].Range;
+                    bookmark3.Text = valueToInsert3;
+                    bookmark3.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+                    string valueToInsert4 = $"{DateTime.Now:yy}";
+                    Microsoft.Office.Interop.Word.Range bookmark4 = doc.Bookmarks["ГодДвеПоследние"].Range;
+                    bookmark4.Text = valueToInsert4;
+                    bookmark4.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+                    string valueToInsert5 = $"{DateTime.Now.Day}";
+                    Microsoft.Office.Interop.Word.Range bookmark5 = doc.Bookmarks["Число"].Range;
+                    bookmark5.Text = valueToInsert5;
+                    bookmark5.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+
+
+
+                    DateTime now = DateTime.Now;
+                    string monthName = now.ToString("MMMM", CultureInfo.CreateSpecificCulture("ru-RU"));
+
+                    string[] monthCases = new string[] { "января", "февраля", "марта", "апреля", "мая", "июня",
+                                     "июля", "августа", "сентября", "октября", "ноября", "декабря" };
+
+                    int monthNumber = now.Month;
+                    string inflectedMonthName = monthCases[monthNumber - 1];
+
+                    string result = inflectedMonthName;
+                    Console.WriteLine(result);
+
+                    string valueToInsert6 = result;
+
+                    string valueToInsert7 = contractGenerator.GetNextContractNumber();
+                    Microsoft.Office.Interop.Word.Range bookmark7 = doc.Bookmarks["Номер"].Range;
+                    bookmark7.Text = valueToInsert7;
+                    bookmark7.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+
+                    Microsoft.Office.Interop.Word.Range bookmark6 = doc.Bookmarks["Месяц"].Range;
+                    bookmark6.Text = valueToInsert6;
+                    bookmark6.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+                    // Показываем документ Word пользователю
+                    word.Visible = true;
+                    // Закрываем документ и освобождаем ресурсы
+                    doc.Close();
+                    word.Quit();
+                }
+                finally
+                {
+                    if (doc != null)
+                        System.Runtime.InteropServices.Marshal.ReleaseComObject(doc);
+                    if (word != null)
+                        System.Runtime.InteropServices.Marshal.ReleaseComObject(word);
+
+                    doc = null;
+                    word = null;
+                    GC.Collect();
+                }
+
+                // Открываем временный файл в программе по умолчанию
+                System.Diagnostics.Process.Start(tempFilePath);
+
+                MessageBox.Show("Значения успешно добавлены в Word!");
+            }
+
+        }
+
+
     }
-}
+

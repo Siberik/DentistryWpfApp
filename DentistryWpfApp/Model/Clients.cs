@@ -35,6 +35,7 @@ namespace DentistryWpfApp.Model
         public string Clients_Prof { get; set; }
         public int Personal_Id_FK { get; set; }
         public string Сlients_Adress { get; set; }
+        public string Clients_Gender { get; set; }
     
         public virtual ICollection<AllergyInfo> AllergyInfo { get; set; }
         public virtual Personal Personal { get; set; }

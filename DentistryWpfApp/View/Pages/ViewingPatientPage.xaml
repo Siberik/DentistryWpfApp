@@ -42,6 +42,8 @@
             <TextBlock x:Name="SurnameTextBlock" Margin="0,10"/>
             <TextBlock x:Name="PhoneTextBlock"/>
             <TextBlock x:Name="ClientsDateTextBlock"/>
+            <TextBlock x:Name="AdressTextBlock"/>
+            <TextBlock x:Name="ProfTextBlock"/>
                
             </StackPanel>
         </Viewbox>

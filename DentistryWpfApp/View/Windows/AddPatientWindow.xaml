@@ -33,7 +33,6 @@
                 <Viewbox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30">
 
                     <StackPanel>
-
                         <TextBlock Text="Добавить пользователя:" FontSize="20" Height="24"></TextBlock>
                     </StackPanel>
                 </Viewbox>
@@ -63,23 +62,25 @@
                                 <TextBlock Margin="0,7"><Run Text="Профессия:"/><LineBreak/><Run/></TextBlock>
                                 <TextBlock Text="Дата рождения:" Margin="0,-5"/>
                                 <TextBlock Text="Лечащий врач:" Margin="0,15"/>
+                                <TextBlock Text="Пол:" Margin="0,5"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Center">
                                 <TextBox MinWidth="150" x:Name="LastNameTextBox" Margin="0,5"/>
-                                <TextBox MinWidth="150" x:Name="NameTextBox"  Margin="0,5"/>
-
+                                <TextBox MinWidth="150" x:Name="NameTextBox" Margin="0,5"/>
                                 <TextBox MinWidth="150" x:Name="SurnameTextBox" Margin="0,5"/>
                                 <TextBox MinWidth="150" x:Name="PhoneTextBox" Margin="0,5"/>
                                 <TextBox MinWidth="150" x:Name="AdressTextBox" Margin="0,5"/>
                                 <TextBox MinWidth="150" x:Name="ProfTextBox" Margin="0,5"/>
                                 <DatePicker MinWidth="150" x:Name="ClientsDatePicker" Margin="0,5"/>
                                 <ComboBox  MinWidth="150" x:Name="DentistComboBox" Margin="0,5"/>
-
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton x:Name="MaleRadioButton" Content="М" Margin="0,5" Checked="RadioButton_Checked"/>
+                                    <RadioButton x:Name="FemaleRadioButton" Content="Ж" Margin="10,5" Checked="RadioButton_Checked"/>
+                                </StackPanel>
                             </StackPanel>
                         </StackPanel>
                         <Button x:Name="SaveButton"  HorizontalAlignment="Center" Content="Сохранить" Grid.Row="1" Grid.ColumnSpan="2" IsDefault="True" Click="SaveButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}"  />
                     </Grid>
-
                 </Viewbox>
 
             </Grid>

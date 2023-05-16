@@ -33,6 +33,7 @@
           <Property Name="Clients_Date" Type="date" />
           <Property Name="Clients_Prof" Type="nvarchar(max)" />
           <Property Name="Сlients_Adress" Type="nvarchar(max)" />
+          <Property Name="Clients_Gender" Type="nvarchar" MaxLength="1" />
           <Property Name="Personal_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DentalFormula">
@@ -466,6 +467,7 @@
           <NavigationProperty Name="ServicesHistory" Relationship="Self.FK_ServicesHistory_Clients1" FromRole="Clients" ToRole="ServicesHistory" />
           <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_Clients" FromRole="Clients" ToRole="Studies" />
           <Property Name="Сlients_Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Clients_Gender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="DentalFormula">
           <Key>
@@ -898,6 +900,7 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="DentistryModel.Clients">
               <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="Clients_Gender" ColumnName="Clients_Gender" />
                 <ScalarProperty Name="Сlients_Adress" ColumnName="Сlients_Adress" />
                 <ScalarProperty Name="Clients_Id" ColumnName="Clients_Id" />
                 <ScalarProperty Name="Clients_Name" ColumnName="Clients_Name" />

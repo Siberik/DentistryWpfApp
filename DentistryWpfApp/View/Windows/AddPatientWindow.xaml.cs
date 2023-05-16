@@ -20,6 +20,7 @@ namespace DentistryWpfApp.View.Windows
     /// </summary>
     public partial class AddPatientWindow : Window
     {
+        string gender;
         private bool isDragging = false;
         private double x = 0;
         private double y = 0;
@@ -40,7 +41,13 @@ namespace DentistryWpfApp.View.Windows
             x = e.GetPosition(this).X;
             y = e.GetPosition(this).Y;
         }
-
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = (RadioButton)sender;
+            string selectedGender = radioButton.Content.ToString();
+            gender = selectedGender;
+            
+        }
         private void Border_MouseUp(object sender, MouseButtonEventArgs e)
         {
             isDragging = false;
@@ -72,8 +79,9 @@ namespace DentistryWpfApp.View.Windows
                 Clients_Surname = SurnameTextBox.Text,
                 Personal_Id_FK = dentistId,
                 Clients_Date = ClientsDatePicker.SelectedDate,
-                Clients_Prof=ProfTextBox.Text,
-                Сlients_Adress= AdressTextBox.Text,
+                Clients_Prof = ProfTextBox.Text,
+                Сlients_Adress = AdressTextBox.Text,
+                Clients_Gender = gender,
             };
             db.context.Clients.Add(newClient);
             

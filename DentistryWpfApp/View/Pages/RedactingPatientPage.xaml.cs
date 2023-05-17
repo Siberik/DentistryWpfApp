@@ -35,7 +35,7 @@ namespace DentistryWpfApp.View.Pages
             SurnameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Surname).FirstOrDefault();
             PhoneTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault();
             ClientDateTextBox.SelectedDate = (DateTime)db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Date).FirstOrDefault();
-            AdressTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Сlients_Adress).FirstOrDefault();
+            AdressTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Adress).FirstOrDefault();
             ProfTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Prof).FirstOrDefault();
             
 
@@ -58,7 +58,7 @@ namespace DentistryWpfApp.View.Pages
                 Clients_Phone = PhoneTextBox.Text,
                 Personal_Id_FK = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
                 Clients_Date = ClientDateTextBox.SelectedDate,
-                Сlients_Adress = AdressTextBox.Text,
+                Clients_Adress = AdressTextBox.Text,
                 Clients_Prof = ProfTextBox.Text,
                 Clients_Gender = gender,
                 

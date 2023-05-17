@@ -80,7 +80,7 @@ namespace DentistryWpfApp.View.Windows
                 Personal_Id_FK = dentistId,
                 Clients_Date = ClientsDatePicker.SelectedDate,
                 Clients_Prof = ProfTextBox.Text,
-                Сlients_Adress = AdressTextBox.Text,
+                Clients_Adress = AdressTextBox.Text,
                 Clients_Gender = gender,
             };
             db.context.Clients.Add(newClient);

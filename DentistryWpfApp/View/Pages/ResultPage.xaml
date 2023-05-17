@@ -9,29 +9,59 @@
       Title="ResultPage">
 
     <Viewbox>
-        <Grid>
-            <StackPanel>
-                <TextBlock Text="Составление протокола" FontSize="24" FontWeight="Bold" Margin="0,20,0,0"/>
-                <StackPanel Margin="0,20,0,0">
-                    <TextBlock Text="Что было сделано?" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
-                </StackPanel>
+        <DockPanel>
+            <!-- Разделы страницы -->
+            <StackPanel x:Name="Section1" Margin="0,20,0,0" Visibility="Visible" DockPanel.Dock="Top">
+                <!-- Код раздела 1 -->
+                <!-- ... -->
+                <Viewbox>
+                    <Grid>
+                        <StackPanel Width="600">
+                            <TextBlock Text="Составление протокола" FontSize="24" FontWeight="Bold" Margin="0,20,0,0"/>
+                            <StackPanel Margin="0,20,0,0">
+                                <TextBlock Text="Жалобы пациента" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                            </StackPanel>
 
-                <!-- Блок "Диагноз" -->
-                <StackPanel Margin="0,20,0,0">
-                    <TextBlock Text="Диагноз" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
-                </StackPanel>
-                <StackPanel Margin="0,20,0,0">
-                    <TextBlock Text="Выберите услугу:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <ComboBox x:Name="servicesComboBox" DisplayMemberPath="Services_Code" SelectedValuePath="Services_Id"/>
-                    <Button Margin="0,10" HorizontalAlignment="Center" Click="AddServiceButton_Click" Content="Добавить"/>
-                </StackPanel>
-                <StackPanel Margin="0,20,0,0" x:Name="servicesContainer" Orientation="Horizontal"/>
+                            <StackPanel Margin="0,20,0,0">
+                                <TextBlock Text="Перенесённые и сопутствующие заболевания" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                            </StackPanel>
 
-                <Button Margin="0,20" HorizontalAlignment="Center" Content="Сформировать протокол" Click="AddToWordButton_Click"/>
+                            <!-- Блок "Диагноз" -->
+                            <StackPanel Margin="0,20,0,0">
+                                <TextBlock Text="Диагноз" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                            </StackPanel>
+                            <StackPanel Margin="0,20,0,0">
+                                <TextBlock Text="Развитие настоящего заболевания" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                            </StackPanel>
+                            <StackPanel Margin="0,20,0,0">
+                                <TextBlock Text="Выберите услугу:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                <ComboBox x:Name="servicesComboBox" DisplayMemberPath="Services_Code" SelectedValuePath="Services_Id"/>
+                                <Button Margin="0,10" HorizontalAlignment="Center" Click="AddServiceButton_Click" Content="Добавить"/>
+                            </StackPanel>
+                            <StackPanel Margin="0,20,0,0" x:Name="servicesContainer" Orientation="Horizontal"/>
+
+                           
+                        </StackPanel>
+                    </Grid>
+                </Viewbox>
             </StackPanel>
-        </Grid>
+
+            <StackPanel x:Name="Section2" Margin="0,20,0,0" Visibility="Collapsed" DockPanel.Dock="Top">
+                <!-- Код раздела 2 -->
+                <!-- ... -->
+                <TextBlock Text="Раздел2"/>
+            </StackPanel>
+
+           
+
+            <!-- Кнопка "NextButton" -->
+            <Button x:Name="NextButton" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Далее" Click="NextButton_Click" DockPanel.Dock="Bottom" />
+
+        </DockPanel>
     </Viewbox>
 
 </Page>

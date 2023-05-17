@@ -34,7 +34,7 @@ namespace DentistryWpfApp.View.Pages
             string lastname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Lastname).FirstOrDefault();
             string phone = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault();
             var date = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Date).FirstOrDefault();
-            string adress= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Сlients_Adress).FirstOrDefault();
+            string adress= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Adress).FirstOrDefault();
             string prof= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Prof).FirstOrDefault();
             string gender= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Gender).FirstOrDefault();
             InitializeComponent();
@@ -49,7 +49,7 @@ namespace DentistryWpfApp.View.Pages
             GenderTextBlock.Text=$"Пол: {gender}";
         }
 
-       
+                    
 
         private void RedactButtonClick(object sender, RoutedEventArgs e)
         {

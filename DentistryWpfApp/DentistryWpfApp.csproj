@@ -373,11 +373,11 @@
     </EmbeddedResource>
     <Resource Include="Assets\Fonts\Montserrat-Regular.ttf" />
     <Resource Include="Assets\Fonts\OpenSans-Regular.ttf" />
+    <None Include="Assets\Documents\043у.docx" />
     <EntityDeploy Include="Model\ModelDentistry.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelDentistry.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Assets\Documents\043у.docx" />
     <None Include="Model\ModelDentistry.edmx.diagram">
       <DependentUpon>ModelDentistry.edmx</DependentUpon>
     </None>

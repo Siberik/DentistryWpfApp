@@ -23,6 +23,7 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class RedactingPatientPage : Page
     {
+        string gender;
         private int idget = 0;
         Core db = new Core();
         public RedactingPatientPage(int id)
@@ -54,11 +55,12 @@ namespace DentistryWpfApp.View.Pages
                 Clients_Name = NameTextBox.Text,
                 Clients_Surname = SurnameTextBox.Text,
                 Clients_Lastname = LastNameTextBox.Text,
-                Clients_Phone=PhoneTextBox.Text,
-                Personal_Id_FK= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
-                Clients_Date=ClientDateTextBox.SelectedDate,
-                Сlients_Adress=AdressTextBox.Text,
-                Clients_Prof=ProfTextBox.Text,
+                Clients_Phone = PhoneTextBox.Text,
+                Personal_Id_FK = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
+                Clients_Date = ClientDateTextBox.SelectedDate,
+                Сlients_Adress = AdressTextBox.Text,
+                Clients_Prof = ProfTextBox.Text,
+                Clients_Gender = gender,
                 
             };
 
@@ -75,6 +77,14 @@ namespace DentistryWpfApp.View.Pages
                 MessageBox.Show("Проверьте правильность введённых данных");
             }
             
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = (RadioButton)sender;
+            string selectedGender = radioButton.Content.ToString();
+            gender = selectedGender;
+
         }
     }
 }

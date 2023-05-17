@@ -74,8 +74,8 @@
                                 <DatePicker MinWidth="150" x:Name="ClientsDatePicker" Margin="0,5"/>
                                 <ComboBox  MinWidth="150" x:Name="DentistComboBox" Margin="0,5"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <RadioButton x:Name="MaleRadioButton" Content="М" Margin="0,5" Checked="RadioButton_Checked"/>
-                                    <RadioButton x:Name="FemaleRadioButton" Content="Ж" Margin="10,5" Checked="RadioButton_Checked"/>
+                                    <RadioButton x:Name="MaleRadioButton"  Foreground="{DynamicResource TextPrimaryColor}" Content="М" Margin="0,5" Checked="RadioButton_Checked"/>
+                                    <RadioButton x:Name="FemaleRadioButton" Foreground="{DynamicResource TextPrimaryColor}" Content="Ж" Margin="10,5" Checked="RadioButton_Checked"/>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>

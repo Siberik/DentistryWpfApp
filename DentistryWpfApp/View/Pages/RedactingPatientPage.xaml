@@ -29,7 +29,8 @@
                         <TextBlock Text="Телефон:" Margin="0,5"/>
                         <TextBlock Margin="0,5"><Run Language="ru-ru" Text="Адрес"/><Run Text=":"/></TextBlock>
                         <TextBlock Margin="0,5"><Run Language="ru-ru" Text="Профессия"/><Run Text=":"/></TextBlock>
-                        <TextBlock Text="Дата рождения:" Margin="0,5"/>
+                        <TextBlock Text="Дата рождения:" Margin="0,10"/>
+                        <TextBlock Text="Пол:" Margin="0,5"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Center">
                         <TextBox MinWidth="150" x:Name="LastNameTextBox" Margin="0,5"/>
@@ -40,6 +41,11 @@
                         <TextBox MinWidth="150" x:Name="AdressTextBox" Margin="0,5"/>
                         <TextBox MinWidth="150" x:Name="ProfTextBox" Margin="0,5"/>
                         <DatePicker MinWidth="150" x:Name="ClientDateTextBox" Margin="0,5"/>
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton x:Name="MaleRadioButton"  Foreground="{DynamicResource TextPrimaryColor}" Content="М" Margin="0,5" Checked="RadioButton_Checked"/>
+                            <RadioButton x:Name="FemaleRadioButton" Foreground="{DynamicResource TextPrimaryColor}" Content="Ж" Margin="10,5" Checked="RadioButton_Checked"/>
+                        </StackPanel>
+                        
                         
                     </StackPanel>
                 </StackPanel>

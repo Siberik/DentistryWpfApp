@@ -36,6 +36,7 @@ namespace DentistryWpfApp.View.Pages
             var date = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Date).FirstOrDefault();
             string adress= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Сlients_Adress).FirstOrDefault();
             string prof= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Prof).FirstOrDefault();
+            string gender= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Gender).FirstOrDefault();
             InitializeComponent();
             IdTextBlock.Text = $"Id клиента: {id}";
             LastNameTextBlock.Text =$"Фамилия: {lastname}";
@@ -45,6 +46,7 @@ namespace DentistryWpfApp.View.Pages
             ClientsDateTextBlock.Text = $"Дата рождения: {date}";
             AdressTextBlock.Text = $"Адрес: {adress}";
             ProfTextBlock.Text = $"Профессия: {prof}";
+            GenderTextBlock.Text=$"Пол: {gender}";
         }
 
        

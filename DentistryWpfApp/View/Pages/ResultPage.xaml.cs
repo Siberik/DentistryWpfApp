@@ -186,11 +186,68 @@ namespace DentistryWpfApp.View.Pages
                 bookmark8.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
 
                 var adress = db.context.Clients.Where(x => x.Clients_Id == idGet).Select(x => x.Clients_Adress).FirstOrDefault();
-                string valueToInsert9 = gender;
+                string valueToInsert9 = adress;
                 Microsoft.Office.Interop.Word.Range bookmark9 = doc.Bookmarks["Адрес"].Range;
 
-                bookmark8.Text = valueToInsert9;
-                bookmark8.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+                bookmark9.Text = valueToInsert9;
+                bookmark9.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+                var client = db.context.Clients.FirstOrDefault(x => x.Clients_Id == idGet);
+                int age=0;
+                if (client != null)
+                {
+                    DateTime birthDate = (DateTime)client.Clients_Date;
+                    DateTime currentDate = DateTime.Now;
+                     age = currentDate.Year - birthDate.Year;
+
+                    // Учтите случай, если текущая дата еще не достигла дня рождения клиента в текущем году
+                    if (currentDate.Month < birthDate.Month || (currentDate.Month == birthDate.Month && currentDate.Day < birthDate.Day))
+                    {
+                        age--;
+                    }
+
+                    // Теперь переменная "age" содержит возраст клиента
+                    // Вы можете использовать эту переменную по вашему усмотрению
+                }
+                
+                string valueToInsert10 = age.ToString();
+                Microsoft.Office.Interop.Word.Range bookmark10 = doc.Bookmarks["Возраст"].Range;
+
+                bookmark10.Text = valueToInsert10;
+                bookmark10.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+
+                string valueToInsert11 = client.Clients_Prof;
+                Microsoft.Office.Interop.Word.Range bookmark11 = doc.Bookmarks["Профессия"].Range;
+
+                bookmark11.Text = valueToInsert11;
+                bookmark11.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+
+                string valueToInsert12 = TransferredDiseasesTextBox.Text;
+                Microsoft.Office.Interop.Word.Range bookmark12 = doc.Bookmarks["СопутствующиеЗаблоевания"].Range;
+
+                bookmark12.Text = valueToInsert12;
+                bookmark12.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+
+                string valueToInsert13 = СomplaintsTextBox.Text;
+                Microsoft.Office.Interop.Word.Range bookmark13 = doc.Bookmarks["Жалобы"].Range;
+
+                bookmark13.Text = valueToInsert13;
+                bookmark13.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert14 = RealDiseaseTextBox.Text;
+                Microsoft.Office.Interop.Word.Range bookmark14 = doc.Bookmarks["РазвитиеНастоящегоЗаболевания"].Range;
+
+                bookmark14.Text = valueToInsert14;
+                bookmark14.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert15 = MucousMembraneTextBox.Text;
+                Microsoft.Office.Interop.Word.Range bookmark15 = doc.Bookmarks["СостояниеСлизистой"].Range;
+
+                bookmark15.Text = valueToInsert15;
+                bookmark15.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
+
 
 
                 // Показываем документ Word пользователю

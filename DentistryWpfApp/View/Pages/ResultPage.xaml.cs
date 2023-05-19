@@ -113,15 +113,21 @@ namespace DentistryWpfApp.View.Pages
             // Создаем объект Word и открываем документ
             Microsoft.Office.Interop.Word.Application word = null;
             Microsoft.Office.Interop.Word.Document doc = null;
-
+            var client = db.context.Clients.FirstOrDefault(x => x.Clients_Id == idGet);
             try
             {
                 word = new Microsoft.Office.Interop.Word.Application();
                 doc = word.Documents.Open(tempFilePath, ReadOnly: false, Visible: true);
-
+                string valueToInsert1="";
                 // Ваш остальной код
                 // Получаем значения для вставки и задаем стиль "нижнее подчеркивание"
-                string valueToInsert1 = "Место для рекламы";
+                var personal = db.context.Personal.FirstOrDefault(x => x.Personal_Id == client.Personal_Id_FK);
+                if (personal != null)
+                {
+                    valueToInsert1 = personal.Personal_LastName + " " + personal.Personal_Name;
+                    // Вы можете использовать переменную "valueToInsert1" по вашему усмотрению
+                }
+              
                 Microsoft.Office.Interop.Word.Range bookmark1 = doc.Bookmarks["ЛечащийВрач"].Range;
                 bookmark1.Text = valueToInsert1;
                 bookmark1.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
@@ -191,7 +197,7 @@ namespace DentistryWpfApp.View.Pages
 
                 bookmark9.Text = valueToInsert9;
                 bookmark9.Underline = Microsoft.Office.Interop.Word.WdUnderline.wdUnderlineSingle;
-                var client = db.context.Clients.FirstOrDefault(x => x.Clients_Id == idGet);
+                
                 int age=0;
                 if (client != null)
                 {

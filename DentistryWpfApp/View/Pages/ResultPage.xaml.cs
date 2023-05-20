@@ -10,6 +10,7 @@ using System.Windows.Media;
 using DentistryClassLibrary;
 using Microsoft.Office.Interop.Word;
 using System.Runtime.InteropServices;
+using System.Data.Entity.Migrations;
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -18,10 +19,12 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class ResultPage : System.Windows.Controls.Page
     {
+        Registration reg;
         int idGet;
         Core db = new Core();
-        public ResultPage(int clientsId)
+        public ResultPage(int clientsId, Registration registration)
         {
+            reg= registration;
             contractGenerator = new ContractGeneratorClass();
             InitializeComponent();
             idGet = clientsId;
@@ -265,6 +268,28 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
                 tempDoc = null;
                 word = null;
                 GC.Collect();
+            }
+
+            Visits visits = new Visits()
+            {
+                Visits_Date = reg.Registration_Date,
+                Visits_Diagnosis=DiagnosisTextBox.Text,
+                Visits_RealDisease=RealDiseaseTextBox.Text,
+                Visits_Rentgen=RentgenTextBox.Text,
+                Visits_Sovet=SovetTextBox.Text,
+                Visits_MucousMembrane=MucousMembraneTextBox.Text,
+                Visits_Result=ResultTextBox.Text,
+                Visits_TransferredDiseases=TransferredDiseasesTextBox.Text,
+                Visits_Сomplaints= СomplaintsTextBox.Text,
+                Clients_Id_FK=(int)reg.Clients_Id_FK,
+            };
+            reg.Visits_Id_FK = visits.Visits_Id;
+            db.context.Visits.Add(visits);
+            db.context.Registration.AddOrUpdate(reg);
+            
+           if(db.context.SaveChanges() == 0)
+            {
+                MessageBox.Show("Ты лоханулся, дружок");
             }
         }
 

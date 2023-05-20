@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище DentistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Allergy">
           <Key>
             <PropertyRef Name="Allergy_Id" />
@@ -160,7 +160,14 @@
           </Key>
           <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Visits_Date" Type="datetime" Nullable="false" />
-          <Property Name="Visits_Description" Type="nvarchar(max)" />
+          <Property Name="Visits_TransferredDiseases" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visits_Сomplaints" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visits_RealDisease" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visits_MucousMembrane" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visits_Rentgen" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visits_Sovet" Type="nvarchar(max)" />
+          <Property Name="Visits_Result" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visits_Diagnosis" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_AllergyInfo_Allergy">
@@ -611,7 +618,14 @@
           </Key>
           <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Visits_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Visits_TransferredDiseases" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visits_Сomplaints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visits_RealDisease" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visits_MucousMembrane" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visits_Rentgen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visits_Sovet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Visits_Result" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visits_Diagnosis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Registration" Relationship="Self.FK_Registration_Visits" FromRole="Visits" ToRole="Registration" />
         </EntityType>
@@ -1050,7 +1064,14 @@
               <MappingFragment StoreEntitySet="Visits">
                 <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
                 <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />
-                <ScalarProperty Name="Visits_Description" ColumnName="Visits_Description" />
+                <ScalarProperty Name="Visits_TransferredDiseases" ColumnName="Visits_TransferredDiseases" />
+                <ScalarProperty Name="Visits_Сomplaints" ColumnName="Visits_Сomplaints" />
+                <ScalarProperty Name="Visits_RealDisease" ColumnName="Visits_RealDisease" />
+                <ScalarProperty Name="Visits_MucousMembrane" ColumnName="Visits_MucousMembrane" />
+                <ScalarProperty Name="Visits_Rentgen" ColumnName="Visits_Rentgen" />
+                <ScalarProperty Name="Visits_Sovet" ColumnName="Visits_Sovet" />
+                <ScalarProperty Name="Visits_Result" ColumnName="Visits_Result" />
+                <ScalarProperty Name="Visits_Diagnosis" ColumnName="Visits_Diagnosis" />
                 <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1071,7 +1092,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
       </DesignerInfoPropertySet>
     </Options>

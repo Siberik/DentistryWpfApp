@@ -8,8 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ResultPage">
 
-    <Viewbox Height="Auto" Width="600">
-        <DockPanel>
+    <Viewbox >
+        <DockPanel >
+            <Button x:Name="BackButton" Margin="10" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="BackButton_Click" DockPanel.Dock="Top" Visibility="Collapsed" />
+
             <!-- Разделы страницы -->
             <StackPanel x:Name="Section1" Margin="0,20,0,0" Visibility="Visible" DockPanel.Dock="Top">
                 <!-- Код раздела 1 -->
@@ -17,34 +19,34 @@
                 <Viewbox>
                     <Grid>
                         <StackPanel Width="600">
-                            <TextBlock Text="Составление протокола" FontSize="30" FontWeight="Bold" Margin="0,20,0,0"/>
+                            <TextBlock Text="Составление протокола" FontSize="36" FontWeight="Bold" Margin="0,20,0,0" />
                             <StackPanel Margin="0,20,0,0">
-                                <TextBlock Text="Жалобы пациента" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                                <TextBox FontSize="14" x:Name="СomplaintsTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                                <TextBlock Text="Жалобы пациента" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                                <TextBox FontSize="18" x:Name="СomplaintsTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120" />
                             </StackPanel>
 
                             <StackPanel Margin="0,20,0,0">
-                                <TextBlock Text="Перенесённые и сопутствующие заболевания" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                                <TextBox FontSize="14" Name="TransferredDiseasesTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                                <TextBlock Text="Перенесённые и сопутствующие заболевания" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                                <TextBox FontSize="18" Name="TransferredDiseasesTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120" />
                             </StackPanel>
 
                             <!-- Блок "Диагноз" -->
                             <StackPanel Margin="0,20,0,0">
-                                <TextBlock Text="Диагноз" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                                <TextBox FontSize="14" TextWrapping="Wrap" x:Name="DiagnosisTextBox" AcceptsReturn="True" Height="120"/>
+                                <TextBlock Text="Диагноз" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                                <TextBox FontSize="18" TextWrapping="Wrap" x:Name="DiagnosisTextBox" AcceptsReturn="True" Height="120" />
                             </StackPanel>
                             <StackPanel Margin="0,20,0,0">
-                                <TextBlock Text="Развитие настоящего заболевания" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                                <TextBox FontSize="14" Name="RealDiseaseTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                                <TextBlock Text="Развитие настоящего заболевания" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                                <TextBox FontSize="18" Name="RealDiseaseTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120" />
                             </StackPanel>
                             <StackPanel Margin="0,20,0,0">
-                                <TextBlock Text="Выберите услугу:" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                                <ComboBox x:Name="servicesComboBox" DisplayMemberPath="Services_Code" SelectedValuePath="Services_Id"/>
-                                <Button Margin="0,10" HorizontalAlignment="Center" Click="AddServiceButton_Click" Content="Добавить"/>
+                                <TextBlock Text="Выберите услугу:" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                                <ComboBox x:Name="servicesComboBox" DisplayMemberPath="Services_Code" SelectedValuePath="Services_Id" FontSize="18" />
+                                <Button Margin="0,10" HorizontalAlignment="Center" Click="AddServiceButton_Click" Content="Добавить" FontSize="18" />
                             </StackPanel>
-                            <StackPanel Margin="0,20,0,0" x:Name="servicesContainer" Orientation="Horizontal"/>
+                            <StackPanel Margin="0,20,0,0" x:Name="servicesContainer" Orientation="Horizontal" />
 
-                           
+
                         </StackPanel>
                     </Grid>
                 </Viewbox>
@@ -54,29 +56,27 @@
                 <!-- Код раздела 2 -->
                 <!-- ... -->
                 <StackPanel Margin="0,20,0,0">
-                    <TextBlock Text="Состояние слизистой оболочки"  FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBox FontSize="14" TextWrapping="Wrap" x:Name="MucousMembraneTextBox" AcceptsReturn="True" Height="120"/>
+                    <TextBlock Text="Состояние слизистой оболочки" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                    <TextBox FontSize="18" TextWrapping="Wrap" x:Name="MucousMembraneTextBox" AcceptsReturn="True" Height="120" />
                 </StackPanel>
                 <StackPanel Margin="0,20,0,0">
-                    <TextBlock Text="Данные рентгеновские исследования" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBox FontSize="14" Name="RentgenTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                    <TextBlock Text="Данные рентгеновского исследования" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                    <TextBox FontSize="18" Name="RentgenTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120" />
                 </StackPanel>
                 <StackPanel Margin="0,20,0,0">
-                    <TextBlock Text="Результаты лечения (эпикриз)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBox FontSize="14" Name="ResultTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                    <TextBlock Text="Результаты лечения (эпикриз)" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                    <TextBox FontSize="18" Name="ResultTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120" />
                 </StackPanel>
                 <StackPanel Margin="0,20,0,0">
-                    <TextBlock Text="Наставления"  FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBox FontSize="14" Name="SovetTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120"/>
+                    <TextBlock Text="Наставления" FontSize="24" FontWeight="Bold" Margin="0,0,0,10" />
+                    <TextBox FontSize="18" Name="SovetTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="120" />
                 </StackPanel>
             </StackPanel>
 
-           
-        
             <!-- Кнопка "NextButton" -->
-            <Button x:Name="NextButton" Margin="10" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Далее" Click="NextButton_Click" DockPanel.Dock="Bottom" />
+            <Button x:Name="NextButton" Margin="10" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Далее" Click="NextButton_Click" DockPanel.Dock="Bottom" FontSize="18" />
 
         </DockPanel>
     </Viewbox>
 
-</Page> 
+</Page>

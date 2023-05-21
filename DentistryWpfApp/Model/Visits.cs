@@ -22,7 +22,7 @@ namespace DentistryWpfApp.Model
         public int Visits_Id { get; set; }
         public System.DateTime Visits_Date { get; set; }
         public string Visits_TransferredDiseases { get; set; }
-        public string Visits_Сomplaints { get; set; }
+        public string Visits_Complaints { get; set; }
         public string Visits_RealDisease { get; set; }
         public string Visits_MucousMembrane { get; set; }
         public string Visits_Rentgen { get; set; }

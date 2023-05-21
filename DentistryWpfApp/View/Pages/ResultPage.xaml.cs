@@ -280,7 +280,7 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
                 Visits_MucousMembrane=MucousMembraneTextBox.Text,
                 Visits_Result=ResultTextBox.Text,
                 Visits_TransferredDiseases=TransferredDiseasesTextBox.Text,
-                Visits_Сomplaints= СomplaintsTextBox.Text,
+                Visits_Complaints = СomplaintsTextBox.Text,
                 Clients_Id_FK=(int)reg.Clients_Id_FK,
             };
             reg.Visits_Id_FK = visits.Visits_Id;

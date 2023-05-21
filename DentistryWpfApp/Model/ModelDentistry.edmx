@@ -162,7 +162,7 @@
           <Property Name="Visits_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Visits_Date" Type="datetime" Nullable="false" />
           <Property Name="Visits_TransferredDiseases" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Visits_Сomplaints" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visits_Complaints" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Visits_RealDisease" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Visits_MucousMembrane" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Visits_Rentgen" Type="nvarchar(max)" Nullable="false" />
@@ -621,7 +621,7 @@
           <Property Name="Visits_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Visits_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Visits_TransferredDiseases" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Visits_Сomplaints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visits_Complaints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Visits_RealDisease" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Visits_MucousMembrane" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Visits_Rentgen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
@@ -1068,7 +1068,7 @@
                 <ScalarProperty Name="Visits_Id" ColumnName="Visits_Id" />
                 <ScalarProperty Name="Visits_Date" ColumnName="Visits_Date" />
                 <ScalarProperty Name="Visits_TransferredDiseases" ColumnName="Visits_TransferredDiseases" />
-                <ScalarProperty Name="Visits_Сomplaints" ColumnName="Visits_Сomplaints" />
+                <ScalarProperty Name="Visits_Complaints" ColumnName="Visits_Complaints" />
                 <ScalarProperty Name="Visits_RealDisease" ColumnName="Visits_RealDisease" />
                 <ScalarProperty Name="Visits_MucousMembrane" ColumnName="Visits_MucousMembrane" />
                 <ScalarProperty Name="Visits_Rentgen" ColumnName="Visits_Rentgen" />

@@ -1,31 +1,18 @@
 ﻿using DentistryWpfApp.Model;
-using JetBrains.Annotations;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DentistryWpfApp.View.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для ViewingPatientPage.xaml
-    /// </summary>
     public partial class ViewingPatientPage : Page
     {
         private int idget = 0;
         Core db = new Core();
+        private bool appointmentsVisible = false;
+
         public ViewingPatientPage(int id)
         {
             idget = id;
@@ -40,7 +27,7 @@ namespace DentistryWpfApp.View.Pages
             InitializeComponent();
             IdTextBlock.Text = $"Id клиента: {id}";
             LastNameTextBlock.Text = $"Фамилия: {lastname}";
-            NameTextBlock.Text = $"Имя : {name}";
+            NameTextBlock.Text = $"Имя: {name}";
             SurnameTextBlock.Text = $"Отчество: {surname}";
             PhoneTextBlock.Text = $"Телефон: {phone}";
             ClientsDateTextBlock.Text = $"Дата рождения: {date}";
@@ -49,83 +36,79 @@ namespace DentistryWpfApp.View.Pages
             GenderTextBlock.Text = $"Пол: {gender}";
         }
 
-
-
         private void RedactButtonClick(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new RedactingPatientPage(idget));
         }
 
-
-
         private void DeleteButtonClick(object sender, RoutedEventArgs e)
         {
+            Clients clientsDelete = db.context.Clients.FirstOrDefault(x => x.Clients_Id == idget);
 
-            Clients clientsDelete = new Clients()
+            if (clientsDelete != null)
             {
-                Clients_Name = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Name).FirstOrDefault(),
-                Clients_Lastname = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Lastname).FirstOrDefault(),
-                Clients_Phone = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Phone).FirstOrDefault(),
-                Clients_Surname = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Surname).FirstOrDefault(),
-                Personal_Id_FK = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
-                Clients_Id = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Id).FirstOrDefault(),
-                Clients_Date = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Date).FirstOrDefault(),
+                db.context.Clients.Remove(clientsDelete);
 
-            };
+                var registrations = db.context.Registration.Where(r => r.Clients_Id_FK == idget).ToList();
+                db.context.Registration.RemoveRange(registrations);
 
-
-
-            if (!db.context.Clients.Local.Contains(clientsDelete))
-            {
-                db.context.Clients.Attach(clientsDelete);
-            }
-            EntityState state = db.context.Entry(clientsDelete).State;
-            if (state != EntityState.Deleted)
-            {
-                db.context.Entry(clientsDelete).State = EntityState.Deleted;
-                int clientId = clientsDelete.Clients_Id; // id клиента
-                var registrations = db.context.Registration.Where(r => r.Clients_Id_FK == clientId).ToList();
-
-                foreach (var registration in registrations)
+                if (db.context.SaveChanges() > 0)
                 {
-                    db.context.Registration.Remove(registration);
+                    MessageBox.Show("Удаление сделано.");
                 }
-
-
+                else
+                {
+                    MessageBox.Show("Удаление сделано. Привязанных к клиенту приёмов не обнаружено.");
+                }
             }
-
-            if (db.context.SaveChanges() > 0)
-            {
-                MessageBox.Show("Удаление сделано.");
-            }
-            else
-            {
-                MessageBox.Show("Удаление сделано. Привязанных к клиенту приёмов не обнаружено.");
-            }
-
         }
 
         private void ViewAppointmentsButtonClick(object sender, RoutedEventArgs e)
         {
-            // Очищаем панель с кнопками при каждом нажатии
-            AppointmentsPanel.Children.Clear();
-
-            // Здесь вам нужно получить даты приёмов пациента из вашей базы данных
-            // и создать кнопки для каждой даты приёма
-
-            // Пример создания кнопок с датами приёмов (замените данный код на вашу логику получения данных из БД)
-            for (int i = 0; i < 5; i++)
+            if (appointmentsVisible)
             {
-                Button button = new Button
-                {
-                    Content = DateTime.Now.AddDays(i).ToShortDateString(),
-                    Style = FindResource("AppointmentButtonStyle") as Style
-                };
-                AppointmentsPanel.Children.Add(button);
+                // Если список уже видим, скрываем его
+                AppointmentsPanel.Visibility = Visibility.Collapsed;
+                appointmentsVisible = false;
             }
+            else
+            {
+                // Очищаем панель с кнопками при каждом нажатии
+                AppointmentsPanel.Children.Clear();
 
-            // Показываем панель с кнопками датами приёмов
-            AppointmentsPanel.Visibility = Visibility.Visible;
+                // Получаем даты приёмов из базы данных для данного клиента
+                var appointments = db.context.Registration
+                    .Where(r => r.Clients_Id_FK == idget)
+                    .Select(r => r.Registration_Date)
+                    .ToList();
+
+                // Создаем кнопку для каждой даты приёма и добавляем их на панель
+                foreach (var appointmentDate in appointments)
+                {
+                    Button button = new Button
+                    {
+                        Content = appointmentDate.ToShortDateString(),
+                        Style = FindResource("AppointmentButtonStyle") as Style
+                    };
+                    // Создаем экземпляр объекта Visits
+                    Visits visits = new Visits
+                    {
+                        Visits_Date = appointmentDate,
+                        Clients_Id_FK = idget
+                    };
+                    // Привязываем обработчик события клика на кнопку
+                    button.Click += (s, args) =>
+                    {
+                        // Переходим на страницу ViewingVisitsPage и передаем объект Visits
+                        NavigationService.Navigate(new ViewingVisitsPage(visits));
+                    };
+                    AppointmentsPanel.Children.Add(button);
+                }
+
+                // Показываем панель с кнопками
+                AppointmentsPanel.Visibility = Visibility.Visible;
+                appointmentsVisible = true;
+            }
         }
 
     }

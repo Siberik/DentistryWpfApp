@@ -27,16 +27,22 @@ namespace DentistryWpfApp.View.Pages
         {
             personalID = personalId;
             InitializeComponent();
-           var clientsIdList = db.context.Clients.Where(x => x.Personal_Id_FK == personalId).Select(x => x.Clients_Id).ToList();
+            LoadVisits();
+            StartTimer();
+        }
+
+        private void LoadVisits()
+        {
+            var clientsIdList = db.context.Clients.Where(x => x.Personal_Id_FK == personalID).Select(x => x.Clients_Id).ToList();
             var registrations = db.context.Registration
-      .Where(r => clientsIdList.Contains((int)r.Clients_Id_FK))
-      .ToList();
-            registrations=registrations.OrderBy(r => r.Registration_Date) // добавляем сортировку по дате
-        .ToList();
+                .Where(r => clientsIdList.Contains((int)r.Clients_Id_FK))
+                .OrderBy(r => r.Registration_Date)
+                .ToList();
+
             foreach (var registration in registrations)
             {
-                // Проверяем, прошло ли время записи на прием
-                if (registration.Registration_Date > DateTime.Now)
+                // Проверяем, прошло ли время записи на прием и регистрация не была успешной
+                if (registration.Registration_Date > DateTime.Now && registration.Registration_Success != "Y")
                 {
                     Button button = new Button
                     {
@@ -48,6 +54,7 @@ namespace DentistryWpfApp.View.Pages
                 }
             }
         }
+
         private void OnButtonClicked(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
@@ -80,8 +87,8 @@ namespace DentistryWpfApp.View.Pages
             VisitsStackPanel.Children.Clear();
             foreach (var registration in registrations)
             {
-                // Проверяем, прошло ли время записи на прием
-                if (registration.Registration_Date > DateTime.Now)
+                // Проверяем, прошло ли время записи на прием и регистрация не была успешной
+                if (registration.Registration_Date > DateTime.Now && registration.Registration_Success != "Y")
                 {
                     Button button = new Button
                     {
@@ -94,8 +101,16 @@ namespace DentistryWpfApp.View.Pages
             }
         }
 
+        private async void StartTimer()
+        {
+            await Task.Delay(TimeSpan.FromHours(2)); // Задержка в 2 часа
 
-
+            // Скрываем кнопки после задержки
+            foreach (Button button in VisitsStackPanel.Children.OfType<Button>())
+            {
+                button.Visibility = Visibility.Collapsed;
+            }
+        }
 
         private void CreateRegistrationButtonClick(object sender, RoutedEventArgs e)
         {

@@ -15,14 +15,25 @@
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-       
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4,5">
+        <Viewbox>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4,5">
 
-            <TextBox x:Name="SearchTextBox" Width="200" Height="30"  />
-            <Button Margin="5" Content="Поиск" Click="SearchButton_Click" />
-            <Button Content="Создать нового клиента" x:Name="AddButton" Click="AddButtonClick" Margin="240,0"/>
+                    <TextBox x:Name="SearchTextBox" Width="200" Height="30"  />
+                    <Button Margin="5" Content="Поиск" Click="SearchButton_Click" />
+                </StackPanel>
+            </Viewbox>
+            <Viewbox>
+                <StackPanel HorizontalAlignment="Right">
+                    <Button Content="Создать нового клиента" x:Name="AddButton" Margin="90,0" Click="AddButtonClick" />
+                </StackPanel>
+            </Viewbox>
         </StackPanel>
-        <Viewbox Grid.Row="1">
+       
+            
+
+
+                <Viewbox Grid.Row="1">
             <StackPanel x:Name="MainPatientsStackPanel" >
             </StackPanel>
         </Viewbox>

@@ -19,6 +19,7 @@ namespace DentistryWpfApp.Model
         public string Registration_Description { get; set; }
         public Nullable<int> Clients_Id_FK { get; set; }
         public Nullable<int> Visits_Id_FK { get; set; }
+        public string Registration_Success { get; set; }
     
         public virtual Clients Clients { get; set; }
         public virtual Visits Visits { get; set; }

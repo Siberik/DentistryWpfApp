@@ -144,6 +144,8 @@
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Controllers\ClientsController.cs" />
+    <Compile Include="Model\Controllers\PersonalController.cs" />
+    <Compile Include="Model\Core.cs" />
     <Compile Include="Model\DentalFormula.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
@@ -177,7 +179,6 @@
     <Compile Include="Model\Personal.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Controllers\PersonalController.cs" />
     <Compile Include="Model\PhotoPersonal.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
@@ -202,7 +203,6 @@
     <Compile Include="Model\Visits.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Core.cs" />
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemesCountClass.cs" />
     <Compile Include="ViewModel\AppViewModel.cs" />
@@ -247,9 +247,11 @@
       <DependentUpon>UserPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="View\Pages\ViewingPatientPage.xaml.cs">
+    <Compile Include="View\Pages\ViewingVisitsPage.xaml.cs">
+      <DependentUpon>ViewingVisitsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewingPatientPage.xaml.cs">
       <DependentUpon>ViewingPatientPage.xaml</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="View\Windows\AddPatientWindow.xaml.cs">
       <DependentUpon>AddPatientWindow.xaml</DependentUpon>
@@ -343,10 +345,13 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
-    <Page Include="View\Pages\ViewingPatientPage.xaml">
+    <Page Include="View\Pages\ViewingVisitsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\ViewingPatientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\AddPatientWindow.xaml">
       <SubType>Designer</SubType>

@@ -107,6 +107,7 @@
           <Property Name="Registration_Description" Type="nvarchar(max)" />
           <Property Name="Clients_Id_FK" Type="int" />
           <Property Name="Visits_Id_FK" Type="int" />
+          <Property Name="Registration_Success" Type="nvarchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -558,6 +559,7 @@
           <Property Name="Registration_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Id_FK" Type="Int32" />
           <Property Name="Visits_Id_FK" Type="Int32" />
+          <Property Name="Registration_Success" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_Registration_Clients" FromRole="Registration" ToRole="Clients" />
           <NavigationProperty Name="Visits" Relationship="Self.FK_Registration_Visits" FromRole="Registration" ToRole="Visits" />
         </EntityType>
@@ -1005,6 +1007,7 @@
                 <ScalarProperty Name="Registration_Description" ColumnName="Registration_Description" />
                 <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
                 <ScalarProperty Name="Visits_Id_FK" ColumnName="Visits_Id_FK" />
+                <ScalarProperty Name="Registration_Success" ColumnName="Registration_Success" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

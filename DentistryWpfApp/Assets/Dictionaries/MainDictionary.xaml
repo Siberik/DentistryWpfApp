@@ -50,7 +50,7 @@
         </Style.Resources>
     </Style>
     <Style x:Key="H1 TextBlock" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{StaticResource MainColorForeground}"/>
+        <Setter Property="Foreground" Value="{StaticResource TextPrimaryColor}"/>
         <Setter Property="ItemsControl.FontSize" Value="25"/>
         <Setter Property="FontWeight" Value="Heavy" />
         <Setter Property="ItemsControl.FontFamily" Value="{StaticResource Main}"/>
@@ -412,8 +412,28 @@
     <Style TargetType="Button" x:Key="CustomCloseButton">
         <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}"/>
     </Style>
-    
-    
-    
-    
+
+
+    <Style x:Key="AppointmentButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#FFE9BEBE"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Data="M0,0 L6,6 M6,0 L0,6" Stroke="#990000" StrokeThickness="2" Margin="-10,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="{TemplateBinding Content}" Foreground="#990000" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
 </ResourceDictionary>

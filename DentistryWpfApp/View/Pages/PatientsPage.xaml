@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PatientsPage" Foreground="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource Montserrat}" FontSize="20">
- 
+
     <Grid>
 
         <Grid.RowDefinitions>
@@ -15,18 +15,18 @@
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" HorizontalAlignment="Right" Content="Создать нового клиента" x:Name="AddButton" Click="AddButtonClick"></Button>
+       
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4,5">
+
+            <TextBox x:Name="SearchTextBox" Width="200" Height="30"  />
+            <Button Margin="5" Content="Поиск" Click="SearchButton_Click" />
+            <Button Content="Создать нового клиента" x:Name="AddButton" Click="AddButtonClick" Margin="240,0"/>
+        </StackPanel>
         <Viewbox Grid.Row="1">
-           
-
-                <StackPanel x:Name="MainPatientsStackPanel" >
-                
+            <StackPanel x:Name="MainPatientsStackPanel" >
             </StackPanel>
-
-          
         </Viewbox>
         <StackPanel x:Name="paginationStackPanel" Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
-            
         </StackPanel>
     </Grid>
 </Page>

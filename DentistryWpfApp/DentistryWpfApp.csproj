@@ -250,7 +250,7 @@
     <Compile Include="View\Pages\ViewingVisitsPage.xaml.cs">
       <DependentUpon>ViewingVisitsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewingPatientPage.xaml.cs">
+    <Compile Include="View\Pages\ViewingPatientPage.xaml.cs">
       <DependentUpon>ViewingPatientPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\AddPatientWindow.xaml.cs">
@@ -349,7 +349,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ViewingPatientPage.xaml">
+    <Page Include="View\Pages\ViewingPatientPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

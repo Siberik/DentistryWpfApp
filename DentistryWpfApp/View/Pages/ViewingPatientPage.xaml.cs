@@ -25,56 +25,56 @@ namespace DentistryWpfApp.View.Pages
     public partial class ViewingPatientPage : Page
     {
         private int idget = 0;
-        Core db= new Core();
+        Core db = new Core();
         public ViewingPatientPage(int id)
         {
             idget = id;
-            string name= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Name).FirstOrDefault();
-            string surname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Surname).FirstOrDefault();
-            string lastname= db.context.Clients.Where(x=>x.Clients_Id==id).Select(x=>x.Clients_Lastname).FirstOrDefault();
+            string name = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Name).FirstOrDefault();
+            string surname = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Surname).FirstOrDefault();
+            string lastname = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Lastname).FirstOrDefault();
             string phone = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault();
             var date = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Date).FirstOrDefault();
-            string adress= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Adress).FirstOrDefault();
-            string prof= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Prof).FirstOrDefault();
-            string gender= db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Gender).FirstOrDefault();
+            string adress = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Adress).FirstOrDefault();
+            string prof = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Prof).FirstOrDefault();
+            string gender = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Gender).FirstOrDefault();
             InitializeComponent();
             IdTextBlock.Text = $"Id клиента: {id}";
-            LastNameTextBlock.Text =$"Фамилия: {lastname}";
-            NameTextBlock.Text =$"Имя : {name}";
+            LastNameTextBlock.Text = $"Фамилия: {lastname}";
+            NameTextBlock.Text = $"Имя : {name}";
             SurnameTextBlock.Text = $"Отчество: {surname}";
             PhoneTextBlock.Text = $"Телефон: {phone}";
             ClientsDateTextBlock.Text = $"Дата рождения: {date}";
             AdressTextBlock.Text = $"Адрес: {adress}";
             ProfTextBlock.Text = $"Профессия: {prof}";
-            GenderTextBlock.Text=$"Пол: {gender}";
+            GenderTextBlock.Text = $"Пол: {gender}";
         }
 
-                    
+
 
         private void RedactButtonClick(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new RedactingPatientPage(idget));
         }
 
-     
+
 
         private void DeleteButtonClick(object sender, RoutedEventArgs e)
         {
-            
+
             Clients clientsDelete = new Clients()
             {
-                Clients_Name= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Name).FirstOrDefault(),
-                Clients_Lastname= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Lastname).FirstOrDefault(),
-                Clients_Phone= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Phone).FirstOrDefault(),
-                Clients_Surname= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Surname).FirstOrDefault(),
-                Personal_Id_FK= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
-                Clients_Id= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Id).FirstOrDefault(),
-                Clients_Date= db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Date).FirstOrDefault(),
+                Clients_Name = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Name).FirstOrDefault(),
+                Clients_Lastname = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Lastname).FirstOrDefault(),
+                Clients_Phone = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Phone).FirstOrDefault(),
+                Clients_Surname = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Surname).FirstOrDefault(),
+                Personal_Id_FK = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
+                Clients_Id = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Id).FirstOrDefault(),
+                Clients_Date = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Clients_Date).FirstOrDefault(),
 
             };
-          
-        
-          
+
+
+
             if (!db.context.Clients.Local.Contains(clientsDelete))
             {
                 db.context.Clients.Attach(clientsDelete);
@@ -91,9 +91,9 @@ namespace DentistryWpfApp.View.Pages
                     db.context.Registration.Remove(registration);
                 }
 
-                
+
             }
-            
+
             if (db.context.SaveChanges() > 0)
             {
                 MessageBox.Show("Удаление сделано.");
@@ -104,5 +104,29 @@ namespace DentistryWpfApp.View.Pages
             }
 
         }
+
+        private void ViewAppointmentsButtonClick(object sender, RoutedEventArgs e)
+        {
+            // Очищаем панель с кнопками при каждом нажатии
+            AppointmentsPanel.Children.Clear();
+
+            // Здесь вам нужно получить даты приёмов пациента из вашей базы данных
+            // и создать кнопки для каждой даты приёма
+
+            // Пример создания кнопок с датами приёмов (замените данный код на вашу логику получения данных из БД)
+            for (int i = 0; i < 5; i++)
+            {
+                Button button = new Button
+                {
+                    Content = DateTime.Now.AddDays(i).ToShortDateString(),
+                    Style = FindResource("AppointmentButtonStyle") as Style
+                };
+                AppointmentsPanel.Children.Add(button);
+            }
+
+            // Показываем панель с кнопками датами приёмов
+            AppointmentsPanel.Visibility = Visibility.Visible;
+        }
+
     }
 }

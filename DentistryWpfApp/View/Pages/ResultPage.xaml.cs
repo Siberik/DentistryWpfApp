@@ -285,11 +285,13 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
             };
             reg.Visits_Id_FK = visits.Visits_Id;
             db.context.Visits.Add(visits);
-            db.context.Registration.AddOrUpdate(reg);
+			reg.Registration_Success = "Y";
+			db.context.Registration.AddOrUpdate(reg);
+          
             
            if(db.context.SaveChanges() == 0)
             {
-                MessageBox.Show("Ты лоханулся, дружок");
+                MessageBox.Show("Не добавлено.");
             }
         }
 

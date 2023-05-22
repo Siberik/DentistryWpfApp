@@ -30,7 +30,7 @@
           <Property Name="Clients_Surname" Type="nvarchar" MaxLength="50" />
           <Property Name="Clients_Lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Clients_Phone" Type="nvarchar" MaxLength="20" />
-          <Property Name="Clients_Date" Type="date" />
+          <Property Name="Clients_Date" Type="datetime" />
           <Property Name="Clients_Prof" Type="nvarchar(max)" />
           <Property Name="Clients_Adress" Type="nvarchar(max)" />
           <Property Name="Clients_Gender" Type="nvarchar" MaxLength="1" />
@@ -463,7 +463,7 @@
           <Property Name="Clients_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Clients_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Clients_Date" Type="DateTime" Precision="0" />
+          <Property Name="Clients_Date" Type="DateTime" Precision="3" />
           <Property Name="Clients_Prof" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Clients_Gender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />

@@ -1,7 +1,7 @@
 ﻿using DentistryWpfApp.Model;
 using DentistryWpfApp.Themes;
 using DentistryWpfApp.View.Pages;
-using JetBrains.Annotations;
+
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -86,7 +86,7 @@ namespace DentistryWpfApp
 
         private void rdNotes_Click(object sender, RoutedEventArgs e)
         {
-            if (idWin == 1)
+            if (roleIdWin == 1)
             {
                 PagesNavigation.Navigate(new NotesDentistPage(idWin));
             }
@@ -96,10 +96,7 @@ namespace DentistryWpfApp
             }
         }
 
-        private void rdPayment_Click(object sender, RoutedEventArgs e)
-        {
-            PagesNavigation.Navigate(new System.Uri("Pages/PaymentPage.xaml", UriKind.RelativeOrAbsolute));
-        }
+       
 
         private void rdHome_Checked(object sender, RoutedEventArgs e)
         {
@@ -172,5 +169,10 @@ namespace DentistryWpfApp
         {
 
         }
-    }
+
+		private void rdNotes_Checked(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }

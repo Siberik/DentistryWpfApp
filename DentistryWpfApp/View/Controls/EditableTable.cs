@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
+using System.Windows.Media;
 
 namespace DentistryWpfApp.View.Controls
 {
     public class EditableTable : UserControl
     {
         private Grid grid;
-        private List<List<TextBox>> textBoxes;
+        private List<List<UIElement>> elements;
 
         public int Rows { get; set; }
         public int Columns { get; set; }
@@ -16,7 +16,7 @@ namespace DentistryWpfApp.View.Controls
         public EditableTable()
         {
             grid = new Grid();
-            textBoxes = new List<List<TextBox>>();
+            elements = new List<List<UIElement>>();
 
             Content = grid;
 
@@ -33,30 +33,49 @@ namespace DentistryWpfApp.View.Controls
             grid.RowDefinitions.Clear();
             grid.ColumnDefinitions.Clear();
             grid.Children.Clear();
-            textBoxes.Clear();
+            elements.Clear();
 
             for (int row = 0; row < Rows; row++)
             {
                 grid.RowDefinitions.Add(new RowDefinition());
 
-                List<TextBox> rowTextBoxes = new List<TextBox>();
+                List<UIElement> rowElements = new List<UIElement>();
 
                 for (int col = 0; col < Columns; col++)
                 {
-                    grid.ColumnDefinitions.Add(new ColumnDefinition());
+                    if (row == Rows / 2)
+                    {
+                        TextBlock textBlock = new TextBlock();
+                        int value = col + 1;
+                        if (value > 8)
+                            value = 16 - value;
+                        textBlock.Text = value.ToString();
+                        textBlock.TextAlignment = TextAlignment.Center;
+                        textBlock.VerticalAlignment = VerticalAlignment.Center;
+                        textBlock.FontSize = 14;
+                        textBlock.FontWeight = FontWeights.Bold;
 
-                    TextBox textBox = new TextBox();
-                    textBox.BorderThickness = new Thickness(1);
-                    textBox.Margin = new Thickness(2);
-                    textBox.TextChanged += TextBox_TextChanged;
-                    Grid.SetRow(textBox, row);
-                    Grid.SetColumn(textBox, col);
+                        rowElements.Add(textBlock);
+                        grid.Children.Add(textBlock);
+                        Grid.SetRow(textBlock, row);
+                        Grid.SetColumn(textBlock, col);
+                    }
+                    else
+                    {
+                        TextBox textBox = new TextBox();
+                        textBox.BorderThickness = new Thickness(1);
+                        textBox.Margin = new Thickness(2);
+                        textBox.TextChanged += TextBox_TextChanged;
+                        textBox.TextAlignment = TextAlignment.Center;
 
-                    rowTextBoxes.Add(textBox);
-                    grid.Children.Add(textBox);
+                        rowElements.Add(textBox);
+                        grid.Children.Add(textBox);
+                        Grid.SetRow(textBox, row);
+                        Grid.SetColumn(textBox, col);
+                    }
                 }
 
-                textBoxes.Add(rowTextBoxes);
+                elements.Add(rowElements);
             }
         }
 
@@ -78,9 +97,9 @@ namespace DentistryWpfApp.View.Controls
 
         public string GetCellValue(int row, int col)
         {
-            if (row >= 0 && row < Rows && col >= 0 && col < Columns)
+            if (row >= 0 && row < Rows && col >= 0 && col < Columns && elements[row][col] is TextBox textBox)
             {
-                return textBoxes[row][col].Text;
+                return textBox.Text;
             }
 
             return string.Empty;
@@ -88,9 +107,9 @@ namespace DentistryWpfApp.View.Controls
 
         public void SetCellValue(int row, int col, string value)
         {
-            if (row >= 0 && row < Rows && col >= 0 && col < Columns)
+            if (row >= 0 && row < Rows && col >= 0 && col < Columns && elements[row][col] is TextBox textBox)
             {
-                textBoxes[row][col].Text = value;
+                textBox.Text = value;
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using DentistryWpfApp.Model;
+using DentistryWpfApp.View.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -15,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace DentistryWpfApp.View.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для AddPatientWindow.xaml
-    /// </summary>
     public partial class AddPatientWindow : Window
     {
         string gender;
@@ -29,25 +25,30 @@ namespace DentistryWpfApp.View.Windows
         public AddPatientWindow()
         {
             InitializeComponent();
+
+            // Загрузка таблицы Excel
+
             DentistComboBox.ItemsSource = db.context.Personal.ToList();
-
             DentistComboBox.DisplayMemberPath = "Personal_LastName";
-
-
+            
+            EditableTable editableTable = new EditableTable();
+            editableTable.CellTextChanged += EditableTable_CellTextChanged;
         }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             isDragging = true;
             x = e.GetPosition(this).X;
             y = e.GetPosition(this).Y;
         }
+
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = (RadioButton)sender;
             string selectedGender = radioButton.Content.ToString();
             gender = selectedGender;
-            
         }
+
         private void Border_MouseUp(object sender, MouseButtonEventArgs e)
         {
             isDragging = false;
@@ -67,34 +68,77 @@ namespace DentistryWpfApp.View.Windows
 
         private void SaveButtonClick(object sender, RoutedEventArgs e)
         {
-            int textComboBox = DentistComboBox.SelectedIndex+1;
-            Console.WriteLine(textComboBox);
-            var dentistId=db.context.Personal.Where(x=>x.Personal_Id==textComboBox).Select(x=>x.Personal_Id).FirstOrDefault();
-            Clients newClient = new Clients()
+            if (ValidateFields())
             {
+                int textComboBox = DentistComboBox.SelectedIndex + 1;
+                Console.WriteLine(textComboBox);
+                var dentistId = db.context.Personal.Where(x => x.Personal_Id == textComboBox).Select(x => x.Personal_Id).FirstOrDefault();
+                Clients newClient = new Clients()
+                {
+                    Clients_Name = NameTextBox.Text,
+                    Clients_Lastname = LastNameTextBox.Text,
+                    Clients_Phone = PhoneTextBox.Text,
+                    Clients_Surname = SurnameTextBox.Text,
+                    Personal_Id_FK = dentistId,
+                    Clients_Date = ClientsDatePicker.SelectedDate,
+                    Clients_Prof = ProfTextBox.Text,
+                    Clients_Adress = AdressTextBox.Text,
+                    Clients_Gender = gender,
+                };
+                db.context.Clients.Add(newClient);
 
-                Clients_Name = NameTextBox.Text,
-                Clients_Lastname = LastNameTextBox.Text,
-                Clients_Phone = PhoneTextBox.Text,
-                Clients_Surname = SurnameTextBox.Text,
-                Personal_Id_FK = dentistId,
-                Clients_Date = ClientsDatePicker.SelectedDate,
-                Clients_Prof = ProfTextBox.Text,
-                Clients_Adress = AdressTextBox.Text,
-                Clients_Gender = gender,
+                if (db.context.SaveChanges() > 0)
+                {
+                    MessageBox.Show("Новый клиент создан.");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось создать клиента.");
+                }
+            }
+        }
+
+        private bool ValidateFields()
+        {
+            bool isValid = true;
+
+            List<TextBox> requiredTextBoxes = new List<TextBox>
+            {
+                NameTextBox,
+                LastNameTextBox,
+                PhoneTextBox,
+                SurnameTextBox,
+                ProfTextBox,
+                AdressTextBox
             };
-            db.context.Clients.Add(newClient);
-            
-            if(db.context.SaveChanges() >0) {
-                MessageBox.Show("Новый клиент создан.");
-                Close();
+
+            foreach (TextBox textBox in requiredTextBoxes)
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.BorderBrush = Brushes.Red;
+                    isValid = false;
+                }
+                else
+                {
+                    textBox.ClearValue(Border.BorderBrushProperty);
+                }
+            }
+
+            if (ClientsDatePicker.SelectedDate == null)
+            {
+                ClientsDatePicker.BorderBrush = Brushes.Red;
+                isValid = false;
             }
             else
             {
-                MessageBox.Show("Не вышло создать клиента.");
-                
+                ClientsDatePicker.ClearValue(Border.BorderBrushProperty);
             }
+
+            return isValid;
         }
+
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Close();
@@ -113,7 +157,43 @@ namespace DentistryWpfApp.View.Windows
             WindowState = WindowState.Minimized;
         }
 
-      
-    }
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Переключение видимости разделов
+            Section1.Visibility = Visibility.Collapsed;
+            Section2.Visibility = Visibility.Visible;
 
+            // Скрытие кнопки "NextButton"
+            NextButton.Visibility = Visibility.Collapsed;
+        }
+
+        private void EditableTable_Initialized(object sender, EventArgs e)
+{
+    // Получение ссылки на объект EditableTable, который вызвал событие
+    EditableTable editableTable = (EditableTable)sender;
+
+    // Пример кода обработки события Initialized для EditableTable
+    // ...
+
+    // Например, установка начальных значений или настройка параметров EditableTable
+    editableTable.Rows = 5; // Установка количества строк
+    editableTable.Columns = 3; // Установка количества столбцов
+
+    // Инициализация таблицы
+    editableTable.Initialize();
+
+    // ...
+}
+
+        private void EditableTable_CellTextChanged(object sender, CellTextChangedEventArgs e)
+        {
+            // Вызывается при изменении текста в ячейке таблицы
+            string newText = e.NewText;
+            int row = e.Row;
+            int col = e.Column;
+
+            // Обработка изменения значения ячейки
+            // ...
+        }
+    }
 }

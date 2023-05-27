@@ -51,7 +51,7 @@
                     <!--<Image Source="/Images/Logo.png"
                            Width="100" Height="100"/>-->
 
-                    <TextBlock Style="{StaticResource H1 TextBlock}"><Run Language="ru-ru" Text="А"/><Run Text="РМ СТОМАТОЛОГА"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Style="{StaticResource H1 TextBlock}" Text="АРМ СТОМАТОЛОГА" Foreground="{DynamicResource TextPrimaryColor}"></TextBlock>
 
                     <TextBlock Text="Войдите в свой рабочий аккаунт."
                               

@@ -5,11 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
+      xmlns:local2="clr-namespace:DentistryWpfApp"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CreateRegistratonPage" Foreground="{DynamicResource TextPrimaryColor}">
+      Title="CreateRegistratonPage" Foreground="{DynamicResource TextPrimaryColor}"
+    >
 
     <Page.Resources>
+        <!-- Ресурсы стилей -->
         <Style TargetType="TextBlock">
             <Setter Property="Margin" Value="5"/>
         </Style>
@@ -25,8 +28,10 @@
 
     <Viewbox>
         <Grid>
-            
+
             <Grid.RowDefinitions>
+                <!-- Определения строк -->
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -35,33 +40,32 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <StackPanel>
-                
-          
-            <!-- Заголовок -->
-            <TextBlock Text="Создание записи на приём" FontSize="24" Margin="10" Grid.Row="0"/>
 
-            <!-- Дата и время -->
-            <TextBlock Text="Дата" FontSize="18" Margin="10" Grid.Row="1"/>
-           
-            <DatePicker Margin="10" Grid.Row="2" Name="RegistrationDatePicker"/>
-                <TextBlock Text="Время" FontSize="18" Margin="10" Grid.Row="1"/>
-                <TextBox  x:Name="HourTextBox"/>
+            <StackPanel>
+                <!-- Заголовок -->
+                <TextBlock Text="Создание записи на приём" FontSize="24" Margin="10" Grid.Row="0"/>
+
+                <!-- Дата и время -->
+                <TextBlock Text="Дата" FontSize="18" Margin="10" Grid.Row="1"/>
+                <DatePicker Margin="10" Grid.Row="2" Name="RegistrationDatePicker"/>
+                <TextBlock Text="Время" FontSize="18" Margin="10" Grid.Row="3"/>
+                <TextBox  x:Name="HourTextBox" Grid.Row="4"/>
 
                 <!-- Описание -->
-            <TextBlock Text="Описание" FontSize="18" Margin="10" Grid.Row="3"/>
-            <TextBox Margin="10" Grid.Row="4" Name="DescTextBox"/>
+                <TextBlock Text="Описание" FontSize="18" Margin="10" Grid.Row="5"/>
+                <TextBox Margin="10" Grid.Row="6" Name="DescTextBox"/>
 
-            <!-- Комбо-бокс с клиентами -->
-            <TextBlock Text="Выберите клиента" FontSize="18" Margin="10" Grid.Row="5"/>
-                <ComboBox Margin="10" Grid.Row="6" Name="ClientsComboBox" >
-                
-            </ComboBox>
+                <!-- Комбо-бокс с клиентами -->
+                <TextBlock Text="Выберите клиента" FontSize="18" Margin="10" Grid.Row="7"/>
+                <ComboBox Margin="10" Grid.Row="8" Name="ClientsComboBox" />
 
-            <!-- Кнопка создания записи -->
-            <Button Content="Создать запись" FontSize="18" Margin="10" Grid.Row="7" Width="139" Name="CreateRegButton" Click="CreateRegButtonClick"/>
-                 <materialDesign:Snackbar x:Name="errorSnackbar" MessageQueue="{materialDesign:MessageQueue}" VerticalAlignment="Bottom" Foreground="Red"/>
+                <!-- Кнопка создания записи -->
+                <Button Content="Создать запись" FontSize="18" Margin="10" Grid.Row="9" Width="139" Name="CreateRegButton" Click="CreateRegButtonClick"/>
+
+                <!-- SnackBarControl -->
+                <local2:SnackBarControl x:Name="SnackBar"  Message="Бля" Margin="10" Grid.Row="10"/>
             </StackPanel>
         </Grid>
     </Viewbox>
+
 </Page>

@@ -134,6 +134,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Controls\EditableTable.cs" />
     <Compile Include="Model\Allergy.cs">
       <DependentUpon>ModelDentristry.tt</DependentUpon>
     </Compile>
@@ -203,10 +204,15 @@
     <Compile Include="Model\Visits.cs">
       <DependentUpon>ModelDentristry.tt</DependentUpon>
     </Compile>
+    <Compile Include="SnackBarControl.xaml.cs">
+      <DependentUpon>SnackBarControl.xaml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemesCountClass.cs" />
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="CustomSnackBar.cs" />
     <Compile Include="View\Pages\AutoPage.xaml.cs">
       <DependentUpon>AutoPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -276,6 +282,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SnackBarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
     <Page Include="Styles\MainStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -451,7 +462,7 @@
       <Version>2.14.1</Version>
     </PackageReference>
     <PackageReference Include="MaterialDesignThemes">
-      <Version>4.8.0</Version>
+      <Version>4.9.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Office.Interop.Word">
       <Version>15.0.4797.1004</Version>

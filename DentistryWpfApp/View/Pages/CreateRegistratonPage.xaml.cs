@@ -39,6 +39,7 @@ namespace DentistryWpfApp.View.Pages
             var clientsList = db.context.Clients.Where(x => x.Personal_Id_FK == personalId).Select(p => p.Clients_Lastname).ToList();
             for (int i = 0; i < clientsList.Count; i++) {
                 ClientsComboBox.Items.Add(clientsList[i]);
+                SnackBar.Visibility = Visibility.Visible;
             }
         }
 
@@ -48,15 +49,15 @@ namespace DentistryWpfApp.View.Pages
         {
             if (string.IsNullOrEmpty(HourTextBox.Text) || !InputClass.HourChecking(HourTextBox.Text))
             {
-                errorSnackbar.MessageQueue.Enqueue("Ошибка: Неверный формат времени", "OK", () => { });
+                MessageBox.Show("Введите время в формате HH:mm.\n Где: *HH - часы \n *mm - минуты");
             }
             else if (!RegistrationDatePicker.SelectedDate.HasValue)
             {
-                errorSnackbar.MessageQueue.Enqueue("Ошибка: Дата не выбрана", "OK", () => { });
+                MessageBox.Show("Вы не выбрали дату");
             }
             else if (!InputClass.DataChecking(RegistrationDatePicker.SelectedDate.Value.ToShortDateString()))
             {
-                errorSnackbar.MessageQueue.Enqueue("Ошибка: Неверный формат даты", "OK", () => { });
+                MessageBox.Show("Введите правильную дату.");
             }
             
             else 

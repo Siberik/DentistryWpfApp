@@ -87,10 +87,41 @@
 
 
 
+                            <StackPanel>
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
 
-                            <controls:EditableTable Rows="5" Columns="16"  Initialized="EditableTable_Initialized" CellTextChanged="EditableTable_CellTextChanged" HorizontalAlignment="Center">
-                                
-                            </controls:EditableTable>
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <TextBlock Text="8 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="7 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="6 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="5 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="4 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="3 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="2 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="1 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="1 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="2 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="3 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="4 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="5 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="6 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="7 " HorizontalAlignment="Center" TextAlignment="Center" />
+                                            <TextBlock Text="8" HorizontalAlignment="Center" TextAlignment="Center" />
+                                        </StackPanel>
+
+                                        <controls:EditableTable  x:Name="EditTableDent" Grid.Row="1" Rows="4" Columns="16" Initialized="EditableTable_Initialized" CellTextChanged="EditableTable_CellTextChanged" HorizontalAlignment="Center" />
+                                    </Grid>
+                                </StackPanel>
+
+
+                            </StackPanel>
+
+
                             <Button x:Name="SaveButton" HorizontalAlignment="Center" Content="Сохранить" IsDefault="True" Click="SaveButtonClick" MinWidth="200" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}" />
                         </StackPanel>
                     </Grid>

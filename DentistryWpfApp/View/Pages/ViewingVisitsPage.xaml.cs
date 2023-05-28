@@ -40,7 +40,7 @@ namespace DentistryWpfApp.View.Pages
             VisitsTransferredDiseasesTextBlock.Text = $"Перенесённые и сопутствующие заболевания: {currentVisit.Visits_TransferredDiseases}" ;
             VisitsSovetTextBlock.Text = $"Наставления: {currentVisit.Visits_Sovet}";
             VisitsResultTextBlock.Text = $"Эпикриз: {currentVisit.Visits_Result}";
-            ClientsIdFKTextBlock.Text = $" Идентификатор клиента: {currentVisit.Clients_Id_FK.ToString()}";
+            ClientsIdFKTextBlock.Text = $"Идентификатор клиента: {currentVisit.Clients_Id_FK.ToString()}";
 
         }
     }

@@ -13,7 +13,7 @@ namespace DentistryWpfApp.View.Pages
     {
         private int idPersonal;
         Core db = new Core();
-        public UserPage(int id)
+        public UserPage(int id,PhotoPersonal photo)
         {
             idPersonal = id;
             InitializeComponent();

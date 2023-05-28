@@ -145,7 +145,8 @@ namespace DentistryWpfApp
             rdNotes.IsChecked = false;
             rdPatients.IsChecked = false;
             rdHome.IsChecked = false;
-            PagesNavigation.Navigate(new UserPage(idWin));
+            PhotoPersonal photo=db.context.PhotoPersonal.FirstOrDefault(x=>x.Personal_Id_FK == idWin);
+            PagesNavigation.Navigate(new UserPage(idWin,photo));
         }
 
         private void rdTheme_Click(object sender, RoutedEventArgs e)

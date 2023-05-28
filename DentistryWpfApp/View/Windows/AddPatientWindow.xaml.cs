@@ -176,9 +176,7 @@ namespace DentistryWpfApp.View.Windows
     // ...
 
     // Например, установка начальных значений или настройка параметров EditableTable
-    editableTable.Rows = 5; // Установка количества строк
-    editableTable.Columns = 3; // Установка количества столбцов
-
+    
     // Инициализация таблицы
     editableTable.Initialize();
 
@@ -187,13 +185,7 @@ namespace DentistryWpfApp.View.Windows
 
         private void EditableTable_CellTextChanged(object sender, CellTextChangedEventArgs e)
         {
-            // Вызывается при изменении текста в ячейке таблицы
-            string newText = e.NewText;
-            int row = e.Row;
-            int col = e.Column;
-
-            // Обработка изменения значения ячейки
-            // ...
+            
         }
     }
 }

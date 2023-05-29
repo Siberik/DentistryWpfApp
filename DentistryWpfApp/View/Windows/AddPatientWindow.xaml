@@ -76,6 +76,7 @@
                                 </StackPanel>
                             </StackPanel>
 
+                          
                             <Button x:Name="NextButton" HorizontalAlignment="Right" Content="Далее" Margin="10,0" Click="NextButton_Click"/>
 
                         </StackPanel>
@@ -84,8 +85,6 @@
                         <StackPanel Grid.Row="0" Visibility="Collapsed" Name="Section2">
 
                             <!-- Здесь размещаем содержимое второго раздела -->
-
-
 
                             <StackPanel>
                                 <StackPanel>
@@ -118,12 +117,12 @@
                                     </Grid>
                                 </StackPanel>
 
-
                             </StackPanel>
 
-
                             <Button x:Name="SaveButton" HorizontalAlignment="Center" Content="Сохранить" IsDefault="True" Click="SaveButtonClick" MinWidth="200" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}" />
+                            <Button x:Name="BackButton" HorizontalAlignment="Left" Content="Назад" Margin="10,0" Click="BackButton_Click"/>
                         </StackPanel>
+                        
                     </Grid>
                 </Viewbox>
 

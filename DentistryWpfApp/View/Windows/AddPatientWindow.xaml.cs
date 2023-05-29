@@ -118,6 +118,10 @@ namespace DentistryWpfApp.View.Windows
                 // Используйте полученную строку со значениями в EditableTable
                 Console.WriteLine(tableValuesString);
             }
+            else
+            {
+                MessageBox.Show("Вы ввели не все значения.");
+            }
         }
 
 
@@ -188,6 +192,7 @@ namespace DentistryWpfApp.View.Windows
 
             // Скрытие кнопки "NextButton"
             NextButton.Visibility = Visibility.Collapsed;
+            BackButton.Visibility = Visibility.Visible;
         }
 
         private void EditableTable_Initialized(object sender, EventArgs e)
@@ -210,5 +215,19 @@ namespace DentistryWpfApp.View.Windows
         {
             
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Переключение видимости разделов
+            Section1.Visibility = Visibility.Visible;
+            Section2.Visibility = Visibility.Collapsed;
+
+            // Скрытие кнопки "BackButton"
+            BackButton.Visibility = Visibility.Collapsed;
+
+            // Отображение кнопки "NextButton"
+            NextButton.Visibility = Visibility.Visible;
+        }
+
     }
 }

@@ -134,76 +134,76 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="View\Controls\EditableTable.cs" />
     <Compile Include="Model\Allergy.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\AllergyInfo.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Clients.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\DentalFormula.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Diagnosis.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DiagnosisHistory.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Drugs.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DrugsInfo.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDentistry.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDentistry.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDentistry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDentistry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Personal.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PhotoPersonal.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Registration.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Role.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Services.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ServicesHistory.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Studies.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Visits.cs">
+      <DependentUpon>ModelDentistry.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\EditableTable.cs" />
     <Compile Include="Model\Controllers\ClientsController.cs" />
     <Compile Include="Model\Controllers\PersonalController.cs" />
     <Compile Include="Model\Core.cs" />
-    <Compile Include="Model\DentalFormula.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Diagnosis.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\DiagnosisHistory.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Drugs.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\DrugsInfo.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelDentristry.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDentristry.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelDentristry.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelDentristry.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDentristry.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Personal.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\PhotoPersonal.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Registration.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Role.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Services.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ServicesHistory.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Studies.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Visits.cs">
-      <DependentUpon>ModelDentristry.tt</DependentUpon>
-    </Compile>
     <Compile Include="SnackBarControl.xaml.cs">
       <DependentUpon>SnackBarControl.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -304,6 +304,10 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
+    <Page Include="Themes\SpecialTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\AutoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -390,12 +394,12 @@
     <Resource Include="Assets\Fonts\Montserrat-Regular.ttf" />
     <Resource Include="Assets\Fonts\OpenSans-Regular.ttf" />
     <None Include="Assets\Documents\043у.docx" />
-    <EntityDeploy Include="Model\ModelDentristry.edmx">
+    <EntityDeploy Include="Model\ModelDentistry.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelDentristry.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelDentistry.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\ModelDentristry.edmx.diagram">
-      <DependentUpon>ModelDentristry.edmx</DependentUpon>
+    <None Include="Model\ModelDentistry.edmx.diagram">
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -407,19 +411,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\ModelDentistry.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
+      <LastGenOutput>ModelDentistry.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ModelDentistry.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDentistry.edmx</DependentUpon>
+      <LastGenOutput>ModelDentistry.cs</LastGenOutput>
+    </Content>
     <Resource Include="Assets\Avatars\default.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Content Include="Model\ModelDentristry.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDentristry.edmx</DependentUpon>
-      <LastGenOutput>ModelDentristry.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\ModelDentristry.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDentristry.edmx</DependentUpon>
-      <LastGenOutput>ModelDentristry.cs</LastGenOutput>
-    </Content>
     <Resource Include="Assets\Avatars\avatar-2.jpg" />
     <Resource Include="Assets\Images\home-page.png" />
     <Content Include="Assets\Images\user_ico.svg" />

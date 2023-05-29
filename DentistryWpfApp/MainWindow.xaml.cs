@@ -152,28 +152,45 @@ namespace DentistryWpfApp
         private void rdTheme_Click(object sender, RoutedEventArgs e)
         {
             ThemesCountClass.count++;
-            if (ThemesCountClass.count % 2 != 0)
+            if (ThemesCountClass.count==70)
             {
                 rdTheme.IsChecked = false;
-                var uri = new Uri(@"Themes/DarkTheme.xaml", UriKind.Relative);
+                var uri = new Uri(@"Themes/SpecialTheme.xaml", UriKind.Relative);
                 ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
                 Application.Current.Resources.Clear();
                 Application.Current.Resources.MergedDictionaries.Add(resourceDict);
                 PagesNavigation.NavigationService.Refresh();
-                Console.WriteLine($"Тёмная тема: {ThemesCountClass.count}");
+                Console.WriteLine($"Cпециальная тема: {ThemesCountClass.count}");
                 rdTheme.SetResourceReference(RadioButton.TagProperty, "sun");
+                MessageBox.Show("Открыта дьявольская тема: \nПередаю спасибо:\n• Илье Трубину за идею \n• Алексею Захарову за дизайн \n• Анастасии Спициной за тестирование");
+
             }
-            else
+            if (ThemesCountClass.count != 70)
             {
-                rdTheme.IsChecked = false;
-                var uri = new Uri(@"Themes/LightTheme.xaml", UriKind.Relative);
-                ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
-                Application.Current.Resources.Clear();
-                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-                PagesNavigation.NavigationService.Refresh();
-                Console.WriteLine($"Светлая тема: {ThemesCountClass.count}");
-                rdTheme.SetResourceReference(RadioButton.TagProperty, "moon");
+                if (ThemesCountClass.count % 2 != 0)
+                {
+                    rdTheme.IsChecked = false;
+                    var uri = new Uri(@"Themes/DarkTheme.xaml", UriKind.Relative);
+                    ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                    Application.Current.Resources.Clear();
+                    Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+                    PagesNavigation.NavigationService.Refresh();
+                    Console.WriteLine($"Тёмная тема: {ThemesCountClass.count}");
+                    rdTheme.SetResourceReference(RadioButton.TagProperty, "sun");
+                }
+                else
+                {
+                    rdTheme.IsChecked = false;
+                    var uri = new Uri(@"Themes/LightTheme.xaml", UriKind.Relative);
+                    ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                    Application.Current.Resources.Clear();
+                    Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+                    PagesNavigation.NavigationService.Refresh();
+                    Console.WriteLine($"Светлая тема: {ThemesCountClass.count}");
+                    rdTheme.SetResourceReference(RadioButton.TagProperty, "moon");
+                }
             }
+          
         }
 
         private void rdPatientsClick(object sender, RoutedEventArgs e)

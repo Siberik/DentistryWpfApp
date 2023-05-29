@@ -12,12 +12,12 @@
 
                
                 
-
+                <ResourceDictionary Source="/Themes/SpecialTheme.xaml"/>
                 <ResourceDictionary Source="/Styles/MainStyle.xaml"/>
                 <ResourceDictionary Source="/Assets/Icons/Icons.xaml"/>
                 <ResourceDictionary Source="/Themes/DarkTheme.xaml"/>
 
-               
+
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

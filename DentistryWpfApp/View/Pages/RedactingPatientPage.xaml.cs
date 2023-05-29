@@ -1,8 +1,10 @@
 ﻿using DentistryWpfApp.Model;
+using DentistryWpfApp.View.Controls;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -37,11 +39,33 @@ namespace DentistryWpfApp.View.Pages
             ClientDateTextBox.SelectedDate = (DateTime)db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Date).FirstOrDefault();
             AdressTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Adress).FirstOrDefault();
             ProfTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Prof).FirstOrDefault();
-            
 
 
+
+            EditableTable editableTable = new EditableTable();
+            editableTable.CellTextChanged += EditableTable_CellTextChanged;
             string phone = PhoneTextBox.Text;
             PhoneTextBox.Text =phone;
+        }
+        private void EditableTable_Initialized(object sender, EventArgs e)
+        {
+            // Получение ссылки на объект EditableTable, который вызвал событие
+            EditableTable editableTable = (EditableTable)sender;
+
+            // Пример кода обработки события Initialized для EditableTable
+            // ...
+
+            // Например, установка начальных значений или настройка параметров EditableTable
+
+            // Инициализация таблицы
+            editableTable.Initialize();
+
+            // ...
+        }
+
+        private void EditableTable_CellTextChanged(object sender, CellTextChangedEventArgs e)
+        {
+
         }
 
 
@@ -64,7 +88,34 @@ namespace DentistryWpfApp.View.Pages
                 
             };
 
+            // Получение значений из EditableTable и создание строки с разделителями ","
+            StringBuilder editableTableValues = new StringBuilder();
+            List<List<TextBox>> textBoxes = EditTableDent.GetTextBoxes();
+            foreach (var rowTextBoxes in textBoxes)
+            {
+                foreach (var textBox in rowTextBoxes)
+                {
+                    string value = textBox.Text;
+                    if (string.IsNullOrEmpty(value))
+                    {
+                        value = "0";
+                    }
+                    editableTableValues.Append(value);
+                    editableTableValues.Append(",");
+                }
+            }
+            string tableValuesString = editableTableValues.ToString().TrimEnd(',');
+            // Используйте полученную строку со значениями в EditableTable
+            Console.WriteLine(tableValuesString);
+            DentalFormula formula = new DentalFormula()
+            {
+                DentalFormula_Formula = tableValuesString,
+                Client_Id_FK = s.Clients_Id,
 
+
+
+            };
+            db.context.DentalFormula.AddOrUpdate(formula);
 
             db.context.Clients.AddOrUpdate(s);
             if (db.context.SaveChanges()>0)

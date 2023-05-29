@@ -26,7 +26,7 @@ namespace DentistryWpfApp.View.Windows
         {
             InitializeComponent();
 
-            // Загрузка таблицы Excel
+           
 
             DentistComboBox.ItemsSource = db.context.Personal.ToList();
             DentistComboBox.DisplayMemberPath = "Personal_LastName";
@@ -87,15 +87,7 @@ namespace DentistryWpfApp.View.Windows
                 };
                 db.context.Clients.Add(newClient);
 
-                if (db.context.SaveChanges() > 0)
-                {
-                    MessageBox.Show("Новый клиент создан.");
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Не удалось создать клиента.");
-                }
+              
 
                 // Получение значений из EditableTable и создание строки с разделителями ","
                 StringBuilder editableTableValues = new StringBuilder();
@@ -114,9 +106,27 @@ namespace DentistryWpfApp.View.Windows
                     }
                 }
                 string tableValuesString = editableTableValues.ToString().TrimEnd(',');
-
                 // Используйте полученную строку со значениями в EditableTable
                 Console.WriteLine(tableValuesString);
+                DentalFormula formula = new DentalFormula()
+                {
+                    DentalFormula_Formula = tableValuesString,
+                    Client_Id_FK = newClient.Clients_Id,
+                    
+                    
+
+                };
+                db.context.DentalFormula.Add(formula);
+              
+               if (db.context.SaveChanges() > 0)
+                {
+                    MessageBox.Show("Новый клиент создан.");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось создать клиента.");
+                }
             }
             else
             {

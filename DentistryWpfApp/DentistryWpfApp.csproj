@@ -194,9 +194,6 @@
     <Compile Include="Model\Studies.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>ModelDentistry.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Visits.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>

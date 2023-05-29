@@ -96,8 +96,31 @@ namespace DentistryWpfApp.View.Windows
                 {
                     MessageBox.Show("Не удалось создать клиента.");
                 }
+
+                // Получение значений из EditableTable и создание строки с разделителями ","
+                StringBuilder editableTableValues = new StringBuilder();
+                List<List<TextBox>> textBoxes = EditTableDent.GetTextBoxes();
+                foreach (var rowTextBoxes in textBoxes)
+                {
+                    foreach (var textBox in rowTextBoxes)
+                    {
+                        string value = textBox.Text;
+                        if (string.IsNullOrEmpty(value))
+                        {
+                            value = "0";
+                        }
+                        editableTableValues.Append(value);
+                        editableTableValues.Append(",");
+                    }
+                }
+                string tableValuesString = editableTableValues.ToString().TrimEnd(',');
+
+                // Используйте полученную строку со значениями в EditableTable
+                Console.WriteLine(tableValuesString);
             }
         }
+
+
 
         private bool ValidateFields()
         {

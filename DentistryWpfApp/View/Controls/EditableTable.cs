@@ -59,6 +59,11 @@ namespace DentistryWpfApp.View.Controls
                 textBoxes.Add(rowTextBoxes);
             }
         }
+        public List<List<TextBox>> GetTextBoxes()
+        {
+            return textBoxes;
+        }
+
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {

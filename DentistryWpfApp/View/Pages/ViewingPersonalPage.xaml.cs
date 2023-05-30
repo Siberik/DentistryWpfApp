@@ -32,7 +32,7 @@ namespace DentistryWpfApp.View.Pages
             LastNameTextBlock.Text = $"Фамилия: {personal.Personal_LastName}";
             NameTextBlock.Text = $"Имя: {personal.Personal_Name}";
             SurnameTextBlock.Text = $"Отчество: {personal.Personal_Surname}";
-            MailTextBlock.Text = $"Телефон: {personal.Personal_Mail}";
+            MailTextBlock.Text = $"Почта: {personal.Personal_Mail}";
           
         }
         private void RedactButtonClick(object sender, RoutedEventArgs e)

@@ -28,7 +28,7 @@ namespace DentistryWpfApp.View.Pages
         {
             personalGet = personal;
             InitializeComponent();
-            IdTextBlock.Text = $"Id клиента: {personal.Personal_Id}";
+            IdTextBlock.Text = $"Id работника: {personal.Personal_Id}";
             LastNameTextBlock.Text = $"Фамилия: {personal.Personal_LastName}";
             NameTextBlock.Text = $"Имя: {personal.Personal_Name}";
             SurnameTextBlock.Text = $"Отчество: {personal.Personal_Surname}";

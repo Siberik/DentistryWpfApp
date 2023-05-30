@@ -123,7 +123,8 @@ namespace DentistryWpfApp.View.Pages
         {
             Button button = sender as Button;
             int id = int.Parse(button.Name.Substring(6));
-            NavigationService.Navigate(new ViewingPatientPage(id));
+            Personal personal=db.context.Personal.FirstOrDefault(x=>x.Personal_Id==id);
+            NavigationService.Navigate(new ViewingPersonalPage(personal));
         }
     }
 }

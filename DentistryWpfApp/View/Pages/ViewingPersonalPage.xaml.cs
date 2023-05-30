@@ -37,7 +37,7 @@ namespace DentistryWpfApp.View.Pages
         }
         private void RedactButtonClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new RedactingPatientPage(personalGet.Personal_Id));
+            this.NavigationService.Navigate(new RedactingPersonalPage(personalGet));
         }
 
         private void DeleteButtonClick(object sender, RoutedEventArgs e)

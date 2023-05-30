@@ -240,6 +240,9 @@
     <Compile Include="View\Pages\RedactingPatientPage.xaml.cs">
       <DependentUpon>RedactingPatientPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\RedactingPersonalPage.xaml.cs">
+      <DependentUpon>RedactingPersonalPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\RegistrationDetailsPage.xaml.cs">
       <DependentUpon>RegistrationDetailsPage.xaml</DependentUpon>
     </Compile>
@@ -347,6 +350,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\RedactingPatientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\RedactingPersonalPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

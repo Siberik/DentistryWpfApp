@@ -50,7 +50,7 @@
         </Style.Resources>
     </Style>
     <Style x:Key="H1 TextBlock" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{StaticResource TextPrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}"/>
         <Setter Property="ItemsControl.FontSize" Value="25"/>
         <Setter Property="FontWeight" Value="Heavy" />
         <Setter Property="ItemsControl.FontFamily" Value="{StaticResource Main}"/>

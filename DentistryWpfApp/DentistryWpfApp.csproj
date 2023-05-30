@@ -234,6 +234,9 @@
       <DependentUpon>PatientsPage.xaml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="View\Pages\PersonalPage.xaml.cs">
+      <DependentUpon>PersonalPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\RedactingPatientPage.xaml.cs">
       <DependentUpon>RedactingPatientPage.xaml</DependentUpon>
     </Compile>
@@ -335,6 +338,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\Pages\PersonalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\RedactingPatientPage.xaml">
       <SubType>Designer</SubType>

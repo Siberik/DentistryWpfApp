@@ -70,6 +70,7 @@
                                 </RadioButton>
                                 <RadioButton x:Name="rdPatients" Content=" Карточки пациентов" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource patient}" Margin="0 5 0 5" Click="rdPatientsClick" Cursor="Hand"/>
                                 <RadioButton x:Name="rdNotes" Content=" Запись на приём" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click" Checked="rdNotes_Checked"/>
+                                <RadioButton x:Name="rdAddPersonal" Content=" Добавить персонал" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource personalplus}" Click="rdAddPersonal_Click" Checked="rdNotes_Checked"/>
                                 <RadioButton x:Name="rdTheme" Content=" Изменить тему" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource moon}" Click="rdTheme_Click" IsChecked="False" Checked="rdTheme_Checked"/>
                             </StackPanel>
                            

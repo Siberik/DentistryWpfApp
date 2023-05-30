@@ -55,6 +55,9 @@ namespace DentistryWpfApp
             PersonalNameLabel.Content = $"{lastname} {name}";
             var mail = db.context.Personal.Where(x => x.Personal_Id == idWin).Select(x => x.Personal_Mail).First();
             MailLabel.Content = mail;
+            if (roleId != 3) { 
+            rdAddPersonal.Visibility= Visibility.Collapsed;
+            }
             UpdateUserPhoto();
         }
 
@@ -216,6 +219,11 @@ namespace DentistryWpfApp
         private void rdTheme_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void rdAddPersonal_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new PersonalPage());
         }
     }
 }

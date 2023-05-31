@@ -1,7 +1,6 @@
 ﻿using DentistryClassLibrary;
 using DentistryWpfApp.Model;
 using DentistryWpfApp.View.Windows;
-using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

@@ -58,6 +58,7 @@
                 <!-- Комбо-бокс с клиентами -->
                 <TextBlock Text="Выберите клиента" FontSize="18" Margin="10" Grid.Row="7"/>
                 <ComboBox Margin="10" Grid.Row="8" Name="ClientsComboBox" />
+                
 
                 <!-- Кнопка создания записи -->
                 <Button Content="Создать запись" FontSize="18" Margin="10" Grid.Row="9" Width="139" Name="CreateRegButton" Click="CreateRegButtonClick"/>

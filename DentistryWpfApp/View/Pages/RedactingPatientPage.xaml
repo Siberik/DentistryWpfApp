@@ -76,8 +76,9 @@
                                     <TextBlock Text="8" HorizontalAlignment="Center" TextAlignment="Center" />
                                 </StackPanel>
 
-                                <controls:EditableTable  x:Name="EditTableDent" Grid.Row="1" Rows="4" Columns="16" Initialized="EditableTable_Initialized" CellTextChanged="EditableTable_CellTextChanged" HorizontalAlignment="Center" />
-                            </Grid>
+                                    <controls:EditableTable  x:Name="EditTableDent" Grid.Row="1" Rows="4" Columns="16" Initialized="EditableTable_Initialized" CellTextChanged="EditableTable_CellTextChanged" HorizontalAlignment="Center" />
+                                    <StackPanel x:Name="ContentPanel"/>
+                                </Grid>
                         </StackPanel>
                         </StackPanel>
                     </StackPanel>

@@ -250,8 +250,151 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
                 bookmark18.Text = valueToInsert18;
                 bookmark18.Underline = WdUnderline.wdUnderlineSingle;
 
+                var dentalFormula=db.context.DentalFormula.Where(x=>x.Client_Id_FK==client.Clients_Id).Select(x=>x.DentalFormula_Formula).FirstOrDefault();
+               var dentalFormula1 = dentalFormula.Split(',');
+               
+
+                string valueToInsert19 = dentalFormula1[0];
+                Range bookmark19 = tempDoc.Bookmarks["в1"].Range;
+                bookmark19.Text = valueToInsert19;
+                bookmark19.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert20 = dentalFormula1[1];
+                Range bookmark20 = tempDoc.Bookmarks["с1"].Range;
+                bookmark20.Text = valueToInsert20;
+                bookmark20.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 21-41, меняя соответствующие значения
+
+                string valueToInsert21 = dentalFormula1[2];
+                Range bookmark21 = tempDoc.Bookmarks["ш1"].Range;
+                bookmark21.Text = valueToInsert21;
+                bookmark21.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert22 = dentalFormula1[3];
+                Range bookmark22 = tempDoc.Bookmarks["п1"].Range;
+                bookmark22.Text = valueToInsert22;
+                bookmark22.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert23 = dentalFormula1[4];
+                Range bookmark23 = tempDoc.Bookmarks["ч1"].Range;
+                bookmark23.Text = valueToInsert23;
+                bookmark23.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 24-41, меняя соответствующие значения
+
+                string valueToInsert24 = dentalFormula1[5];
+                Range bookmark24 = tempDoc.Bookmarks["т1"].Range;
+                bookmark24.Text = valueToInsert24;
+                bookmark24.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert25 = dentalFormula1[6];
+                Range bookmark25 = tempDoc.Bookmarks["д1"].Range;
+                bookmark25.Text = valueToInsert25;
+                bookmark25.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert26 = dentalFormula1[7];
+                Range bookmark26 = tempDoc.Bookmarks["о1"].Range;
+                bookmark26.Text = valueToInsert26;
+                bookmark26.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 27-41, меняя соответствующие значения
+
+                string valueToInsert27 = dentalFormula1[8];
+                Range bookmark27 = tempDoc.Bookmarks["мо1"].Range;
+                bookmark27.Text = valueToInsert27;
+                bookmark27.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert28 = dentalFormula1[9];
+                Range bookmark28 = tempDoc.Bookmarks["мд1"].Range;
+                bookmark28.Text = valueToInsert28;
+                bookmark28.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert29 = dentalFormula1[10];
+                Range bookmark29 = tempDoc.Bookmarks["мт1"].Range;
+                bookmark29.Text = valueToInsert29;
+                bookmark29.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 30-41, меняя соответствующие значения
+
+                string valueToInsert30 = dentalFormula1[11];
+                Range bookmark30 = tempDoc.Bookmarks["мч1"].Range;
+                bookmark30.Text = valueToInsert30;
+                bookmark30.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert31 = dentalFormula1[12];
+                Range bookmark31 = tempDoc.Bookmarks["мп1"].Range;
+                bookmark31.Text = valueToInsert31;
+                bookmark31.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert32 = dentalFormula1[13];
+                Range bookmark32 = tempDoc.Bookmarks["мш1"].Range;
+                bookmark32.Text = valueToInsert32;
+                bookmark32.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 33-41, меняя соответствующие значения
+
+                string valueToInsert33 = dentalFormula1[14];
+                Range bookmark33 = tempDoc.Bookmarks["мс1"].Range;
+                bookmark33.Text = valueToInsert33;
+                bookmark33.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert34 = dentalFormula1[15];
+                Range bookmark34 = tempDoc.Bookmarks["мв1"].Range;
+                bookmark34.Text = valueToInsert34;
+                bookmark34.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert35 = SovetTextBox.Text;
+                Range bookmark35 = tempDoc.Bookmarks["Наставления"].Range;
+                bookmark35.Text = valueToInsert35;
+                bookmark35.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 36-41, меняя соответствующие значения
+
+                string valueToInsert36 = SovetTextBox.Text;
+                Range bookmark36 = tempDoc.Bookmarks["Наставления"].Range;
+                bookmark36.Text = valueToInsert36;
+                bookmark36.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert37 = SovetTextBox.Text;
+                Range bookmark37 = tempDoc.Bookmarks["Наставления"].Range;
+                bookmark37.Text = valueToInsert37;
+                bookmark37.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert38 = SovetTextBox.Text;
+                Range bookmark38 = tempDoc.Bookmarks["Наставления"].Range;
+                bookmark38.Text = valueToInsert38;
+                bookmark38.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 39-41, меняя соответствующие значения
+
+                string valueToInsert39 = SovetTextBox.Text;
+                Range bookmark39 = tempDoc.Bookmarks["Наставления"].Range;
+                bookmark39.Text = valueToInsert39;
+                bookmark39.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert40 = SovetTextBox.Text;
+                Range bookmark40 = tempDoc.Bookmarks["Наставления"].Range;
+                bookmark40.Text = valueToInsert40;
+                bookmark40.Underline = WdUnderline.wdUnderlineSingle;
+
+                string valueToInsert41 = SovetTextBox.Text;
+                Range bookmark41 = tempDoc.Bookmarks["Наставления"].Range;
+                bookmark41.Text = valueToInsert41;
+                bookmark41.Underline = WdUnderline.wdUnderlineSingle;
+
+                // Продолжайте далее для чисел 42 и далее, меняя соответствующие значения
+
+
+
+
+
+
                 // Сохраняем временную копию файла с данными
                 tempDoc.Save();
+
+
+             
 
                 // Открываем временный файл в программе по умолчанию
                 System.Diagnostics.Process.Start(tempFilePath);

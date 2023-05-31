@@ -7,11 +7,22 @@ namespace DentistryWpfApp.View.Controls
 {
     public class EditableTable : UserControl
     {
+
         private Grid grid;
         private List<List<TextBox>> textBoxes;
 
         public int Rows { get; set; }
         public int Columns { get; set; }
+
+        public TextBox GetTextBoxAtPosition(int row, int col)
+        {
+            if (row >= 0 && row < Rows && col >= 0 && col < Columns)
+            {
+                return textBoxes[row][col];
+            }
+
+            return null;
+        }
 
         public EditableTable()
         {

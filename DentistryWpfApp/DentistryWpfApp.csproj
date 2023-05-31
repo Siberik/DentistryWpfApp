@@ -197,7 +197,9 @@
     <Compile Include="Model\Visits.cs">
       <DependentUpon>ModelDentistry.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\Controls\EditableTable.cs" />
+    <Compile Include="View\Controls\EditableTable.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Model\Controllers\ClientsController.cs" />
     <Compile Include="Model\Controllers\PersonalController.cs" />
     <Compile Include="Model\Core.cs" />

@@ -63,7 +63,7 @@
                 <Button Content="Создать запись" FontSize="18" Margin="10" Grid.Row="9" Width="139" Name="CreateRegButton" Click="CreateRegButtonClick"/>
 
                 <!-- SnackBarControl -->
-                <local2:SnackBarControl x:Name="SnackBar"  Message="Бля" Margin="10" Grid.Row="10"/>
+                <local2:SnackBarControl x:Name="SnackBar"  Message="бял" Margin="10" Grid.Row="10"/>
             </StackPanel>
         </Grid>
     </Viewbox>

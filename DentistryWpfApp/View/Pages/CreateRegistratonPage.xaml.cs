@@ -37,7 +37,8 @@ namespace DentistryWpfApp.View.Pages
             InitializeComponent();
 
             var clientsList = db.context.Clients.Where(x => x.Personal_Id_FK == personalId).Select(p => p.Clients_Lastname).ToList();
-            for (int i = 0; i < clientsList.Count; i++) {
+            for (int i = 0; i < clientsList.Count; i++)
+            {
                 ClientsComboBox.Items.Add(clientsList[i]);
                 SnackBar.Visibility = Visibility.Visible;
             }
@@ -59,8 +60,11 @@ namespace DentistryWpfApp.View.Pages
             {
                 MessageBox.Show("Введите правильную дату.");
             }
-            
-            else 
+            else if (ClientsComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Вы не выбрали клиента!");
+            }
+            else
             {
                 // получаем выбранную дату из DatePicker
                 DateTime date = (DateTime)RegistrationDatePicker.SelectedDate;
@@ -73,40 +77,42 @@ namespace DentistryWpfApp.View.Pages
 
                 // объединяем дату и время в объект DateTime
                 DateTime result = date.Add(time);
-                if (result.Date<DateTime.Now)
+                if (result.Date < DateTime.Now)
                 {
                     MessageBox.Show("Нельзя записаться на прошедшую дату.");
-                    
+
                 }
                 else
                 {
-                  string LastName = ClientsComboBox.SelectionBoxItem.ToString();
+                    string LastName = ClientsComboBox.SelectionBoxItem.ToString();
 
 
 
-                Registration registration = new Registration
-                {
-                    Registration_Date = result,
-                    Clients_Id_FK = db.context.Clients.Where(x => x.Clients_Lastname == LastName).Where(x => x.Personal_Id_FK == personalID).Select(x => x.Clients_Id).First(),
-                    Registration_Description=DescTextBox.Text,
-                    
-                
-                
-                };
-                db.context.Registration.Add(registration);
-                if(db.context.SaveChanges()>0) {
-                    MessageBox.Show("Запись на приём успешно создана.");
+                    Registration registration = new Registration
+                    {
+                        Registration_Date = result,
+                        Clients_Id_FK = db.context.Clients.Where(x => x.Clients_Lastname == LastName).Where(x => x.Personal_Id_FK == personalID).Select(x => x.Clients_Id).First(),
+                        Registration_Description = DescTextBox.Text,
+
+
+
+                    };
+                    db.context.Registration.Add(registration);
+                    if (db.context.SaveChanges() > 0)
+                    {
+                        MessageBox.Show("Запись на приём успешно создана.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Что-то не так.");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Что-то не так.");
-                }
-                }
-                
+
+
 
             }
         }
 
-       
+
     }
 }

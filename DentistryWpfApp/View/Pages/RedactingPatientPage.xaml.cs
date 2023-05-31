@@ -2,6 +2,7 @@
 using DentistryWpfApp.View.Controls;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
@@ -15,119 +16,119 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 
 namespace DentistryWpfApp.View.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для RedactingPatientPage.xaml
-    /// </summary>
     public partial class RedactingPatientPage : Page
     {
-        string gender;
+        private string gender;
         private int idget = 0;
-        Core db = new Core();
+        private Core db = new Core();
+        private StackPanel EditableTableContainer;
+
         public RedactingPatientPage(int id)
         {
-            idget=id;
+            idget = id;
             InitializeComponent();
-            NameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Name).FirstOrDefault();
-            LastNameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Lastname).FirstOrDefault();
-            SurnameTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Surname).FirstOrDefault();
-            PhoneTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Phone).FirstOrDefault();
-            ClientDateTextBox.SelectedDate = (DateTime)db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Date).FirstOrDefault();
-            AdressTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Adress).FirstOrDefault();
-            ProfTextBox.Text = db.context.Clients.Where(x => x.Clients_Id == id).Select(x => x.Clients_Prof).FirstOrDefault();
 
+            // Заполнение полей данными из базы данных
+            Clients client = db.context.Clients.FirstOrDefault(x => x.Clients_Id == id);
+            if (client != null)
+            {
+                NameTextBox.Text = client.Clients_Name;
+                LastNameTextBox.Text = client.Clients_Lastname;
+                SurnameTextBox.Text = client.Clients_Surname;
+                PhoneTextBox.Text = client.Clients_Phone;
+                ClientDateTextBox.SelectedDate = client.Clients_Date;
+                AdressTextBox.Text = client.Clients_Adress;
+                ProfTextBox.Text = client.Clients_Prof;
+                gender = client.Clients_Gender;
+            }
 
+            EditableTableContainer = new StackPanel();
+            // Добавьте его на страницу
+            ContentPanel.Children.Add(EditableTableContainer);
 
             EditableTable editableTable = new EditableTable();
             editableTable.CellTextChanged += EditableTable_CellTextChanged;
             string phone = PhoneTextBox.Text;
-            PhoneTextBox.Text =phone;
-        }
-        private void EditableTable_Initialized(object sender, EventArgs e)
-        {
-            // Получение ссылки на объект EditableTable, который вызвал событие
-            EditableTable editableTable = (EditableTable)sender;
+            PhoneTextBox.Text = phone;
 
-            // Пример кода обработки события Initialized для EditableTable
-            // ...
+            // Получение значения DentalFormula_Formula из базы данных по id
+            DentalFormula dentalFormula = db.context.DentalFormula.FirstOrDefault(x => x.Client_Id_FK == id);
+            if (dentalFormula != null)
+            {
+                string formula = dentalFormula.DentalFormula_Formula;
 
-            // Например, установка начальных значений или настройка параметров EditableTable
+                // Заполнение edittable значениями из DentalFormula_Formula
+                for (int i = 0; i < formula.Length; i++)
+                {
+                    TextBox cell = editableTable.GetTextBoxAtPosition(i % editableTable.Columns, i / editableTable.Columns);
+                    if (cell != null)
+                    {
+                        cell.Text = formula[i].ToString();
+                    }
+                }
+            }
 
-            // Инициализация таблицы
-            editableTable.Initialize();
-
-            // ...
+            // Добавление EditableTable на страницу
+            EditableTableContainer.Children.Add(editableTable);
         }
 
         private void EditableTable_CellTextChanged(object sender, CellTextChangedEventArgs e)
         {
-
+            // Обработка изменения значения в ячейке EditableTable
+            // Можно добавить соответствующую логику здесь
         }
-
-
-
 
         private void SaveButtonClick(object sender, RoutedEventArgs e)
         {
-            Clients s = new Clients()
-            {
-                Clients_Id = idget,
-                Clients_Name = NameTextBox.Text,
-                Clients_Surname = SurnameTextBox.Text,
-                Clients_Lastname = LastNameTextBox.Text,
-                Clients_Phone = PhoneTextBox.Text,
-                Personal_Id_FK = db.context.Clients.Where(x => x.Clients_Id == idget).Select(x => x.Personal_Id_FK).FirstOrDefault(),
-                Clients_Date = ClientDateTextBox.SelectedDate,
-                Clients_Adress = AdressTextBox.Text,
-                Clients_Prof = ProfTextBox.Text,
-                Clients_Gender = gender,
-                
-            };
+            // Сохранение изменений в базу данных
 
-            // Получение значений из EditableTable и создание строки с разделителями ","
-            StringBuilder editableTableValues = new StringBuilder();
-            List<List<TextBox>> textBoxes = EditTableDent.GetTextBoxes();
-            foreach (var rowTextBoxes in textBoxes)
+            Clients client = db.context.Clients.FirstOrDefault(x => x.Clients_Id == idget);
+            if (client != null)
             {
-                foreach (var textBox in rowTextBoxes)
+                client.Clients_Name = NameTextBox.Text;
+                client.Clients_Lastname = LastNameTextBox.Text;
+                client.Clients_Surname = SurnameTextBox.Text;
+                client.Clients_Phone = PhoneTextBox.Text;
+                client.Clients_Date = ClientDateTextBox.SelectedDate;
+                client.Clients_Adress = AdressTextBox.Text;
+                client.Clients_Prof = ProfTextBox.Text;
+                client.Clients_Gender = gender;
+            }
+
+            DentalFormula dentalFormula = db.context.DentalFormula.FirstOrDefault(x => x.Client_Id_FK == idget);
+            if (dentalFormula != null)
+            {
+                StringBuilder editableTableValues = new StringBuilder();
+                EditableTable editableTable = EditableTableContainer.Children.OfType<EditableTable>().FirstOrDefault();
+                if (editableTable != null)
                 {
-                    string value = textBox.Text;
-                    if (string.IsNullOrEmpty(value))
+                    List<List<TextBox>> textBoxes = editableTable.GetTextBoxes();
+                    foreach (var rowTextBoxes in textBoxes)
                     {
-                        value = "0";
+                        foreach (var textBox in rowTextBoxes)
+                        {
+                            string value = textBox.Text;
+                            if (string.IsNullOrEmpty(value))
+                            {
+                                value = "0";
+                            }
+                            editableTableValues.Append(value);
+                            editableTableValues.Append(",");
+                        }
                     }
-                    editableTableValues.Append(value);
-                    editableTableValues.Append(",");
                 }
+
+                dentalFormula.DentalFormula_Formula = editableTableValues.ToString().TrimEnd(',');
+                dentalFormula.Client_Id_FK = client.Clients_Id;
             }
-            string tableValuesString = editableTableValues.ToString().TrimEnd(',');
-            // Используйте полученную строку со значениями в EditableTable
-            Console.WriteLine(tableValuesString);
-            DentalFormula formula = new DentalFormula()
-            {
-                DentalFormula_Formula = tableValuesString,
-                Client_Id_FK = s.Clients_Id,
 
+            db.context.SaveChanges();
 
-
-            };
-            db.context.DentalFormula.AddOrUpdate(formula);
-
-            db.context.Clients.AddOrUpdate(s);
-            if (db.context.SaveChanges()>0)
-            {
-                MessageBox.Show("Сохранено.");
-                this.NavigationService.Navigate(new ViewingPatientPage(idget));
-            }
-            else
-            {
-                MessageBox.Show("Проверьте правильность введённых данных");
-            }
-            
+            MessageBox.Show("Сохранено.");
+            this.NavigationService.Navigate(new ViewingPatientPage(idget));
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -135,7 +136,6 @@ namespace DentistryWpfApp.View.Pages
             RadioButton radioButton = (RadioButton)sender;
             string selectedGender = radioButton.Content.ToString();
             gender = selectedGender;
-
         }
     }
 }

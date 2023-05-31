@@ -16,7 +16,7 @@ namespace DentistryLibraryTests
         public void SendMail_Successful_ReturnsTrue()
         {
             // Arrange
-            string to = "recipient@example.com";
+            string to = "lolgagr@gmail.comt";
             string login = "lolo";
             string password = "testpassword";
 

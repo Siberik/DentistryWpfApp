@@ -47,6 +47,7 @@
 
                 <!-- Дата и время -->
                 <TextBlock Text="Дата" FontSize="18" Margin="10" Grid.Row="1"/>
+                
                 <DatePicker Margin="10" Grid.Row="2" Name="RegistrationDatePicker"/>
                 <TextBlock Text="Время" FontSize="18" Margin="10" Grid.Row="3"/>
                 <TextBox  x:Name="HourTextBox" Grid.Row="4"/>
@@ -61,7 +62,7 @@
                 
 
                 <!-- Кнопка создания записи -->
-                <Button Content="Создать запись" FontSize="18" Margin="10" Grid.Row="9" Width="139" Name="CreateRegButton" Click="CreateRegButtonClick"/>
+                <Button Content="Создать запись" FontSize="18" Margin="10" Grid.Row="9"  Name="CreateRegButton" Click="CreateRegButtonClick" Style="{DynamicResource SaveButtonStyle}" Tag="{StaticResource confirm}" HorizontalAlignment="Center"/>
 
                 <!-- SnackBarControl -->
                 <local2:SnackBarControl x:Name="SnackBar"  Message="бял" Margin="10" Grid.Row="10"/>

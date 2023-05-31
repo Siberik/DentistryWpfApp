@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PersonalPage" Foreground="{DynamicResource TextPrimaryColor}">
@@ -17,17 +18,63 @@
         <Viewbox>
 
 
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4,5">
-                <Viewbox>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Width="487">
+                <Viewbox Width="162">
                     <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4,5">
 
                         <TextBox x:Name="SearchTextBox" Width="200" Height="30"  />
-                        <Button Margin="5" Content="Поиск" Click="SearchButton_Click" />
+                        <Button Margin="5" Click="SearchButton_Click" Background="#FF2196F3" BorderBrush="#FF2196F3" Foreground="White" Padding="10" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </Button.Resources>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Magnify" VerticalAlignment="Center" Margin="0,0,5,0" />
+                                <TextBlock Text="Поиск" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+
+
                     </StackPanel>
                 </Viewbox>
                 <Viewbox>
                     <StackPanel HorizontalAlignment="Right">
-                        <Button Content="Создать нового работника" x:Name="AddButton" Margin="90,0" Click="AddButtonClick" />
+                        <Button Content="Создать нового работника" x:Name="AddButton" Margin="90,0" Click="AddButtonClick">
+                            <Button.Resources>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="#417505" Offset="0" />
+                                                <GradientStop Color="#102F05" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+                                    <Setter Property="Padding" Value="10" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="Auto" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Viewbox Grid.Column="0" Width="20" Height="20" Margin="5">
+                                                        <Path Data="M7,2H9V7H14V9H9V14H7V9H2V7H7V2Z" Fill="{DynamicResource TextPrimaryColor}" />
+                                                    </Viewbox>
+                                                    <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Resources>
+
+                        </Button>
                     </StackPanel>
                 </Viewbox>
             </StackPanel>

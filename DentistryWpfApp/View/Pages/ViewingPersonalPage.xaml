@@ -13,7 +13,17 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Grid.Row="0" Content="Редактировать" x:Name="RedactButton" Click="RedactButtonClick" Margin="0,0,10,0" />
+            <Button    Height="30" Background="{DynamicResource PrimaryBlueColor}" BorderThickness="0"  Grid.Row="0"  x:Name="RedactButton" Click="RedactButtonClick" Margin="0,0,10,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Button.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <Path Data="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" Stroke="#fff" StrokeThickness="2"  Height="19" Width="24" Stretch="Fill" RenderTransformOrigin="0.988,0.518"/>
+                    <TextBlock Text="Редактировать" Foreground="#fff" Margin="5,0,0,0" />
+                </StackPanel>
+            </Button>
             <Button Width="80" Height="30" Background="#FFE9BEBE" BorderThickness="0" Margin="2" Click="DeleteButtonClick">
                 <Button.Resources>
                     <Style TargetType="Border">

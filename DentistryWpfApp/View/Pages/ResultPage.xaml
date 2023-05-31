@@ -5,9 +5,17 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ResultPage" Foreground="{DynamicResource TextPrimaryColor}">
-
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="Blue" SecondaryColor="Yellow" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
     <Viewbox >
         <DockPanel >
             <Button x:Name="BackButton" Margin="10" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="BackButton_Click" DockPanel.Dock="Top" Visibility="Collapsed" />
@@ -74,7 +82,21 @@
             </StackPanel>
 
             <!-- Кнопка "NextButton" -->
-            <Button x:Name="NextButton" Margin="10" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Далее" Click="NextButton_Click" DockPanel.Dock="Bottom" FontSize="18" />
+            <Button x:Name="NextButton" Margin="10" Width="100" Height="50" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Далее" Click="NextButton_Click" DockPanel.Dock="Bottom" FontSize="18" Foreground="{DynamicResource TextPrimaryColor}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Далее" VerticalAlignment="Center"/>
+                            <Path Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0"
+                      Data="M0,0 L4,4 L0,8 Z" Fill="{TemplateBinding Foreground}" Width="50" Height="50"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
 
         </DockPanel>
     </Viewbox>

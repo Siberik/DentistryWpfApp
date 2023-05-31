@@ -49,8 +49,8 @@ namespace DentistryWpfApp.View.Pages
             // Добавьте его на страницу
             ContentPanel.Children.Add(EditableTableContainer);
 
-            EditableTable editableTable = new EditableTable();
-            editableTable.CellTextChanged += EditableTable_CellTextChanged;
+
+            EditTableDent.CellTextChanged += (sender, e) => EditableTable_CellTextChanged(sender, e);
             string phone = PhoneTextBox.Text;
             PhoneTextBox.Text = phone;
 
@@ -63,7 +63,7 @@ namespace DentistryWpfApp.View.Pages
                 // Заполнение edittable значениями из DentalFormula_Formula
                 for (int i = 0; i < formula.Length; i++)
                 {
-                    TextBox cell = editableTable.GetTextBoxAtPosition(i % editableTable.Columns, i / editableTable.Columns);
+                    TextBox cell = EditTableDent.GetTextBoxAtPosition(i % EditTableDent.Columns, i / EditTableDent.Columns);
                     if (cell != null)
                     {
                         cell.Text = formula[i].ToString();
@@ -72,7 +72,7 @@ namespace DentistryWpfApp.View.Pages
             }
 
             // Добавление EditableTable на страницу
-            EditableTableContainer.Children.Add(editableTable);
+            EditableTableContainer.Children.Add(EditTableDent);
         }
 
         private void EditableTable_CellTextChanged(object sender, CellTextChangedEventArgs e)

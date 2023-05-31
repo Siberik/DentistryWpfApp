@@ -76,8 +76,23 @@
                                 </StackPanel>
                             </StackPanel>
 
-                          
-                            <Button x:Name="NextButton" HorizontalAlignment="Right" Content="Далее" Margin="10,0" Click="NextButton_Click"/>
+
+                            <Button x:Name="NextButton" HorizontalAlignment="Right" Margin="10,0" Click="NextButton_Click" Foreground="{DynamicResource TextPrimaryColor}">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Далее" VerticalAlignment="Center"/>
+                                            <Path Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0"
+                      Data="M0,0 L4,4 L0,8 Z" Fill="{TemplateBinding Foreground}"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
 
                         </StackPanel>
 
@@ -120,7 +135,21 @@
                             </StackPanel>
 
                             <Button x:Name="SaveButton" HorizontalAlignment="Center" Content="Сохранить" IsDefault="True" Click="SaveButtonClick" MinWidth="200" Style="{DynamicResource SaveButtonStyle}" Tag="{DynamicResource confirm}" />
-                            <Button x:Name="BackButton" HorizontalAlignment="Left" Content="Назад" Margin="10,0" Click="BackButton_Click"/>
+                            <Button x:Name="BackButton" HorizontalAlignment="Left" Margin="10,0" Click="BackButton_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Path Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                      Data="M4,0 L0,4 L4,8 Z" Fill="{TemplateBinding Foreground}" Margin="0,0,5,0"/>
+                                            <TextBlock Grid.Column="1" Text="Назад" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
                         </StackPanel>
                         
                     </Grid>

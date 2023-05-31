@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PatientsPage" Foreground="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource Montserrat}" FontSize="20">
@@ -20,15 +21,25 @@
      
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4,5">
         <Viewbox>
-                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="4,5">
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Width="385">
 
                     <TextBox x:Name="SearchTextBox" Width="200" Height="30"  />
-                    <Button Margin="5" Content="Поиск" Click="SearchButton_Click" />
-                </StackPanel>
+                        <Button Margin="5" Click="SearchButton_Click" Background="#FF2196F3" BorderBrush="#FF2196F3" Foreground="White" Padding="10" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </Button.Resources>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Magnify" VerticalAlignment="Center" Margin="0,0,5,0" />
+                                <TextBlock Text="Поиск" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
             </Viewbox>
             <Viewbox>
                 <StackPanel HorizontalAlignment="Right">
-                        <Button Content="Создать нового клиента" x:Name="AddButton" Margin="90,0" Click="AddButtonClick" Foreground="{DynamicResource TextPrimaryColor}">
+                        <Button Content="Создать нового клиента" x:Name="AddButton" Margin="90,0" Click="AddButtonClick" Foreground="{DynamicResource TextPrimaryColor}" Height="45" Width="371">
                             <Button.Resources>
                                 <Style TargetType="Button">
                                     <Setter Property="Background">

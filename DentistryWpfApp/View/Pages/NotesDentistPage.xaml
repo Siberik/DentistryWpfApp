@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
+      xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="NotesDentistPage" Foreground="{DynamicResource TextPrimaryColor}">
@@ -19,9 +19,35 @@
             <TextBox Name="ClientNameTextBox" Width="200" VerticalAlignment="Center"/>
             <TextBlock Text="Дата:" Margin="20,0,10,0" VerticalAlignment="Center"/>
             <DatePicker Name="RegistrationDatePicker" Width="150" VerticalAlignment="Center"/>
-            <Button Content="Применить фильтр" Margin="20,0" Click="OnFilterButtonClicked"/>
-            <Button Margin="10,0,0,0" Content="Создать запись" VerticalAlignment="Center" Name="CreateRegistrationButton" Click="CreateRegistrationButtonClick"/>
-        </StackPanel>
+                <Button  Margin="20,0" Click="OnFilterButtonClicked">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <materialDesign:PackIcon Kind="Filter" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="Применить фильтр" VerticalAlignment="Center" Grid.Column="1" />
+                    </Grid>
+                </Button>
+
+                <Button Margin="10,0,0,0"  VerticalAlignment="Center" Name="CreateRegistrationButton" Click="CreateRegistrationButtonClick" Background="#4CAF50" Foreground="White" BorderThickness="0" Padding="10">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="Создать запись" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
         </Viewbox>
         
         <Viewbox Grid.Row="1">

@@ -42,10 +42,41 @@ namespace DentistryWpfApp.View.Pages
 
 
 
-            EditableTable editableTable = new EditableTable();
-            editableTable.CellTextChanged += EditableTable_CellTextChanged;
+           
+            EditTableDent.CellTextChanged += EditableTable_CellTextChanged;
             string phone = PhoneTextBox.Text;
             PhoneTextBox.Text = phone;
+            // Получение зубной формулы пациента из базы данных
+            DentalFormula dentalFormula = db.context.DentalFormula.FirstOrDefault(f => f.Client_Id_FK == idget);
+
+            // Проверка наличия зубной формулы
+            if (dentalFormula != null)
+            {
+                // Получение строки с зубной формулой
+                string formulaString = dentalFormula.DentalFormula_Formula;
+
+                // Разделение строки на отдельные числа
+                string[] formulaValues = formulaString.Split(',');
+
+                // Получение всех текстовых полей в EditTableDent
+                List<List<TextBox>> textBoxes = EditTableDent.GetTextBoxes();
+
+                // Заполнение текстовых полей значениями из разделенной строки
+                int valueIndex = 0;
+                foreach (var rowTextBoxes in textBoxes)
+                {
+                    foreach (var textBox in rowTextBoxes)
+                    {
+                        // Проверка на выход за пределы массива formulaValues
+                        if (valueIndex < formulaValues.Length)
+                        {
+                            string value = formulaValues[valueIndex];
+                            textBox.Text = value;
+                            valueIndex++;
+                        }
+                    }
+                }
+            }
         }
         private void EditableTable_Initialized(object sender, EventArgs e)
         {

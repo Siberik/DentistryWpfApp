@@ -5,11 +5,24 @@ namespace DentistryClassLibrary
     public class ContractGeneratorClass
     {
         private int contractNumber;
-        private string fileName = "contract_number.txt";
+        private readonly string fileName = "contract_number.txt";
+        public string FileName => fileName;
 
         public ContractGeneratorClass()
         {
-            // Загружаем значение договора из файла, если он существует
+            LoadContractNumber();
+        }
+
+        public void Initialize()
+        {
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
+        }
+
+        private void LoadContractNumber()
+        {
             if (File.Exists(fileName))
             {
                 string savedContractNumber = File.ReadAllText(fileName);
@@ -19,29 +32,27 @@ namespace DentistryClassLibrary
                 }
                 else
                 {
-                    // В случае ошибки при парсинге значения, устанавливаем начальное значение 1
                     contractNumber = 1;
+                    SaveContractNumber();
                 }
             }
             else
             {
-                // В случае отсутствия файла, устанавливаем начальное значение 1
                 contractNumber = 1;
+                SaveContractNumber();
             }
+        }
+
+        private void SaveContractNumber()
+        {
+            File.WriteAllText(fileName, contractNumber.ToString());
         }
 
         public string GetNextContractNumber()
         {
-            // Генерируем номер текущего договора на основе текущего значения
-            string currentContractNumber = contractNumber.ToString();
-
-            // Увеличиваем значение договора для следующего договора
             contractNumber++;
-
-            // Сохраняем значение договора в файл
-            File.WriteAllText(fileName, contractNumber.ToString());
-
-            return currentContractNumber;
+            SaveContractNumber();
+            return contractNumber.ToString();
         }
     }
 }

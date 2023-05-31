@@ -12,6 +12,7 @@ namespace DentistryWpfApp.View.Pages
         private int idget = 0;
         Core db = new Core();
         private bool appointmentsVisible = false;
+        string formula;
 
         public ViewingPatientPage(int id)
         {
@@ -34,6 +35,9 @@ namespace DentistryWpfApp.View.Pages
             AdressTextBlock.Text = $"Адрес: {adress}";
             ProfTextBlock.Text = $"Профессия: {prof}";
             GenderTextBlock.Text = $"Пол: {gender}";
+            DentalFormula dentalFormula = db.context.DentalFormula.FirstOrDefault(x=>x.Client_Id_FK==id);
+            formula = dentalFormula.DentalFormula_Formula;
+            var formula1 = formula.Split(',');
         }
 
         private void RedactButtonClick(object sender, RoutedEventArgs e)

@@ -81,6 +81,7 @@ namespace DentistryWpfApp.View.Pages
             // Можно добавить соответствующую логику здесь
         }
 
+
         private void SaveButtonClick(object sender, RoutedEventArgs e)
         {
             // Сохранение изменений в базу данных

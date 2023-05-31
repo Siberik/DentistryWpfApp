@@ -7,22 +7,11 @@ namespace DentistryWpfApp.View.Controls
 {
     public class EditableTable : UserControl
     {
-
         private Grid grid;
         private List<List<TextBox>> textBoxes;
 
         public int Rows { get; set; }
         public int Columns { get; set; }
-
-        public TextBox GetTextBoxAtPosition(int row, int col)
-        {
-            if (row >= 0 && row < Rows && col >= 0 && col < Columns)
-            {
-                return textBoxes[row][col];
-            }
-
-            return null;
-        }
 
         public EditableTable()
         {
@@ -70,11 +59,6 @@ namespace DentistryWpfApp.View.Controls
                 textBoxes.Add(rowTextBoxes);
             }
         }
-        public List<List<TextBox>> GetTextBoxes()
-        {
-            return textBoxes;
-        }
-
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -92,22 +76,34 @@ namespace DentistryWpfApp.View.Controls
             CellTextChanged?.Invoke(this, new CellTextChangedEventArgs(newText, row, col));
         }
 
-        public string GetCellValue(int row, int col)
+        public TextBox GetTextBoxAtPosition(int row, int col)
         {
             if (row >= 0 && row < Rows && col >= 0 && col < Columns)
             {
-                return textBoxes[row][col].Text;
+                return textBoxes[row][col];
             }
 
-            return string.Empty;
+            return null;
+        }
+
+        public string GetCellValue(int row, int col)
+        {
+            TextBox textBox = GetTextBoxAtPosition(row, col);
+            return textBox != null ? textBox.Text : string.Empty;
         }
 
         public void SetCellValue(int row, int col, string value)
         {
-            if (row >= 0 && row < Rows && col >= 0 && col < Columns)
+            TextBox textBox = GetTextBoxAtPosition(row, col);
+            if (textBox != null)
             {
-                textBoxes[row][col].Text = value;
+                textBox.Text = value;
             }
+        }
+
+        public List<List<TextBox>> GetTextBoxes()
+        {
+            return textBoxes;
         }
     }
 

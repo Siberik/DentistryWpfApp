@@ -1,5 +1,4 @@
 ﻿using DentistryWpfApp.Model;
-using Humanizer;
 using System;
 using System.Globalization;
 using System.Linq;
@@ -11,6 +10,8 @@ using DentistryClassLibrary;
 using Microsoft.Office.Interop.Word;
 using System.Runtime.InteropServices;
 using System.Data.Entity.Migrations;
+
+
 
 namespace DentistryWpfApp.View.Pages
 {
@@ -38,7 +39,7 @@ namespace DentistryWpfApp.View.Pages
             servicesComboBox.SelectedValuePath = "Services_Id";
         }
 
-        private void AddServiceButton_Click(object sender, RoutedEventArgs e)
+        private void AddServiceButton_Click(object sender, MouseEventArgs e)
         {
             // Получаем выбранную услугу
             var selectedService = servicesComboBox.SelectedItem as Services;
@@ -58,6 +59,7 @@ namespace DentistryWpfApp.View.Pages
                 servicesContainer.Children.Add(serviceButton);
             }
         }
+      
 
         private void ServiceButton_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -69,7 +71,8 @@ namespace DentistryWpfApp.View.Pages
                 serviceButton.Background = Brushes.Red;
             }
         }
-        private void ServiceButton_MouseLeave(object sender, MouseEventArgs e)
+
+        private void ServiceButton_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             // Изменяем цвет кнопки при наведении мыши
             var serviceButton = sender as Button;
@@ -79,6 +82,8 @@ namespace DentistryWpfApp.View.Pages
                 serviceButton.Background = Brushes.Gray;
             }
         }
+
+
 
         private void ServiceButton_Click(object sender, RoutedEventArgs e)
         {
@@ -344,49 +349,100 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
                 bookmark34.Text = valueToInsert34;
                 bookmark34.Underline = WdUnderline.wdUnderlineSingle;
 
-                string valueToInsert35 = SovetTextBox.Text;
-                Range bookmark35 = tempDoc.Bookmarks["Наставления"].Range;
+                string valueToInsert35 = dentalFormula1[16];
+                Range bookmark35 = tempDoc.Bookmarks["в2"].Range;
                 bookmark35.Text = valueToInsert35;
                 bookmark35.Underline = WdUnderline.wdUnderlineSingle;
 
                 // Продолжайте далее для чисел 36-41, меняя соответствующие значения
 
-                string valueToInsert36 = SovetTextBox.Text;
-                Range bookmark36 = tempDoc.Bookmarks["Наставления"].Range;
+                string valueToInsert36 = dentalFormula1[17];
+                Range bookmark36 = tempDoc.Bookmarks["с2"].Range;
                 bookmark36.Text = valueToInsert36;
                 bookmark36.Underline = WdUnderline.wdUnderlineSingle;
 
-                string valueToInsert37 = SovetTextBox.Text;
-                Range bookmark37 = tempDoc.Bookmarks["Наставления"].Range;
+                string valueToInsert37 = dentalFormula1[18];
+                Range bookmark37 = tempDoc.Bookmarks["ш2"].Range;
                 bookmark37.Text = valueToInsert37;
                 bookmark37.Underline = WdUnderline.wdUnderlineSingle;
 
-                string valueToInsert38 = SovetTextBox.Text;
-                Range bookmark38 = tempDoc.Bookmarks["Наставления"].Range;
+                string valueToInsert38 = dentalFormula1[19];
+                Range bookmark38 = tempDoc.Bookmarks["п2"].Range;
                 bookmark38.Text = valueToInsert38;
                 bookmark38.Underline = WdUnderline.wdUnderlineSingle;
 
                 // Продолжайте далее для чисел 39-41, меняя соответствующие значения
 
-                string valueToInsert39 = SovetTextBox.Text;
-                Range bookmark39 = tempDoc.Bookmarks["Наставления"].Range;
+                string valueToInsert39 = dentalFormula1[20];
+                Range bookmark39 = tempDoc.Bookmarks["ч2"].Range;
                 bookmark39.Text = valueToInsert39;
                 bookmark39.Underline = WdUnderline.wdUnderlineSingle;
 
-                string valueToInsert40 = SovetTextBox.Text;
-                Range bookmark40 = tempDoc.Bookmarks["Наставления"].Range;
+                string valueToInsert40 = dentalFormula1[21];
+                Range bookmark40 = tempDoc.Bookmarks["т2"].Range;
                 bookmark40.Text = valueToInsert40;
                 bookmark40.Underline = WdUnderline.wdUnderlineSingle;
 
-                string valueToInsert41 = SovetTextBox.Text;
-                Range bookmark41 = tempDoc.Bookmarks["Наставления"].Range;
+                string valueToInsert41 = dentalFormula1[22];
+                Range bookmark41 = tempDoc.Bookmarks["д2"].Range;
                 bookmark41.Text = valueToInsert41;
                 bookmark41.Underline = WdUnderline.wdUnderlineSingle;
 
-                // Продолжайте далее для чисел 42 и далее, меняя соответствующие значения
+                // 42
+                string valueToInsert42 = dentalFormula1[23];
+                Range bookmark42 = tempDoc.Bookmarks["о2"].Range;
+                bookmark42.Text = valueToInsert42;
+                bookmark42.Underline = WdUnderline.wdUnderlineSingle;
 
+                // 43
+                string valueToInsert43 = dentalFormula1[24];
+                Range bookmark43 = tempDoc.Bookmarks["мо2"].Range;
+                bookmark43.Text = valueToInsert43;
+                bookmark43.Underline = WdUnderline.wdUnderlineSingle;
 
+                // 44
+                string valueToInsert44 = dentalFormula1[25];
+                Range bookmark44 = tempDoc.Bookmarks["мд2"].Range;
+                bookmark44.Text = valueToInsert44;
+                bookmark44.Underline = WdUnderline.wdUnderlineSingle;
 
+                // 45
+                string valueToInsert45 = dentalFormula1[26];
+                Range bookmark45 = tempDoc.Bookmarks["мт2"].Range;
+                bookmark45.Text = valueToInsert45;
+                bookmark45.Underline = WdUnderline.wdUnderlineSingle;
+
+                // 46
+                string valueToInsert46 = dentalFormula1[27];
+                Range bookmark46 = tempDoc.Bookmarks["мч2"].Range;
+                bookmark46.Text = valueToInsert46;
+                bookmark46.Underline = WdUnderline.wdUnderlineSingle;
+
+                // 47
+                string valueToInsert47 = dentalFormula1[28];
+                Range bookmark47 = tempDoc.Bookmarks["мп2"].Range;
+                bookmark47.Text = valueToInsert47;
+                bookmark47.Underline = WdUnderline.wdUnderlineSingle;
+
+                // 48
+                string valueToInsert48 = dentalFormula1[29];
+                Range bookmark48 = tempDoc.Bookmarks["мш2"].Range;
+                bookmark48.Text = valueToInsert48;
+                bookmark48.Underline = WdUnderline.wdUnderlineSingle;
+
+                // 49
+                string valueToInsert49 = dentalFormula1[30];
+                Range bookmark49 = tempDoc.Bookmarks["мс2"].Range;
+                bookmark49.Text = valueToInsert49;
+                bookmark49.Underline = WdUnderline.wdUnderlineSingle;
+
+                // 50
+                string valueToInsert50 = dentalFormula1[31];
+                Range bookmark50 = tempDoc.Bookmarks["мв2"].Range;
+                bookmark50.Text = valueToInsert50;
+                bookmark50.Underline = WdUnderline.wdUnderlineSingle;
+
+                
 
 
 
@@ -399,7 +455,7 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
                 // Открываем временный файл в программе по умолчанию
                 System.Diagnostics.Process.Start(tempFilePath);
 
-                MessageBox.Show("Значения успешно добавлены в Word!");
+                System.Windows.Forms.MessageBox.Show("Значения успешно добавлены в Word!");
             }
             finally
             {
@@ -434,7 +490,7 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
             
            if(db.context.SaveChanges() == 0)
             {
-                MessageBox.Show("Не добавлено.");
+                System.Windows.Forms.MessageBox.Show("Не добавлено.");
             }
         }
 
@@ -491,6 +547,10 @@ private void AddToWordButton_Click(object sender, RoutedEventArgs e)
             }
         }
 
+        private void AddServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 

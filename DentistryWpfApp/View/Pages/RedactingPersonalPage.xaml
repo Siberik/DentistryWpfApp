@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="RedactingPersonalPage">
+      Title="RedactingPersonalPage" Foreground="{DynamicResource TextPrimaryColor}">
 
     <Viewbox>
         <Grid>
@@ -20,7 +20,7 @@
             </Grid.RowDefinitions>
 
             <StackPanel>
-                <TextBlock Style="{StaticResource  H1 TextBlock}" Text="Привет" Margin="0,-7,0,0"/>
+                <TextBlock Style="{StaticResource  H1 TextBlock}" Text="Редактирование" Margin="0,-7,0,0"/>
             </StackPanel>
             <StackPanel Margin="0,30,0,0" Orientation="Horizontal">
                 

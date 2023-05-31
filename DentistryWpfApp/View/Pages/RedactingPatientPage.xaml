@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DentistryWpfApp.View.Pages"   xmlns:controls="clr-namespace:DentistryWpfApp.View.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="RedactingPatientPage">
+      Title="RedactingPatientPage" Foreground="{DynamicResource TextPrimaryColor}">
 
     <Grid>
 

@@ -28,8 +28,41 @@
             </Viewbox>
             <Viewbox>
                 <StackPanel HorizontalAlignment="Right">
-                    <Button Content="Создать нового клиента" x:Name="AddButton" Margin="90,0" Click="AddButtonClick" />
-                </StackPanel>
+                        <Button Content="Создать нового клиента" x:Name="AddButton" Margin="90,0" Click="AddButtonClick" Foreground="{DynamicResource TextPrimaryColor}">
+                            <Button.Resources>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="#417505" Offset="0" />
+                                                <GradientStop Color="#102F05" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+                                    <Setter Property="Padding" Value="10" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                    <Setter Property="HorizontalAlignment" Value="Left" />
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="Auto" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Viewbox Grid.Column="0" Width="20" Height="20" Margin="5">
+                                                        <Path Data="M7,2H9V7H14V9H9V14H7V9H2V7H7V2Z" Fill="{DynamicResource TextPrimaryColor}" />
+                                                    </Viewbox>
+                                                    <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
             </Viewbox>
         </StackPanel>
         </Viewbox>

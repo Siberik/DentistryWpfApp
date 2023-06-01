@@ -70,12 +70,29 @@ namespace DentistryLibraryTests
         }
 
         // Тестирование отправки письма с длинным паролем пользователя.
-        // Ожидается, что метод SendMail вернет true.
+        // Ожидается, что метод SendMail вернет false.
         [TestMethod]
         public void SendMail_LongPassword_ReturnsTrue()
         {
             // Arrange
             string to = "recipient@example.com";
+            string login = "testuser";
+            string password = new string('a', 10000);
+
+            // Act
+            bool result = MailClass.SendMail(to, login, password);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        // Тестирование отправки письма с длинным паролем пользователя.
+        // Ожидается, что метод SendMail вернет true.
+        [TestMethod]
+        public void SendMail_MailEmpty_ReturnsTrue()
+        {
+            // Arrange
+            string to = " ";
             string login = "testuser";
             string password = new string('a', 10000);
 
@@ -157,6 +174,7 @@ namespace DentistryLibraryTests
             // Assert
             Assert.AreEqual(0, password.Length);
         }
+
     }
 }
     

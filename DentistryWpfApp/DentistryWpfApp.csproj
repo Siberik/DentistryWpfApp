@@ -412,6 +412,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelDentistry.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Assets\Documents\Губарев Презентация к КП.pptx" />
     <None Include="Model\ModelDentistry.edmx.diagram">
       <DependentUpon>ModelDentistry.edmx</DependentUpon>
     </None>

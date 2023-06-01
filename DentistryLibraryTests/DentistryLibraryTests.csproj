@@ -60,6 +60,10 @@
       <Project>{55bc7c91-dcaa-4d6c-be5c-1f419cc50a69}</Project>
       <Name>DentistryClassLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DentistryWpfApp\DentistryWpfApp.csproj">
+      <Project>{ebde4b70-681c-466e-8693-1e4459d98d3e}</Project>
+      <Name>DentistryWpfApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

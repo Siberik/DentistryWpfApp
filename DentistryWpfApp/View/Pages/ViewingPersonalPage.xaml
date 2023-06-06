@@ -24,7 +24,7 @@
                     <TextBlock Text="Редактировать" Foreground="#fff" Margin="5,0,0,0" />
                 </StackPanel>
             </Button>
-            <Button Width="80" Height="30" Background="#FFE9BEBE" BorderThickness="0" Margin="2" Click="DeleteButtonClick">
+            <Button Width="150" Height="30" Background="#FFE9BEBE" BorderThickness="0" Margin="2" Click="DeleteButtonClick">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />

@@ -39,6 +39,7 @@ namespace DentistryWpfApp.View.Pages
                     Tag = personal.Personal_Id
                 };
                 button.Click += OnButtonClicked;
+                button.Margin = new Thickness(0, 10, 0, 0);
                 ButtonsStackPanel.Children.Add(button);
             }
         }

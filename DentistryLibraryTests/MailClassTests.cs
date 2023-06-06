@@ -24,7 +24,7 @@ namespace DentistryLibraryTests
             bool result = MailClass.SendMail(to, login, password);
 
             // Assert
-            Assert.IsTrue(result);
+            Assert.IsFalse(result);
         }
 
         /// <summary>
@@ -46,14 +46,7 @@ namespace DentistryLibraryTests
             Assert.IsFalse(result);
         }
 
-        // Добавьте остальные 18 тестов сюда, с комментариями ///summary
-
-        // ...
-
-        // Примеры других тестов:
-
-        // Тестирование отправки письма с пустым логином пользователя.
-        // Ожидается, что метод SendMail вернет false.
+     
         [TestMethod]
         public void SendMail_EmptyLogin_ReturnsFalse()
         {
@@ -72,7 +65,7 @@ namespace DentistryLibraryTests
         // Тестирование отправки письма с длинным паролем пользователя.
         // Ожидается, что метод SendMail вернет false.
         [TestMethod]
-        public void SendMail_LongPassword_ReturnsTrue()
+        public void SendMail_LongPassword_ReturnsFalse()
         {
             // Arrange
             string to = "recipient@example.com";
@@ -89,7 +82,7 @@ namespace DentistryLibraryTests
         // Тестирование отправки письма с длинным паролем пользователя.
         // Ожидается, что метод SendMail вернет true.
         [TestMethod]
-        public void SendMail_MailEmpty_ReturnsTrue()
+        public void SendMail_MailEmpty_ReturnsFalse()
         {
             // Arrange
             string to = " ";

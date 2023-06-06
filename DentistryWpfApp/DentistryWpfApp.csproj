@@ -264,6 +264,9 @@
     <Compile Include="View\Windows\AddPatientWindow.xaml.cs">
       <DependentUpon>AddPatientWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\AddPersonalPage.xaml.cs">
+      <DependentUpon>AddPersonalPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="Assets\Dictionaries\MainDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -383,6 +386,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\AddPatientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AddPersonalPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

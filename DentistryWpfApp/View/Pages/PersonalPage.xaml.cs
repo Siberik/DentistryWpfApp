@@ -35,7 +35,7 @@ namespace DentistryWpfApp.View.Pages
 
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
-            AddPatientWindow win2 = new AddPatientWindow();
+            AddPersonalPage win2 = new AddPersonalPage();
             win2.Show();
         }
 

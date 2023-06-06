@@ -25,7 +25,10 @@
                     <TextBlock Text="Редактировать" Foreground="#fff" Margin="5,0,0,0" />
                 </StackPanel>
             </Button>
-            <Button Width="80" Height="30" Background="#FFE9BEBE" BorderThickness="0" Margin="2" Click="DeleteButtonClick">
+          
+                
+           
+            <Button Width="150" Height="30"  Background="#FFE9BEBE" BorderThickness="0" Margin="2" Click="DeleteButtonClick">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
@@ -36,6 +39,7 @@
                     <TextBlock Text="Удалить" Foreground="#990000" Margin="5,0,0,0" />
                 </StackPanel>
             </Button>
+
         </StackPanel>
 
         <Viewbox Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -51,7 +55,7 @@
                 <TextBlock x:Name="GenderTextBlock" Margin="0,10" />
 
                 <StackPanel>
-                    <Button Content="Посмотреть приёмы" Click="ViewAppointmentsButtonClick" Height="30" Width="150" BorderThickness="0" Margin="0,10">
+                    <Button Content="Посмотреть приёмы" Click="ViewAppointmentsButtonClick" Height="30" Width="173" BorderThickness="0" Margin="0,10">
                         <Button.Resources>
                             <Style TargetType="ToggleButton">
                                 <Setter Property="Foreground" Value="#FF333333" />

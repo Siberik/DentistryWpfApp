@@ -26,11 +26,11 @@ namespace DentistryWpfApp.View.Windows
         {
             InitializeComponent();
 
-           
+
 
             DentistComboBox.ItemsSource = db.context.Personal.ToList();
             DentistComboBox.DisplayMemberPath = "Personal_LastName";
-            
+
             EditableTable editableTable = new EditableTable();
             editableTable.CellTextChanged += EditableTable_CellTextChanged;
         }

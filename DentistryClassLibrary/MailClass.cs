@@ -36,6 +36,35 @@ namespace DentistryClassLibrary
             }
         }
 
+        public static bool SendMailNewUser(string to, string login, string password)
+        {
+            try
+            {
+                using (SmtpClient smtpClient = new SmtpClient("smtp.mail.ru", 25))
+                {
+                    smtpClient.Credentials = new NetworkCredential("t.pochta@vladgubarev.site", "G0S3inDTHG4G3sG2TuGi");
+                    smtpClient.EnableSsl = true;
+
+                    using (MailMessage mailMessage = new MailMessage())
+                    {
+                        mailMessage.From = new MailAddress("t.pochta@vladgubarev.site");
+                        mailMessage.To.Add(new MailAddress(to));
+                        mailMessage.Subject = "Восстановление пароля.";
+                        mailMessage.Body = $"Добро пожаловать к нам в стоматологию. Ваш логин: {login}.\n Ваш пароль: {password}.\n Будем только рады работать с вами!\nПо техническим вопросам можете писать сюда: t.pochta@vladgubarev.site";
+
+                        smtpClient.Send(mailMessage);
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при отправке письма: {ex.Message}");
+                return false;
+            }
+        }
+
         public static string GetRandomPassword(int length)
         {
             const string chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

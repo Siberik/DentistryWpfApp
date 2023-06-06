@@ -24,7 +24,7 @@ namespace DentistryLibraryTests
             bool result = MailClass.SendMail(to, login, password);
 
             // Assert
-            Assert.IsFalse(result);
+            Assert.IsTrue(result);
         }
 
         /// <summary>

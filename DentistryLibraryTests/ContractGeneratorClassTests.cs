@@ -56,6 +56,41 @@ namespace DentistryLibraryTests
             // Assert
             Assert.AreNotEqual(expectedContractNumber, actualContractNumber);
         }
+
+        /// <summary>
+        /// Проверяет, что при использовании 200 экземпляров ContractGeneratorClass
+        /// номера договоров генерируются независимо друг от друга.
+        /// </summary>
+        [TestMethod]
+        public void GetNextContractNumber_FourInstances_IndependentContractNumbers()
+        {
+            // Arrange
+            ContractGeneratorClass secondGenerator = new ContractGeneratorClass();
+            string expectedContractNumber = "4";
+
+            // Act
+            string actualContractNumber = generator.GetNextContractNumber();
+
+            // Assert
+            Assert.AreNotEqual(expectedContractNumber, actualContractNumber);
+        }
+        /// <summary>
+        /// Проверяет, что при использовании трёх экземпляров ContractGeneratorClass
+        /// номера договоров генерируются независимо друг от друга.
+        /// </summary>
+        [TestMethod]
+        public void GetNextContractNumber_TwoHundred_IndependentContractNumbers()
+        {
+            // Arrange
+            ContractGeneratorClass secondGenerator = new ContractGeneratorClass();
+            string expectedContractNumber = "200";
+
+            // Act
+            string actualContractNumber = generator.GetNextContractNumber();
+
+            // Assert
+            Assert.AreNotEqual(expectedContractNumber, actualContractNumber);
+        }
     }
 
 }

@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContractGeneratorClassTests.cs" />
+    <Compile Include="DateCheckingTests.cs" />
+    <Compile Include="HourCheckingTests.cs" />
     <Compile Include="InputClassTests.cs" />
     <Compile Include="MailClassTests.cs" />
+    <Compile Include="PasswordGeneratorClassTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

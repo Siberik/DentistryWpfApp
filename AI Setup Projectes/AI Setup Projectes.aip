@@ -5,9 +5,157 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_AutoPage.xaml.cs_1" Value="..\DentistryWpfApp\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_AutoPage.xaml.cs_2" Value="..\DentistryLibraryTests\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentalMKBLibrary.dll_2" Value="..\DentalMKBLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentalMKBLibrary.pdb_2" Value="..\DentalMKBLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.dll_1" Value="..\DentistryClassLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.dll_2" Value="..\DentistryClassLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.dll_3" Value="..\DentistryClassLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.pdb_1" Value="..\DentistryClassLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryLibraryTests.dll" Value="..\DentistryLibraryTests\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryLibraryTests.pdb" Value="..\DentistryLibraryTests\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.exe.config_2" Value="..\DentistryWpfApp\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.exe_2" Value="..\DentistryWpfApp\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.exe_3" Value="..\DentistryWpfApp\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.pdb_2" Value="..\DentistryWpfApp\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EditableTable.cs_1" Value="..\DentistryWpfApp\bin\Debug\View\Controls"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EditableTable.cs_2" Value="..\DentistryLibraryTests\bin\Debug\View\Controls"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.dll_1" Value="..\..\..\..\.nuget\packages\entityframework\6.2.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.dll_2" Value="..\..\..\..\.nuget\packages\entityframework\6.2.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.resources.dll_2" Value="..\..\..\..\.nuget\packages\entityframework.ru\6.2.0\lib\net45\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.resources.dll_3" Value="..\..\..\..\.nuget\packages\entityframework.ru\6.2.0\lib\net45\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.dll_1" Value="..\..\..\..\.nuget\packages\entityframework\6.2.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.dll_2" Value="..\..\..\..\.nuget\packages\entityframework\6.2.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.resources.dll_2" Value="..\..\..\..\.nuget\packages\entityframework.ru\6.2.0\lib\net45\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.resources.dll_3" Value="..\..\..\..\.nuget\packages\entityframework.ru\6.2.0\lib\net45\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_HomePage.xaml.cs_1" Value="..\DentistryWpfApp\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_HomePage.xaml.cs_2" Value="..\DentistryLibraryTests\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Humanizer.dll_1" Value="..\..\..\..\.nuget\packages\humanizer.core\2.14.1\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Humanizer.dll_2" Value="..\..\..\..\.nuget\packages\humanizer.core\2.14.1\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Humanizer.resources.dll_2" Value="..\..\..\..\.nuget\packages\humanizer.core.ru\2.14.1\lib\netstandard2.0\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Humanizer.resources.dll_3" Value="..\..\..\..\.nuget\packages\humanizer.core.ru\2.14.1\lib\netstandard2.0\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_JetBrains.Annotations.dll_1" Value="..\packages\JetBrains.Annotations.10.3.0\lib\net"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MaterialDesignColors.dll_1" Value="..\..\..\..\.nuget\packages\materialdesigncolors\2.1.4\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MaterialDesignColors.dll_2" Value="..\..\..\..\.nuget\packages\materialdesigncolors\2.1.4\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MaterialDesignThemes.Wpf.dll_1" Value="..\..\..\..\.nuget\packages\materialdesignthemes\4.9.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MaterialDesignThemes.Wpf.dll_2" Value="..\..\..\..\.nuget\packages\materialdesignthemes\4.9.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Office.Interop.Word.dll_1" Value="..\..\..\..\.nuget\packages\microsoft.office.interop.word\15.0.4797.1004\lib\net20"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Office.Interop.Word.dll_2" Value="..\..\..\..\.nuget\packages\microsoft.office.interop.word\15.0.4797.1004\lib\net20"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.QualityTools.Testing.Fakes.dll_1" Value="..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\PublicAssemblies"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.dll" Value="..\DentistryLibraryTests\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.resources.dll" Value="..\DentistryLibraryTests\bin\Debug\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.TestPlatform.CoreUtilities.resources.dll" Value="..\DentistryLibraryTests\bin\Debug\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" Value="..\DentistryLibraryTests\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll" Value="..\DentistryLibraryTests\bin\Debug\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In" Value="..\DentistryLibraryTests\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl" Value="..\DentistryLibraryTests\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re" Value="..\DentistryLibraryTests\bin\Debug\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" Value="..\DentistryLibraryTests\bin\Debug\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" Value="..\..\..\..\.nuget\packages\mstest.testframework\2.2.10\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1" Value="..\..\..\..\.nuget\packages\mstest.testframework\2.2.10\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2" Value="..\..\..\..\.nuget\packages\mstest.testframework\2.2.10\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll" Value="..\..\..\..\.nuget\packages\mstest.testframework\2.2.10\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1" Value="..\..\..\..\.nuget\packages\mstest.testframework\2.2.10\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2" Value="..\..\..\..\.nuget\packages\mstest.testframework\2.2.10\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll" Value="..\DentistryLibraryTests\bin\Debug\ru"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll_1" Value="..\..\..\..\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.39\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll_2" Value="..\..\..\..\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.39\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_PatientsPage.xaml.cs_1" Value="..\DentistryWpfApp\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_PatientsPage.xaml.cs_2" Value="..\DentistryLibraryTests\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_SnackBarControl.xaml.cs_1" Value="..\DentistryWpfApp\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_SnackBarControl.xaml.cs_2" Value="..\DentistryLibraryTests\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Buffers.dll_1" Value="..\packages\System.Buffers.4.4.0\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.ComponentModel.Annotations.dll_1" Value="..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Configuration.ConfigurationManager.dll_1" Value="..\packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Memory.dll_1" Value="..\packages\System.Memory.4.5.3\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Numerics.Vectors.dll_1" Value="..\packages\System.Numerics.Vectors.4.4.0\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Reactive.dll_1" Value="..\packages\System.Reactive.5.0.0\lib\net472"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll_1" Value="..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Security.AccessControl.dll_1" Value="..\packages\System.Security.AccessControl.6.0.0\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Security.Permissions.dll_1" Value="..\packages\System.Security.Permissions.7.0.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Security.Principal.Windows.dll_1" Value="..\packages\System.Security.Principal.Windows.5.0.0\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Threading.Tasks.Extensions.dll_1" Value="..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.ValueTuple.dll_1" Value="..\packages\System.ValueTuple.4.5.0\lib\net47"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_UserPage.xaml.cs_1" Value="..\DentistryWpfApp\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_UserPage.xaml.cs_2" Value="..\DentistryLibraryTests\bin\Debug\View\Pages"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_AutoPage.xaml.cs_1" Value="AutoPage.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_AutoPage.xaml.cs_2" Value="AutoPage.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentalMKBLibrary.dll_2" Value="DentalMKBLibrary.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentalMKBLibrary.pdb_2" Value="DentalMKBLibrary.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_1" Value="DentistryClassLibrary.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_2" Value="DentistryClassLibrary.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_3" Value="DentistryClassLibrary.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.pdb_1" Value="DentistryClassLibrary.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryLibraryTests.dll" Value="DentistryLibraryTests.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryLibraryTests.pdb" Value="DentistryLibraryTests.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe.config_2" Value="DentistryWpfApp.exe.config"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe_2" Value="DentistryWpfApp.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe_3" Value="DentistryWpfApp.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.pdb_2" Value="DentistryWpfApp.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EditableTable.cs_1" Value="EditableTable.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EditableTable.cs_2" Value="EditableTable.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.dll_1" Value="EntityFramework.SqlServer.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.dll_2" Value="EntityFramework.SqlServer.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.resources.dll_2" Value="EntityFramework.SqlServer.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.resources.dll_3" Value="EntityFramework.SqlServer.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll_1" Value="EntityFramework.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll_2" Value="EntityFramework.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.resources.dll_2" Value="EntityFramework.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.resources.dll_3" Value="EntityFramework.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_HomePage.xaml.cs_1" Value="HomePage.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_HomePage.xaml.cs_2" Value="HomePage.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Humanizer.dll_1" Value="Humanizer.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Humanizer.dll_2" Value="Humanizer.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Humanizer.resources.dll_2" Value="Humanizer.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Humanizer.resources.dll_3" Value="Humanizer.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_JetBrains.Annotations.dll_1" Value="JetBrains.Annotations.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignColors.dll_1" Value="MaterialDesignColors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignColors.dll_2" Value="MaterialDesignColors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignThemes.Wpf.dll_1" Value="MaterialDesignThemes.Wpf.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignThemes.Wpf.dll_2" Value="MaterialDesignThemes.Wpf.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Office.Interop.Word.dll_1" Value="Microsoft.Office.Interop.Word.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Office.Interop.Word.dll_2" Value="Microsoft.Office.Interop.Word.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.QualityTools.Testing.Fakes.dll_1" Value="Microsoft.QualityTools.Testing.Fakes.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.dll" Value="Microsoft.TestPlatform.AdapterUtilities.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.resources.dll" Value="Microsoft.TestPlatform.AdapterUtilities.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.CoreUtilities.resources.dll" Value="Microsoft.TestPlatform.CoreUtilities.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" Value="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll" Value="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In" Value="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl" Value="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re" Value="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" Value="Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" Value="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1" Value="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2" Value="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll" Value="Microsoft.VisualStudio.TestPlatform.TestFramework.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1" Value="Microsoft.VisualStudio.TestPlatform.TestFramework.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2" Value="Microsoft.VisualStudio.TestPlatform.TestFramework.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll" Value="Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll_1" Value="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll_2" Value="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PatientsPage.xaml.cs_1" Value="PatientsPage.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_PatientsPage.xaml.cs_2" Value="PatientsPage.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_SnackBarControl.xaml.cs_1" Value="SnackBarControl.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_SnackBarControl.xaml.cs_2" Value="SnackBarControl.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll_1" Value="System.Buffers.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.ComponentModel.Annotations.dll_1" Value="System.ComponentModel.Annotations.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Configuration.ConfigurationManager.dll_1" Value="System.Configuration.ConfigurationManager.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Memory.dll_1" Value="System.Memory.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Numerics.Vectors.dll_1" Value="System.Numerics.Vectors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Reactive.dll_1" Value="System.Reactive.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll_1" Value="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Security.AccessControl.dll_1" Value="System.Security.AccessControl.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Security.Permissions.dll_1" Value="System.Security.Permissions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Security.Principal.Windows.dll_1" Value="System.Security.Principal.Windows.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Threading.Tasks.Extensions.dll_1" Value="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.ValueTuple.dll_1" Value="System.ValueTuple.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_UserPage.xaml.cs_1" Value="UserPage.xaml.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_UserPage.xaml.cs_2" Value="UserPage.xaml.cs"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
-    <ROW Property="Manufacturer" Value="Prometei"/>
+    <ROW Property="Manufacturer" Value="MyComp"/>
     <ROW Property="ProductCode" Value="1033:{F0938317-76A6-47C4-A4EF-97D68CFCB716} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Dentistry"/>
@@ -25,22 +173,25 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
-    <ROW Directory="Assets_1_Dir" Directory_Parent="Debug_5_Dir" DefaultDir="Assets"/>
+    <ROW Directory="Assets_1_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="Assets"/>
     <ROW Directory="Assets_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="Assets"/>
     <ROW Directory="Avatars_Dir" Directory_Parent="Assets_Dir" DefaultDir="Avatars"/>
     <ROW Directory="Controllers_1_Dir" Directory_Parent="Model_1_Dir" DefaultDir="CONTRO~1|Controllers"/>
     <ROW Directory="Controllers_Dir" Directory_Parent="Model_Dir" DefaultDir="CONTRO~1|Controllers"/>
     <ROW Directory="Controls_1_Dir" Directory_Parent="View_2_Dir" DefaultDir="Controls"/>
+    <ROW Directory="Controls_2_Dir" Directory_Parent="View_3_Dir" DefaultDir="Controls"/>
     <ROW Directory="Controls_Dir" Directory_Parent="View_Dir" DefaultDir="Controls"/>
     <ROW Directory="Debug_1_Dir" Directory_Parent="obj_Dir" DefaultDir="Debug"/>
-    <ROW Directory="Debug_2_Dir" Directory_Parent="bin_1_Dir" DefaultDir="Debug"/>
-    <ROW Directory="Debug_3_Dir" Directory_Parent="obj_1_Dir" DefaultDir="Debug"/>
-    <ROW Directory="Debug_4_Dir" Directory_Parent="bin_2_Dir" DefaultDir="Debug"/>
-    <ROW Directory="Debug_5_Dir" Directory_Parent="obj_2_Dir" DefaultDir="Debug"/>
+    <ROW Directory="Debug_2_Dir" Directory_Parent="obj_1_Dir" DefaultDir="Debug"/>
+    <ROW Directory="Debug_3_Dir" Directory_Parent="bin_1_Dir" DefaultDir="Debug"/>
+    <ROW Directory="Debug_4_Dir" Directory_Parent="obj_2_Dir" DefaultDir="Debug"/>
     <ROW Directory="Debug_Dir" Directory_Parent="bin_Dir" DefaultDir="Debug"/>
     <ROW Directory="DentalMKBLibrary_Dir" Directory_Parent="APPDIR" DefaultDir="DENTAL~1|DentalMKBLibrary"/>
-    <ROW Directory="DentistryClassLibrary_Dir" Directory_Parent="APPDIR" DefaultDir="DENTIS~1|DentistryClassLibrary"/>
+    <ROW Directory="DentistryClassLibrary_Dir" Directory_Parent="APPDIR" DefaultDir="DENTIS~3|DentistryClassLibrary"/>
+    <ROW Directory="DentistryLibraryTests_Dir" Directory_Parent="APPDIR" DefaultDir="DENTIS~4|DentistryLibraryTests"/>
+    <ROW Directory="DentistryLibrary_Dir" Directory_Parent="APPDIR" DefaultDir="DENTIS~1|DentistryLibrary"/>
     <ROW Directory="DentistryWpfApp_Dir" Directory_Parent="APPDIR" DefaultDir="DENTIS~2|DentistryWpfApp"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="Dictionaries_1_Dir" Directory_Parent="Assets_1_Dir" DefaultDir="DICTIO~1|Dictionaries"/>
     <ROW Directory="Dictionaries_Dir" Directory_Parent="Assets_Dir" DefaultDir="DICTIO~1|Dictionaries"/>
     <ROW Directory="Documents_Dir" Directory_Parent="Assets_Dir" DefaultDir="DOCUME~1|Documents"/>
@@ -54,149 +205,162 @@
     <ROW Directory="Model_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="Model"/>
     <ROW Directory="Pages_1_Dir" Directory_Parent="View_1_Dir" DefaultDir="Pages"/>
     <ROW Directory="Pages_2_Dir" Directory_Parent="View_2_Dir" DefaultDir="Pages"/>
+    <ROW Directory="Pages_3_Dir" Directory_Parent="View_3_Dir" DefaultDir="Pages"/>
     <ROW Directory="Pages_Dir" Directory_Parent="View_Dir" DefaultDir="Pages"/>
-    <ROW Directory="Properties_1_Dir" Directory_Parent="DentistryClassLibrary_Dir" DefaultDir="PROPER~1|Properties"/>
-    <ROW Directory="Properties_2_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="PROPER~1|Properties"/>
+    <ROW Directory="Properties_1_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="PROPER~1|Properties"/>
     <ROW Directory="Properties_Dir" Directory_Parent="DentalMKBLibrary_Dir" DefaultDir="PROPER~1|Properties"/>
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="StartMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTM~1|StartMenuFolder" IsPseudoRoot="1"/>
     <ROW Directory="Styles_1_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="Styles"/>
-    <ROW Directory="Styles_Dir" Directory_Parent="Debug_5_Dir" DefaultDir="Styles"/>
+    <ROW Directory="Styles_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="Styles"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
-    <ROW Directory="TempPE_Dir" Directory_Parent="Debug_5_Dir" DefaultDir="TempPE"/>
+    <ROW Directory="TempPE_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="TempPE"/>
     <ROW Directory="Themes_1_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="Themes"/>
-    <ROW Directory="Themes_Dir" Directory_Parent="Debug_5_Dir" DefaultDir="Themes"/>
+    <ROW Directory="Themes_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="Themes"/>
     <ROW Directory="ViewModel_1_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="VIEWMO~1|ViewModel"/>
-    <ROW Directory="ViewModel_Dir" Directory_Parent="Debug_5_Dir" DefaultDir="VIEWMO~1|ViewModel"/>
-    <ROW Directory="View_1_Dir" Directory_Parent="Debug_5_Dir" DefaultDir="View"/>
+    <ROW Directory="ViewModel_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="VIEWMO~1|ViewModel"/>
+    <ROW Directory="View_1_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="View"/>
     <ROW Directory="View_2_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="View"/>
-    <ROW Directory="View_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="View"/>
+    <ROW Directory="View_3_Dir" Directory_Parent="DentistryLibraryTests_Dir" DefaultDir="View"/>
+    <ROW Directory="View_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="View"/>
     <ROW Directory="Windows_1_Dir" Directory_Parent="View_2_Dir" DefaultDir="Windows"/>
     <ROW Directory="Windows_Dir" Directory_Parent="View_1_Dir" DefaultDir="Windows"/>
-    <ROW Directory="bin_1_Dir" Directory_Parent="DentistryClassLibrary_Dir" DefaultDir="bin"/>
-    <ROW Directory="bin_2_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="bin"/>
+    <ROW Directory="bin_1_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="bin"/>
     <ROW Directory="bin_Dir" Directory_Parent="DentalMKBLibrary_Dir" DefaultDir="bin"/>
-    <ROW Directory="cs_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="cs"/>
-    <ROW Directory="de_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="de"/>
-    <ROW Directory="edmxResourcesToEmbed_Dir" Directory_Parent="Debug_5_Dir" DefaultDir="EDMXRE~1|edmxResourcesToEmbed"/>
-    <ROW Directory="es_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="es"/>
-    <ROW Directory="fr_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="fr"/>
-    <ROW Directory="it_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="it"/>
-    <ROW Directory="ja_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="ja"/>
-    <ROW Directory="ko_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="ko"/>
-    <ROW Directory="obj_1_Dir" Directory_Parent="DentistryClassLibrary_Dir" DefaultDir="obj"/>
+    <ROW Directory="cs_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="cs"/>
+    <ROW Directory="de_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="de"/>
+    <ROW Directory="edmxResourcesToEmbed_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="EDMXRE~1|edmxResourcesToEmbed"/>
+    <ROW Directory="es_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="es"/>
+    <ROW Directory="fr_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="fr"/>
+    <ROW Directory="it_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="it"/>
+    <ROW Directory="ja_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="ja"/>
+    <ROW Directory="ko_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="ko"/>
+    <ROW Directory="obj_1_Dir" Directory_Parent="DentistryLibrary_Dir" DefaultDir="obj"/>
     <ROW Directory="obj_2_Dir" Directory_Parent="DentistryWpfApp_Dir" DefaultDir="obj"/>
     <ROW Directory="obj_Dir" Directory_Parent="DentalMKBLibrary_Dir" DefaultDir="obj"/>
-    <ROW Directory="pl_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="pl"/>
-    <ROW Directory="ptBR_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="pt-BR"/>
-    <ROW Directory="ru_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="ru"/>
-    <ROW Directory="tr_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="tr"/>
-    <ROW Directory="zhHans_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="zh-Hans"/>
-    <ROW Directory="zhHant_Dir" Directory_Parent="Debug_4_Dir" DefaultDir="zh-Hant"/>
+    <ROW Directory="pl_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="pl"/>
+    <ROW Directory="ptBR_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="pt-BR"/>
+    <ROW Directory="ru_1_Dir" Directory_Parent="DentistryLibraryTests_Dir" DefaultDir="ru"/>
+    <ROW Directory="ru_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="ru"/>
+    <ROW Directory="tr_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="tr"/>
+    <ROW Directory="zhHans_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="zh-Hans"/>
+    <ROW Directory="zhHant_Dir" Directory_Parent="Debug_3_Dir" DefaultDir="zh-Hant"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{E300193C-7F6A-423A-BF68-4C6EBC9CB770}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="AddPatientWindow.baml" ComponentId="{4B118C01-BA9D-413E-B3AF-2F6283F5F23C}" Directory_="Windows_Dir" Attributes="0" KeyPath="AddPatientWindow.baml" Type="0"/>
-    <ROW Component="AddPatientWindow.xaml" ComponentId="{7BF0E775-0523-483A-AC9C-C357EE370377}" Directory_="Windows_1_Dir" Attributes="0" KeyPath="AddPatientWindow.xaml" Type="0"/>
-    <ROW Component="AdministratorFone.png" ComponentId="{5FCE137A-EA22-491A-8DB5-774C05C56BAF}" Directory_="Images_Dir" Attributes="0" KeyPath="AdministratorFone.png" Type="0"/>
-    <ROW Component="Allergy.cs" ComponentId="{6113E8BF-7873-4BF2-A00E-ED211E8A417C}" Directory_="Model_Dir" Attributes="0" KeyPath="Allergy.cs" Type="0"/>
-    <ROW Component="App.config" ComponentId="{7AC991B9-1EFA-4F79-9553-8129C3F9DABD}" Directory_="DentistryWpfApp_Dir" Attributes="0" KeyPath="App.config" Type="0"/>
-    <ROW Component="AppViewModel.cs" ComponentId="{792666C7-B85E-4FCF-AE23-B41E7157726E}" Directory_="ViewModel_1_Dir" Attributes="0" KeyPath="AppViewModel.cs" Type="0"/>
-    <ROW Component="AssemblyInfo.cs" ComponentId="{CC7F8CEF-5941-4EFB-BC33-33EA3CE5779B}" Directory_="Properties_Dir" Attributes="0" KeyPath="AssemblyInfo.cs" Type="0"/>
-    <ROW Component="AssemblyInfo.cs_1" ComponentId="{4F4DDEC0-F952-49E4-B4A8-3A29ABF60AE7}" Directory_="Properties_1_Dir" Attributes="0" KeyPath="AssemblyInfo.cs_1" Type="0"/>
-    <ROW Component="AssemblyInfo.cs_2" ComponentId="{8D9303DD-4D8D-48B1-BFC0-5962FA0AB16A}" Directory_="Properties_2_Dir" Attributes="0" KeyPath="AssemblyInfo.cs_2" Type="0"/>
-    <ROW Component="AutoPage.baml" ComponentId="{37DF14D8-D9E6-4744-851D-6B6EE5EDBFA8}" Directory_="Pages_1_Dir" Attributes="0" KeyPath="AutoPage.baml" Type="0"/>
-    <ROW Component="AutoPage.xaml" ComponentId="{4F6D4D91-76DE-4450-B7E8-B06EE0077135}" Directory_="Pages_2_Dir" Attributes="0" KeyPath="AutoPage.xaml" Type="0"/>
-    <ROW Component="AutoPage.xaml.cs" ComponentId="{AC975120-FCDF-4FBD-9162-CF7A129615B7}" Directory_="Pages_Dir" Attributes="0" KeyPath="AutoPage.xaml.cs" Type="0"/>
-    <ROW Component="ClientsController.cs" ComponentId="{F56E0C39-60BD-4EC7-B405-574D0807C20C}" Directory_="Controllers_Dir" Attributes="0" KeyPath="ClientsController.cs" Type="0"/>
-    <ROW Component="ContractGeneratorClass.cs" ComponentId="{7632BE92-08F5-46ED-9548-6D0E81980096}" Directory_="DentistryClassLibrary_Dir" Attributes="0" KeyPath="ContractGeneratorClass.cs" Type="0"/>
-    <ROW Component="DarkTheme.baml" ComponentId="{07CC8229-B54F-4C20-9EC4-FBF0D75681F3}" Directory_="Themes_Dir" Attributes="0" KeyPath="DarkTheme.baml" Type="0"/>
-    <ROW Component="DarkTheme.xaml" ComponentId="{C65663A9-75E5-4722-A829-7DA461EB0AEB}" Directory_="Themes_1_Dir" Attributes="0" KeyPath="DarkTheme.xaml" Type="0"/>
-    <ROW Component="DentalMKBLibrary.csproj" ComponentId="{7755F1FF-7329-4C5D-B445-3320B3B33467}" Directory_="DentalMKBLibrary_Dir" Attributes="0" KeyPath="DentalMKBLibrary.csproj" Type="0"/>
-    <ROW Component="DentalMKBLibrary.dll" ComponentId="{420DF909-BA5E-4C7F-B688-F66265985594}" Directory_="Debug_Dir" Attributes="0" KeyPath="DentalMKBLibrary.dll"/>
-    <ROW Component="DentalMKBLibrary.dll_1" ComponentId="{35996060-FD0B-4657-BA77-B056F0A9DB70}" Directory_="Debug_1_Dir" Attributes="0" KeyPath="DentalMKBLibrary.dll_1"/>
-    <ROW Component="DentistryClassLibrary.dll" ComponentId="{216F1EB6-2362-41BC-B57D-88534FC24AC0}" Directory_="Debug_2_Dir" Attributes="0" KeyPath="DentistryClassLibrary.dll"/>
-    <ROW Component="DentistryClassLibrary.dll_1" ComponentId="{1AF6E8B4-E194-4A8F-B296-CA8310D13292}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="DentistryClassLibrary.dll_1"/>
-    <ROW Component="DentistryClassLibrary.dll_2" ComponentId="{14B2740B-3BAF-4A8D-ABD5-93766713B963}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="DentistryClassLibrary.dll_2"/>
-    <ROW Component="DentistryWpfApp.csproj.nuget.dgspec.json" ComponentId="{2963D104-69C0-47A8-8AFE-31D241A14B91}" Directory_="obj_2_Dir" Attributes="0" KeyPath="DentistryWpfApp.csproj.nuget.dgspec.json" Type="0"/>
-    <ROW Component="DentistryWpfApp.exe" ComponentId="{0C1B5BB9-8F1E-4627-9EF3-A472DDE61929}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="DentistryWpfApp.exe"/>
-    <ROW Component="DentistryWpfApp.exe_1" ComponentId="{9B85F992-E9E2-4597-89D0-F3389389A479}" Directory_="Debug_5_Dir" Attributes="0" KeyPath="DentistryWpfApp.exe_1"/>
-    <ROW Component="EditableTable.cs" ComponentId="{C3F7CE6E-C590-4EFA-89E4-4BF9C7E40CB8}" Directory_="Controls_Dir" Attributes="0" KeyPath="EditableTable.cs" Type="0"/>
-    <ROW Component="EditableTable.cs_1" ComponentId="{31B2A79B-F72C-4A1C-AEB0-BD15DA36BBB6}" Directory_="Controls_1_Dir" Attributes="0" KeyPath="EditableTable.cs_1" Type="0"/>
-    <ROW Component="EntityFramework.Fakes.dll" ComponentId="{41C3CD1B-A771-4043-B7D7-6605825B11C7}" Directory_="FakesAssemblies_Dir" Attributes="0" KeyPath="EntityFramework.Fakes.dll"/>
-    <ROW Component="EntityFramework.Fakes.fakesconfig" ComponentId="{0C90D3D1-7DB1-46D5-9119-558728409C30}" Directory_="FakesAssemblies_Dir" Attributes="0" KeyPath="EntityFramework.Fakes.fakesconfig" Type="0"/>
-    <ROW Component="EntityFramework.SqlServer.dll" ComponentId="{442C4613-3692-4149-9481-E6F1DF8297FE}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="EntityFramework.SqlServer.dll"/>
-    <ROW Component="EntityFramework.SqlServer.resources.dll" ComponentId="{DD61DB3F-3735-4E95-ABF6-4646F6478A0B}" Directory_="ru_Dir" Attributes="0" KeyPath="EntityFramework.SqlServer.resources.dll"/>
-    <ROW Component="EntityFramework.dll" ComponentId="{B61E97D5-C99D-46DE-8539-2948C3067658}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="EntityFramework.dll"/>
-    <ROW Component="EntityFramework.resources.dll" ComponentId="{288745FE-1863-42CC-8466-229B018C6B79}" Directory_="ru_Dir" Attributes="0" KeyPath="EntityFramework.resources.dll"/>
-    <ROW Component="Humanizer.dll" ComponentId="{01525182-9B8A-4F75-B4FC-2524EF3B018A}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="Humanizer.dll"/>
-    <ROW Component="Humanizer.resources.dll" ComponentId="{33B8D6C7-CC30-403F-8845-FC12B2D15092}" Directory_="ru_Dir" Attributes="0" KeyPath="Humanizer.resources.dll"/>
-    <ROW Component="Icons.baml" ComponentId="{1BE3FB2D-363A-493C-A978-5EEAD2555B1C}" Directory_="Icons_1_Dir" Attributes="0" KeyPath="Icons.baml" Type="0"/>
-    <ROW Component="Icons.xaml" ComponentId="{5794B891-1488-4279-B08A-4267BE40954D}" Directory_="Icons_Dir" Attributes="0" KeyPath="Icons.xaml" Type="0"/>
-    <ROW Component="JetBrains.Annotations.dll" ComponentId="{F26E122C-F13E-42C8-A6AF-D677688638FF}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="JetBrains.Annotations.dll"/>
-    <ROW Component="MainDictionary.baml" ComponentId="{C4E892B6-DB7A-4E08-9C54-ECDDB69AF600}" Directory_="Dictionaries_1_Dir" Attributes="0" KeyPath="MainDictionary.baml" Type="0"/>
-    <ROW Component="MainDictionary.xaml" ComponentId="{A0D141D9-632D-4063-8251-9DB65985C4DF}" Directory_="Dictionaries_Dir" Attributes="0" KeyPath="MainDictionary.xaml" Type="0"/>
-    <ROW Component="MainStyle.baml" ComponentId="{2BB9D478-918F-421C-8C71-D69D6905E6A5}" Directory_="Styles_Dir" Attributes="0" KeyPath="MainStyle.baml" Type="0"/>
-    <ROW Component="MainStyle.xaml" ComponentId="{0137F3AE-1C2D-4C6E-9314-1E5C2B3A11FF}" Directory_="Styles_1_Dir" Attributes="0" KeyPath="MainStyle.xaml" Type="0"/>
-    <ROW Component="MaterialDesignColors.dll" ComponentId="{FE955724-AE12-4840-AFC3-3759C4BC2C5B}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="MaterialDesignColors.dll"/>
-    <ROW Component="MaterialDesignThemes.Wpf.dll" ComponentId="{EDC31132-8384-490F-B28F-05335CFC2101}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="MaterialDesignThemes.Wpf.dll"/>
-    <ROW Component="Microsoft.Office.Interop.Word.dll" ComponentId="{9C8A9479-7A32-4654-80B9-FBB356747F1B}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="Microsoft.Office.Interop.Word.dll"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.dll" ComponentId="{62B15B8A-53A4-48AC-ADAB-37A5A5D5AA49}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.dll"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll" ComponentId="{CB3F0062-14FC-48F6-83E1-485D869CD5AC}" Directory_="cs_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_1" ComponentId="{67679BDD-671C-46F0-8969-EC327DA095B0}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_1"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_10" ComponentId="{5A02DA83-5CC3-4FC7-9812-24B0A824E47B}" Directory_="tr_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_10"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_11" ComponentId="{C6BC9DA9-0F24-497C-B2A8-3F3A6B942E69}" Directory_="zhHans_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_11"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_12" ComponentId="{95B6B182-288C-45DC-AACC-4C23C76546C4}" Directory_="zhHant_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_12"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_2" ComponentId="{DC59BF07-2663-4D71-8191-CC65DAD5B6D3}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_2"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_3" ComponentId="{D5EB0724-582F-4361-BFB8-53B4719FF1E0}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_3"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_4" ComponentId="{95C2F222-9042-4EFB-A1BF-1B7DCBB9BDCF}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_4"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_5" ComponentId="{AA5D50DC-C5D9-4B76-9D7C-C19BD7084DFA}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_5"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_6" ComponentId="{A5502111-C6EA-4BE1-90F3-044CF461CA4F}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_6"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_7" ComponentId="{5D1CF507-4EA5-4C6A-84FD-AFA34CD6F574}" Directory_="pl_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_7"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_8" ComponentId="{4D46C67C-6F83-4D00-803B-30625BB3C21C}" Directory_="ptBR_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_8"/>
-    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_9" ComponentId="{E00DF083-2E6B-4B41-9806-314F32D4D91D}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_9"/>
-    <ROW Component="Microsoft.Xaml.Behaviors.dll" ComponentId="{894E6CB4-F4F4-4F99-9764-5A6A552C1B7A}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="Microsoft.Xaml.Behaviors.dll"/>
-    <ROW Component="Model..Designer.cs.dll" ComponentId="{A0C51D12-4AF3-4E3D-AFA1-DC3D52725F9A}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model..Designer.cs.dll"/>
-    <ROW Component="Model.Controllers.ModelDentistry.Context.cs.dll" ComponentId="{8BEC2C5F-2A64-4C3D-9276-21A240A1354D}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Controllers.ModelDentistry.Context.cs.dll"/>
-    <ROW Component="Model.Controllers.ModelDentistry.Designer.cs.dll" ComponentId="{EAC9541B-E770-4B7C-B1D9-0018E6D5D0A9}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Controllers.ModelDentistry.Designer.cs.dll"/>
-    <ROW Component="Model.Controllers.ModelDentistry.cs.dll" ComponentId="{3A04B972-C38E-46AB-9E1D-8B3E33F540C8}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Controllers.ModelDentistry.cs.dll"/>
-    <ROW Component="Model.Model.Context.cs.dll" ComponentId="{46D7CCE5-C8F5-41A2-89E2-FF04C1C295D2}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Model.Context.cs.dll"/>
-    <ROW Component="Model.Model.Designer.cs.dll" ComponentId="{9FD448A7-A14A-4F5C-941A-7A6146CC0A57}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Model.Designer.cs.dll"/>
-    <ROW Component="Model.Model.cs.dll" ComponentId="{D0035815-B57C-4DA9-85B3-06857399B687}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Model.cs.dll"/>
-    <ROW Component="Model.ModelDentist.Context.cs.dll" ComponentId="{6135CBD2-9DDF-4A61-8CBA-B3C62104F36B}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentist.Context.cs.dll"/>
-    <ROW Component="Model.ModelDentist.cs.dll" ComponentId="{A5725BB3-34A6-4CA3-BD65-A1F624993CA2}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentist.cs.dll"/>
-    <ROW Component="Model.ModelDentistry.Context.cs.dll" ComponentId="{96B7988C-44A5-4433-99BA-BFBA6ED7AD05}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentistry.Context.cs.dll"/>
-    <ROW Component="Model.ModelDentistry.Designer.cs.dll" ComponentId="{4F3D804C-916A-48C2-A5F6-88542174CB98}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentistry.Designer.cs.dll"/>
-    <ROW Component="Model.ModelDentistry.cs.dll" ComponentId="{87308316-1395-455E-BB20-786771AA7DB5}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentistry.cs.dll"/>
-    <ROW Component="Model.ModelDentristry.Context.cs.dll" ComponentId="{8CD294AD-3EEC-41E2-B244-119E67A91EE3}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentristry.Context.cs.dll"/>
-    <ROW Component="Model.ModelDentristry.Designer.cs.dll" ComponentId="{2367677C-3D75-41B2-A1B8-138C8E3192C6}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentristry.Designer.cs.dll"/>
-    <ROW Component="Model.ModelDentristry.cs.dll" ComponentId="{D6EE07A9-4F95-4F61-A121-0E9E2A139EE6}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentristry.cs.dll"/>
-    <ROW Component="Model.csdl" ComponentId="{4E5715C8-9E57-402F-83D8-225B7AFCF72B}" Directory_="Model_1_Dir" Attributes="0" KeyPath="Model.csdl" Type="0"/>
-    <ROW Component="ModelDentistry.csdl" ComponentId="{2C480CEB-4345-4F73-89B6-D9F25A8465F6}" Directory_="Controllers_1_Dir" Attributes="0" KeyPath="ModelDentistry.csdl" Type="0"/>
-    <ROW Component="MontserratRegular.ttf" ComponentId="{89EA3213-8759-4EFC-88CE-08207C70A232}" Directory_="Fonts_Dir" Attributes="0" Type="0"/>
-    <ROW Component="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs" ComponentId="{BC5DE208-6260-4A81-86D7-8B737C8B02FA}" Directory_="Debug_1_Dir" Attributes="0" KeyPath="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs" Type="0"/>
-    <ROW Component="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" ComponentId="{407B065F-F68F-4021-B48C-FB948FF70BAD}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" Type="0"/>
-    <ROW Component="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" ComponentId="{D9504A5D-747D-49A6-8249-C6EC50A579AB}" Directory_="Debug_5_Dir" Attributes="0" KeyPath="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" Type="0"/>
+    <ROW Component="AddPatientWindow.baml" ComponentId="{5D20B89F-9036-47F2-B527-48939377FD76}" Directory_="Windows_Dir" Attributes="0" KeyPath="AddPatientWindow.baml" Type="0"/>
+    <ROW Component="AddPatientWindow.xaml" ComponentId="{86698EC4-F899-4443-9F27-9968AB0FD35E}" Directory_="Windows_1_Dir" Attributes="0" KeyPath="AddPatientWindow.xaml" Type="0"/>
+    <ROW Component="AdministratorFone.png" ComponentId="{52F02783-53BC-46DF-B32B-B91398745633}" Directory_="Images_Dir" Attributes="0" KeyPath="AdministratorFone.png" Type="0"/>
+    <ROW Component="Allergy.cs" ComponentId="{577E866B-1D7E-425D-99BC-D933FB39B584}" Directory_="Model_Dir" Attributes="0" KeyPath="Allergy.cs" Type="0"/>
+    <ROW Component="AppViewModel.cs" ComponentId="{4459D7EA-61D5-4114-9340-0FCE4A738439}" Directory_="ViewModel_1_Dir" Attributes="0" KeyPath="AppViewModel.cs" Type="0"/>
+    <ROW Component="AssemblyInfo.cs" ComponentId="{BAA5552B-EACA-495C-8FC8-15D8D57E2D58}" Directory_="Properties_Dir" Attributes="0" KeyPath="AssemblyInfo.cs" Type="0"/>
+    <ROW Component="AssemblyInfo.cs_1" ComponentId="{4C85C031-B9F1-4973-9742-DCA9BA1ACB2A}" Directory_="Properties_1_Dir" Attributes="0" KeyPath="AssemblyInfo.cs_1" Type="0"/>
+    <ROW Component="AutoPage.baml" ComponentId="{925076B8-9793-4D14-8225-1A2897FB604E}" Directory_="Pages_1_Dir" Attributes="0" KeyPath="AutoPage.baml" Type="0"/>
+    <ROW Component="AutoPage.xaml.cs" ComponentId="{74DE21E1-1395-48C4-81C8-4C2B35995709}" Directory_="Pages_Dir" Attributes="0" KeyPath="AutoPage.xaml.cs" Type="0"/>
+    <ROW Component="ClientsController.cs" ComponentId="{8829D4AB-CF93-4E69-B09E-1EEB56118674}" Directory_="Controllers_Dir" Attributes="0" KeyPath="ClientsController.cs" Type="0"/>
+    <ROW Component="DarkTheme.baml" ComponentId="{1719AD66-5BE9-4503-97EB-7CA2AA6C2110}" Directory_="Themes_Dir" Attributes="0" KeyPath="DarkTheme.baml" Type="0"/>
+    <ROW Component="DarkTheme.xaml" ComponentId="{50BD1A6B-CB1B-468E-B517-71AB0D5828D0}" Directory_="Themes_1_Dir" Attributes="0" KeyPath="DarkTheme.xaml" Type="0"/>
+    <ROW Component="DentalMKBLibrary.csproj" ComponentId="{166D441B-22ED-4F30-A9A0-ED63D93971A4}" Directory_="DentalMKBLibrary_Dir" Attributes="0" KeyPath="DentalMKBLibrary.csproj" Type="0"/>
+    <ROW Component="DentalMKBLibrary.dll" ComponentId="{456A786A-7718-4923-951C-5B4E2FF4FE78}" Directory_="Debug_Dir" Attributes="0" KeyPath="DentalMKBLibrary.dll"/>
+    <ROW Component="DentalMKBLibrary.dll_1" ComponentId="{38CE7829-ACC4-488E-93DD-E89292EAB4C1}" Directory_="Debug_1_Dir" Attributes="0" KeyPath="DentalMKBLibrary.dll_1"/>
+    <ROW Component="DentalMKBLibrary_PrimaryOutput" ComponentId="{1D14B31A-2BE5-4FC5-A3AE-ED3029BACCD3}" Directory_="DentalMKBLibrary_Dir" Attributes="0" KeyPath="DentalMKBLibrary.dll_2"/>
+    <ROW Component="DentalMKBLibrary_SymbolsOutput" ComponentId="{43A3B747-DC4D-40EB-BD45-27032280DC5D}" Directory_="DentalMKBLibrary_Dir" Attributes="0" KeyPath="DentalMKBLibrary.pdb_2"/>
+    <ROW Component="DentistryClassLibrary.dll" ComponentId="{0449EFFF-3DF5-40BF-932E-9CA0081A5EA7}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="DentistryClassLibrary.dll"/>
+    <ROW Component="DentistryClassLibrary_PrimaryOutput" ComponentId="{510C9958-29A4-4604-9355-7BF5AF444975}" Directory_="DentistryClassLibrary_Dir" Attributes="0" KeyPath="DentistryClassLibrary.dll_1"/>
+    <ROW Component="DentistryClassLibrary_References" ComponentId="{421D5238-DB1C-4822-828D-D0F367AC679C}" Directory_="DentistryClassLibrary_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.TestPlatform.TestFramework.dll"/>
+    <ROW Component="DentistryClassLibrary_SymbolsOutput" ComponentId="{421BBCBB-B259-498A-B1FD-7CC030016D27}" Directory_="DentistryClassLibrary_Dir" Attributes="0" KeyPath="DentistryClassLibrary.pdb_1"/>
+    <ROW Component="DentistryLibraryTests_ContentOutput" ComponentId="{79332B2B-4A43-4368-AAD3-61D020D1EDCD}" Directory_="DentistryLibraryTests_Dir" Attributes="0" KeyPath="SnackBarControl.xaml.cs_2" Type="0"/>
+    <ROW Component="DentistryLibraryTests_ContentOutput_View_Controls" ComponentId="{6DD5B9F3-BAAD-4922-B74E-6E81624FF8D5}" Directory_="Controls_2_Dir" Attributes="0" KeyPath="EditableTable.cs_2" Type="0"/>
+    <ROW Component="DentistryLibraryTests_ContentOutput_View_Pages" ComponentId="{27C79B2E-40EC-42E9-BCE1-47AB99D9CA0A}" Directory_="Pages_3_Dir" Attributes="0" KeyPath="AutoPage.xaml.cs_2" Type="0"/>
+    <ROW Component="DentistryLibraryTests_ContentOutput_ru" ComponentId="{5726D021-0D60-4C69-B811-B821DD70FF96}" Directory_="ru_1_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"/>
+    <ROW Component="DentistryLibraryTests_PrimaryOutput" ComponentId="{6EEB6C9E-5CFA-4B69-84CB-42061FC62A40}" Directory_="DentistryLibraryTests_Dir" Attributes="0" KeyPath="DentistryLibraryTests.dll"/>
+    <ROW Component="DentistryLibraryTests_References" ComponentId="{92F1E83F-AC13-49BC-BA75-8C84ED2BFD03}" Directory_="DentistryLibraryTests_Dir" Attributes="0" KeyPath="Humanizer.resources.dll_3"/>
+    <ROW Component="DentistryLibraryTests_SymbolsOutput" ComponentId="{CB3EA616-579E-40A4-ACA8-46DC6141AB5E}" Directory_="DentistryLibraryTests_Dir" Attributes="0" KeyPath="DentistryLibraryTests.pdb"/>
+    <ROW Component="DentistryWpfApp.csproj.nuget.dgspec.json" ComponentId="{2A94ABF8-DD64-467E-8D88-EC1C83D056C0}" Directory_="obj_2_Dir" Attributes="0" KeyPath="DentistryWpfApp.csproj.nuget.dgspec.json" Type="0"/>
+    <ROW Component="DentistryWpfApp.exe" ComponentId="{FF40EEA1-9DFC-4913-BD64-B3FD76D23B1F}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="DentistryWpfApp.exe"/>
+    <ROW Component="DentistryWpfApp.exe_1" ComponentId="{95A90B27-94ED-43F0-A910-284BA239D490}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="DentistryWpfApp.exe_1"/>
+    <ROW Component="DentistryWpfApp_ContentOutput" ComponentId="{32FE4E3F-B3A0-4621-87E6-17CB0FFD41CB}" Directory_="DentistryWpfApp_Dir" Attributes="0" KeyPath="App.config" Type="0"/>
+    <ROW Component="DentistryWpfApp_ContentOutput_View_Controls" ComponentId="{2AF057B8-6B19-4F6E-B6B3-2B397B53B693}" Directory_="Controls_1_Dir" Attributes="0" KeyPath="EditableTable.cs_1" Type="0"/>
+    <ROW Component="DentistryWpfApp_ContentOutput_View_Pages" ComponentId="{112E8528-FFF6-4A49-89ED-E49A0CFCE3D5}" Directory_="Pages_2_Dir" Attributes="0" KeyPath="AutoPage.xaml" Type="0"/>
+    <ROW Component="DentistryWpfApp_PrimaryOutput" ComponentId="{6239E68F-269A-4F29-831A-A412B4AEF3F0}" Directory_="DentistryWpfApp_Dir" Attributes="0" KeyPath="DentistryWpfApp.exe_3"/>
+    <ROW Component="DentistryWpfApp_References" ComponentId="{438C1E47-E13E-4345-920F-C6E241921749}" Directory_="DentistryWpfApp_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2"/>
+    <ROW Component="DentistryWpfApp_SymbolsOutput" ComponentId="{98EB0047-1AC0-4BB4-9C52-73EB16D7B33E}" Directory_="DentistryWpfApp_Dir" Attributes="0" KeyPath="DentistryWpfApp.pdb_2"/>
+    <ROW Component="EditableTable.cs" ComponentId="{D7A86C87-DC25-4F43-A0C8-C895C97394CB}" Directory_="Controls_Dir" Attributes="0" KeyPath="EditableTable.cs" Type="0"/>
+    <ROW Component="EntityFramework.Fakes.dll" ComponentId="{0F50E4CB-C4BA-4C15-BBDF-B2091FC275E8}" Directory_="FakesAssemblies_Dir" Attributes="0" KeyPath="EntityFramework.Fakes.dll"/>
+    <ROW Component="EntityFramework.Fakes.fakesconfig" ComponentId="{0016F112-9F6F-4187-9A77-30CC3450FF6D}" Directory_="FakesAssemblies_Dir" Attributes="0" KeyPath="EntityFramework.Fakes.fakesconfig" Type="0"/>
+    <ROW Component="EntityFramework.SqlServer.dll" ComponentId="{2B950BA0-663D-484B-BF75-BF0C951DF2A6}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="EntityFramework.SqlServer.dll"/>
+    <ROW Component="EntityFramework.SqlServer.resources.dll" ComponentId="{5BFED464-D8E5-4DCB-AEB7-0D5BD60C954D}" Directory_="ru_Dir" Attributes="0" KeyPath="EntityFramework.SqlServer.resources.dll"/>
+    <ROW Component="EntityFramework.dll" ComponentId="{3210041B-3C48-4EE6-835F-382A977B2031}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="EntityFramework.dll"/>
+    <ROW Component="EntityFramework.resources.dll" ComponentId="{355BD972-3E30-4560-8CB4-55638F3F8F61}" Directory_="ru_Dir" Attributes="0" KeyPath="EntityFramework.resources.dll"/>
+    <ROW Component="Humanizer.dll" ComponentId="{39D8D566-F8B9-418D-955F-0CBB9AD9ABE4}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="Humanizer.dll"/>
+    <ROW Component="Humanizer.resources.dll" ComponentId="{3E260AB0-6684-4CA8-B3DF-37A8696B792B}" Directory_="ru_Dir" Attributes="0" KeyPath="Humanizer.resources.dll"/>
+    <ROW Component="Icons.baml" ComponentId="{45951F32-E8AF-4D7D-B1AA-817F4732BAAE}" Directory_="Icons_1_Dir" Attributes="0" KeyPath="Icons.baml" Type="0"/>
+    <ROW Component="Icons.xaml" ComponentId="{17B01E36-B8A6-4131-B3CF-93AD5A036713}" Directory_="Icons_Dir" Attributes="0" KeyPath="Icons.xaml" Type="0"/>
+    <ROW Component="JetBrains.Annotations.dll" ComponentId="{CC28F583-73BE-4F13-AF8C-691F81245502}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="JetBrains.Annotations.dll"/>
+    <ROW Component="MainDictionary.baml" ComponentId="{8B802B2D-EFAE-4908-BFEF-1A4F7C39FC1A}" Directory_="Dictionaries_1_Dir" Attributes="0" KeyPath="MainDictionary.baml" Type="0"/>
+    <ROW Component="MainDictionary.xaml" ComponentId="{DEB66E62-BBD8-4389-86ED-2131FA6E9B84}" Directory_="Dictionaries_Dir" Attributes="0" KeyPath="MainDictionary.xaml" Type="0"/>
+    <ROW Component="MainStyle.baml" ComponentId="{3A76E342-9A37-46E6-B972-055FD2FC00FA}" Directory_="Styles_Dir" Attributes="0" KeyPath="MainStyle.baml" Type="0"/>
+    <ROW Component="MainStyle.xaml" ComponentId="{7FD94F4F-3441-4C9C-8FDF-27DB3B1362C1}" Directory_="Styles_1_Dir" Attributes="0" KeyPath="MainStyle.xaml" Type="0"/>
+    <ROW Component="MaterialDesignColors.dll" ComponentId="{9C6D4803-DF80-4A63-AD5F-0446C7B68C55}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="MaterialDesignColors.dll"/>
+    <ROW Component="MaterialDesignThemes.Wpf.dll" ComponentId="{567CFF11-E4BB-4C53-877A-F95B539E274E}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="MaterialDesignThemes.Wpf.dll"/>
+    <ROW Component="Microsoft.Office.Interop.Word.dll" ComponentId="{C8936B83-53BA-40BB-B77A-20EAF12F4CE0}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="Microsoft.Office.Interop.Word.dll"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.dll" ComponentId="{737A6882-EDB5-4FD9-9BFD-61B86F54FAA2}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.dll"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll" ComponentId="{874978E6-2B6B-4684-9371-C29CAC81B10E}" Directory_="cs_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_1" ComponentId="{C7FB88A3-B107-47DF-AC00-7A60056B3CEB}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_1"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_10" ComponentId="{40FCC96D-FA3C-4E08-8357-584AE4278774}" Directory_="tr_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_10"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_11" ComponentId="{3F70B83F-EB3B-4EA6-914C-1BBDDFBB0440}" Directory_="zhHans_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_11"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_12" ComponentId="{0B864242-1532-43E3-9D0C-093ECD7A94E7}" Directory_="zhHant_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_12"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_2" ComponentId="{4BC9DE60-C7A4-4FF5-A061-E1F6B29B28B5}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_2"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_3" ComponentId="{A852B6D9-9365-4589-8C5A-0C905F83F747}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_3"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_4" ComponentId="{3FABF15F-6593-448F-9F49-D5D583F05E85}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_4"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_5" ComponentId="{EEBB6DCB-3823-415C-AC13-3010B4B2006A}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_5"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_6" ComponentId="{64E01EFD-13C5-404D-8636-1D282B5C2C0D}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_6"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_7" ComponentId="{CD59464E-030D-4582-B589-59119FFA7BBD}" Directory_="pl_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_7"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_8" ComponentId="{072F70B8-68DB-4505-AC85-3C5F6F18DF59}" Directory_="ptBR_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_8"/>
+    <ROW Component="Microsoft.QualityTools.Testing.Fakes.resources.dll_9" ComponentId="{BF279F42-7B75-4CBD-99E8-2E6EFECC3BC6}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.QualityTools.Testing.Fakes.resources.dll_9"/>
+    <ROW Component="Microsoft.Xaml.Behaviors.dll" ComponentId="{3D3A75F5-C896-4316-99EE-4D88C27032B1}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW Component="Model..Designer.cs.dll" ComponentId="{A921C37F-DC93-4904-8872-34F6FB5772C8}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model..Designer.cs.dll"/>
+    <ROW Component="Model.Controllers.ModelDentistry.Context.cs.dll" ComponentId="{B380FC6E-D842-4BB1-9504-C24BABF423EF}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Controllers.ModelDentistry.Context.cs.dll"/>
+    <ROW Component="Model.Controllers.ModelDentistry.Designer.cs.dll" ComponentId="{A0817759-CD62-4114-BF86-1E578789587B}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Controllers.ModelDentistry.Designer.cs.dll"/>
+    <ROW Component="Model.Controllers.ModelDentistry.cs.dll" ComponentId="{B0CF1679-B75A-4D5C-81F2-873C44D95974}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Controllers.ModelDentistry.cs.dll"/>
+    <ROW Component="Model.Model.Context.cs.dll" ComponentId="{CBB69F59-4873-4EC0-8C34-7FDFAE331F6C}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Model.Context.cs.dll"/>
+    <ROW Component="Model.Model.Designer.cs.dll" ComponentId="{392D9FB8-6C16-4FFB-A0AD-8EB62DB53E61}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Model.Designer.cs.dll"/>
+    <ROW Component="Model.Model.cs.dll" ComponentId="{CB887E14-0D71-4F73-BE16-C336DA43AAFB}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.Model.cs.dll"/>
+    <ROW Component="Model.ModelDentist.Context.cs.dll" ComponentId="{265CFDB4-E019-4FEA-BEC4-A061208A417B}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentist.Context.cs.dll"/>
+    <ROW Component="Model.ModelDentist.cs.dll" ComponentId="{27BFC77F-C8C0-4415-B3BA-7AF9AC833BEE}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentist.cs.dll"/>
+    <ROW Component="Model.ModelDentistry.Context.cs.dll" ComponentId="{915866B9-3776-4B05-96F4-44498E3866FB}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentistry.Context.cs.dll"/>
+    <ROW Component="Model.ModelDentistry.Designer.cs.dll" ComponentId="{5095E1E7-E844-4D6D-8C85-025E2944D259}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentistry.Designer.cs.dll"/>
+    <ROW Component="Model.ModelDentistry.cs.dll" ComponentId="{8E6BA2D7-F547-400A-9249-A7773A260E4D}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentistry.cs.dll"/>
+    <ROW Component="Model.ModelDentristry.Context.cs.dll" ComponentId="{493A0989-F53D-4889-8496-4BD623FD14D4}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentristry.Context.cs.dll"/>
+    <ROW Component="Model.ModelDentristry.Designer.cs.dll" ComponentId="{72868F05-0988-4D6D-BB84-384AAB290537}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentristry.Designer.cs.dll"/>
+    <ROW Component="Model.ModelDentristry.cs.dll" ComponentId="{41F8B87D-4606-4885-BBA8-A0C572789AC1}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Model.ModelDentristry.cs.dll"/>
+    <ROW Component="Model.csdl" ComponentId="{5DB0D9FA-8C89-45C8-B72C-4B9037F14981}" Directory_="Model_1_Dir" Attributes="0" KeyPath="Model.csdl" Type="0"/>
+    <ROW Component="ModelDentistry.csdl" ComponentId="{A990409C-0D66-4878-902E-35353B172357}" Directory_="Controllers_1_Dir" Attributes="0" KeyPath="ModelDentistry.csdl" Type="0"/>
+    <ROW Component="MontserratRegular.ttf" ComponentId="{A671CCB4-B28E-461B-91AA-21EA87F4DD35}" Directory_="Fonts_Dir" Attributes="0" Type="0"/>
+    <ROW Component="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs" ComponentId="{9458E10B-E437-4533-AF90-371FE3F10B72}" Directory_="Debug_1_Dir" Attributes="0" KeyPath="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs" Type="0"/>
+    <ROW Component="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" ComponentId="{76DC3BF4-ED52-40BE-AF76-2E9F37E177CC}" Directory_="Debug_2_Dir" Attributes="0" KeyPath="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" Type="0"/>
+    <ROW Component="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" ComponentId="{2BF04EA1-62FE-495E-9414-CF2114D04BDF}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" Type="0"/>
     <ROW Component="ProductInformation" ComponentId="{41873338-C78B-42A2-BD2A-60E489660951}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="Properties.Resources.Designer.cs.dll" ComponentId="{5428807E-F795-462C-AA40-35B67505DFCB}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Properties.Resources.Designer.cs.dll"/>
-    <ROW Component="SHORTCUTDIR" ComponentId="{A7602420-BACC-4FEA-BEF4-C2EDFD513E07}" Directory_="SHORTCUTDIR" Attributes="0"/>
-    <ROW Component="SnackBarControl.g.i.cs" ComponentId="{FA3EF3B5-5E3A-4002-9736-DC97FF1F363A}" Directory_="ViewModel_Dir" Attributes="0" KeyPath="SnackBarControl.g.i.cs_2" Type="0"/>
-    <ROW Component="System.Buffers.dll" ComponentId="{4B497DCA-2734-4E8E-8CEC-61FB6AE44442}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
-    <ROW Component="System.ComponentModel.Annotations.dll" ComponentId="{AC1EADE0-D2A7-4ED2-B35C-899611B81635}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll"/>
-    <ROW Component="System.Configuration.ConfigurationManager.dll" ComponentId="{11D34EE5-9B30-428E-9525-91A26049A47B}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Configuration.ConfigurationManager.dll"/>
-    <ROW Component="System.Memory.dll" ComponentId="{F08A3D7A-6927-47FE-9141-4D8B4E3D186B}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Memory.dll"/>
-    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{50EFA2BC-77A4-4F8D-B6BF-77D29B07064E}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
-    <ROW Component="System.Reactive.dll" ComponentId="{11B8A50B-82C4-41A4-A637-8CC822FE6B73}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Reactive.dll"/>
-    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{355B8E83-A1D2-4192-9858-4C73DCC9AD83}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
-    <ROW Component="System.Security.AccessControl.dll" ComponentId="{568AA83F-FF28-41DF-ABA1-6DD6D4DA0374}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Security.AccessControl.dll"/>
-    <ROW Component="System.Security.Permissions.dll" ComponentId="{CA9EA45C-B4A1-4962-8730-C461D0641C03}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Security.Permissions.dll"/>
-    <ROW Component="System.Security.Principal.Windows.dll" ComponentId="{16A532F9-2397-49A2-A49B-253E39A47D75}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Security.Principal.Windows.dll"/>
-    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{336CF259-5D8F-4924-839A-1ACAF6E32994}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
-    <ROW Component="System.ValueTuple.dll" ComponentId="{AEB70C13-169D-4607-A358-AD7591747306}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="System.ValueTuple.dll"/>
-    <ROW Component="ViewingPatientPage.g.i.cs" ComponentId="{1482D442-6C2E-42BC-A9BD-43975FA4EBB3}" Directory_="View_1_Dir" Attributes="0" KeyPath="ViewingPatientPage.g.i.cs_1" Type="0"/>
-    <ROW Component="avatar2.jpg" ComponentId="{4B71B85F-75C9-4E93-910B-50A7A5B81A9D}" Directory_="Avatars_Dir" Attributes="0" KeyPath="avatar2.jpg" Type="0"/>
-    <ROW Component="contract_number.txt" ComponentId="{54F3370A-93EB-48C8-88FD-B30891816D90}" Directory_="Debug_4_Dir" Attributes="0" KeyPath="contract_number.txt" Type="0"/>
-    <ROW Component="docx" ComponentId="{F44A7DE3-15E8-4F73-920D-75E674B24668}" Directory_="Documents_Dir" Attributes="0" KeyPath="docx" Type="0"/>
-    <ROW Component="moon114svgrepocom.baml" ComponentId="{BCEA1156-B896-44A4-B6BA-D3A2F9E20E87}" Directory_="Images_1_Dir" Attributes="0" KeyPath="moon114svgrepocom.baml" Type="0"/>
+    <ROW Component="Properties.Resources.Designer.cs.dll" ComponentId="{6A474647-7DDA-4127-8AB9-4F0405D6138B}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Properties.Resources.Designer.cs.dll"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{CF0F3503-E621-4D0C-A78B-D11539DAD45A}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SnackBarControl.g.i.cs" ComponentId="{58C80534-2514-4AA4-A110-595B5D285DF9}" Directory_="ViewModel_Dir" Attributes="0" KeyPath="SnackBarControl.g.i.cs_2" Type="0"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{B0F3B23E-5FA3-4C17-AA2A-0243B4786DD2}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.ComponentModel.Annotations.dll" ComponentId="{35794C3D-8041-4F74-B2D2-4DBC5CE956B8}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll"/>
+    <ROW Component="System.Configuration.ConfigurationManager.dll" ComponentId="{C3DB2105-D0AD-4618-AA01-6E61B8EE0F4E}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Configuration.ConfigurationManager.dll"/>
+    <ROW Component="System.Memory.dll" ComponentId="{08AD269B-4A74-4ACB-8F97-5EC697CF6C40}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{73E1A9D9-1DF0-45EB-A85B-F83694820891}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
+    <ROW Component="System.Reactive.dll" ComponentId="{E0B002A3-198D-4986-BBF5-12B094362F4C}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Reactive.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{4D975A86-6A57-4E8F-84B2-460188A01B8A}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Component="System.Security.AccessControl.dll" ComponentId="{2B96AF4B-7310-410F-9136-A83EE88771E8}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Security.AccessControl.dll"/>
+    <ROW Component="System.Security.Permissions.dll" ComponentId="{62BC75CD-AB2A-41D6-9A61-A655DF0E8B65}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Security.Permissions.dll"/>
+    <ROW Component="System.Security.Principal.Windows.dll" ComponentId="{A7892C1C-73AA-4E48-A1ED-7183EAA72BA9}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Security.Principal.Windows.dll"/>
+    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{FC5849FC-AED8-4BD0-8919-E6CC5C1803D3}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Component="System.ValueTuple.dll" ComponentId="{A1070BE2-C779-4945-B00D-6540389607E8}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="System.ValueTuple.dll"/>
+    <ROW Component="ViewingPatientPage.g.i.cs" ComponentId="{4D36265C-3092-488B-9573-95B58A2561E1}" Directory_="View_1_Dir" Attributes="0" KeyPath="ViewingPatientPage.g.i.cs_1" Type="0"/>
+    <ROW Component="avatar2.jpg" ComponentId="{F5D736F5-2B30-4F70-84E4-581675320D19}" Directory_="Avatars_Dir" Attributes="0" KeyPath="avatar2.jpg" Type="0"/>
+    <ROW Component="contract_number.txt" ComponentId="{6F9BEF96-25DF-42C1-ACEA-DDD521FDE00F}" Directory_="Debug_3_Dir" Attributes="0" KeyPath="contract_number.txt" Type="0"/>
+    <ROW Component="docx" ComponentId="{6DA70406-4CAD-4A83-B487-519C606BA5F8}" Directory_="Documents_Dir" Attributes="0" KeyPath="docx" Type="0"/>
+    <ROW Component="moon114svgrepocom.baml" ComponentId="{B3772192-5BFA-4BA0-8B86-715D57970EDD}" Directory_="Images_1_Dir" Attributes="0" KeyPath="moon114svgrepocom.baml" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -215,24 +379,12 @@
     <ROW File="DentalMKBLibrary.pdb_1" Component_="DentalMKBLibrary.dll_1" FileName="DENTAL~1.PDB|DentalMKBLibrary.pdb" Attributes="0" SourcePath="..\DentalMKBLibrary\obj\Debug\DentalMKBLibrary.pdb" SelfReg="false"/>
     <ROW File="DesignTimeResolveAssemblyReferencesInput.cache" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs" FileName="DESIGN~1.CAC|DesignTimeResolveAssemblyReferencesInput.cache" Attributes="0" SourcePath="..\DentalMKBLibrary\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" SelfReg="false"/>
     <ROW File="AssemblyInfo.cs" Component_="AssemblyInfo.cs" FileName="ASSEMB~1.CS|AssemblyInfo.cs" Attributes="0" SourcePath="..\DentalMKBLibrary\Properties\AssemblyInfo.cs" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.dll" Component_="DentistryClassLibrary.dll" FileName="DENTIS~1.DLL|DentistryClassLibrary.dll" Attributes="0" SourcePath="..\DentistryClassLibrary\bin\Debug\DentistryClassLibrary.dll" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.pdb" Component_="DentistryClassLibrary.dll" FileName="DENTIS~1.PDB|DentistryClassLibrary.pdb" Attributes="0" SourcePath="..\DentistryClassLibrary\bin\Debug\DentistryClassLibrary.pdb" SelfReg="false"/>
-    <ROW File="ContractGeneratorClass.cs" Component_="ContractGeneratorClass.cs" FileName="CONTRA~1.CS|ContractGeneratorClass.cs" Attributes="0" SourcePath="..\DentistryClassLibrary\ContractGeneratorClass.cs" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.csproj" Component_="ContractGeneratorClass.cs" FileName="DENTIS~1.CSP|DentistryClassLibrary.csproj" Attributes="0" SourcePath="..\DentistryClassLibrary\DentistryClassLibrary.csproj" SelfReg="false"/>
-    <ROW File="InputClass.cs" Component_="ContractGeneratorClass.cs" FileName="INPUTC~1.CS|InputClass.cs" Attributes="0" SourcePath="..\DentistryClassLibrary\InputClass.cs" SelfReg="false"/>
-    <ROW File="MailClass.cs" Component_="ContractGeneratorClass.cs" FileName="MAILCL~1.CS|MailClass.cs" Attributes="0" SourcePath="..\DentistryClassLibrary\MailClass.cs" SelfReg="false"/>
-    <ROW File="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="NETFRA~1.CS|.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" SelfReg="false"/>
-    <ROW File="NETFrameworkVersionv4.8.AssemblyAttributes.cs" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="NETFRA~2.CS|.NETFramework,Version=v4.8.AssemblyAttributes.cs" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.csproj.AssemblyReference.cache" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="DENTIS~1.CAC|DentistryClassLibrary.csproj.AssemblyReference.cache" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\DentistryClassLibrary.csproj.AssemblyReference.cache" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.csproj.CoreCompileInputs.cache" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="DENTIS~2.CAC|DentistryClassLibrary.csproj.CoreCompileInputs.cache" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\DentistryClassLibrary.csproj.CoreCompileInputs.cache" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.csproj.FileListAbsolute.txt" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="DENTIS~1.TXT|DentistryClassLibrary.csproj.FileListAbsolute.txt" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\DentistryClassLibrary.csproj.FileListAbsolute.txt" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.dll_1" Component_="DentistryClassLibrary.dll_1" FileName="DENTIS~1.DLL|DentistryClassLibrary.dll" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\DentistryClassLibrary.dll" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.pdb_1" Component_="DentistryClassLibrary.dll_1" FileName="DENTIS~1.PDB|DentistryClassLibrary.pdb" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\DentistryClassLibrary.pdb" SelfReg="false"/>
-    <ROW File="DesignTimeResolveAssemblyReferencesInput.cache_1" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="DESIGN~1.CAC|DesignTimeResolveAssemblyReferencesInput.cache" Attributes="0" SourcePath="..\DentistryClassLibrary\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" SelfReg="false"/>
-    <ROW File="AssemblyInfo.cs_1" Component_="AssemblyInfo.cs_1" FileName="ASSEMB~1.CS|AssemblyInfo.cs" Attributes="0" SourcePath="..\DentistryClassLibrary\Properties\AssemblyInfo.cs" SelfReg="false"/>
-    <ROW File="App.config" Component_="App.config" FileName="APP~1.CON|App.config" Attributes="0" SourcePath="..\DentistryWpfApp\App.config" SelfReg="false"/>
-    <ROW File="App.xaml" Component_="App.config" FileName="APP~1.XAM|App.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\App.xaml" SelfReg="false"/>
-    <ROW File="App.xaml.cs" Component_="App.config" FileName="APPXAM~1.CS|App.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\App.xaml.cs" SelfReg="false"/>
+    <ROW File="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="NETFRA~1.CS|.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" Attributes="0" SourcePath="..\DentistryLibrary\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" SelfReg="false"/>
+    <ROW File="DentistryLibrary.csproj.AssemblyReference.cache" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="DENTIS~1.CAC|DentistryLibrary.csproj.AssemblyReference.cache" Attributes="0" SourcePath="..\DentistryLibrary\obj\Debug\DentistryLibrary.csproj.AssemblyReference.cache" SelfReg="false"/>
+    <ROW File="DesignTimeResolveAssemblyReferencesInput.cache_1" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1" FileName="DESIGN~1.CAC|DesignTimeResolveAssemblyReferencesInput.cache" Attributes="0" SourcePath="..\DentistryLibrary\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" SelfReg="false"/>
+    <ROW File="App.config" Component_="DentistryWpfApp_ContentOutput" FileName="APP~1.CON|App.config" Attributes="0" SourcePath="..\DentistryWpfApp\App.config" SelfReg="false"/>
+    <ROW File="App.xaml" Component_="DentistryWpfApp_ContentOutput" FileName="APP~1.XAM|App.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\App.xaml" SelfReg="false"/>
+    <ROW File="App.xaml.cs" Component_="DentistryWpfApp_ContentOutput" FileName="APPXAM~1.CS|App.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\App.xaml.cs" SelfReg="false"/>
     <ROW File="avatar2.jpg" Component_="avatar2.jpg" FileName="avatar-2.jpg" Attributes="0" SourcePath="..\DentistryWpfApp\Assets\Avatars\avatar-2.jpg" SelfReg="false"/>
     <ROW File="default.jpeg" Component_="avatar2.jpg" FileName="DEFAUL~1.JPE|default.jpeg" Attributes="0" SourcePath="..\DentistryWpfApp\Assets\Avatars\default.jpeg" SelfReg="false"/>
     <ROW File="MainDictionary.xaml" Component_="MainDictionary.xaml" FileName="MAINDI~1.XAM|MainDictionary.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\Assets\Dictionaries\MainDictionary.xaml" SelfReg="false"/>
@@ -255,13 +407,13 @@
     <ROW File="moon114svgrepocom.xaml" Component_="AdministratorFone.png" FileName="MOON-1~1.XAM|moon-114-svgrepo-com.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\Assets\Images\moon-114-svgrepo-com.xaml" SelfReg="false"/>
     <ROW File="usericon.png" Component_="AdministratorFone.png" FileName="USER-I~1.PNG|user-icon.png" Attributes="0" SourcePath="..\DentistryWpfApp\Assets\Images\user-icon.png" SelfReg="false"/>
     <ROW File="user_ico.svg" Component_="AdministratorFone.png" FileName="user_ico.svg" Attributes="0" SourcePath="..\DentistryWpfApp\Assets\Images\user_ico.svg" SelfReg="false"/>
-    <ROW File="AutorizationWindow.xaml" Component_="App.config" FileName="AUTORI~1.XAM|AutorizationWindow.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\AutorizationWindow.xaml" SelfReg="false"/>
-    <ROW File="AutorizationWindow.xaml.cs" Component_="App.config" FileName="AUTORI~1.CS|AutorizationWindow.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\AutorizationWindow.xaml.cs" SelfReg="false"/>
+    <ROW File="AutorizationWindow.xaml" Component_="DentistryWpfApp_ContentOutput" FileName="AUTORI~1.XAM|AutorizationWindow.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\AutorizationWindow.xaml" SelfReg="false"/>
+    <ROW File="AutorizationWindow.xaml.cs" Component_="DentistryWpfApp_ContentOutput" FileName="AUTORI~1.CS|AutorizationWindow.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\AutorizationWindow.xaml.cs" SelfReg="false"/>
     <ROW File="contract_number.txt" Component_="contract_number.txt" FileName="CONTRA~1.TXT|contract_number.txt" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\contract_number.txt" SelfReg="false"/>
     <ROW File="Microsoft.QualityTools.Testing.Fakes.resources.dll" Component_="Microsoft.QualityTools.Testing.Fakes.resources.dll" FileName="MICROS~1.DLL|Microsoft.QualityTools.Testing.Fakes.resources.dll" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll" SelfReg="false"/>
     <ROW File="Microsoft.QualityTools.Testing.Fakes.resources.dll_1" Component_="Microsoft.QualityTools.Testing.Fakes.resources.dll_1" FileName="MICROS~1.DLL|Microsoft.QualityTools.Testing.Fakes.resources.dll" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\de\Microsoft.QualityTools.Testing.Fakes.resources.dll" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.dll_2" Component_="DentistryClassLibrary.dll_2" FileName="DENTIS~1.DLL|DentistryClassLibrary.dll" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\DentistryClassLibrary.dll" SelfReg="false"/>
-    <ROW File="DentistryClassLibrary.pdb_2" Component_="DentistryClassLibrary.dll_2" FileName="DENTIS~1.PDB|DentistryClassLibrary.pdb" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\DentistryClassLibrary.pdb" SelfReg="false"/>
+    <ROW File="DentistryClassLibrary.dll" Component_="DentistryClassLibrary.dll" FileName="DENTIS~1.DLL|DentistryClassLibrary.dll" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\DentistryClassLibrary.dll" SelfReg="false"/>
+    <ROW File="DentistryClassLibrary.pdb" Component_="DentistryClassLibrary.dll" FileName="DENTIS~1.PDB|DentistryClassLibrary.pdb" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\DentistryClassLibrary.pdb" SelfReg="false"/>
     <ROW File="DentistryWpfApp.exe" Component_="DentistryWpfApp.exe" FileName="DENTIS~1.EXE|DentistryWpfApp.exe" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\DentistryWpfApp.exe" SelfReg="false" DigSign="true"/>
     <ROW File="DentistryWpfApp.exe.config" Component_="contract_number.txt" FileName="DENTIS~1.CON|DentistryWpfApp.exe.config" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\DentistryWpfApp.exe.config" SelfReg="false"/>
     <ROW File="DentistryWpfApp.pdb" Component_="DentistryWpfApp.exe" FileName="DENTIS~2.PDB|DentistryWpfApp.pdb" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\DentistryWpfApp.pdb" SelfReg="false"/>
@@ -321,16 +473,16 @@
     <ROW File="UserPage.xaml.cs" Component_="AutoPage.xaml.cs" FileName="USERPA~1.CS|UserPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\View\Pages\UserPage.xaml.cs" SelfReg="false"/>
     <ROW File="Microsoft.QualityTools.Testing.Fakes.resources.dll_11" Component_="Microsoft.QualityTools.Testing.Fakes.resources.dll_11" FileName="MICROS~1.DLL|Microsoft.QualityTools.Testing.Fakes.resources.dll" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll" SelfReg="false"/>
     <ROW File="Microsoft.QualityTools.Testing.Fakes.resources.dll_12" Component_="Microsoft.QualityTools.Testing.Fakes.resources.dll_12" FileName="MICROS~1.DLL|Microsoft.QualityTools.Testing.Fakes.resources.dll" Attributes="0" SourcePath="..\DentistryWpfApp\bin\Debug\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll" SelfReg="false"/>
-    <ROW File="contract_number.txt_1" Component_="App.config" FileName="CONTRA~1.TXT|contract_number.txt" Attributes="0" SourcePath="..\DentistryWpfApp\contract_number.txt" SelfReg="false"/>
-    <ROW File="CustomSnackBar.cs" Component_="App.config" FileName="CUSTOM~1.CS|CustomSnackBar.cs" Attributes="0" SourcePath="..\DentistryWpfApp\CustomSnackBar.cs" SelfReg="false"/>
-    <ROW File="DentistryWpfApp.csproj" Component_="App.config" FileName="DENTIS~1.CSP|DentistryWpfApp.csproj" Attributes="0" SourcePath="..\DentistryWpfApp\DentistryWpfApp.csproj" SelfReg="false"/>
-    <ROW File="DentistryWpfApp.csproj.user" Component_="App.config" FileName="DENTIS~1.USE|DentistryWpfApp.csproj.user" Attributes="0" SourcePath="..\DentistryWpfApp\DentistryWpfApp.csproj.user" SelfReg="false"/>
+    <ROW File="contract_number.txt_1" Component_="DentistryWpfApp_ContentOutput" FileName="CONTRA~1.TXT|contract_number.txt" Attributes="0" SourcePath="..\DentistryWpfApp\contract_number.txt" SelfReg="false"/>
+    <ROW File="CustomSnackBar.cs" Component_="DentistryWpfApp_ContentOutput" FileName="CUSTOM~1.CS|CustomSnackBar.cs" Attributes="0" SourcePath="..\DentistryWpfApp\CustomSnackBar.cs" SelfReg="false"/>
+    <ROW File="DentistryWpfApp.csproj" Component_="DentistryWpfApp_ContentOutput" FileName="DENTIS~1.CSP|DentistryWpfApp.csproj" Attributes="0" SourcePath="..\DentistryWpfApp\DentistryWpfApp.csproj" SelfReg="false"/>
+    <ROW File="DentistryWpfApp.csproj.user" Component_="DentistryWpfApp_ContentOutput" FileName="DENTIS~1.USE|DentistryWpfApp.csproj.user" Attributes="0" SourcePath="..\DentistryWpfApp\DentistryWpfApp.csproj.user" SelfReg="false"/>
     <ROW File="EntityFramework.Fakes.dll" Component_="EntityFramework.Fakes.dll" FileName="ENTITY~1.DLL|EntityFramework.Fakes.dll" Attributes="0" SourcePath="..\DentistryWpfApp\FakesAssemblies\EntityFramework.Fakes.dll" SelfReg="false"/>
     <ROW File="EntityFramework.Fakes.fakesconfig" Component_="EntityFramework.Fakes.fakesconfig" FileName="ENTITY~1.FAK|EntityFramework.Fakes.fakesconfig" Attributes="0" SourcePath="..\DentistryWpfApp\FakesAssemblies\EntityFramework.Fakes.fakesconfig" SelfReg="false"/>
     <ROW File="EntityFramework.Fakes.messages" Component_="EntityFramework.Fakes.fakesconfig" FileName="ENTITY~1.MES|EntityFramework.Fakes.messages" Attributes="0" SourcePath="..\DentistryWpfApp\FakesAssemblies\EntityFramework.Fakes.messages" SelfReg="false"/>
     <ROW File="EntityFramework.Fakes.xml" Component_="EntityFramework.Fakes.fakesconfig" FileName="ENTITY~1.XML|EntityFramework.Fakes.xml" Attributes="0" SourcePath="..\DentistryWpfApp\FakesAssemblies\EntityFramework.Fakes.xml" SelfReg="false"/>
-    <ROW File="MainWindow.xaml" Component_="App.config" FileName="MAINWI~1.XAM|MainWindow.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\MainWindow.xaml" SelfReg="false"/>
-    <ROW File="MainWindow.xaml.cs" Component_="App.config" FileName="MAINWI~1.CS|MainWindow.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\MainWindow.xaml.cs" SelfReg="false"/>
+    <ROW File="MainWindow.xaml" Component_="DentistryWpfApp_ContentOutput" FileName="MAINWI~1.XAM|MainWindow.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\MainWindow.xaml" SelfReg="false"/>
+    <ROW File="MainWindow.xaml.cs" Component_="DentistryWpfApp_ContentOutput" FileName="MAINWI~1.CS|MainWindow.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\MainWindow.xaml.cs" SelfReg="false"/>
     <ROW File="Allergy.cs" Component_="Allergy.cs" FileName="Allergy.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Model\Allergy.cs" SelfReg="false"/>
     <ROW File="AllergyInfo.cs" Component_="Allergy.cs" FileName="ALLERG~1.CS|AllergyInfo.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Model\AllergyInfo.cs" SelfReg="false"/>
     <ROW File="Clients.cs" Component_="Allergy.cs" FileName="Clients.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Model\Clients.cs" SelfReg="false"/>
@@ -365,7 +517,7 @@
     <ROW File="Studies.cs" Component_="Allergy.cs" FileName="Studies.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Model\Studies.cs" SelfReg="false"/>
     <ROW File="Visits.cs" Component_="Allergy.cs" FileName="Visits.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Model\Visits.cs" SelfReg="false"/>
     <ROW File="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" FileName="NETFRA~1.CS|.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" Attributes="0" SourcePath="..\DentistryWpfApp\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" SelfReg="false"/>
-    <ROW File="NETFrameworkVersionv4.8.AssemblyAttributes.cs_1" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" FileName="NETFRA~2.CS|.NETFramework,Version=v4.8.AssemblyAttributes.cs" Attributes="0" SourcePath="..\DentistryWpfApp\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" SelfReg="false"/>
+    <ROW File="NETFrameworkVersionv4.8.AssemblyAttributes.cs" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" FileName="NETFRA~2.CS|.NETFramework,Version=v4.8.AssemblyAttributes.cs" Attributes="0" SourcePath="..\DentistryWpfApp\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" SelfReg="false"/>
     <ROW File="App.baml" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" FileName="APP~1.BAM|App.baml" Attributes="0" SourcePath="..\DentistryWpfApp\obj\Debug\App.baml" SelfReg="false"/>
     <ROW File="App.g.cs" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" FileName="APPG~1.CS|App.g.cs" Attributes="0" SourcePath="..\DentistryWpfApp\obj\Debug\App.g.cs" SelfReg="false"/>
     <ROW File="App.g.i.cs" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_2" FileName="APPGI~1.CS|App.g.i.cs" Attributes="0" SourcePath="..\DentistryWpfApp\obj\Debug\App.g.i.cs" SelfReg="false"/>
@@ -499,59 +651,203 @@
     <ROW File="DentistryWpfApp.csproj.nuget.g.targets" Component_="DentistryWpfApp.csproj.nuget.dgspec.json" FileName="DENTIS~1.TAR|DentistryWpfApp.csproj.nuget.g.targets" Attributes="0" SourcePath="..\DentistryWpfApp\obj\DentistryWpfApp.csproj.nuget.g.targets" SelfReg="false"/>
     <ROW File="project.assets.json" Component_="DentistryWpfApp.csproj.nuget.dgspec.json" FileName="PROJEC~1.JSO|project.assets.json" Attributes="0" SourcePath="..\DentistryWpfApp\obj\project.assets.json" SelfReg="false"/>
     <ROW File="project.nuget.cache" Component_="DentistryWpfApp.csproj.nuget.dgspec.json" FileName="PROJEC~1.CAC|project.nuget.cache" Attributes="0" SourcePath="..\DentistryWpfApp\obj\project.nuget.cache" SelfReg="false"/>
-    <ROW File="packages.config" Component_="App.config" FileName="PACKAG~1.CON|packages.config" Attributes="0" SourcePath="..\DentistryWpfApp\packages.config" SelfReg="false"/>
-    <ROW File="AssemblyInfo.cs_2" Component_="AssemblyInfo.cs_2" FileName="ASSEMB~1.CS|AssemblyInfo.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\AssemblyInfo.cs" SelfReg="false"/>
-    <ROW File="Resources.Designer.cs" Component_="AssemblyInfo.cs_2" FileName="RESOUR~1.CS|Resources.Designer.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Resources.Designer.cs" SelfReg="false"/>
-    <ROW File="Resources.resx" Component_="AssemblyInfo.cs_2" FileName="RESOUR~1.RES|Resources.resx" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Resources.resx" SelfReg="false"/>
-    <ROW File="Settings.Designer.cs" Component_="AssemblyInfo.cs_2" FileName="SETTIN~1.CS|Settings.Designer.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Settings.Designer.cs" SelfReg="false"/>
-    <ROW File="Settings.settings" Component_="AssemblyInfo.cs_2" FileName="SETTIN~1.SET|Settings.settings" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Settings.settings" SelfReg="false"/>
-    <ROW File="SnackBarControl.xaml" Component_="App.config" FileName="SNACKB~1.XAM|SnackBarControl.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\SnackBarControl.xaml" SelfReg="false"/>
-    <ROW File="SnackBarControl.xaml.cs_1" Component_="App.config" FileName="SNACKB~1.CS|SnackBarControl.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\SnackBarControl.xaml.cs" SelfReg="false"/>
+    <ROW File="packages.config" Component_="DentistryWpfApp_ContentOutput" FileName="PACKAG~1.CON|packages.config" Attributes="0" SourcePath="..\DentistryWpfApp\packages.config" SelfReg="false"/>
+    <ROW File="AssemblyInfo.cs_1" Component_="AssemblyInfo.cs_1" FileName="ASSEMB~1.CS|AssemblyInfo.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\AssemblyInfo.cs" SelfReg="false"/>
+    <ROW File="Resources.Designer.cs" Component_="AssemblyInfo.cs_1" FileName="RESOUR~1.CS|Resources.Designer.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Resources.Designer.cs" SelfReg="false"/>
+    <ROW File="Resources.resx" Component_="AssemblyInfo.cs_1" FileName="RESOUR~1.RES|Resources.resx" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Resources.resx" SelfReg="false"/>
+    <ROW File="Settings.Designer.cs" Component_="AssemblyInfo.cs_1" FileName="SETTIN~1.CS|Settings.Designer.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Settings.Designer.cs" SelfReg="false"/>
+    <ROW File="Settings.settings" Component_="AssemblyInfo.cs_1" FileName="SETTIN~1.SET|Settings.settings" Attributes="0" SourcePath="..\DentistryWpfApp\Properties\Settings.settings" SelfReg="false"/>
+    <ROW File="SnackBarControl.xaml" Component_="DentistryWpfApp_ContentOutput" FileName="SNACKB~1.XAM|SnackBarControl.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\SnackBarControl.xaml" SelfReg="false"/>
+    <ROW File="SnackBarControl.xaml.cs_1" Component_="DentistryWpfApp_ContentOutput" FileName="SNACKB~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_SnackBarControl.xaml.cs_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_SnackBarControl.xaml.cs_1&gt;" SelfReg="false"/>
     <ROW File="MainStyle.xaml" Component_="MainStyle.xaml" FileName="MAINST~1.XAM|MainStyle.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\Styles\MainStyle.xaml" SelfReg="false"/>
     <ROW File="DarkTheme.xaml" Component_="DarkTheme.xaml" FileName="DARKTH~1.XAM|DarkTheme.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\Themes\DarkTheme.xaml" SelfReg="false"/>
     <ROW File="LightTheme.xaml" Component_="DarkTheme.xaml" FileName="LIGHTT~1.XAM|LightTheme.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\Themes\LightTheme.xaml" SelfReg="false"/>
     <ROW File="SpecialTheme.xaml" Component_="DarkTheme.xaml" FileName="SPECIA~1.XAM|SpecialTheme.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\Themes\SpecialTheme.xaml" SelfReg="false"/>
     <ROW File="ThemesController.cs" Component_="DarkTheme.xaml" FileName="THEMES~1.CS|ThemesController.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Themes\ThemesController.cs" SelfReg="false"/>
     <ROW File="ThemesCountClass.cs" Component_="DarkTheme.xaml" FileName="THEMES~2.CS|ThemesCountClass.cs" Attributes="0" SourcePath="..\DentistryWpfApp\Themes\ThemesCountClass.cs" SelfReg="false"/>
-    <ROW File="EditableTable.cs_1" Component_="EditableTable.cs_1" FileName="EDITAB~1.CS|EditableTable.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Controls\EditableTable.cs" SelfReg="false"/>
-    <ROW File="AutoPage.xaml" Component_="AutoPage.xaml" FileName="AUTOPA~1.XAM|AutoPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\AutoPage.xaml" SelfReg="false"/>
-    <ROW File="AutoPage.xaml.cs_1" Component_="AutoPage.xaml" FileName="AUTOPA~1.CS|AutoPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\AutoPage.xaml.cs" SelfReg="false"/>
-    <ROW File="CreateRegistratonPage.xaml" Component_="AutoPage.xaml" FileName="CREATE~1.XAM|CreateRegistratonPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\CreateRegistratonPage.xaml" SelfReg="false"/>
-    <ROW File="CreateRegistratonPage.xaml.cs" Component_="AutoPage.xaml" FileName="CREATE~1.CS|CreateRegistratonPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\CreateRegistratonPage.xaml.cs" SelfReg="false"/>
-    <ROW File="HomePage.xaml" Component_="AutoPage.xaml" FileName="HOMEPA~1.XAM|HomePage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\HomePage.xaml" SelfReg="false"/>
-    <ROW File="HomePage.xaml.cs_1" Component_="AutoPage.xaml" FileName="HOMEPA~1.CS|HomePage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\HomePage.xaml.cs" SelfReg="false"/>
-    <ROW File="NotesAdminPage.xaml" Component_="AutoPage.xaml" FileName="NOTESA~1.XAM|NotesAdminPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesAdminPage.xaml" SelfReg="false"/>
-    <ROW File="NotesAdminPage.xaml.cs" Component_="AutoPage.xaml" FileName="NOTESA~1.CS|NotesAdminPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesAdminPage.xaml.cs" SelfReg="false"/>
-    <ROW File="NotesDentistPage.xaml" Component_="AutoPage.xaml" FileName="NOTESD~1.XAM|NotesDentistPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesDentistPage.xaml" SelfReg="false"/>
-    <ROW File="NotesDentistPage.xaml.cs" Component_="AutoPage.xaml" FileName="NOTESD~1.CS|NotesDentistPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesDentistPage.xaml.cs" SelfReg="false"/>
-    <ROW File="PatientsPage.xaml" Component_="AutoPage.xaml" FileName="PATIEN~1.XAM|PatientsPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\PatientsPage.xaml" SelfReg="false"/>
-    <ROW File="PatientsPage.xaml.cs_1" Component_="AutoPage.xaml" FileName="PATIEN~1.CS|PatientsPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\PatientsPage.xaml.cs" SelfReg="false"/>
-    <ROW File="PersonalPage.xaml" Component_="AutoPage.xaml" FileName="PERSON~1.XAM|PersonalPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\PersonalPage.xaml" SelfReg="false"/>
-    <ROW File="PersonalPage.xaml.cs" Component_="AutoPage.xaml" FileName="PERSON~1.CS|PersonalPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\PersonalPage.xaml.cs" SelfReg="false"/>
-    <ROW File="RedactingPatientPage.xaml" Component_="AutoPage.xaml" FileName="REDACT~1.XAM|RedactingPatientPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPatientPage.xaml" SelfReg="false"/>
-    <ROW File="RedactingPatientPage.xaml.cs" Component_="AutoPage.xaml" FileName="REDACT~1.CS|RedactingPatientPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPatientPage.xaml.cs" SelfReg="false"/>
-    <ROW File="RedactingPersonalPage.xaml" Component_="AutoPage.xaml" FileName="REDACT~2.XAM|RedactingPersonalPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPersonalPage.xaml" SelfReg="false"/>
-    <ROW File="RedactingPersonalPage.xaml.cs" Component_="AutoPage.xaml" FileName="REDACT~2.CS|RedactingPersonalPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPersonalPage.xaml.cs" SelfReg="false"/>
-    <ROW File="RegistrationDetailsPage.xaml" Component_="AutoPage.xaml" FileName="REGIST~1.XAM|RegistrationDetailsPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RegistrationDetailsPage.xaml" SelfReg="false"/>
-    <ROW File="RegistrationDetailsPage.xaml.cs" Component_="AutoPage.xaml" FileName="REGIST~1.CS|RegistrationDetailsPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RegistrationDetailsPage.xaml.cs" SelfReg="false"/>
-    <ROW File="ResetPasswordPage.xaml" Component_="AutoPage.xaml" FileName="RESETP~1.XAM|ResetPasswordPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResetPasswordPage.xaml" SelfReg="false"/>
-    <ROW File="ResetPasswordPage.xaml.cs" Component_="AutoPage.xaml" FileName="RESETP~1.CS|ResetPasswordPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResetPasswordPage.xaml.cs" SelfReg="false"/>
-    <ROW File="ResultPage.xaml" Component_="AutoPage.xaml" FileName="RESULT~1.XAM|ResultPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResultPage.xaml" SelfReg="false"/>
-    <ROW File="ResultPage.xaml.cs" Component_="AutoPage.xaml" FileName="RESULT~1.CS|ResultPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResultPage.xaml.cs" SelfReg="false"/>
-    <ROW File="UserPage.xaml" Component_="AutoPage.xaml" FileName="USERPA~1.XAM|UserPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\UserPage.xaml" SelfReg="false"/>
-    <ROW File="UserPage.xaml.cs_1" Component_="AutoPage.xaml" FileName="USERPA~1.CS|UserPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\UserPage.xaml.cs" SelfReg="false"/>
-    <ROW File="ViewingPatientPage.xaml" Component_="AutoPage.xaml" FileName="VIEWIN~1.XAM|ViewingPatientPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPatientPage.xaml" SelfReg="false"/>
-    <ROW File="ViewingPatientPage.xaml.cs" Component_="AutoPage.xaml" FileName="VIEWIN~1.CS|ViewingPatientPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPatientPage.xaml.cs" SelfReg="false"/>
-    <ROW File="ViewingPersonalPage.xaml" Component_="AutoPage.xaml" FileName="VIEWIN~2.XAM|ViewingPersonalPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPersonalPage.xaml" SelfReg="false"/>
-    <ROW File="ViewingPersonalPage.xaml.cs" Component_="AutoPage.xaml" FileName="VIEWIN~2.CS|ViewingPersonalPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPersonalPage.xaml.cs" SelfReg="false"/>
-    <ROW File="ViewingVisitsPage.xaml" Component_="AutoPage.xaml" FileName="VIEWIN~3.XAM|ViewingVisitsPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingVisitsPage.xaml" SelfReg="false"/>
-    <ROW File="ViewingVisitsPage.xaml.cs" Component_="AutoPage.xaml" FileName="VIEWIN~3.CS|ViewingVisitsPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingVisitsPage.xaml.cs" SelfReg="false"/>
+    <ROW File="EditableTable.cs_1" Component_="DentistryWpfApp_ContentOutput_View_Controls" FileName="EDITAB~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_EditableTable.cs_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EditableTable.cs_1&gt;" SelfReg="false"/>
+    <ROW File="AutoPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="AUTOPA~1.XAM|AutoPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\AutoPage.xaml" SelfReg="false"/>
+    <ROW File="AutoPage.xaml.cs_1" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="AUTOPA~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_AutoPage.xaml.cs_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_AutoPage.xaml.cs_1&gt;" SelfReg="false"/>
+    <ROW File="CreateRegistratonPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="CREATE~1.XAM|CreateRegistratonPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\CreateRegistratonPage.xaml" SelfReg="false"/>
+    <ROW File="CreateRegistratonPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="CREATE~1.CS|CreateRegistratonPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\CreateRegistratonPage.xaml.cs" SelfReg="false"/>
+    <ROW File="HomePage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="HOMEPA~1.XAM|HomePage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\HomePage.xaml" SelfReg="false"/>
+    <ROW File="HomePage.xaml.cs_1" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="HOMEPA~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_HomePage.xaml.cs_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_HomePage.xaml.cs_1&gt;" SelfReg="false"/>
+    <ROW File="NotesAdminPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="NOTESA~1.XAM|NotesAdminPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesAdminPage.xaml" SelfReg="false"/>
+    <ROW File="NotesAdminPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="NOTESA~1.CS|NotesAdminPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesAdminPage.xaml.cs" SelfReg="false"/>
+    <ROW File="NotesDentistPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="NOTESD~1.XAM|NotesDentistPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesDentistPage.xaml" SelfReg="false"/>
+    <ROW File="NotesDentistPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="NOTESD~1.CS|NotesDentistPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\NotesDentistPage.xaml.cs" SelfReg="false"/>
+    <ROW File="PatientsPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="PATIEN~1.XAM|PatientsPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\PatientsPage.xaml" SelfReg="false"/>
+    <ROW File="PatientsPage.xaml.cs_1" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="PATIEN~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_PatientsPage.xaml.cs_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PatientsPage.xaml.cs_1&gt;" SelfReg="false"/>
+    <ROW File="PersonalPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="PERSON~1.XAM|PersonalPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\PersonalPage.xaml" SelfReg="false"/>
+    <ROW File="PersonalPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="PERSON~1.CS|PersonalPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\PersonalPage.xaml.cs" SelfReg="false"/>
+    <ROW File="RedactingPatientPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="REDACT~1.XAM|RedactingPatientPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPatientPage.xaml" SelfReg="false"/>
+    <ROW File="RedactingPatientPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="REDACT~1.CS|RedactingPatientPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPatientPage.xaml.cs" SelfReg="false"/>
+    <ROW File="RedactingPersonalPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="REDACT~2.XAM|RedactingPersonalPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPersonalPage.xaml" SelfReg="false"/>
+    <ROW File="RedactingPersonalPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="REDACT~2.CS|RedactingPersonalPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RedactingPersonalPage.xaml.cs" SelfReg="false"/>
+    <ROW File="RegistrationDetailsPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="REGIST~1.XAM|RegistrationDetailsPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RegistrationDetailsPage.xaml" SelfReg="false"/>
+    <ROW File="RegistrationDetailsPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="REGIST~1.CS|RegistrationDetailsPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\RegistrationDetailsPage.xaml.cs" SelfReg="false"/>
+    <ROW File="ResetPasswordPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="RESETP~1.XAM|ResetPasswordPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResetPasswordPage.xaml" SelfReg="false"/>
+    <ROW File="ResetPasswordPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="RESETP~1.CS|ResetPasswordPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResetPasswordPage.xaml.cs" SelfReg="false"/>
+    <ROW File="ResultPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="RESULT~1.XAM|ResultPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResultPage.xaml" SelfReg="false"/>
+    <ROW File="ResultPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="RESULT~1.CS|ResultPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ResultPage.xaml.cs" SelfReg="false"/>
+    <ROW File="UserPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="USERPA~1.XAM|UserPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\UserPage.xaml" SelfReg="false"/>
+    <ROW File="UserPage.xaml.cs_1" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="USERPA~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_UserPage.xaml.cs_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_UserPage.xaml.cs_1&gt;" SelfReg="false"/>
+    <ROW File="ViewingPatientPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="VIEWIN~1.XAM|ViewingPatientPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPatientPage.xaml" SelfReg="false"/>
+    <ROW File="ViewingPatientPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="VIEWIN~1.CS|ViewingPatientPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPatientPage.xaml.cs" SelfReg="false"/>
+    <ROW File="ViewingPersonalPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="VIEWIN~2.XAM|ViewingPersonalPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPersonalPage.xaml" SelfReg="false"/>
+    <ROW File="ViewingPersonalPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="VIEWIN~2.CS|ViewingPersonalPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingPersonalPage.xaml.cs" SelfReg="false"/>
+    <ROW File="ViewingVisitsPage.xaml" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="VIEWIN~3.XAM|ViewingVisitsPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingVisitsPage.xaml" SelfReg="false"/>
+    <ROW File="ViewingVisitsPage.xaml.cs" Component_="DentistryWpfApp_ContentOutput_View_Pages" FileName="VIEWIN~3.CS|ViewingVisitsPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Pages\ViewingVisitsPage.xaml.cs" SelfReg="false"/>
     <ROW File="AddPatientWindow.xaml" Component_="AddPatientWindow.xaml" FileName="ADDPAT~1.XAM|AddPatientWindow.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Windows\AddPatientWindow.xaml" SelfReg="false"/>
     <ROW File="AddPatientWindow.xaml.cs" Component_="AddPatientWindow.xaml" FileName="ADDPAT~1.CS|AddPatientWindow.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Windows\AddPatientWindow.xaml.cs" SelfReg="false"/>
     <ROW File="AddPersonalPage.xaml" Component_="AddPatientWindow.xaml" FileName="ADDPER~1.XAM|AddPersonalPage.xaml" Attributes="0" SourcePath="..\DentistryWpfApp\View\Windows\AddPersonalPage.xaml" SelfReg="false"/>
     <ROW File="AddPersonalPage.xaml.cs" Component_="AddPatientWindow.xaml" FileName="ADDPER~1.CS|AddPersonalPage.xaml.cs" Attributes="0" SourcePath="..\DentistryWpfApp\View\Windows\AddPersonalPage.xaml.cs" SelfReg="false"/>
     <ROW File="AppViewModel.cs" Component_="AppViewModel.cs" FileName="APPVIE~1.CS|AppViewModel.cs" Attributes="0" SourcePath="..\DentistryWpfApp\ViewModel\AppViewModel.cs" SelfReg="false"/>
     <ROW File="RelayCommand.cs" Component_="AppViewModel.cs" FileName="RELAYC~1.CS|RelayCommand.cs" Attributes="0" SourcePath="..\DentistryWpfApp\ViewModel\RelayCommand.cs" SelfReg="false"/>
+    <ROW File="DentalMKBLibrary.dll_2" Component_="DentalMKBLibrary_PrimaryOutput" FileName="DENTAL~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DentalMKBLibrary.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentalMKBLibrary.dll_2&gt;" SelfReg="false"/>
+    <ROW File="DentalMKBLibrary.pdb_2" Component_="DentalMKBLibrary_SymbolsOutput" FileName="DENTAL~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_DentalMKBLibrary.pdb_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentalMKBLibrary.pdb_2&gt;" SelfReg="false"/>
+    <ROW File="DentistryClassLibrary.dll_1" Component_="DentistryClassLibrary_PrimaryOutput" FileName="DENTIS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryClassLibrary.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" Component_="DentistryClassLibrary_References" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.TestFramework.dll" Component_="DentistryClassLibrary_References" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll&gt;" SelfReg="false"/>
+    <ROW File="DentistryClassLibrary.pdb_1" Component_="DentistryClassLibrary_SymbolsOutput" FileName="DENTIS~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.pdb_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryClassLibrary.pdb_1&gt;" SelfReg="false"/>
+    <ROW File="DentistryLibraryTests.dll" Component_="DentistryLibraryTests_PrimaryOutput" FileName="DENTIS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryLibraryTests.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryLibraryTests.dll&gt;" SelfReg="false"/>
+    <ROW File="DentistryClassLibrary.dll_2" Component_="DentistryLibraryTests_References" FileName="DENTIS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryClassLibrary.dll_2&gt;" SelfReg="false"/>
+    <ROW File="DentistryWpfApp.exe_2" Component_="DentistryLibraryTests_References" FileName="DENTIS~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryWpfApp.exe_2&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="EntityFramework.SqlServer.dll_1" Component_="DentistryLibraryTests_References" FileName="ENTITY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.SqlServer.dll_1&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.dll_1" Component_="DentistryLibraryTests_References" FileName="ENTITY~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Humanizer.dll_1" Component_="DentistryLibraryTests_References" FileName="HUMANI~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Humanizer.dll_1&gt;" SelfReg="false"/>
+    <ROW File="MaterialDesignColors.dll_1" Component_="DentistryLibraryTests_References" FileName="MATERI~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignColors.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MaterialDesignColors.dll_1&gt;" SelfReg="false"/>
+    <ROW File="MaterialDesignThemes.Wpf.dll_1" Component_="DentistryLibraryTests_References" FileName="MATERI~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignThemes.Wpf.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MaterialDesignThemes.Wpf.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Office.Interop.Word.dll_1" Component_="DentistryLibraryTests_References" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Office.Interop.Word.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Office.Interop.Word.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Xaml.Behaviors.dll_1" Component_="DentistryLibraryTests_References" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1" Component_="DentistryLibraryTests_References" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1" Component_="DentistryLibraryTests_References" FileName="MICROS~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1&gt;" SelfReg="false"/>
+    <ROW File="EditableTable.cs_2" Component_="DentistryLibraryTests_ContentOutput_View_Controls" FileName="EDITAB~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_EditableTable.cs_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EditableTable.cs_2&gt;" SelfReg="false"/>
+    <ROW File="SnackBarControl.xaml.cs_2" Component_="DentistryLibraryTests_ContentOutput" FileName="SNACKB~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_SnackBarControl.xaml.cs_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_SnackBarControl.xaml.cs_2&gt;" SelfReg="false"/>
+    <ROW File="AutoPage.xaml.cs_2" Component_="DentistryLibraryTests_ContentOutput_View_Pages" FileName="AUTOPA~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_AutoPage.xaml.cs_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_AutoPage.xaml.cs_2&gt;" SelfReg="false"/>
+    <ROW File="HomePage.xaml.cs_2" Component_="DentistryLibraryTests_ContentOutput_View_Pages" FileName="HOMEPA~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_HomePage.xaml.cs_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_HomePage.xaml.cs_2&gt;" SelfReg="false"/>
+    <ROW File="PatientsPage.xaml.cs_2" Component_="DentistryLibraryTests_ContentOutput_View_Pages" FileName="PATIEN~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_PatientsPage.xaml.cs_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PatientsPage.xaml.cs_2&gt;" SelfReg="false"/>
+    <ROW File="UserPage.xaml.cs_2" Component_="DentistryLibraryTests_ContentOutput_View_Pages" FileName="USERPA~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_UserPage.xaml.cs_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_UserPage.xaml.cs_2&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.TestPlatform.AdapterUtilities.resources.dll" Component_="DentistryLibraryTests_ContentOutput_ru" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.resources.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.resources.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.TestPlatform.CoreUtilities.resources.dll" Component_="DentistryLibraryTests_ContentOutput_ru" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.CoreUtilities.resources.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.TestPlatform.CoreUtilities.resources.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll" Component_="DentistryLibraryTests_ContentOutput_ru" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re" Component_="DentistryLibraryTests_ContentOutput_ru" FileName="MICROS~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" Component_="DentistryLibraryTests_ContentOutput_ru" FileName="MICROS~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll" Component_="DentistryLibraryTests_ContentOutput_ru" FileName="MICROS~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" Component_="DentistryLibraryTests_ContentOutput" FileName="MICROS~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In" Component_="DentistryLibraryTests_ContentOutput" FileName="MICROS~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl" Component_="DentistryLibraryTests_ContentOutput" FileName="MICROS~8.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.TestPlatform.AdapterUtilities.dll" Component_="DentistryLibraryTests_ContentOutput" FileName="MICROS~9.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.dll&gt;" SelfReg="false"/>
+    <ROW File="DentistryLibraryTests.pdb" Component_="DentistryLibraryTests_SymbolsOutput" FileName="DENTIS~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryLibraryTests.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryLibraryTests.pdb&gt;" SelfReg="false"/>
+    <ROW File="DentistryWpfApp.exe_3" Component_="DentistryWpfApp_PrimaryOutput" FileName="DENTIS~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryWpfApp.exe_3&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="DentistryWpfApp.exe.config_2" Component_="DentistryWpfApp_PrimaryOutput" FileName="DENTIS~2.CON|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe.config_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryWpfApp.exe.config_2&gt;" SelfReg="false"/>
+    <ROW File="DentistryClassLibrary.dll_3" Component_="DentistryWpfApp_References" FileName="DENTIS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryClassLibrary.dll_3&gt;" SelfReg="false"/>
+    <ROW File="JetBrains.Annotations.dll_1" Component_="DentistryWpfApp_References" FileName="JETBRA~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_JetBrains.Annotations.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_JetBrains.Annotations.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.QualityTools.Testing.Fakes.dll_1" Component_="DentistryWpfApp_References" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.QualityTools.Testing.Fakes.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.QualityTools.Testing.Fakes.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Buffers.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.ComponentModel.Annotations.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.ComponentModel.Annotations.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.ComponentModel.Annotations.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Configuration.ConfigurationManager.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Configuration.ConfigurationManager.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Configuration.ConfigurationManager.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Memory.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Memory.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Memory.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Numerics.Vectors.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Numerics.Vectors.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Reactive.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Reactive.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Reactive.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~8.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Security.AccessControl.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTEM~9.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Security.AccessControl.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Security.AccessControl.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Security.Permissions.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTE~10.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Security.Permissions.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Security.Permissions.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Security.Principal.Windows.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTE~11.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Security.Principal.Windows.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Security.Principal.Windows.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTE~12.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Threading.Tasks.Extensions.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Threading.Tasks.Extensions.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.ValueTuple.dll_1" Component_="DentistryWpfApp_References" FileName="SYSTE~13.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.ValueTuple.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.ValueTuple.dll_1&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.SqlServer.dll_2" Component_="DentistryWpfApp_References" FileName="ENTITY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.SqlServer.dll_2&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.dll_2" Component_="DentistryWpfApp_References" FileName="ENTITY~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.dll_2&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.SqlServer.resources.dll_2" Component_="DentistryWpfApp_References" FileName="ENTITY~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.resources.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.SqlServer.resources.dll_2&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.resources.dll_2" Component_="DentistryWpfApp_References" FileName="ENTITY~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.resources.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.resources.dll_2&gt;" SelfReg="false"/>
+    <ROW File="Humanizer.dll_2" Component_="DentistryWpfApp_References" FileName="HUMANI~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Humanizer.dll_2&gt;" SelfReg="false"/>
+    <ROW File="Humanizer.resources.dll_2" Component_="DentistryWpfApp_References" FileName="HUMANI~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.resources.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Humanizer.resources.dll_2&gt;" SelfReg="false"/>
+    <ROW File="MaterialDesignColors.dll_2" Component_="DentistryWpfApp_References" FileName="MATERI~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignColors.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MaterialDesignColors.dll_2&gt;" SelfReg="false"/>
+    <ROW File="MaterialDesignThemes.Wpf.dll_2" Component_="DentistryWpfApp_References" FileName="MATERI~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignThemes.Wpf.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MaterialDesignThemes.Wpf.dll_2&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Office.Interop.Word.dll_2" Component_="DentistryWpfApp_References" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Office.Interop.Word.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Office.Interop.Word.dll_2&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Xaml.Behaviors.dll_2" Component_="DentistryWpfApp_References" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll_2&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2" Component_="DentistryWpfApp_References" FileName="MICROS~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2" Component_="DentistryWpfApp_References" FileName="MICROS~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2&gt;" SelfReg="false"/>
+    <ROW File="DentistryWpfApp.pdb_2" Component_="DentistryWpfApp_SymbolsOutput" FileName="DENTIS~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.pdb_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DentistryWpfApp.pdb_2&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.SqlServer.resources.dll_3" Component_="DentistryLibraryTests_References" FileName="ENTITY~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.resources.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.SqlServer.resources.dll_3&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.resources.dll_3" Component_="DentistryLibraryTests_References" FileName="ENTITY~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.resources.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.resources.dll_3&gt;" SelfReg="false"/>
+    <ROW File="Humanizer.resources.dll_3" Component_="DentistryLibraryTests_References" FileName="HUMANI~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.resources.dll_3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Humanizer.resources.dll_3&gt;" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_AutoPage.xaml.cs_1" Path="[|AI_PROPPATH_DIR_PERBUILD_AutoPage.xaml.cs_1]\[|AI_PROPPATH_FILENAME_PERBUILD_AutoPage.xaml.cs_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_AutoPage.xaml.cs_2" Path="[|AI_PROPPATH_DIR_PERBUILD_AutoPage.xaml.cs_2]\[|AI_PROPPATH_FILENAME_PERBUILD_AutoPage.xaml.cs_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentalMKBLibrary.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_DentalMKBLibrary.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_DentalMKBLibrary.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentalMKBLibrary.pdb_2" Path="[|AI_PROPPATH_DIR_PERBUILD_DentalMKBLibrary.pdb_2]\[|AI_PROPPATH_FILENAME_PERBUILD_DentalMKBLibrary.pdb_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryClassLibrary.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryClassLibrary.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryClassLibrary.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.dll_3]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryClassLibrary.pdb_1" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryClassLibrary.pdb_1]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryClassLibrary.pdb_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryLibraryTests.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryLibraryTests.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryLibraryTests.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryLibraryTests.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryLibraryTests.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryLibraryTests.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryWpfApp.exe.config_2" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.exe.config_2]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe.config_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryWpfApp.exe_2" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.exe_2]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryWpfApp.exe_3" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.exe_3]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.exe_3]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DentistryWpfApp.pdb_2" Path="[|AI_PROPPATH_DIR_PERBUILD_DentistryWpfApp.pdb_2]\[|AI_PROPPATH_FILENAME_PERBUILD_DentistryWpfApp.pdb_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EditableTable.cs_1" Path="[|AI_PROPPATH_DIR_PERBUILD_EditableTable.cs_1]\[|AI_PROPPATH_FILENAME_PERBUILD_EditableTable.cs_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EditableTable.cs_2" Path="[|AI_PROPPATH_DIR_PERBUILD_EditableTable.cs_2]\[|AI_PROPPATH_FILENAME_PERBUILD_EditableTable.cs_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.SqlServer.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.SqlServer.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.SqlServer.resources.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.resources.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.resources.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.SqlServer.resources.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.SqlServer.resources.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.SqlServer.resources.dll_3]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.resources.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.resources.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.resources.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.resources.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.resources.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.resources.dll_3]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_HomePage.xaml.cs_1" Path="[|AI_PROPPATH_DIR_PERBUILD_HomePage.xaml.cs_1]\[|AI_PROPPATH_FILENAME_PERBUILD_HomePage.xaml.cs_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_HomePage.xaml.cs_2" Path="[|AI_PROPPATH_DIR_PERBUILD_HomePage.xaml.cs_2]\[|AI_PROPPATH_FILENAME_PERBUILD_HomePage.xaml.cs_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Humanizer.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Humanizer.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Humanizer.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Humanizer.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Humanizer.resources.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Humanizer.resources.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.resources.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Humanizer.resources.dll_3" Path="[|AI_PROPPATH_DIR_PERBUILD_Humanizer.resources.dll_3]\[|AI_PROPPATH_FILENAME_PERBUILD_Humanizer.resources.dll_3]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_JetBrains.Annotations.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_JetBrains.Annotations.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_JetBrains.Annotations.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_MaterialDesignColors.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_MaterialDesignColors.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignColors.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_MaterialDesignColors.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_MaterialDesignColors.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignColors.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_MaterialDesignThemes.Wpf.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_MaterialDesignThemes.Wpf.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignThemes.Wpf.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_MaterialDesignThemes.Wpf.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_MaterialDesignThemes.Wpf.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_MaterialDesignThemes.Wpf.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Office.Interop.Word.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Office.Interop.Word.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Office.Interop.Word.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Office.Interop.Word.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Office.Interop.Word.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Office.Interop.Word.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.QualityTools.Testing.Fakes.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.QualityTools.Testing.Fakes.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.QualityTools.Testing.Fakes.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.resources.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.resources.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.AdapterUtilities.resources.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.TestPlatform.CoreUtilities.resources.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.TestPlatform.CoreUtilities.resources.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.TestPlatform.CoreUtilities.resources.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll_2" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll_2]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_PatientsPage.xaml.cs_1" Path="[|AI_PROPPATH_DIR_PERBUILD_PatientsPage.xaml.cs_1]\[|AI_PROPPATH_FILENAME_PERBUILD_PatientsPage.xaml.cs_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_PatientsPage.xaml.cs_2" Path="[|AI_PROPPATH_DIR_PERBUILD_PatientsPage.xaml.cs_2]\[|AI_PROPPATH_FILENAME_PERBUILD_PatientsPage.xaml.cs_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_SnackBarControl.xaml.cs_1" Path="[|AI_PROPPATH_DIR_PERBUILD_SnackBarControl.xaml.cs_1]\[|AI_PROPPATH_FILENAME_PERBUILD_SnackBarControl.xaml.cs_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_SnackBarControl.xaml.cs_2" Path="[|AI_PROPPATH_DIR_PERBUILD_SnackBarControl.xaml.cs_2]\[|AI_PROPPATH_FILENAME_PERBUILD_SnackBarControl.xaml.cs_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Buffers.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Buffers.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.ComponentModel.Annotations.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.ComponentModel.Annotations.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.ComponentModel.Annotations.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Configuration.ConfigurationManager.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Configuration.ConfigurationManager.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Configuration.ConfigurationManager.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Memory.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Memory.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Memory.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Numerics.Vectors.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Numerics.Vectors.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Numerics.Vectors.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Reactive.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Reactive.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Reactive.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Security.AccessControl.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Security.AccessControl.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Security.AccessControl.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Security.Permissions.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Security.Permissions.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Security.Permissions.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Security.Principal.Windows.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Security.Principal.Windows.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Security.Principal.Windows.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Threading.Tasks.Extensions.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Threading.Tasks.Extensions.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Threading.Tasks.Extensions.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.ValueTuple.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.ValueTuple.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.ValueTuple.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_UserPage.xaml.cs_1" Path="[|AI_PROPPATH_DIR_PERBUILD_UserPage.xaml.cs_1]\[|AI_PROPPATH_FILENAME_PERBUILD_UserPage.xaml.cs_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_UserPage.xaml.cs_2" Path="[|AI_PROPPATH_DIR_PERBUILD_UserPage.xaml.cs_2]\[|AI_PROPPATH_FILENAME_PERBUILD_UserPage.xaml.cs_2]" Type="2" Content="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -632,12 +928,8 @@
     <ROW Feature_="MainFeature" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs"/>
     <ROW Feature_="MainFeature" Component_="DentalMKBLibrary.dll_1"/>
     <ROW Feature_="MainFeature" Component_="AssemblyInfo.cs"/>
-    <ROW Feature_="MainFeature" Component_="DentistryClassLibrary.dll"/>
-    <ROW Feature_="MainFeature" Component_="ContractGeneratorClass.cs"/>
     <ROW Feature_="MainFeature" Component_="NETFrameworkVersionv4.7.2.AssemblyAttributes.cs_1"/>
-    <ROW Feature_="MainFeature" Component_="DentistryClassLibrary.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="AssemblyInfo.cs_1"/>
-    <ROW Feature_="MainFeature" Component_="App.config"/>
+    <ROW Feature_="MainFeature" Component_="DentistryWpfApp_ContentOutput"/>
     <ROW Feature_="MainFeature" Component_="avatar2.jpg"/>
     <ROW Feature_="MainFeature" Component_="MainDictionary.xaml"/>
     <ROW Feature_="MainFeature" Component_="docx"/>
@@ -647,7 +939,7 @@
     <ROW Feature_="MainFeature" Component_="contract_number.txt"/>
     <ROW Feature_="MainFeature" Component_="Microsoft.QualityTools.Testing.Fakes.resources.dll"/>
     <ROW Feature_="MainFeature" Component_="Microsoft.QualityTools.Testing.Fakes.resources.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="DentistryClassLibrary.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DentistryClassLibrary.dll"/>
     <ROW Feature_="MainFeature" Component_="DentistryWpfApp.exe"/>
     <ROW Feature_="MainFeature" Component_="EntityFramework.dll"/>
     <ROW Feature_="MainFeature" Component_="EntityFramework.SqlServer.dll"/>
@@ -720,14 +1012,29 @@
     <ROW Feature_="MainFeature" Component_="AddPatientWindow.baml"/>
     <ROW Feature_="MainFeature" Component_="SnackBarControl.g.i.cs"/>
     <ROW Feature_="MainFeature" Component_="DentistryWpfApp.csproj.nuget.dgspec.json"/>
-    <ROW Feature_="MainFeature" Component_="AssemblyInfo.cs_2"/>
+    <ROW Feature_="MainFeature" Component_="AssemblyInfo.cs_1"/>
     <ROW Feature_="MainFeature" Component_="MainStyle.xaml"/>
     <ROW Feature_="MainFeature" Component_="DarkTheme.xaml"/>
-    <ROW Feature_="MainFeature" Component_="EditableTable.cs_1"/>
-    <ROW Feature_="MainFeature" Component_="AutoPage.xaml"/>
+    <ROW Feature_="MainFeature" Component_="DentistryWpfApp_ContentOutput_View_Controls"/>
+    <ROW Feature_="MainFeature" Component_="DentistryWpfApp_ContentOutput_View_Pages"/>
     <ROW Feature_="MainFeature" Component_="AddPatientWindow.xaml"/>
     <ROW Feature_="MainFeature" Component_="AppViewModel.cs"/>
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="DentalMKBLibrary_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentalMKBLibrary_SymbolsOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentistryClassLibrary_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentistryClassLibrary_References"/>
+    <ROW Feature_="MainFeature" Component_="DentistryClassLibrary_SymbolsOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentistryLibraryTests_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentistryLibraryTests_References"/>
+    <ROW Feature_="MainFeature" Component_="DentistryLibraryTests_ContentOutput_View_Controls"/>
+    <ROW Feature_="MainFeature" Component_="DentistryLibraryTests_ContentOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentistryLibraryTests_ContentOutput_View_Pages"/>
+    <ROW Feature_="MainFeature" Component_="DentistryLibraryTests_ContentOutput_ru"/>
+    <ROW Feature_="MainFeature" Component_="DentistryLibraryTests_SymbolsOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentistryWpfApp_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="DentistryWpfApp_References"/>
+    <ROW Feature_="MainFeature" Component_="DentistryWpfApp_SymbolsOutput"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -758,7 +1065,10 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="Dentistry" Directory_="SHORTCUTDIR" Name="DENTIS~2|Dentistry_ARM_Short" Component_="DentistryWpfApp.exe" Target="[#DentistryWpfApp.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Debug_4_Dir"/>
+    <ROW Shortcut="DentistryWpfApp" Directory_="SHORTCUTDIR" Name="DENTIS~2|DentistryWpfApp" Component_="DentistryWpfApp_PrimaryOutput" Target="[#DentistryWpfApp.exe_3]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="Dentistry_ARM" Directory_="SHORTCUTDIR" Name="DENTIS~1|Dentistry_ARM" Component_="DentistryWpfApp.exe" Target="[#DentistryWpfApp.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Debug_3_Dir"/>
+    <ROW Shortcut="Dentistry_ARM_1" Directory_="DesktopFolder" Name="DENTIS~1|Dentistry_ARM" Component_="DentistryWpfApp.exe" Target="[#DentistryWpfApp.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Debug_3_Dir"/>
+    <ROW Shortcut="Dentistry_ARM_2" Directory_="StartMenuFolder" Name="DENTIS~1|Dentistry_ARM" Component_="DentistryWpfApp.exe" Target="[#DentistryWpfApp.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Debug_3_Dir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
@@ -766,5 +1076,81 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
+    <ROW ProjectId="{ed9fc3bc-ee0b-497d-a23a-34d610faec95}" ProjectName="DentalMKBLibrary" OutputGroup="PrimaryOutput" OutputFile="DentalMKBLibrary.dll_2"/>
+    <ROW ProjectId="{ed9fc3bc-ee0b-497d-a23a-34d610faec95}" ProjectName="DentalMKBLibrary" OutputGroup="SymbolsOutput" OutputFile="DentalMKBLibrary.pdb_2"/>
+    <ROW ProjectId="{55bc7c91-dcaa-4d6c-be5c-1f419cc50a69}" ProjectName="DentistryClassLibrary" OutputGroup="PrimaryOutput" OutputFile="DentistryClassLibrary.dll_1"/>
+    <ROW ProjectId="{55bc7c91-dcaa-4d6c-be5c-1f419cc50a69}" ProjectName="DentistryClassLibrary" OutputGroup="References" OutputFile="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll"/>
+    <ROW ProjectId="{55bc7c91-dcaa-4d6c-be5c-1f419cc50a69}" ProjectName="DentistryClassLibrary" OutputGroup="References" OutputFile="Microsoft.VisualStudio.TestPlatform.TestFramework.dll"/>
+    <ROW ProjectId="{55bc7c91-dcaa-4d6c-be5c-1f419cc50a69}" ProjectName="DentistryClassLibrary" OutputGroup="SymbolsOutput" OutputFile="DentistryClassLibrary.pdb_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="PrimaryOutput" OutputFile="DentistryLibraryTests.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="DentistryClassLibrary.dll_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="DentistryWpfApp.exe_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="EntityFramework.SqlServer.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="EntityFramework.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="Humanizer.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="MaterialDesignColors.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="MaterialDesignThemes.Wpf.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="Microsoft.Office.Interop.Word.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="Microsoft.Xaml.Behaviors.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="Microsoft.VisualStudio.TestPlatform.TestFramework.dll_1"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="EditableTable.cs_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="SnackBarControl.xaml.cs_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="AutoPage.xaml.cs_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="HomePage.xaml.cs_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="PatientsPage.xaml.cs_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="UserPage.xaml.cs_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.TestPlatform.AdapterUtilities.resources.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.TestPlatform.CoreUtilities.resources.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.re"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.In"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dl"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="ContentOutput" OutputFile="Microsoft.TestPlatform.AdapterUtilities.dll"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="SymbolsOutput" OutputFile="DentistryLibraryTests.pdb"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="PrimaryOutput" OutputFile="DentistryWpfApp.exe_3" OutputFileShortcut="DentistryWpfApp"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="PrimaryOutput" OutputFile="DentistryWpfApp.exe.config_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="DentistryClassLibrary.dll_3"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="JetBrains.Annotations.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="Microsoft.QualityTools.Testing.Fakes.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Buffers.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.ComponentModel.Annotations.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Configuration.ConfigurationManager.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Memory.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Numerics.Vectors.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Reactive.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Runtime.CompilerServices.Unsafe.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Security.AccessControl.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Security.Permissions.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Security.Principal.Windows.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.Threading.Tasks.Extensions.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="System.ValueTuple.dll_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="EntityFramework.SqlServer.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="EntityFramework.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="EntityFramework.SqlServer.resources.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="EntityFramework.resources.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="Humanizer.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="Humanizer.resources.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="MaterialDesignColors.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="MaterialDesignThemes.Wpf.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="Microsoft.Office.Interop.Word.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="Microsoft.Xaml.Behaviors.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="References" OutputFile="Microsoft.VisualStudio.TestPlatform.TestFramework.dll_2"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="ContentOutput" OutputFile="EditableTable.cs_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="ContentOutput" OutputFile="SnackBarControl.xaml.cs_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="ContentOutput" OutputFile="AutoPage.xaml.cs_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="ContentOutput" OutputFile="HomePage.xaml.cs_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="ContentOutput" OutputFile="PatientsPage.xaml.cs_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="ContentOutput" OutputFile="UserPage.xaml.cs_1"/>
+    <ROW ProjectId="{ebde4b70-681c-466e-8693-1e4459d98d3e}" ProjectName="DentistryWpfApp" OutputGroup="SymbolsOutput" OutputFile="DentistryWpfApp.pdb_2"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="EntityFramework.SqlServer.resources.dll_3"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="EntityFramework.resources.dll_3"/>
+    <ROW ProjectId="{190ed49f-172e-44a4-9154-53f0611fb071}" ProjectName="DentistryLibraryTests" OutputGroup="References" OutputFile="Humanizer.resources.dll_3"/>
   </COMPONENT>
 </DOCUMENT>

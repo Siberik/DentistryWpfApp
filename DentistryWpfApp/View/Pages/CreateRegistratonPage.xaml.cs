@@ -26,6 +26,7 @@ namespace DentistryWpfApp.View.Pages
     /// </summary>
     public partial class CreateRegistratonPage : Page
     {
+        InputClass input= new InputClass();
         int personalID;
         Core db = new Core();
         public CreateRegistratonPage(int personalId)
